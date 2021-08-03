@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+  <html>
+    <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <title>Lesson 1 - Frontend Basics</title>
+      <link rel="stylesheet" href="node_modules/reveal.js/dist/reset.css" />
+      <link rel="stylesheet" href="node_modules/reveal.js/dist/reveal.css" />
+      <link rel="stylesheet" href="node_modules/reveal.js/dist/theme/league.css" />
+      <!-- Theme used for syntax highlighted code -->
+      <!--link rel="stylesheet" href="plugin/highlight/monokai.css" /-->
+      <link rel="stylesheet" href="node_modules/reveal.js/plugin/highlight/atom-one-light.min.css" />
+    </head>
+    <body>
+      <main class="reveal">
+        <article class="slides">
+
+          <section>
+            <h1>Frontend Basics</h1>
+            <h3>Lesson 1</h3>
+            <img alt="*" src="img/01/ness.png" height="190" />
+            <div>
+              🙈 dalibor.schon@ness.com<br/>
+              🙉 lukas.orgovan@ness.com<br/>
+              🙊 erik.fecko@ness.com
+            </div>
+          </section>
+
+          <section>
+            <h2>IDE, Chrome, DevTools, WWW</h2>
+            <h3>Lesson 1</h3>
+            <ul>
+              <li>🛠 IDE, Chrome, DevTools</li>
+              <li class="fragment">🕷 WWW & Protocols</li>
+              <li class="fragment">🖼 Resources, Assets</li>
+              <li class="fragment">💄 HTML, CSS</li>
+              <li class="fragment">🧱 Webpage Structure</li>
+            </ul>
+          </section>
+
+          <section>
+            <h1>IDE</h1>
+            <h3>integrated development environment</h3>
+            <div class="fragment">
+              <img src="img/01/vs-code.svg" height="300" alt="vs-code-logo"/>
+              <h3>Visual Studio Code</h3>
+            </div>
+          </section>
+
+          <section data-transition="convex">
+            <h3>VSCode - not only editor</h3>
+            <span>MarkDown with preview</span>
+            <img src="img/01/vscode-01.png" alt="vs-code-01"/>
+          </section>
+
+          <section data-transition="convex">
+            <h3>VSCode - plugins</h3>
+            <img src="img/01/vscode-02.png" alt="vs-code-02"/>
+          </section>
+
+          <section data-transition="convex">
+            <h3>VSCode - IDE overview</h3>
+            <span>Tree, Outline, Timeline, Intellisense, Integrated doc</span>
+            <img src="img/01/vscode-03.png" alt="vs-code-03"/>
+          </section>
+
+          <section data-transition="convex">
+            <h3>VSCode - Search</h3>
+            <span>Search over all files in project(s)</span>
+            <img src="img/01/vscode-04.png" alt="vs-code-04"/>
+            <p></p>
+          </section>
+
+          <section data-transition="convex">
+            <h3>VSCode - Search</h3>
+            <span>Search in current file [⌘/Ctrl+F]</span>
+            <img src="img/01/vscode-09.png" alt="vs-code-09"/>
+            <p></p>
+          </section>
+
+          <section data-transition="convex">
+            <h3>VSCode - Search</h3>
+            <span>Search for file [⌘/Ctrl+P]</span>
+            <img src="img/01/vscode-06.png" alt="vs-code-06"/>
+            <p></p>
+          </section>
+
+          <section data-transition="convex">
+            <h3>VSCode - Search</h3>
+            <span>Narrowing search</span>
+            <img src="img/01/vscode-07.png" alt="vs-code-07"/>
+            <p></p>
+          </section>
+
+          <section data-transition="convex">
+            <h3>VSCode - Panes</h3>
+            <img src="img/01/vscode-05.png" alt="vs-code-05"/>
+            <p></p>
+          </section>
+
+          <section data-transition="convex">
+            <h3>VSCode - Command Palette</h3>
+            <span>"menu" search [⌘/Ctrl+Shift+P]</span>
+            <img src="img/01/vscode-08.png" alt="vs-code-08"/>
+            <p></p>
+          </section>
+
+          <section data-transition="convex">
+            <h3>VSCode - Teamwork</h3>
+            <span>Who did this! 🐷 (and many more...)</span>
+            <img src="img/01/vscode-10.png" alt="vs-code-10"/>
+            <p></p>
+          </section>
+
+          <section>
+            <h1>Chrome</h1>
+            <img src="img/01/logo-chrome.png" class="plain fifty" alt="logo-chrome"/>
+          </section>
+  
+          <section>
+            <h3>Chrome - DevTools [F12]</h3>
+            <img src="img/01/chrome-reveal.png" alt="chrome-inspect"/>
+          </section>
+
+          <section>
+            <h1>🕷 World Wide Web</h1>
+            <h3>Web, Protocols etc.</h3>
+            <img src="img/01/logo-http-www.jpg" alt="logo-http-www.jpg"/>
+          </section>
+
+          <section>
+            <h2>Glossary</h2>
+            <ul>
+              <li><b>Zdroj</b> (resource, asset)</li>
+              <li><b>Klient</b> (client, browser)</li>
+              <li><b>Server</b> (server, host)</li>
+              <li><b>URL, URI</b> (Uniform Resource Locator, Identifier)</li>
+              <li><b>HTTP, HTTPs</b> (HyperText Transfer Protocol)</li>
+              <li><b>API</b> (Application programming interface), <b>backpoint</b></li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Frontend vs backend</h2>
+            <div class="r-stack">
+              <img class="fragment current-visible" src="img/01/fe_vs_be_1.jpg" alt="fe_vs_be_1" style="height: 55vh"/>
+              <img class="fragment current-visible" src="img/01/fe_vs_be_2.jpg" alt="fe_vs_be_2" style="height: 55vh"/>
+              <ul class="fragment">
+                <li><b>Frontend</b> - množina zdrojov zaslaná serverom do prehliadača a
+                  spracovaná lokálne na zariadení užívateľa
+                </li>
+                <li><b>Backend</b> - množina zdrojov spracovaná na serveri</li>
+              </ul>
+            </div>
+          </section>
+
+          <section>
+            <h2>Usual Frontend resources</h2>
+            <ul>
+              <li>html</li>
+              <li>css</li>
+              <li>js</li>
+              <li>gif, png, jpg, webp, svg, ico.. </li>
+              <li>woff, eot, svg, ttf</li>
+              <li>mp3, mp4, wav, webm, ogg..</li>
+              <li>json, xml, txt, html..</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>HTTP(S)</h2>
+            <img src="img/01/client-server.png" alt="client-server"/>
+          </section>
+  
+          <section>
+            <h2>HTTP komunikácia</h2>
+            <img src="img/01/HTTP_Steps.png" alt="HTTP_Steps"/>
+          </section>
+  
+          <section>
+            <h2>AJAX</h2>
+            <p>Asynchronous JavaScript + XML</p>
+            <img src="img/01/ajax.png" alt="ajax"/>
+          </section>
+  
+          <section>
+            <h3>URL/URI</h3>
+            <img src="img/01/url-uri.jpg" alt="url-uri"/>
+          </section>
+  
+          <section>
+            <h2>Paths</h2>
+            <span><b>Absolute</b> - usually 3rd party resources</span>
+            <pre><code data-trim class="html">
+              <a href="http://www.ness.il">...</a>
+              <img src="https://www.ness.sk/img/image.png" />
+              <link rel="stylesheet" href="//www.ness.com/styles/main.css">
+            </code></pre>
+          </section>
+
+          <section>
+            <h2>Paths</h2>
+            <span><b>Relative</b> - usually our resources</span>
+            <pre><code data-trim class="html">
+              <a href="index.html">...</a>
+              <img src="/img/image.png" />
+              <link rel="icon" href="../img/learn-icon.gif" type="gif">
+            </code></pre>
+          </section>
+
+          <section>
+            <img src="img/01/logo-html5.png" alt="logo-html"/>
+          </section>
+  
+          <section>
+            <h2>HTML tag</h2>
+            <img src="img/01/taganatomy.png" alt="taganatomy"/>
+            <p class="fragment">paired, unpaired, predefined, custom...</p>
+          </section>
+  
+          <section>
+            <img src="img/01/logo-css3.png" alt="logo-css"/>
+          </section>
+
+          <section>
+            <div style="display: flex; justify-content: center;">
+              <div style="font-size:64px;border:4px solid white;padding:0px 3px;width:200px;height: 180px;padding-top: 20px;">
+                CSS IS AWESOME
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <h3>CSS rule</h3>
+            <img src="img/01/ruleParts.gif" alt="ruleParts"/>
+          </section>
+
+          <section>
+            <h3>CSS selectors</h3>
+            <ul>
+              <li><b>element (type)</b> – div</li>
+              <li><b>id</b> - #help</li>
+              <li><b>class</b> - .engine</li>
+              <li><b>attribute</b> - [attr=value]</li>
+            </ul>
+            <p>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors">https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors</a>
+            <a href="https://www.w3schools.com/cssref/css_selectors.asp">https://www.w3schools.com/cssref/css_selectors.asp</a>
+            </p>
+          </section>
+
+          <section>
+            <h3>CSS placement and priority</h3>
+            <ul>
+              <li>🤮 <b>browser</b> - default style</li>
+              <li>😐 <b>external</b> CSS - &lt;link rel="stylesheet" href="css/style.css" /&gt;</li>
+              <li>🤪 <b>internal</b> CSS - &lt;style&gt;a {color: #000;}&lt;/style&gt;</li>
+              <li>😎 <b>inline</b> CSS - &lt;div style="color: #000"&gt;</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>HTML5 sections</h2>
+            <img src="img/01/html-skeleton.png" alt="html-skeleton" />
+          </section>
+
+          <section>
+            <h2>HTML5 semantics</h2>
+            <span>Function over layout (webcrawrels firendly)</span>
+            <img src="img/01/semantic-html5-markup.png" alt="semantics" style="height: 55vh" />
+          </section>
+
+          <section>
+            <h2>HTML5 semantics</h2>
+            <span>Common HTML skeleton</span>
+            <pre><code data-trim class="html">
+              &lt;!DOCTYPE html&gt;
+              &lt;html lang=&quot;en&quot;&gt;
+                &lt;head&gt;
+                  <meta charset="utf-8" />
+                  <title>Moja stránka</title>
+                  <meta name="viewport" content="width=device-width, initial-scale=1" />
+                  <link rel="stylesheet" href="css/style.css" />
+                  <script src="js/library.js"></script>
+                &lt;/head&gt;
+                &lt;body&gt;
+                  <header>
+                    <h1>Moja stránka</h1>
+                  </header>
+                  <nav>...</nav>
+                  <main>
+                    <article>
+                      <section>...</section>
+                      <section>...</section>
+                    </article>
+                    <aside>...</aside>
+                  </main>
+                  <footer>...</footer>
+                  <script src="js/app.js"></script>
+                &lt;/body&gt;
+              &lt;/html&gt;
+            </code></pre>
+          </section>
+
+          <section>
+            <h3>The End</h3>
+            <img src="img/01/end.jpg" alt="padme"/>
+          </section>
+
+        </article>
+      </main>
+
+      <script src="node_modules/reveal.js/dist/reveal.js"></script>
+      <script src="node_modules/reveal.js/plugin/notes/notes.js"></script>
+      <script src="node_modules/reveal.js/plugin/markdown/markdown.js"></script>
+      <script src="node_modules/reveal.js/plugin/highlight/highlight.js"></script>
+      <script>
+        Reveal.initialize({
+          hash: true,
+          plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+        });
+      </script>
+    </body>
+  </html>
+</html>
