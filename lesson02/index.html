@@ -5,17 +5,6 @@
     <title>Moja stranka</title>
     <link rel="stylesheet" href="css/style.css" />
     <script src="js/library.js"></script>
-    <style>
-      li {
-        color: green;
-      }
-      #prve-menu {
-        color: red;
-      }
-      .modre {
-        color: blue;
-      }
-    </style>
   </head>
   <body>
     <header>
@@ -31,8 +20,71 @@
     <main>
       <h3>Main</h3>
       <article>
-        <section>sekcia prva</section>
-        <section>sekcia druha</section>
+        <div style="background-color: cyan; border: 2px solid red">
+          <section>
+            sekcia prva
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Crocodylus_acutus_mexico_02.jpg/1280px-Crocodylus_acutus_mexico_02.jpg"
+              width="50%"
+              alt="krokodil"
+            />
+            <figure>
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Crocodylus_acutus_mexico_02.jpg/1280px-Crocodylus_acutus_mexico_02.jpg"
+                width="50%"
+                alt="krokodil"
+              />
+              <figcaption>KROKO</figcaption>
+              <!--komentar-->
+            </figure>
+          </section>
+          <section>
+            <span>SPAN</span> druha sekcia
+            <form action="http://server/spracovanie" method="POST">
+              <input value="" name="meno" />
+              <br />
+              <input value="" name="priezvisko" />
+              <br />
+              <input type="checkbox" name="suhlas" />
+              <br />
+              <label for="suhlas">Suhlasim</label>
+              <br />
+              <select>
+                <option value="1">jedna</option>
+                <option value="2">dva</option>
+                <option value="3">tri</option>
+              </select>
+              <button type="submit">Odosli</button>
+              <input type="reset" value="Reset" />
+            </form>
+            <hr />
+            <table>
+              <caption>
+                Vysledky
+              </caption>
+              <thead>
+                <tr>
+                  <td>Meno</td>
+                  <td>cas</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Janko</td>
+                  <td>10min</td>
+                </tr>
+                <tr>
+                  <td>evka</td>
+                  <td>25min</td>
+                </tr>
+                <tr>
+                  <td>jozo</td>
+                  <td>38min</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+        </div>
         <section>
           <p>
             <strong>STRONG</strong> <b>STRONG</b>
