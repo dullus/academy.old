@@ -7,39 +7,67 @@
     <link rel="icon" href="img/icon.png" />
     <script src="js/library.js"></script>
   </head>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+    rel="stylesheet"
+  />
+
   <body>
     <header>
-      <h1>Ahoj</h1>
+      <h1
+        style="
+          color: salmon;
+          font-size: 40px;
+          font-family: lobster;
+          border: 1.5px solid salmon;
+          width: 80%;
+          max-width: 500px;
+        "
+      >
+        Francúzsky buldoček
+      </h1>
       <nav>
-        <ul>
-          <li id="prve-menu">menu1</li>
-          <li class="modre">menu2</li>
+        <ul style="background-color: rgb(205, 236, 248)">
+          <li class="horiz-menu">Menu 1</li>
+          <li class="horiz-menu">Menu 2</li>
+          <li class="horiz-menu">Menu 3</li>
+          <li class="horiz-menu">Menu 4</li>
         </ul>
       </nav>
     </header>
+
     <main>
-      <h3>Main</h3>
+      <h3>Vitajte!</h3>
 
       <article>
         <div
-          style="background-color: rgb(226, 226, 151); border: 1px solid red"
+          style="background-color: rgb(205, 236, 248); border: 1px solid red"
         >
-          <section>sekcia <span>Span</span> prva</section>
-          <img
-            src="https://thewoofclub.ch/wp-content/uploads/2020/01/puppy-frenchies-funnyfrenchie_cute-1-1-738x675.jpg"
-            width="200"
-            alt="francuzsky buldocek"
-          />
+          <section>Šteňa francúzskeho buldočka</section>
           <figure>
             <img
               src="https://thewoofclub.ch/wp-content/uploads/2020/01/puppy-frenchies-funnyfrenchie_cute-1-1-738x675.jpg"
               width="200"
               alt="francuzsky buldocek"
             />
-            <figcaption>Fig.1 - French bulldog</figcaption>
+            <figcaption style="font-size: 10px">
+              Obr. 1 - Modré a čierne sfarbenie
+            </figcaption>
+          </figure>
+          <section>Dospelý pes</section>
+          <figure>
+            <img
+              src="https://pelechyprepsy.sk/wp-content/uploads/2017/12/Pelech-pre-psa-Lauren-CEZAR-S-M-a-XL-%C5%A1ed%C3%BD-3.jpg"
+              width="200"
+              alt="francuzsky buldocek"
+            />
+            <figcaption style="font-size: 10px">
+              Obr. 2 - Hnedé sfarbenie
+            </figcaption>
           </figure>
           <section>
-            sekcia druha
+            Zadajte meno a priezvisko
             <form action="http://server/spracovanie" method="POST">
               <input value="" name="meno" />
               <br />
@@ -89,29 +117,55 @@
           </section>
         </div>
         <section>
-          <p>
-            <em>Lorem</em> <i>ipsum</i> dolor sit, amet consectetur adipisicing
-            elit. Cupiditate assumenda id consequuntur. Maiores officia aliquid
-            reprehenderit <sup>enim</sup> <sub>sunt</sub>, molestiae porro culpa
-            animi mollitia neque optio placeat saepe veritatis facere.
+          <h3 style="font-family: lobster">
+            Skvelý spoločník, rodinný priateľ a výstavný pes
+          </h3>
+          <p style="padding: 15px; background-color: rgb(250, 226, 224)">
+            Je to <em>typický</em> <i>pes</i> do mestských bytov. Má veľmi nízku
+            toleranciu na horúco, ale ani chladné alebo vlhké počasie mu nerobí
+            dobre. Tento hravý, citlivý pes je šťastný v prítomnosti členov
+            rodiny a veľmi rád sa mazná. Miluje deti a bez problémov znáša
+            prítomnosť iných zvierat v domácnosti. Kvôli krátkej dýchacie
+            trubici je u buldočka časté chrápanie a chrochtanie. Ak ste ochotní
+            tieto jeho nedostatky tolerovať, získate <sub>oddaného</sub>,
+            <sup>milujúceho</sup>, niekedy tvrdohlavého spoločníka, ktorý vás
+            bude zahŕňať úprimnou láskou.
           </p>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate
-            assumenda id consequuntur. Maiores officia aliquid reprehenderit
-            enim omnis sunt, molestiae porro culpa animi mollitia neque optio
-            placeat saepe veritatis facere.
+          <h3 style="font-family: lobster">Pôvod</h3>
+          <p style="padding: 15px; background-color: rgb(243, 169, 162)">
+            Pokladá sa za francúzske plemeno, čiastočne je však potomkom starých
+            anglických buldogov. Predkovia sa zúčastňovali psích zápasov,
+            chytali potkany, boli spoločníkmi mäsiarov a drožkárov. Bol
+            stabilizovaný v druhej polovici 19. storočia, v tých časoch bol
+            populárny aj v najvyšších spoločenských vrstvách.
           </p>
-          <p>
-            &lt; &gt; &amp; Lorem ipsum dolor sit, amet consectetur adipisicing
-            elit. Cupiditate assumenda id consequuntur. Maiores officia aliquid
-            reprehenderit enim omnis sunt, molestiae porro culpa animi mollitia
-            neque optio placeat saepe veritatis facere.
+          <h3 style="font-family: lobster">Popis</h3>
+          <p style="padding: 15px; background-color: rgb(248, 125, 114)">
+            &lt; &gt; &amp; Malý, silný, svalnatý a kompaktný pes. Veľká široká
+            hlava s veľmi krátkou ňucháčovou partiou. Koža na hlave vytvára
+            takmer symetrické vrásky. Uši stredne veľké, vztýčené, vysoko
+            nasadené, pri koreni široké, hore zaokrúhlené. Oči nízko položené,
+            veľké, guľaté, mierne vystupujúce. Hrudník veľmi široký, valcovitý.
+            Chrbát široký a svalnatý. Predné nohy rovné, krátke, svalnaté, zadné
+            takisto svalnaté, ale o niečo dlhšie. Chvost krátky, nízko nasadený,
+            pri koreni hrubý a zauzlený. Nesmie byť pod líniou chrbta. Srsť
+            krátka, hustá a lesklá. Farba pruhovaná (zmes čiernych a hrdzavých
+            chlpov), príp. s malými bielymi fľakmi na hrudi a na hlave, strakáč
+            (biela s tmavými pruhovanými fľakmi), svetlohnedá (vzácne, iba
+            prednedávnom uznané zafarbenie). Veľkosť: Hmotnosť 8-14 kg, výška
+            psov 25-34 cm, suky o niečo nižšie.
           </p>
         </section>
       </article>
     </main>
+
     <footer>
-      <a href="http://google.com">Google</a>
+      Ďalšie obrázky buldočkov nájdeš
+      <a
+        href="https://www.google.com/search?q=francuzsky+buldocek&rlz=1C1GCEA_enSK965SK965&source=lnms&tbm=isch&sa=X&ved=2ahUKEwirifC88ZnyAhXqgP0HHTX9CvEQ_AUoAXoECAEQAw&biw=515&bih=608"
+        target="_blank"
+        >TU</a
+      >
     </footer>
   </body>
 </html>

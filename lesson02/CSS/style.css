@@ -3,12 +3,20 @@ td {
   background-color: burlywood;
 }
 li {
-  color: green;
+  color: rgb(32, 143, 158);
 }
 
 #prve-menu {
   color: red;
 }
+.horiz-menu {
+  display: inline;
+}
+
 .modre {
   color: blue;
+}
+
+.lobster-font {
+  font-family: lobster, "Times New Roman", Times, serif;
 }
