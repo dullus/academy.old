@@ -1,0 +1,14 @@
+td {
+  border: 1px solid black;
+  background-color: burlywood;
+}
+li {
+  color: green;
+}
+
+#prve-menu {
+  color: red;
+}
+.modre {
+  color: blue;
+}

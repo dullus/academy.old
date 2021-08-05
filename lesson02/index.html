@@ -6,18 +6,6 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="icon" href="img/icon.png" />
     <script src="js/library.js"></script>
-    <style>
-      li {
-        color: green;
-      }
-
-      #prve-menu {
-        color: red;
-      }
-      .modre {
-        color: blue;
-      }
-    </style>
   </head>
   <body>
     <header>
@@ -31,9 +19,75 @@
     </header>
     <main>
       <h3>Main</h3>
+
       <article>
-        <section>sekcia prva</section>
-        <section>sekcia druha</section>
+        <div
+          style="background-color: rgb(226, 226, 151); border: 1px solid red"
+        >
+          <section>sekcia <span>Span</span> prva</section>
+          <img
+            src="https://thewoofclub.ch/wp-content/uploads/2020/01/puppy-frenchies-funnyfrenchie_cute-1-1-738x675.jpg"
+            width="200"
+            alt="francuzsky buldocek"
+          />
+          <figure>
+            <img
+              src="https://thewoofclub.ch/wp-content/uploads/2020/01/puppy-frenchies-funnyfrenchie_cute-1-1-738x675.jpg"
+              width="200"
+              alt="francuzsky buldocek"
+            />
+            <figcaption>Fig.1 - French bulldog</figcaption>
+          </figure>
+          <section>
+            sekcia druha
+            <form action="http://server/spracovanie" method="POST">
+              <input value="" name="meno" />
+              <br />
+              <input value="" name="priezvisko" />
+              <br />
+              <label for="suhlas">Suhlasim</label>
+              <input type="checkbox" />
+              <br />
+
+              <select>
+                <option value="1">Jedna</option>
+                <option value="2">Dva</option>
+                <option value="3">Tri</option>
+              </select>
+              <input type="button" value="Odosli inak" />
+              <input type="submit" value="Odosli inak" />
+              <input type="reset" value="Reset" />
+            </form>
+            <hr />
+            <table>
+              <caption>
+                Vysledky
+              </caption>
+              <thead>
+                <tr>
+                  <td>Meno</td>
+                  <td>Cas</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Janko</td>
+                  <td>10 min</td>
+                </tr>
+
+                <tr>
+                  <td>Anka</td>
+                  <td>9 min</td>
+                </tr>
+
+                <tr>
+                  <td>Michal</td>
+                  <td>15 min</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+        </div>
         <section>
           <p>
             <em>Lorem</em> <i>ipsum</i> dolor sit, amet consectetur adipisicing
