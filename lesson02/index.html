@@ -5,10 +5,18 @@
     <title>Prva stranka</title>
     <link rel="stylesheet" href="css/style.css" />
     <script src="js/library.js"></script>
+    <style>
+      td {
+        border: 1px solid black;
+      }
+      li {
+        color: green;
+      }
+    </style>
   </head>
   <body>
     <header>
-      <h1>Ahoj</h1>
+      <!--h1>Ahoj</h1-->
       <nav>
         <ul>
           <li>menu 1</li>
@@ -20,8 +28,69 @@
     <main>
       <h3>Main</h3>
       <article>
-        <section>sekcia 1</section>
-        <section>sekcia 2</section>
+        <div style="background-color: cyan; border: 1px solid red">
+          <section>sekcia 1</section>
+          <img
+            src="https://blog-www.pods.com/wp-content/uploads/2019/04/MG_1_1_New_York_City-1.jpg"
+            alt="New York"
+            width="450"
+          />
+          <figure>
+            <img
+              src="https://nypost.com/wp-content/uploads/sites/2/2021/07/nyc-skyline.jpg?quality=80&strip=all&w=618&h=410&crop=1"
+              alt="New York 2"
+            />
+            <figcaption>Fig 2. - New York at night</figcaption>
+          </figure>
+          <section>
+            sekcia 2
+            <form action="http://server/spracovane" method="POST">
+              <input value="" name="meno" />
+              <br />
+              <input value="" name="priezvisko" />
+              <br />
+              <label for="suhlas"> Suhlasim </label>
+              <input type="checkbox" name="suhlas" />
+              <br />
+              <select name="" id="">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              </select>
+              <button type="submit">Odosli</button>
+              <input type="submit" value="Odosli inak" />
+              <input type="reset" value="Reset" />
+              <hr />
+            </form>
+
+            <table>
+              <caption>
+                Vysledky
+              </caption>
+              <thead>
+                <tr>
+                  <td>Meno</td>
+                  <td>Cas</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Janko</td>
+                  <td>10 minut</td>
+                </tr>
+                <tr>
+                  <td>Evka</td>
+                  <td>15 minut</td>
+                </tr>
+                <tr>
+                  <td>Riso</td>
+                  <td>17 minut</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+        </div>
+
         <section>
           <p>
             &lt; &gt; &amp;
