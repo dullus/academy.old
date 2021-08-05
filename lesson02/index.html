@@ -7,17 +7,12 @@
     <link rel="icon" href="img/icon.png" />
     <script src="js/library.js"></script>
     <style>
-      li {
-        color: green;
-      }
-      #prve-menu {
-        color: red;
-      }
-      .modre {
-        color: blue;
+      td {
+        border-color: blue;
       }
     </style>
   </head>
+  <!-- toto je komentar -->
   <body>
     <header>
       <h1>Ahoj</h1>
@@ -32,8 +27,72 @@
     <main>
       <h3>Main</h3>
       <article>
-        <section>sekcia prva</section>
-        <section>sekcia druha</section>
+        <div style="background-color: yellow; border: 1px solid red">
+          <section>
+            <span>Span</span> sekcia prva
+            <img
+              src="https://www.eekwi.org/sites/default/files/2019-10/butterflydrinking.jpg"
+              width="200"
+              alt="motyl"
+            />
+            <figure>
+              <img
+                src="https://www.eekwi.org/sites/default/files/2019-10/butterflydrinking.jpg"
+                width="200"
+                alt="motyl"
+              />
+              <figcaption>Fig.1 - Trulli, Puglia, Italy.</figcaption>
+            </figure>
+          </section>
+          <section>
+            sekcia druha
+            <form action="http://server/pracovanie" method="POST">
+              <input value="" name="meno" />
+              <br />
+              <input value="" name="priezvisko" />
+              <br />
+              <label for="suhlas">Suhlasim</label>
+              <input type="checkbox" name="suhlas" />
+              <br />
+              <select>
+                <option value="1">Jedna</option>
+                <option value="2">Dva</option>
+                <option value="3">Tri</option>
+              </select>
+              <br />
+              <button type="submit">Odosli</button>
+              <input type="submit" value="Odosli inak" />
+              <input type="reset" value="Reset" />
+            </form>
+            <hr />
+            <table>
+              <caption>
+                Vysledky
+              </caption>
+              <thead>
+                <tr>
+                  <td style="border-color: crimson">Meno</td>
+                  <td>Cas</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Janko</td>
+                  <td>10min</td>
+                </tr>
+                <tr>
+                  <td>Evka</td>
+                  <td>9min</td>
+                </tr>
+                <tr>
+                  <td>Miso</td>
+                  <td>8min</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+        </div>
+
         <section>
           <p>
             &lt; &gt; &amp; Œ 🤪
