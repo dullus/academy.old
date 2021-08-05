@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Prva stránka</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="img/icon.png" />
+    <script src="js/library.js"></script>
+    <style>
+      td {
+        border-color: blue;
+      }
+    </style>
+  </head>
+  <!-- toto je komentar -->
+  <body>
+    <header>
+      <h1>Ahoj</h1>
+      <nav>
+        <ul>
+          <li id="prve-menu">menu 1</li>
+          <li>menu 2</li>
+          <li class="modre pekny maly">menu 3</li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h3>Main</h3>
+      <article>
+        <div style="background-color: yellow; border: 1px solid red">
+          <section>
+            <span>Span</span> sekcia prva
+            <img
+              src="https://www.eekwi.org/sites/default/files/2019-10/butterflydrinking.jpg"
+              width="200"
+              alt="motyl"
+            />
+            <figure>
+              <img
+                src="https://www.eekwi.org/sites/default/files/2019-10/butterflydrinking.jpg"
+                width="200"
+                alt="motyl"
+              />
+              <figcaption>Fig.1 - Trulli, Puglia, Italy.</figcaption>
+            </figure>
+          </section>
+          <section>
+            sekcia druha
+            <form action="http://server/pracovanie" method="POST">
+              <input value="" name="meno" />
+              <br />
+              <input value="" name="priezvisko" />
+              <br />
+              <label for="suhlas">Suhlasim</label>
+              <input type="checkbox" name="suhlas" />
+              <br />
+              <select>
+                <option value="1">Jedna</option>
+                <option value="2">Dva</option>
+                <option value="3">Tri</option>
+              </select>
+              <br />
+              <button type="submit">Odosli</button>
+              <input type="submit" value="Odosli inak" />
+              <input type="reset" value="Reset" />
+            </form>
+            <hr />
+            <table>
+              <caption>
+                Vysledky
+              </caption>
+              <thead>
+                <tr>
+                  <td style="border-color: crimson">Meno</td>
+                  <td>Cas</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Janko</td>
+                  <td>10min</td>
+                </tr>
+                <tr>
+                  <td>Evka</td>
+                  <td>9min</td>
+                </tr>
+                <tr>
+                  <td>Miso</td>
+                  <td>8min</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+        </div>
+
+        <section>
+          <p>
+            &lt; &gt; &amp; Œ 🤪
+            <strong>Strong</strong> <b>bold</b> Lorem ipsum, dolor sit amet
+            consectetur adipisicing elit. Amet officiis soluta dolore dolores
+            quis quia, aspernatur distinctio velit earum alias ipsa
+            necessitatibus minus ipsam tenetur est facere consequuntur ab
+            aliquid.
+          </p>
+          <p>
+            <em>Emphasis</em> <i>Italic</i> Lorem ipsum, dolor sit amet
+            consectetur adipisicing elit. Amet officiis soluta dolore dolores
+            quis quia, aspernatur distinctio velit earum alias ipsa
+            necessitatibus <sup>minus</sup> ipsam <sub>tenetur</sub> est facere
+            consequuntur ab aliquid.
+          </p>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet
+            officiis soluta dolore dolores quis quia, aspernatur distinctio
+            velit earum alias ipsa necessitatibus minus ipsam tenetur est facere
+            consequuntur ab aliquid.
+          </p>
+        </section>
+      </article>
+    </main>
+    <footer>
+      <a href="http://google.com">Google</a>
+    </footer>
+  </body>
+</html>
