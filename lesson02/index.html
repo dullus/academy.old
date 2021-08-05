@@ -1,128 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <title>Prva stránka</title>
     <link rel="stylesheet" href="css/style.css" />
-    <script src="js/lib.js"></script>
-    <title>Document</title>
+    <link rel="icon" href="img/icon.png" />
+    <script src="js/library.js"></script>
+    <style>
+      td {
+        border-color: blue;
+      }
+    </style>
   </head>
+
   <body>
     <header>
       <h1>Ahoj</h1>
       <nav>
         <ul>
-          <li id="prve">Domov</li>
-          <li class="blue">Info</li>
-          <li data-lubovolny="pekny">Facebook</li>
+          <li id="prve-menu">menu 1</li>
+          <li>menu 2</li>
+          <li class="modre pekny maly">menu 3</li>
         </ul>
       </nav>
     </header>
     <main>
-      <h2>Main</h2>
+      <h3>Main</h3>
       <article>
-        <div>
+        <div style="background-color: yellow; border: 1px solid red">
           <section>
-            <p>
+            <span>Span</span> sekcia prva
+            <img
+              src="https://www.eekwi.org/sites/default/files/2019-10/butterflydrinking.jpg"
+              width="200"
+              alt="motyl"
+            />
+            <figure>
               <img
-                src="https://www.egalanteria.sk/fotky23728/fotos/_vyr_4773390562_10.jpg"
-                width="300px"
-                height="300px"
+                src="https://www.eekwi.org/sites/default/files/2019-10/butterflydrinking.jpg"
+                width="200"
                 alt="motyl"
               />
-
-              <figure>
-                <img
-                  src="https://www.egalanteria.sk/fotky23728/fotos/_vyr_4773390562_10.jpg"
-                  width="300px"
-                  height="300px"
-                  alt="motyl"
-                />
-                <figcaption>Obr1 motyl</figcaption>
-              </figure>
-              <strong>Strong</strong> <b>bold</b> Ipsum is simply dummy text of
-              the printing and typesetting industry. Lorem Ipsum has been the
-              industry's standard dummy text ever since the 1500s, when an
-              unknown <span>printer</span> took a galley of type and scrambled
-              it to make a type specimen book. It has survived not only five
-              centuries, but also the leap into electronic typesetting,
-              remaining essentially unchanged. It was popularised in the 1960s
-              with the release of Letraset sheets containing Lorem Ipsum
-              passages, and more recently with desktop publishing software like
-              Aldus PageMaker including versions of Lorem Ipsum.
-            </p>
+              <figcaption>Fig.1 - Trulli, Puglia, Italy.</figcaption>
+            </figure>
           </section>
           <section>
-            <p>
-              <em>Emphasis</em> <i>italic</i> <sup>sup</sup> <sub>sub</sub>
-              &lt; &gt; &amp; Lorem Ipsum is simply dummy text of the printing
-              and typesetting industry. Lorem Ipsum has been the industry's
-              standard dummy text ever since the 1500s, when an unknown printer
-              took a galley of type and scrambled it to make a type specimen
-              book. It has survived not only five centuries, but also the leap
-              into electronic typesetting, remaining essentially unchanged. It
-              was popularised in the 1960s with the release of Letraset sheets
-              containing Lorem Ipsum passages, and more recently with desktop
-              publishing software like Aldus PageMaker including versions of
-              Lorem Ipsum.
-            </p>
+            sekcia druha
+            <form action="http://server/pracovanie" method="POST">
+              <input value="" name="meno" />
+              <br />
+              <input value="" name="priezvisko" />
+              <br />
+              <label for="suhlas">Suhlasim</label>
+              <input type="checkbox" name="suhlas" />
+              <br />
+              <select>
+                <option value="1">Jedna</option>
+                <option value="2">Dva</option>
+                <option value="3">Tri</option>
+              </select>
+              <br />
+              <button type="submit">Odosli</button>
+              <input type="submit" value="Odosli inak" />
+              <input type="reset" value="Reset" />
+            </form>
+            <hr />
+            <table>
+              <caption>
+                Vysledky
+              </caption>
+              <thead>
+                <tr>
+                  <td style="border-color: crimson">Meno</td>
+                  <td>Cas</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Janko</td>
+                  <td>10min</td>
+                </tr>
+                <tr>
+                  <td>Evka</td>
+                  <td>9min</td>
+                </tr>
+                <tr>
+                  <td>Miso</td>
+                  <td>8min</td>
+                </tr>
+              </tbody>
+            </table>
           </section>
         </div>
+
         <section>
           <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. It was popularised in the 1960s
-            with the release of Letraset sheets containing Lorem Ipsum passages,
-            and more recently with desktop publishing software like Aldus
-            PageMaker including versions of Lorem Ipsum.
+            &lt; &gt; &amp; Œ 🤪
+            <strong>Strong</strong> <b>bold</b> Lorem ipsum, dolor sit amet
+            consectetur adipisicing elit. Amet officiis soluta dolore dolores
+            quis quia, aspernatur distinctio velit earum alias ipsa
+            necessitatibus minus ipsam tenetur est facere consequuntur ab
+            aliquid.
+          </p>
+          <p>
+            <em>Emphasis</em> <i>Italic</i> Lorem ipsum, dolor sit amet
+            consectetur adipisicing elit. Amet officiis soluta dolore dolores
+            quis quia, aspernatur distinctio velit earum alias ipsa
+            necessitatibus <sup>minus</sup> ipsam <sub>tenetur</sub> est facere
+            consequuntur ab aliquid.
+          </p>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet
+            officiis soluta dolore dolores quis quia, aspernatur distinctio
+            velit earum alias ipsa necessitatibus minus ipsam tenetur est facere
+            consequuntur ab aliquid.
           </p>
         </section>
-
-        <form action="http://server/spracovanie" method="POST">
-          <input type="" name="meno" value="" />
-          <br />
-          <label for="suhlas">Suhlasim</label>
-          <input type="checkbox" name="suhlas" />
-          <br />
-          <select>
-            <option value="1">jedna</option>
-            <option value="2">dva</option>
-            <option value="3">tri</option>
-          </select>
-          <br />
-          <input type="" name="priezvisko" value="" />
-          <button type="submit">Odosli</button>
-          <input type="submit" value="Odosli inak" />
-          <input type="reset" value="Reset" />
-        </form>
-        <hr />
-        <table>
-          <caption>
-            Vysledky
-          </caption>
-          <thead>
-            <tr>
-              <td>Meno</td>
-              <td>Cas</td>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Jano</td>
-              <td>2:20</td>
-            </tr>
-
-            <tr>
-              <td>Fero</td>
-              <td>1:45</td>
-            </tr>
-          </tbody>
-        </table>
       </article>
     </main>
     <footer>
