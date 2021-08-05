@@ -4,3 +4,48 @@ td {
 li {
   color: green;
 }
+.header {
+  padding: 40px;
+  text-align: left;
+  background: #a3c2c2;
+  color: black;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  opacity: 0.9;
+}
+
+.main {
+  font-family: Arial, Helvetica, sans-serif;
+  margin-left: 50px;
+}
+
+#searchbar {
+  float: right;
+}
+
+.footer {
+  font-size: 23px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #a3c2c2;
+  padding: 40px;
+  opacity: 0.9;
+}
+
+.leftside {
+  width: 350;
+}
+
+.rightside {
+  float: right;
+  width: 350;
+}
+
+body {
+  background-color: #f2e6d9;
+}
+
+.table {
+  border-spacing: 15px;
+  border: 1px solid black;
+  border-collapse: collapse;
+}
