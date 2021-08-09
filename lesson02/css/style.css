@@ -1,0 +1,17 @@
+.blue {
+  color: blue;
+}
+#prve {
+  color: cyan;
+}
+
+div {
+  border: solid 1px;
+}
+
+td {
+  border: 0.5px solid rgb(0, 0, 0);
+}
+table {
+  border: 1px solid black;
+}
