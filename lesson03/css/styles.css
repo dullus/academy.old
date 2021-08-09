@@ -1,0 +1,125 @@
+:root {
+  --color: 0 168 45;
+  --fade-color: 20 204 69;
+}
+
+body {
+  margin: auto;
+  width: 60%;
+  font-family: "Soleil_Medium", Helvetica, Arial, sans-serif;
+}
+
+header {
+  color: black;
+  font-weight: bold;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+
+#articles {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.box {
+  box-sizing: border-box;
+  width: 24%;
+  padding: 20px;
+  box-shadow: 2px 5px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 7px;
+}
+
+.box p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+#main {
+  padding: 50px 20px;
+  align-self: center;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 1.5rem;
+  max-width: 80%;
+}
+
+#main p {
+  margin-top: 50px;
+}
+
+#main a:hover {
+  background-color: rgb(var(--fade-color));
+}
+
+#main a {
+  font-size: 18px;
+  font-weight: 500;
+  padding: 15px 85px;
+  border-radius: 4px;
+  text-decoration: none;
+  color: white;
+  background-color: rgb(var(--color));
+}
+
+h1 {
+  font-size: 3.25rem;
+}
+
+header nav p a {
+  text-decoration: none;
+  color: black;
+}
+
+.header-right,
+.header-mid {
+  flex: 1;
+  display: flex;
+}
+
+.header-mid p {
+  margin-left: 35px;
+  border: 4px solid white;
+}
+
+.header-right {
+  justify-content: flex-end;
+}
+
+.header-right p {
+  margin-left: 20px;
+}
+
+.menu-item {
+  font-weight: normal;
+}
+
+.menu-item:hover {
+  color: rgb(var(--fade-color));
+}
+
+.header-mid p a {
+  padding: 20px 0px 30px 0px;
+}
+
+.header-mid p a:hover {
+  border-bottom: 4px solid rgb(var(--color));
+  color: rgb(var(--fade-color));
+}
+
+#download {
+  color: rgb(var(--color));
+  border: 2px solid rgb(var(--color));
+  padding: 10px 25px;
+  border-radius: 3px;
+}
+
+#download:hover {
+  color: rgb(var(--fade-color));
+  border: 2px solid rgb(var(--fade-color));
+}
+
+.header-mid p a:hover .bibi-caret-down-fill {
+  transform: rotate(180deg);
+}
