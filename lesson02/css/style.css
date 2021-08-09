@@ -32,12 +32,12 @@ li {
 }
 
 .leftside {
-  width: 350;
+  width: 350px;
 }
 
 .rightside {
   float: right;
-  width: 350;
+  width: 350px;
 }
 
 body {
