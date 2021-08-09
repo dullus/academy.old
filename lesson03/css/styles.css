@@ -6,32 +6,64 @@ body {
 
   color: rgb(41, 39, 39);
   width: 90%;
-  margin: 30px auto;
+  margin: 0px auto;
 }
 
 .menu {
   display: flex;
-  border: 3px solid darkblue;
+  /* border: 3px solid darkblue; */
   box-sizing: border-box;
   border-radius: 5px;
-  padding: 10px 8px;
+  /* padding: 5px 0px; */
+  margin: 0px 0px;
+}
+ul > div {
+  display: flex;
+  flex-direction: row;
+  flex-direction: row;
+  margin: 0px 0px;
 }
 nav > ul {
   position: relative;
   display: flex;
-  flex-direction: row;
+  margin: 10px 0px;
+  justify-content: space-between;
+  padding-inline-start: 0px;
 }
+
 .menu a {
   display: flex;
   justify-content: center;
   align-items: center;
-
+  box-sizing: border-box;
+  margin: 0px 10px;
   width: 100%;
+  font-size: 0.8em;
   text-decoration: none;
-  text-transform: uppercase;
-  padding: 10px 10px;
   color: rgb(41, 39, 39);
 }
+.menu a:hover {
+  color: #00a82d;
+  box-sizing: border-box;
+  padding-top: 2px;
+  border-bottom: 2px solid #00a82d;
+}
+
+ul > div:first-child {
+  text-transform: uppercase;
+}
+#download > a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #00a82d;
+  border: 2px solid #00a82d;
+  height: 2em;
+  margin: 1em 1em;
+  padding: 0.5em 1.6em;
+  border-radius: 6px;
+}
+
 /* .menu > a > strong {
   display: flex;
   justify-content: center;
