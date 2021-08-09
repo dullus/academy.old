@@ -40,9 +40,39 @@
  - https://jigsaw.w3.org/css-validator/
 
 ### Tools
+
  - https://cssgradient.io
  - https://cssgenerator.org/box-shadow-css-generator.html
+
+### CSS Variables
+
+ - https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties
+ - https://www.w3schools.com/css/css3_variables.asp
+
+### Style normalizers
+
+ * Normalize.css - https://github.com/necolas/normalize.css
+ * Reset.css - https://meyerweb.com/eric/tools/css/reset/
+ * Reboot.css - https://getbootstrap.com/docs/5.0/content/reboot/
+ * HTML5-reset.css - http://html5doctor.com/html-5-reset-stylesheet/
+
+ ### CSS Grid
+ - https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout
+ - https://learncssgrid.com/
+ - https://grid.malven.co/
 
  ## Fonts
 
  - https://fonts.google.com
+
+ ## Palettes and color naming
+
+ - http://www.color-hex.com/color-palette/185
+ - https://www.htmlcsscolor.com/ 
+ - http://chir.ag/projects/name-that-color/
+
+ ## Bootstrap
+
+ - https://getbootstrap.com
+ - https://getbootstrap.com/docs/5.1/getting-started/introduction/
+ - https://getbootstrap.com/docs/5.1/components/buttons/
