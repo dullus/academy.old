@@ -1,0 +1,113 @@
+body {
+  position: relative;
+  /* font-size: 18px; */
+  /* font-family: Helvetica, Arial, sans-serif; */
+  font-family: "Soleil", Helvetica, Arial, sans-serif;
+
+  color: rgb(41, 39, 39);
+  width: 90%;
+  margin: 30px auto;
+}
+
+.menu {
+  display: flex;
+  border: 3px solid darkblue;
+  box-sizing: border-box;
+  border-radius: 5px;
+  padding: 10px 8px;
+}
+nav > ul {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+.menu a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 10px 10px;
+  color: rgb(41, 39, 39);
+}
+/* .menu > a > strong {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+/* 
+@media screen and (max-width: 720px) {
+  body {
+    font-size: 18px;
+    font-family: Helvetica, Arial, sans-serif;
+  }
+  .menu {
+    display: inline;
+    border: 3px solid red;
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 10px 8px;
+    background: white;
+  }
+  .menu a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+  }
+} */
+
+#reasons {
+  /* border: 1px solid blue; */
+  /* background: blue; */
+  border-radius: 10px;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.box {
+  box-sizing: border-box;
+  width: 23%;
+  padding: 10px;
+  box-shadow: 2px 5px 15px rgba(0, 0, 0, 0.15);
+  border-radius: 7px;
+  justify-content: space-around;
+}
+
+.box p {
+  font-size: 1.1em;
+  line-height: 1.5;
+}
+section > p {
+  font-family: "Soleil", Helvetica, Arial, sans-serif;
+  font-size: 1.4em;
+  text-align: center;
+  width: 80%;
+  margin: 10px auto;
+}
+
+section > h1 {
+  width: 70%;
+  margin: 10px auto;
+  text-align: center;
+  font-size: 3.5em;
+  font-family: "Soleil_Medium", Helvetica, Arial, sans-serif;
+}
+
+section > a {
+  font-size: 1em;
+  position: relative;
+  display: block;
+  width: 20%;
+  margin: 1em auto 4em auto;
+  text-align: center;
+  background: #00a82d;
+  color: white;
+  letter-spacing: 1px;
+  text-decoration: none;
+  border-radius: 2px;
+  padding: 1em 1.9em;
+  font-family: "Soleil", Helvetica, Arial, sans-serif;
+}

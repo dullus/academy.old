@@ -10,7 +10,7 @@ div {
 }
 
 td {
-  border: 0.5px solid black;
+  border: 0.5px solid rgb(0, 0, 0);
 }
 table {
   border: 1px solid black;
