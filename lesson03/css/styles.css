@@ -76,8 +76,10 @@ body {
 .rightMenu a:hover {
   color: #00a82d;
 }
-.leftMenu a:hover {
+.leftMenu a:hover,
+a:focus {
   color: #00a82d;
+  border-bottom: 4px #00a82d;
 }
 #overview {
   width: 50%;
@@ -96,7 +98,7 @@ body {
 header {
   display: flex;
   justify-content: space-between;
-  padding: 18px;
+  padding: 15px;
   align-items: center;
   height: 80px;
   position: relative;
