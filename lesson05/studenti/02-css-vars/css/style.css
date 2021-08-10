@@ -1,15 +1,19 @@
 /* http://www.color-hex.com/color-palette/185 */
 /*
-#3b5998	(59,89,152)
-#8b9dc3	(139,157,195)
-#dfe3ee	(223,227,238)
-#f7f7f7	(247,247,247)
-#ffffff (255,255,255)
+var(--color-mariner)	(59,89,152)
+var(--color-blue-rock)	(139,157,195)
+var(--color-blue--hawkes)	(223,227,238)
+var(--color-gray--light)	(247,247,247)
+var(--color-white) (255,255,255)
 */
 
 :root {
   --color-white: #ffffff;
   --color-gray--light: #f7f7f7;
+  --color-blue--rock: #8b9dc3;
+  --color-mariner: #3b5998;
+  --color-blue--hawkes: #dfe3ee;
+  --color-gray: #777;
 }
 
 * {
@@ -24,14 +28,14 @@ body {
   font-family: Arial, sans-serif;
   font-size: 16px;
   background-color: var(--color-white);
-  color: #777;
+  color: var(--color-gray);
   margin: 0;
   padding: 0;
 }
 
 nav {
   padding: 5px;
-  background-color: #8b9dc3;
+  background-color: var(--color-blue-rock);
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -42,11 +46,11 @@ nav {
   padding: 0;
   margin: 0;
   display: inline-block;
-  background-color: #8b9dc3;
+  background-color: var(--color-blue-rock);
 }
 
 .menu li {
-  background-color: #3b5998;
+  background-color: var(--color-mariner);
   margin-right: 10px;
   display: inline-block;
   padding: 4px;
@@ -54,27 +58,25 @@ nav {
 }
 
 .menu li a {
-  color: #f7f7f7;
+  color: var(--color-gray--light);
 }
 
 header h1 {
-  color: #f7f7f7;
-  background-color: #dfe3ee;
+  color: var(--color-gray--light);
+  background-color: var(--color-blue--hawkes);
   padding: 10px;
   margin-top: 0;
   text-align: center;
-  text-shadow:
-    0px 1px 7px rgba(0,0,0,0.4),
-    8px 0px 10px rgba(0,0,0,0.1),
-    -8px 0px 10px rgba(0,0,0,0.1);
+  text-shadow: 0px 1px 7px rgba(0, 0, 0, 0.4), 8px 0px 10px rgba(0, 0, 0, 0.1),
+    -8px 0px 10px rgba(0, 0, 0, 0.1);
   font-weight: bold;
   font-size: 3rem;
 }
 
 footer {
   padding: 5px;
-  background-color: #3b5998;
-  color: #f7f7f7;
+  background-color: var(--color-mariner);
+  color: var(--color-gray--light);
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -86,11 +88,11 @@ footer span.divider {
 
 footer span.item {
   padding: 4px;
-  color: #dfe3ee;
+  color: var(--color-blue--hawkes);
 }
 
 footer span.item a {
-  color: #dfe3ee;
+  color: var(--color-blue--hawkes);
 }
 
 .wrapper {
@@ -108,10 +110,10 @@ article {
 }
 
 .panel-box {
-  background-color: #f7f7f7;
-  border: 1px solid #8b9dc3;
+  background-color: var(--color-gray--light);
+  border: 1px solid var(--color-blue-rock);
   border-radius: 3px;
-  color: #ffffff;
+  color: var(--color-white);
   padding: 0;
   margin: 0rem 0rem 1.625rem;
   position: relative;

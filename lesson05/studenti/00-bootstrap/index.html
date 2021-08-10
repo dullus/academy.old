@@ -4,12 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <!--link
+    <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
       crossorigin="anonymous"
-    /-->
+    />
   </head>
   <body style="max-width: 600px; margin: 10px">
     <h1>Heading 1</h1>
@@ -39,12 +39,36 @@
       </fieldset>
       <fieldset>
         <legend>Do you agree?</legend>
-        <input name="aa" type="radio" value="Yes" id="aa1" />
-        <label for="aa1">Yes</label><br />
-        <input name="aa" type="radio" value="No" id="aa2" checked />
-        <label for="aa2">No</label><br />
-        <input name="aa" type="radio" value="Maybe" id="aa3" />
-        <label for="aa3">Maybe</label>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="flexRadioDefault"
+            id="flexRadioDefault1"
+          />
+          <label class="form-check-label" for="flexRadioDefault1"> Yes </label>
+        </div>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="flexRadioDefault"
+            id="flexRadioDefault2"
+            checked
+          />
+          <label class="form-check-label" for="flexRadioDefault2"> No </label>
+        </div>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="flexRadioDefault"
+            id="flexRadioDefault1"
+          />
+          <label class="form-check-label" for="flexRadioDefault1">
+            Maybe
+          </label>
+        </div>
       </fieldset>
       <fieldset>
         <legend>Opinion</legend>
@@ -56,7 +80,7 @@
         </select>
       </fieldset>
       <br />
-      <button type="submit">Send</button>
+      <button type="submit" class="btn btn-primary">Send</button>
     </form>
   </body>
 </html>
