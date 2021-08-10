@@ -9,7 +9,10 @@
 
 :root {
   --color-white: #ffffff;
-  --color-gray--light: #f7f7f7;
+  --color-RockBlue: #8b9dc3;
+  --color-Mariner: #3b5998;
+  --color-HawkesBlue: #dfe3ee;
+  --color-WhiteSmoke: #f7f7f7;
 }
 
 * {
@@ -31,7 +34,7 @@ body {
 
 nav {
   padding: 5px;
-  background-color: #8b9dc3;
+  background-color: var(--color-RockBlue);
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -42,11 +45,11 @@ nav {
   padding: 0;
   margin: 0;
   display: inline-block;
-  background-color: #8b9dc3;
+  background-color: var(--color-RockBlue);
 }
 
 .menu li {
-  background-color: #3b5998;
+  background-color: var(--color-Mariner);
   margin-right: 10px;
   display: inline-block;
   padding: 4px;
@@ -54,27 +57,25 @@ nav {
 }
 
 .menu li a {
-  color: #f7f7f7;
+  color: var(--color-WhiteSmoke);
 }
 
 header h1 {
-  color: #f7f7f7;
-  background-color: #dfe3ee;
+  color: var(--color-WhiteSmoke);
+  background-color: var(--color-HawkesBlue);
   padding: 10px;
   margin-top: 0;
   text-align: center;
-  text-shadow:
-    0px 1px 7px rgba(0,0,0,0.4),
-    8px 0px 10px rgba(0,0,0,0.1),
-    -8px 0px 10px rgba(0,0,0,0.1);
+  text-shadow: 0px 1px 7px rgba(0, 0, 0, 0.4), 8px 0px 10px rgba(0, 0, 0, 0.1),
+    -8px 0px 10px rgba(0, 0, 0, 0.1);
   font-weight: bold;
   font-size: 3rem;
 }
 
 footer {
   padding: 5px;
-  background-color: #3b5998;
-  color: #f7f7f7;
+  background-color: var(--color-Mariner);
+  color: var(--color-WhiteSmoke);
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -86,11 +87,11 @@ footer span.divider {
 
 footer span.item {
   padding: 4px;
-  color: #dfe3ee;
+  color: var(--color-HawkesBlue);
 }
 
 footer span.item a {
-  color: #dfe3ee;
+  color: var(--color-HawkesBlue);
 }
 
 .wrapper {
@@ -108,10 +109,10 @@ article {
 }
 
 .panel-box {
-  background-color: #f7f7f7;
-  border: 1px solid #8b9dc3;
+  background-color: var(--color-WhiteSmoke);
+  border: 1px solid var(--color-RockBlue);
   border-radius: 3px;
-  color: #ffffff;
+  color: var(--color-white);
   padding: 0;
   margin: 0rem 0rem 1.625rem;
   position: relative;
