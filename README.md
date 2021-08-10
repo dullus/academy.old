@@ -44,6 +44,11 @@
  - https://cssgradient.io
  - https://cssgenerator.org/box-shadow-css-generator.html
 
+### BEM, aBEM...
+ - http://getbem.com/introduction/
+ - https://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/
+ - https://css-tricks.com/abem-useful-adaptation-bem/
+
 ### CSS Variables
 
  - https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties
