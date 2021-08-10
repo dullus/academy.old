@@ -25,10 +25,10 @@ body {
   color: rgb(41, 39, 39);
 }
 .menu a:hover {
-  color: #00a82d;
+  color: #03aa30;
   box-sizing: border-box;
   padding-top: 2px;
-  border-bottom: 2px solid #00a82d;
+  border-bottom: 2px solid #03aa30;
 }
 
 #reasons {
@@ -79,12 +79,12 @@ section > a {
   margin: 1em auto 4em auto;
 }
 
-#download > a {
+.start {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #00a82d;
-  border: 2px solid #00a82d;
+  color: #04a830;
+  border: 2px solid #03a52e;
   height: 2em;
   margin: 1em 1em;
   padding: 0.5em 1.6em;
