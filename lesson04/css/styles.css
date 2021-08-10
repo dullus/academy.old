@@ -1,0 +1,142 @@
+:root {
+  --color-amethyst: #aa63d9;
+  --color-amethyst2: #a356cf;
+  --color-black--russian: #0a0c1b;
+  --color-jaguar: #1c1938;
+  --color-gray--lavender: #babbcc;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background-color: var(--color-black--russian);
+  font-family: sans-serif;
+  height: 100%;
+  position: relative;
+}
+
+.body-wrapper {
+  background-color: var(--color-jaguar);
+  display: flex;
+  width: 75%;
+  height: 60%;
+  border-radius: 10px;
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+section {
+  color: white;
+  flex: 1;
+}
+
+.background-image {
+  height: 100%;
+  background: linear-gradient(rgba(100, 0, 150, 0.5), rgba(100, 0, 150, 0.5)),
+    url("/lesson04/homework/task-01-stats-card/images/image-header-desktop.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.articles {
+  margin-top: 30px;
+  display: inline-block;
+  margin-right: 10%;
+  flex-wrap: wrap;
+}
+
+.articles h2 {
+  font-size: 30px;
+}
+
+.articles p {
+  font-size: 1.2rem;
+  color: var(--color-gray--lavender);
+}
+
+.main-content {
+  flex-direction: row;
+  padding: 30px 0px 10px 100px;
+  width: 50%;
+}
+
+.main-content h1 {
+  max-width: 35rem;
+}
+.main-content p {
+  max-width: 30rem;
+}
+
+h1 {
+  font-size: 45px;
+  line-height: 1.35;
+}
+
+strong {
+  color: var(--color-amethyst);
+}
+
+#main-text {
+  color: var(--color-gray--lavender);
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+.section-article {
+  margin: 70px 0px 0px 0px;
+  display: flex;
+  line-height: 0.5;
+}
+
+.main-content,
+.background-image {
+  width: 50%;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 800px) {
+  .articles {
+    display: flex;
+  }
+
+  .body-wrapper {
+    width: 90%;
+    height: 90%;
+    flex-direction: column-reverse;
+  }
+
+  h1 {
+    font-size: 30px;
+    line-height: 1.35;
+  }
+
+  .main-content {
+    padding: 20px 20px;
+    text-align: center;
+  }
+
+  #main-text {
+    font-size: 1.2rem;
+    line-height: 1.5;
+  }
+
+  .main-content,
+  .background-image {
+    width: auto;
+    flex-direction: column;
+  }
+
+  .section-article {
+    flex-direction: column;
+  }
+
+  .articles {
+    flex-direction: column;
+  }
+}
