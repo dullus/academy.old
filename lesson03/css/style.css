@@ -1,0 +1,62 @@
+body {
+  color: rgb(37, 37, 37);
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.menu {
+  display: inline;
+  border: 3px solid rgb(1, 30, 46);
+  box-sizing: border-box;
+  border-radius: 5px;
+  padding: 10px 8px;
+  background: rgb(1, 39, 61);
+  transition: background-color 2s ease-out;
+}
+
+.menu a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+#reasons {
+  width: 60%;
+  margin: 30px auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.box {
+  box-sizing: border-box;
+  width: 23%;
+  padding: 10px;
+  box-shadow: 2px 5px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
+
+.box p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+/* 
+.menu a:visited {
+  color: red;
+}
+
+.menu a:hover {
+  color: royalblue;
+}
+
+.menu a:active {
+  color: seagreen;
+}
+
+.menu a:focus {
+  color: seashell;
+}
+
+@media screen and (min-width: 320px) {
+  .menu {
+    background-color: red;
+  }
+} */
