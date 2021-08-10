@@ -1,27 +1,38 @@
 body {
-  color: rgb(37, 37, 37);
   font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 28px;
+  color: #000;
+  padding-top: 10px;
 }
 
 .menu {
-  display: inline;
-  border: 3px solid rgb(1, 30, 46);
+  display: flex;
   box-sizing: border-box;
   border-radius: 5px;
-  padding: 10px 8px;
-  background: rgb(1, 39, 61);
-  transition: background-color 2s ease-out;
+  margin: 0px 0px;
 }
 
 .menu a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  margin: 0px 10px;
+  width: 100%;
+  font-size: 0.8em;
   text-decoration: none;
-  text-transform: uppercase;
-  color: #fff;
+  color: rgb(41, 39, 39);
+}
+.menu a:hover {
+  color: #00a82d;
+  box-sizing: border-box;
+  padding-top: 2px;
+  border-bottom: 2px solid #00a82d;
 }
 
 #reasons {
-  width: 60%;
-  margin: 30px auto;
+  border-radius: 10px;
   display: flex;
   justify-content: space-between;
 }
@@ -30,13 +41,64 @@ body {
   box-sizing: border-box;
   width: 23%;
   padding: 10px;
-  box-shadow: 2px 5px 15px rgba(0, 0, 0, 0.2);
-  border-radius: 8px;
+  box-shadow: 2px 5px 15px rgba(0, 0, 0, 0.15);
+  border-radius: 7px;
+  justify-content: space-around;
 }
 
 .box p {
-  font-size: 1.2rem;
+  font-size: 1.1em;
   line-height: 1.5;
+}
+.par {
+  text-align: center;
+  width: 80%;
+  margin: 10px auto;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1.4em;
+}
+
+.ever {
+  font-size: 3.5em;
+  font-family: Helvetica, Arial, sans-serif;
+  width: 70%;
+  margin: 10px auto;
+  text-align: center;
+}
+
+section > a {
+  text-align: center;
+  background: #02b130;
+  color: white;
+  letter-spacing: 1px;
+  text-decoration: none;
+  border-radius: 2px;
+  padding: 1em 1.9em;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1em;
+  position: relative;
+  display: block;
+  width: 20%;
+  margin: 1em auto 4em auto;
+}
+
+#download > a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #00a82d;
+  border: 2px solid #00a82d;
+  height: 2em;
+  margin: 1em 1em;
+  padding: 0.5em 1.6em;
+  border-radius: 6px;
+}
+
+ul > div {
+  display: flex;
+  flex-direction: row;
+  flex-direction: row;
+  margin: 0px 0px;
 }
 /* 
 .menu a:visited {
