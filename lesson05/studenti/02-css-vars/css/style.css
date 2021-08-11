@@ -3,13 +3,14 @@
 #3b5998	(59,89,152)
 #8b9dc3	(139,157,195)
 #dfe3ee	(223,227,238)
-#f7f7f7	(247,247,247)
+Alabaster var(--color-alabaster)	(247,247,247)
 #ffffff (255,255,255)
 */
 
 :root {
   --color-white: #ffffff;
-  --color-gray--light: #f7f7f7;
+  --color-gray--light: var(--color-alabaster);
+  --color-alabaster: var(--color-alabaster);
 }
 
 * {
@@ -54,19 +55,17 @@ nav {
 }
 
 .menu li a {
-  color: #f7f7f7;
+  color: var(--color-alabaster);
 }
 
 header h1 {
-  color: #f7f7f7;
+  color: var(--color-alabaster);
   background-color: #dfe3ee;
   padding: 10px;
   margin-top: 0;
   text-align: center;
-  text-shadow:
-    0px 1px 7px rgba(0,0,0,0.4),
-    8px 0px 10px rgba(0,0,0,0.1),
-    -8px 0px 10px rgba(0,0,0,0.1);
+  text-shadow: 0px 1px 7px rgba(0, 0, 0, 0.4), 8px 0px 10px rgba(0, 0, 0, 0.1),
+    -8px 0px 10px rgba(0, 0, 0, 0.1);
   font-weight: bold;
   font-size: 3rem;
 }
@@ -74,7 +73,7 @@ header h1 {
 footer {
   padding: 5px;
   background-color: #3b5998;
-  color: #f7f7f7;
+  color: var(--color-alabaster);
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -108,7 +107,7 @@ article {
 }
 
 .panel-box {
-  background-color: #f7f7f7;
+  background-color: var(--color-alabaster);
   border: 1px solid #8b9dc3;
   border-radius: 3px;
   color: #ffffff;
