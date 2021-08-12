@@ -1,5 +1,5 @@
 :root {
-  --color-amethyst: #aa63d9;
+  --color-amethyst: #a864d2;
   --color-amethyst2: #a356cf;
   --color-black--russian: #0a0c1b;
   --color-jaguar: #1c1938;
@@ -14,12 +14,12 @@ body {
   background-color: var(--color-black--russian);
   font-family: sans-serif;
   height: 100%;
-  position: relative;
 }
 
 .body-wrapper {
   background-color: var(--color-jaguar);
   display: flex;
+  flex: 1;
   width: 75%;
   height: 60%;
   border-radius: 10px;
@@ -28,42 +28,34 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  flex-direction: row-reverse;
 }
 
-section {
+div {
   color: white;
-  flex: 1;
 }
 
 .background-image {
   height: 100%;
-  background: linear-gradient(rgba(100, 0, 150, 0.5), rgba(100, 0, 150, 0.5)),
+  width: 100%;
+  background-image: linear-gradient(
+      rgba(100, 0, 150, 0.5),
+      rgba(100, 0, 150, 0.5)
+    ),
     url("/lesson04/homework/task-01-stats-card/images/image-header-desktop.jpg");
   background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
+  background-size: cover;
+  background-position-y: top;
+  background-position-x: right;
 }
 
-.articles {
-  margin-top: 30px;
-  display: inline-block;
-  margin-right: 10%;
-  flex-wrap: wrap;
-}
-
-.articles h2 {
-  font-size: 30px;
+h2 {
+  font-size: 1.85rem;
 }
 
 .articles p {
-  font-size: 1.2rem;
+  font-size: 0.85rem;
   color: var(--color-gray--lavender);
-}
-
-.main-content {
-  flex-direction: row;
-  padding: 30px 0px 10px 100px;
-  width: 50%;
 }
 
 .main-content h1 {
@@ -74,69 +66,152 @@ section {
 }
 
 h1 {
-  font-size: 45px;
+  font-size: 2.5rem;
   line-height: 1.35;
+  margin: 1vw 5vw 0vw 5vw;
 }
 
 strong {
   color: var(--color-amethyst);
 }
 
+.articles {
+  padding: 15px;
+}
+
+#main {
+  width: fit-content;
+  text-align: left;
+  display: grid;
+  margin-top: 80px;
+}
+
 #main-text {
   color: var(--color-gray--lavender);
   font-size: 1.25rem;
   line-height: 1.5;
+  margin: 0px 5vw 0vw 5vw;
 }
 
 .section-article {
-  margin: 70px 0px 0px 0px;
-  display: flex;
   line-height: 0.5;
+  flex-direction: row;
+  display: flex;
+  margin: 4vw;
+  justify-content: space-between;
 }
 
-.main-content,
-.background-image {
-  width: 50%;
-  flex-direction: column;
+.main-content {
+  flex: 50%;
 }
 
-@media screen and (max-width: 800px) {
-  .articles {
-    display: flex;
-  }
+/* .image-background {
+  width: 100%;
+  height: 100%;
+} */
 
+@media screen and (max-width: 640px) {
   .body-wrapper {
     width: 90%;
     height: 90%;
-    flex-direction: column-reverse;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .articles {
+    padding: unset;
+  }
+
+  #main {
+    text-align: center;
+    margin-top: 0px;
+    align-items: center;
   }
 
   h1 {
-    font-size: 30px;
+    margin: 2vw 5vw;
     line-height: 1.35;
   }
 
-  .main-content {
-    padding: 20px 20px;
-    text-align: center;
-  }
-
   #main-text {
-    font-size: 1.2rem;
     line-height: 1.5;
+    margin: 2vw 5vw;
   }
 
-  .main-content,
   .background-image {
-    width: auto;
-    flex-direction: column;
+    height: 50vw;
+    width: 100%;
+    background-size: cover;
+    background-position-y: top;
+    background-position-x: left;
   }
 
   .section-article {
     flex-direction: column;
+    margin: 2vw;
+    align-items: center;
   }
 
-  .articles {
+  #image-border {
+    display: contents;
     flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  /* .image-background {
+    height: auto;
+  } */
+}
+
+@media screen and (max-height: 900px) {
+  h1 {
+    font-size: 4vh;
+  }
+
+  #main-text {
+    font-size: 2.25vh;
+  }
+
+  h2 {
+    font-size: 3vh;
+  }
+
+  #main {
+    margin-top: 5vh;
+  }
+}
+
+@media screen and (max-width: 461px) {
+  h1 {
+    font-size: 4vh;
+  }
+
+  #main-text {
+    font-size: 2.25vh;
+  }
+
+  h2 {
+    font-size: 3vh;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  h1 {
+    font-size: 3vh;
+  }
+
+  #main-text {
+    font-size: 1.5vh;
+  }
+
+  h2 {
+    font-size: 3vh;
+  }
+}
+
+@media screen and (min-width: 539px) {
+  .section-article {
+    flex-direction: row;
+    margin: 2vw 5vw;
   }
 }
