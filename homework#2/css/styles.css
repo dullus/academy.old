@@ -4,12 +4,14 @@
   --color-wild-sand: #f5f4f4;
   --color-periwinkle:#D6E1FF;
 }
+
 body {
   background-image: url("/img/pattern-background-desktop.png.png");
   background-repeat: no-repeat;
   font-family: Lato, Arial, Helvetica, sans-serif;
   font-size: 14px;
 }
+
 .imgContainer {
   margin: 0px auto;
   padding: 0px auto;
@@ -18,11 +20,13 @@ body {
   align-items: center;
   justify-content: center;
 }
+
 #illustration-hero {
-  border: 2px solid  var(--color-persian-blue)
+  border: 2px solid  var(--color-persian-blue);
   border-radius: 10% 10% 0% 0%;
   width: 36%;
 }
+
 .orderSummaryContainer {
   margin: 0px auto;
   padding: 0px auto;
@@ -35,16 +39,19 @@ body {
   height: auto;
   background-color:var(--color-white);
 }
+
 .orderSummaryContainer h3 {
   margin: 0 px auto;
   padding: 0px auto;
   border: 1px solid var(--color-white);
 }
+
 .orderSummaryContainer p {
   margin: 0 px auto;
   padding: 0px auto;
   text-align: center;
 }
+
 .planContainer {
   margin: 0px auto;
   padding: 0px auto;
@@ -57,10 +64,12 @@ body {
   width: 36%;
   background-color: var(--color-wild-sand);
 }
+
 #icon-music {
   margin: 0px;
   padding: 0px;
 }
+
 #annualPlan {
   margin: 0 px ;
   padding: 0px ;
@@ -69,6 +78,7 @@ body {
   align-items: center;
   justify-content: space-around;
 }
+
 .paymentContainer {
   margin: 0px auto;
   padding: 10px auto;
@@ -84,19 +94,22 @@ body {
 
 #proceedToPayment {
   padding-top: 10px;
-  text-decoration: none;
   color: white;
   text-align: center;
+ 
   border: 2px solid var(--color-persian-blue);
   background-color: var(--color-persian-blue);
   border-radius: 10px;
   height: 7vh;
   width: 70%;
 }
-#proceedToPayment h6 {
+
+#proceedToPayment h6{
   margin: 0px auto;
   padding: 0px auto;
+  text-decoration: none;
 }
+
 .cancelContainer {
   margin: 0px auto;
   padding: 0px auto;
@@ -108,6 +121,7 @@ body {
   width: 36%;
   background-color:var(--color-white);
 }
+
 #cancelOrder {
   margin: 0px auto;
   padding: 10px auto;
@@ -116,6 +130,7 @@ body {
   width: 70%;
   text-align: center;
 }
+
 #changeAnnualPlan:hover,
 #proceedToPayment:hover,
 #cancelOrder:hover {
@@ -127,8 +142,8 @@ body {
   body {
     /* background-color: var( --color-periwinkle) ; */
     background-image: url("/img/pattern-background-mobile.svg");
-  
 }
+
 #proceedToPayment {
   padding-top: 10px;
   text-decoration: none;
@@ -140,6 +155,7 @@ body {
   height: 3vh;
   width: 70%;
 }
+
 #changeAnnualPlan {
   margin: 0 auto;
   padding: 0
