@@ -191,16 +191,18 @@ footer span.item a {
   .home-layout {
     display: grid;
     grid-column-gap: 2rem;
-    /* grid-template-columns: 1fr 2fr 2fr 1fr 1fr; */
+    grid-template-columns: 1fr 2fr 2fr 1fr 1fr; */
   }
-  /*
+  
   .home-layout .panel-box {
     grid-column: auto / span 2;
   }
+  
   .home-layout .panel-box--hero {
     grid-column-start: 1;
     grid-column-end: 4;
   }
+  
   .home-layout .panel-box--add {
     grid-column: 1 / -1;
   }
@@ -214,5 +216,5 @@ footer span.item a {
   .home-layout .panel-i {
     grid-column: 1 / -1;
   }
-  */
+  
 }
