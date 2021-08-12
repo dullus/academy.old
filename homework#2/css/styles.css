@@ -6,7 +6,7 @@
 }
 
 body {
-  background-image: url("/img/pattern-background-desktop.png.png");
+  background-image: url("/img/pattern-background-desktop.png");
   background-repeat: no-repeat;
   font-family: Lato, Arial, Helvetica, sans-serif;
   font-size: 14px;
@@ -43,7 +43,7 @@ body {
 .orderSummaryContainer h3 {
   margin: 0 px auto;
   padding: 0px auto;
-  border: 1px solid var(--color-white);
+  border: 1px solid white
 }
 
 .orderSummaryContainer p {
@@ -78,6 +78,9 @@ body {
   align-items: center;
   justify-content: space-around;
 }
+#changeAnnualPlan {
+    text-decoration: none;
+}
 
 .paymentContainer {
   margin: 0px auto;
@@ -88,16 +91,19 @@ body {
   align-items: center;
   vertical-align: center;
   justify-content: center;
-  background-color: var(--color-white);
+  background-color: var(--color-white); 
   width: 36%;
 }
+
 
 #proceedToPayment {
   padding-top: 10px;
   color: white;
   text-align: center;
-  border: 2px solid var(--color-persian-blue);
-  background-color: var(--color-persian-blue);
+  text-decoration: none;
+  border: 2px solid var(--color-persian-blue); 
+  background-color: var(--color-persian-blue); 
+  border: 2px solid blue;
   border-radius: 10px;
   height: 7vh;
   width: 70%;
