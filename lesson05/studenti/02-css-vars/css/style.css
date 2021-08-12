@@ -1,15 +1,20 @@
 /* http://www.color-hex.com/color-palette/185 */
 /*
-#3b5998	(59,89,152)
-#8b9dc3	(139,157,195)
-#dfe3ee	(223,227,238)
-#f7f7f7	(247,247,247)
+mariner	(59,89,152)
+rockBlue	(139,157,195)
+hawkesBlue	(223,227,238)
+whiteSmoke	(247,247,247)
 #ffffff (255,255,255)
 */
 
 :root {
   --color-white: #ffffff;
-  --color-gray--light: #f7f7f7;
+  --color-gray--light: whiteSmoke;
+  --color-rockBlue: #8b9dc3;
+  --color-mariner: #3b5998;
+  --color-hawkesBlue: #dfe3ee;
+  --color-whiteSmoke: #f7f7f7;
+  --color-grey: #777;
 }
 
 * {
@@ -24,14 +29,14 @@ body {
   font-family: Arial, sans-serif;
   font-size: 16px;
   background-color: var(--color-white);
-  color: #777;
+  color: grey;
   margin: 0;
   padding: 0;
 }
 
 nav {
   padding: 5px;
-  background-color: #8b9dc3;
+  background-color: var(--color-rockBlue);
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -42,11 +47,11 @@ nav {
   padding: 0;
   margin: 0;
   display: inline-block;
-  background-color: #8b9dc3;
+  background-color: var(--color-rockBlue);
 }
 
 .menu li {
-  background-color: #3b5998;
+  background-color: mariner;
   margin-right: 10px;
   display: inline-block;
   padding: 4px;
@@ -54,27 +59,25 @@ nav {
 }
 
 .menu li a {
-  color: #f7f7f7;
+  color: whiteSmoke;
 }
 
 header h1 {
-  color: #f7f7f7;
-  background-color: #dfe3ee;
+  color: whiteSmoke;
+  background-color: hawkesBlue;
   padding: 10px;
   margin-top: 0;
   text-align: center;
-  text-shadow:
-    0px 1px 7px rgba(0,0,0,0.4),
-    8px 0px 10px rgba(0,0,0,0.1),
-    -8px 0px 10px rgba(0,0,0,0.1);
+  text-shadow: 0px 1px 7px rgba(0, 0, 0, 0.4), 8px 0px 10px rgba(0, 0, 0, 0.1),
+    -8px 0px 10px rgba(0, 0, 0, 0.1);
   font-weight: bold;
   font-size: 3rem;
 }
 
 footer {
   padding: 5px;
-  background-color: #3b5998;
-  color: #f7f7f7;
+  background-color: mariner;
+  color: whiteSmoke;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -86,11 +89,11 @@ footer span.divider {
 
 footer span.item {
   padding: 4px;
-  color: #dfe3ee;
+  color: hawkesBlue;
 }
 
 footer span.item a {
-  color: #dfe3ee;
+  color: hawkesBlue;
 }
 
 .wrapper {
@@ -108,8 +111,8 @@ article {
 }
 
 .panel-box {
-  background-color: #f7f7f7;
-  border: 1px solid #8b9dc3;
+  background-color: whiteSmoke;
+  border: 1px solid rockBlue;
   border-radius: 3px;
   color: #ffffff;
   padding: 0;
