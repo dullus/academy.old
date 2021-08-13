@@ -1,0 +1,217 @@
+:root {
+  --color-amethyst: #a864d2;
+  --color-amethyst2: #a356cf;
+  --color-black--russian: #0a0c1b;
+  --color-jaguar: #1c1938;
+  --color-gray--lavender: #babbcc;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background-color: var(--color-black--russian);
+  font-family: sans-serif;
+  height: 100%;
+}
+
+.body-wrapper {
+  background-color: var(--color-jaguar);
+  display: flex;
+  flex: 1;
+  width: 75%;
+  height: 60%;
+  border-radius: 10px;
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  flex-direction: row-reverse;
+}
+
+div {
+  color: white;
+}
+
+.background-image {
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(
+      rgba(100, 0, 150, 0.5),
+      rgba(100, 0, 150, 0.5)
+    ),
+    url("/lesson04/homework/task-01-stats-card/images/image-header-desktop.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: top;
+  background-position-x: right;
+}
+
+h2 {
+  font-size: 1.85rem;
+}
+
+.articles p {
+  font-size: 0.85rem;
+  color: var(--color-gray--lavender);
+}
+
+.main-content h1 {
+  max-width: 35rem;
+}
+.main-content p {
+  max-width: 30rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  line-height: 1.35;
+  margin: 1vw 5vw 0vw 5vw;
+}
+
+strong {
+  color: var(--color-amethyst);
+}
+
+.articles {
+  padding: 15px;
+}
+
+#main {
+  width: fit-content;
+  text-align: left;
+  display: grid;
+  margin-top: 80px;
+}
+
+#main-text {
+  color: var(--color-gray--lavender);
+  font-size: 1.25rem;
+  line-height: 1.5;
+  margin: 0px 5vw 0vw 5vw;
+}
+
+.section-article {
+  line-height: 0.5;
+  flex-direction: row;
+  display: flex;
+  margin: 4vw;
+  justify-content: space-between;
+}
+
+.main-content {
+  flex: 50%;
+}
+
+/* .image-background {
+  width: 100%;
+  height: 100%;
+} */
+
+@media screen and (max-width: 640px) {
+  .body-wrapper {
+    width: 90%;
+    height: 90%;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .articles {
+    padding: unset;
+  }
+
+  #main {
+    text-align: center;
+    margin-top: 0px;
+    align-items: center;
+  }
+
+  h1 {
+    margin: 2vw 5vw;
+    line-height: 1.35;
+  }
+
+  #main-text {
+    line-height: 1.5;
+    margin: 2vw 5vw;
+  }
+
+  .background-image {
+    height: 50vw;
+    width: 100%;
+    background-size: cover;
+    background-position-y: top;
+    background-position-x: left;
+  }
+
+  .section-article {
+    flex-direction: column;
+    margin: 2vw;
+    align-items: center;
+  }
+
+  #image-border {
+    display: contents;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  /* .image-background {
+    height: auto;
+  } */
+}
+
+@media screen and (max-height: 900px) {
+  h1 {
+    font-size: 4vh;
+  }
+
+  #main-text {
+    font-size: 2.25vh;
+  }
+
+  h2 {
+    font-size: 3vh;
+  }
+
+  #main {
+    margin-top: 5vh;
+  }
+}
+
+@media screen and (max-width: 461px) {
+  h1 {
+    font-size: 4vh;
+  }
+
+  #main-text {
+    font-size: 2.25vh;
+  }
+
+  h2 {
+    font-size: 3vh;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  h1 {
+    font-size: 3vh;
+  }
+
+  #main-text {
+    font-size: 1.5vh;
+  }
+
+  h2 {
+    font-size: 3vh;
+  }
+}
+
+@media screen and (min-width: 539px) {
+  .section-article {
+    flex-direction: row;
+    margin: 2vw 5vw;
+  }
+}
