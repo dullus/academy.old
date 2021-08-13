@@ -7,9 +7,16 @@
 
 body {
   background-image: url("/img/pattern-background-desktop.png");
-  background-repeat: no-repeat;
+  background-repeat: repeat-x;
+  background-color:rgb(214,225,255);
   font-family: Lato, Arial, Helvetica, sans-serif;
   font-size: 14px;
+}
+
+.mainContainer {
+  margin: 0px auto;
+  padding: 0px auto;
+  width:50%;
 }
 
 .imgContainer {
@@ -84,7 +91,7 @@ body {
 
 .paymentContainer {
   margin: 0px auto;
-  padding: 10px auto;
+  padding: 0px auto;
   display: flex;
   flex-direction: row;
   flex-wrap: no-wrap;
