@@ -1,0 +1,347 @@
+@import url(https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap);
+
+.main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  width: 85%;
+  margin: 0 auto;
+  background-color: white;
+  justify-content: space-evenly;
+  top: 50%;
+  left: 50%;
+  padding: 10px;
+  border-radius: 20px;
+  font-family: "Source Code Pro", monospace;
+  /* transform: translate(-50%, -50%);
+  position: absolute;
+  padding: 10px;
+  border-radius: 20px; */
+}
+
+html {
+  height: 100%;
+  font-family: "Source Code Pro", monospace;
+}
+body {
+  background-color: rgb(197, 228, 231);
+  height: 100%;
+}
+
+.all {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  align-items: center;
+  background-color: rgb(197, 228, 231);
+  padding-left: 100px;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  min-height: 75%;
+  width: 100%;
+  margin: 0;
+  padding: 5%;
+  background-color: rgb(0, 71, 75);
+  border-radius: 20px;
+  font-family: "Source Code Pro";
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: left;
+  min-height: 85%;
+  width: 100%;
+  margin: 0;
+  padding: 5%;
+}
+
+.buttons1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  font-family: "Source Code Pro";
+}
+
+.buttons2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  font-family: "Source Code Pro";
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.buttons1 button {
+  background-color: rgb(0, 71, 75);
+  margin: 5px;
+  display: inline-block;
+  padding: 4px;
+  border-radius: 5px;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  font-family: "Source Code Pro";
+}
+
+.rightText {
+  display: flex;
+  flex-direction: column;
+  font-size: 10px;
+  width: 40%;
+  font-family: "Source Code Pro";
+  padding-top: 10px;
+  padding-right: 50px;
+}
+
+.rightItems {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-family: "Source Code Pro";
+}
+
+.textTip {
+  color: white;
+}
+
+.textPersons {
+  color: rgb(26, 129, 134);
+}
+
+.buttons2 button {
+  background-color: rgb(0, 71, 75);
+  margin: 5px;
+  display: inline-block;
+  padding: 4px;
+  border-radius: 5px;
+  width: 87%;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  font-family: "Source Code Pro";
+}
+
+.buttons2 button:active {
+  background-color: rgb(159, 232, 223);
+  color: rgb(7, 77, 79);
+  font-family: "Source Code Pro";
+}
+
+.buttons1 button:active {
+  background-color: rgb(159, 232, 223);
+  color: rgb(7, 77, 79);
+  font-family: "Source Code Pro";
+}
+
+#Custom {
+  background-color: rgb(243, 248, 251);
+  color: rgb(7, 77, 79);
+}
+
+#Custom:focus {
+  border-color: rgb(159, 232, 223);
+  border: rgb(159, 232, 223);
+}
+
+#reset {
+  background-color: rgb(13, 104, 109);
+  display: inline-block;
+  padding: 4px;
+  border-radius: 5px;
+  width: 100%;
+  text-align: center;
+  color: rgb(4, 93, 97);
+  padding: 4px;
+  padding: inherit;
+  border-color: rgb(13, 104, 109);
+  border-radius: 20px;
+  font-family: "Source Code Pro";
+}
+
+#reset:active {
+  background-color: rgb(159, 232, 223);
+  font-family: "Source Code Pro";
+}
+
+.text {
+  text-align: right;
+  width: 100%;
+  background-color: rgb(243, 248, 251);
+  border: 0;
+  resize: none;
+  font-size: 25px;
+  color: rgb(7, 77, 79);
+  font-family: "Source Code Pro";
+}
+
+.text:focus-visible {
+  border: 2px solid rgb(159, 232, 223);
+  border-color: rgb(159, 232, 223);
+  outline: 4px solid rgb(159, 232, 223);
+}
+
+.text2 {
+  text-align: right;
+  width: 30%;
+  background-color: rgb(0, 71, 75);
+  border: 0;
+  resize: none;
+  font-size: 35px;
+  color: rgb(159, 232, 223);
+  font-family: "Source Code Pro";
+}
+
+.text2:focus-visible {
+  outline: none;
+}
+
+#Bill {
+  background-image: url(../img/icon-dollar.svg);
+  background-position: left;
+  background-size: 15px;
+  background-repeat: no-repeat;
+  font-family: "Source Code Pro";
+}
+
+#N_o_p {
+  background-image: url(../img/icon-person.svg);
+  background-position: left;
+  background-size: 15px;
+  background-repeat: no-repeat;
+  font-family: "Source Code Pro";
+}
+
+.logo {
+  padding-top: 110px;
+  padding-bottom: 60px;
+}
+
+.tags {
+  text-align: left;
+  align-items: left;
+}
+
+.inputTag {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: left;
+  text-align: left;
+}
+
+.right ::placeholder {
+  color: rgb(159, 232, 223);
+  font-size: 20px;
+  text-align: right;
+}
+
+@media screen and (max-width: 700px) {
+  .main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 35px;
+    padding-bottom: 2%;
+    background-color: rgb(197, 228, 231);
+  }
+
+  .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: unset;
+    align-items: left;
+    min-height: 50%;
+    width: 50%;
+    margin: 0;
+    padding: 5%;
+    border-radius: 20px;
+    background-color: white;
+    font-size: 13px;
+  }
+
+  .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: unset;
+    align-items: center;
+    min-height: 33%;
+    width: 57%;
+    margin: 0;
+    padding: 2%;
+    background-color: rgb(0, 71, 75);
+    border-radius: 20px;
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: row;
+    width: 102%;
+  }
+
+  .buttons1 button {
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-family: "Source Code Pro";
+    width: 44%;
+    padding: 2%;
+  }
+
+  .buttons2 button {
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-family: "Source Code Pro";
+    width: 47%;
+    padding: 0%;
+  }
+
+  .text {
+    font-size: 16px;
+  }
+
+  #Custom {
+    background-color: rgb(243, 248, 251);
+    color: rgb(7, 77, 79);
+    padding: 0%;
+    width: 79%;
+    padding-left: 9px;
+    margin-right: 5px;
+    margin-left: 5px;
+    margin-top: 8px;
+    padding-top: 2px;
+    height: 24%;
+  }
+
+  .logo {
+    padding-top: 110px;
+    padding-bottom: 5%;
+  }
+
+  #Bill {
+    font-size: 15px;
+    background-size: 10px;
+  }
+
+  #N_o_p {
+    background-size: 10px;
+    font-size: 15px;
+  }
+}
