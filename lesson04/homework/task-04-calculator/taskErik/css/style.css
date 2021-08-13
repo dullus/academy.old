@@ -15,10 +15,6 @@
   padding: 10px;
   border-radius: 20px;
   font-family: "Source Code Pro", monospace;
-  /* transform: translate(-50%, -50%);
-  position: absolute;
-  padding: 10px;
-  border-radius: 20px; */
 }
 
 html {
@@ -150,6 +146,7 @@ body {
 #Custom {
   background-color: rgb(243, 248, 251);
   color: rgb(7, 77, 79);
+  font-size: 20px;
 }
 
 #Custom:focus {
@@ -183,7 +180,7 @@ body {
   background-color: rgb(243, 248, 251);
   border: 0;
   resize: none;
-  font-size: 25px;
+  font-size: 25x;
   color: rgb(7, 77, 79);
   font-family: "Source Code Pro";
 }
@@ -215,6 +212,7 @@ body {
   background-size: 15px;
   background-repeat: no-repeat;
   font-family: "Source Code Pro";
+  font-size: 25px;
 }
 
 #N_o_p {
@@ -223,11 +221,12 @@ body {
   background-size: 15px;
   background-repeat: no-repeat;
   font-family: "Source Code Pro";
+  font-size: 25px;
 }
 
 .logo {
   padding-top: 110px;
-  padding-bottom: 60px;
+  padding-bottom: 5%;
 }
 
 .tags {
@@ -251,18 +250,16 @@ body {
 
 @media screen and (max-width: 700px) {
   .main {
-    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     border-radius: 35px;
     padding-bottom: 2%;
+    padding-right: 50px;
     background-color: rgb(197, 228, 231);
   }
 
   .left {
-    display: flex;
-    flex-direction: column;
     justify-content: unset;
     align-items: left;
     min-height: 50%;
@@ -275,8 +272,6 @@ body {
   }
 
   .right {
-    display: flex;
-    flex-direction: column;
     justify-content: unset;
     align-items: center;
     min-height: 33%;
@@ -288,15 +283,11 @@ body {
   }
 
   .buttons {
-    display: flex;
-    flex-direction: row;
     width: 102%;
   }
 
   .buttons1 button {
     font-size: 15px;
-    display: flex;
-    flex-direction: column;
     justify-content: space-evenly;
     font-family: "Source Code Pro";
     width: 44%;
@@ -305,12 +296,11 @@ body {
 
   .buttons2 button {
     font-size: 15px;
-    display: flex;
-    flex-direction: column;
     justify-content: space-evenly;
     font-family: "Source Code Pro";
     width: 47%;
     padding: 0%;
+    height: 83%;
   }
 
   .text {
@@ -321,13 +311,10 @@ body {
     background-color: rgb(243, 248, 251);
     color: rgb(7, 77, 79);
     padding: 0%;
-    width: 79%;
-    padding-left: 9px;
-    margin-right: 5px;
-    margin-left: 5px;
-    margin-top: 8px;
-    padding-top: 2px;
-    height: 24%;
+    width: 55%;
+    font-size: 16px;
+    padding-top: 7px;
+    height: 100%;
   }
 
   .logo {
