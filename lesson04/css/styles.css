@@ -1,0 +1,165 @@
+:root {
+  --color-bunting: #1c2a4d;
+  --color-background: #e0e8ff;
+  --color-stormGrey: #787e90;
+}
+
+body {
+  font-family: Rubik, sans-serif;
+  background-color: var(--color-background);
+  background-image: url(/lesson04/images/pattern-background-desktop.svg);
+  background-repeat: repeat-x;
+}
+.mainPanel {
+  border: none;
+  width: 25%;
+  margin: auto;
+  margin-top: 6%;
+  background-color: #fff;
+  border-radius: 20px;
+  text-decoration: none;
+  box-shadow: 0px 19px 8px 0px #cbd3f8;
+}
+#image #topPic {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  width: 100%;
+}
+#info {
+  text-align: center;
+  margin: auto;
+  margin-top: 40px;
+}
+#info p {
+  width: 80%;
+  margin: auto;
+}
+#title {
+  color: var(--color-bunting);
+}
+#mainText {
+  color: var(--color-stormGrey);
+}
+#all {
+  display: flex;
+  justify-content: center;
+}
+#price {
+  display: flex;
+  border: none;
+  background-color: #f8f9fe;
+  border-radius: 15px;
+  padding: 10px;
+  width: 80%;
+  margin: 20px auto;
+  height: 70px;
+}
+#icon {
+  display: inline-block;
+  align-self: center;
+}
+#priceInfo {
+  margin-left: 20px;
+  align-self: center;
+}
+#letters {
+  text-align: center;
+  color: #1e2a46;
+}
+#changeButton {
+  display: flex;
+  align-self: center;
+  color: #53509c;
+  margin-left: auto;
+  margin-right: 10px;
+}
+#changeButton:hover a {
+  text-decoration: none;
+  color: #877eda;
+}
+#paymentLink {
+  color: white;
+  border-radius: 10px;
+  background: #382ae1;
+  width: 80%;
+  margin: 20px auto;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0px 8px 18px 0px #a8b2df;
+  height: 40px;
+  padding-top: 20px;
+}
+#paymentLink:hover {
+  box-shadow: 10px 10px;
+  background-color: #766cf1;
+  transition: 0.3s;
+}
+#paymentLink a {
+  text-decoration: none;
+  color: white;
+}
+#cancelLink {
+  box-sizing: border-box;
+  border: none;
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  height: 40px;
+  margin-bottom: 20px;
+}
+#cancelLink a {
+  text-decoration: none;
+  color: #8893aa;
+}
+#cancelLink a:hover {
+  color: #353b59;
+  transition: 0.3s;
+}
+#dollar {
+  color: #888da1;
+}
+@media screen and (max-width: 1300px) {
+  .mainPanel {
+    width: 28%;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .mainPanel {
+    width: 32%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .mainPanel {
+    width: 35%;
+  }
+}
+@media screen and (max-width: 900px) {
+  .mainPanel {
+    width: 40%;
+  }
+}
+@media screen and (max-width: 800px) {
+  .mainPanel {
+    width: 47%;
+  }
+}
+@media screen and (max-width: 700px) {
+  .mainPanel {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 540px) {
+  .mainPanel {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 490px) {
+  .mainPanel {
+    width: 80%;
+    font-size: 0.9rem;
+  }
+  body {
+    background-color: var(--color-background);
+    background-image: none;
+  }
+}
