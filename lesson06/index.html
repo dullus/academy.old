@@ -4,16 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JS test</title>
-    <style>
-      #box {
-        width: 40px;
-        height: 40px;
-        background: red;
-      }
-    </style>
+    <link rel="stylesheet" href="css/styles.css" type="text/css" />
   </head>
   <body>
-    <div id="box"></div>
+    <button onclick="stopBox()">Stop</button>
+    <section id="blue-box" class="simple-box"></section>
+
+    <button onclick="increaseBox(5)" class="buttonIncrease">+</button>
+    <button onclick="increaseBox(-5)" class="buttonIncrease">-</button>
+    <section id="red-box" class="simple-box"></section>
+
     <script src="js/main.js"></script>
   </body>
 </html>
