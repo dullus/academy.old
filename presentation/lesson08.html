@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <html>
+    <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <title>Lesson 8 - FE JavaScript</title>
+      <link rel="stylesheet" href="node_modules/reveal.js/dist/reset.css" />
+      <link rel="stylesheet" href="node_modules/reveal.js/dist/reveal.css" />
+      <link
+        rel="stylesheet"
+        href="node_modules/reveal.js/dist/theme/league.css"
+      />
+      <!-- Theme used for syntax highlighted code -->
+      <!--link rel="stylesheet" href="plugin/highlight/monokai.css" /-->
+      <link
+        rel="stylesheet"
+        href="node_modules/reveal.js/plugin/highlight/atom-one-light.min.css"
+      />
+    </head>
+    <body>
+      <main class="reveal">
+        <article class="slides">
+          <section>
+            <h1>FE JavaScript</h1>
+            <h3>Lesson 8</h3>
+            <img alt="*" src="img/01/ness.png" height="190" />
+            <div>
+              🙈 dalibor.schon@ness.com<br />
+              🙉 lukas.orgovan@ness.com<br />
+              🙊 erik.fecko@ness.com
+            </div>
+          </section>
+
+          <section>
+            <h2>Document Object Model (DOM)</h2>
+            <img src="img/07/dom-in-js.jpg" alt="DOM" />
+          </section>
+
+          <section>
+            <h1>DOM</h1>
+            <h3>Selecting elements</h3>
+            <span>document.querySelector</span>
+            <div style="font-size: 1.2rem">
+              returns the first
+              <em style="color: greenyellow">HTMLElement</em> within the
+              document that matches the specified selector, or group of
+              selectors. If no matches are found,
+              <em style="color: greenyellow">null</em> is returned.
+            </div>
+            <div style="display: flex">
+              <div>
+                <pre style="width: initial"><code data-trim class="html">
+<div id="box"></div>
+<nav class="menu">
+  <ul>
+    <li>one</li>
+    <li class="active">two</li>
+  </ul>
+</nav>
+                </code></pre>
+              </div>
+              <div>
+                <pre
+                  style="width: initial"
+                ><code data-trim class="javascript hljs">
+let tag;
+// select by id
+tag = document.querySelector('#box');
+// select by class
+tag = document.querySelector('.menu');
+// select by tag
+tag = document.querySelector('nav');
+                </code></pre>
+              </div>
+            </div>
+          </section>
+      </main>
+
+      <script src="node_modules/reveal.js/dist/reveal.js"></script>
+      <script src="node_modules/reveal.js/plugin/notes/notes.js"></script>
+      <script src="node_modules/reveal.js/plugin/markdown/markdown.js"></script>
+      <script src="node_modules/reveal.js/plugin/highlight/highlight.js"></script>
+      <script>
+        Reveal.initialize({
+          hash: true,
+          plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+        });
+      </script>
+    </body>
+  </html>
+</html>
