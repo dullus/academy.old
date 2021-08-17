@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lesson08</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <script src="js/utils.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg">
+      <select class="form-select" name="theme" id="theme">
+        <option value="light" selected>light</option>
+        <option value="dark">dark</option>
+      </select>
+      <label for="theme">Theme:</label>
+    </nav>
+    <main>
+      <div class="card">
+        <form class="myForm">
+          <fieldset>
+            <legend>Please fill form</legend>
+            <div class="mb-3">
+              <label for="firstName" class="form-label">First name</label>
+              <input
+                class="form-control"
+                type="text"
+                name="firstName"
+                id="firstName"
+                placeholder="..enter your first name.."
+              />
+            </div>
+            <div class="mb-3">
+              <label for="firstName" class="form-label">Surname</label>
+              <input
+                class="form-control"
+                type="text"
+                name="surName"
+                id="surName"
+                placeholder="..enter your surname.."
+              />
+            </div>
+            <hr />
+            <button type="button" id="btnCapitalize" class="btn btn-secondary">
+              Capitalize
+            </button>
+            <button type="submit" id="btnCapitalize" class="btn btn-primary">
+              Submit
+            </button>
+          </fieldset>
+        </form>
+      </div>
+    </main>
+    <script src="js/main.js"></script>
+  </body>
+</html>
