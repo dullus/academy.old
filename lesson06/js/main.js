@@ -18,16 +18,20 @@ function enlargen(){
     } else if(currentHeightRed == screen.height){
         alert("Max height reached")
     } else {
-        box.style.width = (currentWidthRed + 3) + "px";
-        box.style.height = (currentHeightRed + 3) + "px";
+        box.style.width = (currentWidthRed + 1) + "px";
+        box.style.height = (currentHeightRed + 1) + "px";
     } 
 }
 
 var boxOffset = 0;
 function move() {
-    boxOffset += 30
+    boxOffset += 5
     document.getElementById("box2").style.left = boxOffset + "px";
   }
+
+
+setInterval(move, 10)
+setInterval(enlargen, 10)
 
 // while(boxOffset <= 500){
 //     move();
