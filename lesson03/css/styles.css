@@ -1,0 +1,111 @@
+body { 
+    font-family: 'Lato', Arial, sans-serif;
+    color: rgb(31, 30, 30);
+ }
+ nav ul {
+    margin: 0;
+    padding: 0;
+ }
+ #main-nav {
+    display: flex;
+    justify-content: space-between;
+ }
+ .menu {
+    display: inline;
+    box-sizing: border-box;
+    padding: 30px 8px;
+ }
+ .menu a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color:rgb(31, 30, 30);
+    font-weight: 700;
+    font-size: 0.9rem;
+ }
+ .menu a:hover {
+    color: rgb(0, 168, 45);
+ }
+ .menu:hover {
+   border-bottom: 4px solid rgb(0, 168, 45);
+ }
+#utility-nav ul{
+   list-style-type: none;
+}
+#utility-nav li {
+   display: inline;
+}
+.menu-link {
+   color:rgb(31, 30, 30);
+   text-decoration: none;
+   padding: 0 10px;
+}
+.button-reverse {
+   background: #fff;
+   display: inline-block;
+   padding: 10px 20px;
+   text-decoration: none;
+   border-radius: 3px;
+   border: 2px solid rgb(0, 168, 45);
+   color:rgb(0, 168, 45);
+   transition: all 0.1s ease-in-out;
+}
+.button-reverse:hover {
+   color: #14cc45;
+   border-color: #14cc45;
+}
+
+ #reasons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 6rem;
+ }
+ #feature {
+    text-align: center;
+ }
+ #feature h1 {
+    font-size: 3rem;
+    margin-bottom: 1.2rem;
+ }
+ #feature p {
+   font-size: 1.5rem;
+   width: 80%;
+   margin: 0 auto;
+   margin-bottom: 3rem;
+   line-height: 1.5;
+ }
+ .button-big {
+   color: #fff;
+   border-radius: 3px;
+   font-size: 1.1rem;
+   background-color: rgb(0, 168, 45);
+   transition: background-color 0.1s ease-in-out;
+   text-decoration: none;
+   padding: 1rem 5rem;
+   letter-spacing: 1px;
+ }
+ .button-big:hover {
+    background-color: #14cc45;
+ }
+
+ .wrapper-center {
+   width: 70%;
+   margin: 30px auto;
+ }
+ .box {
+    box-sizing: border-box;
+    width: 24%;
+    padding: 20px;
+    box-shadow: 2px 5px 15px rgba(30, 30, 30, 0.2);
+    border-radius: 8px;
+ }
+ .box img {
+    margin-bottom: 1rem;
+ }
+ .box h2 {
+    font-weight: 700;
+    font-size: 26px;
+ }
+ .box p {
+    font-size: 1.19rem;
+    line-height: 1.5;
+ }

@@ -1,22 +1,12 @@
-const theBlueBox = document.querySelector('#blue-box');
-const theRedBox = document.querySelector('#red-box');
-
-
-// for debugging purpose
-console.log(theBlueBox);
-console.dir(theBlueBox);
-console.log(theRedBox);
-console.dir(theRedBox);
-
-// initialize the blue box  and launch it
- theBlueBox.style.left = "0px";
-theBoxMove = setInterval(moveBox,100,5);
+const theBlueBox = document.querySelector("#blueBox");
+const theRedBox = document.querySelector("#redBox");
+const theGreenBox = document.querySelector("#greenBox");
 
 /*
 function moveBox - move blue box to left each time with an 'offset' pixels forward 
 param offsett
 */
- function moveBox(offset) {
+ function moveBlueBox(offset) {
     let leftBox = theBlueBox.style.left;
     leftBox = leftBox.slice(0,leftBox.length-2);
     leftBox = parseInt(leftBox);
@@ -24,13 +14,29 @@ param offsett
     leftBox = leftBox.toString();
     leftBox  += "px";
     theBlueBox.style.left = leftBox;
+    console.log(theBlueBox.style.left);
  }
 
- // function stopBox - stop bluebox
- function stopBox() {
-    clearInterval(theBoxMove);
- }
+ /*
+function moveBox - move blue box to left each time with an 'offset' pixels forward 
+param offsett
+*/
+function moveGreenBox(offset) {
+   let leftBox = theGreenBox.style.left;
+   leftBox = leftBox.slice(0,leftBox.length-2);
+   leftBox = parseInt(leftBox);
+   leftBox += offset;
+   leftBox = leftBox.toString();
+   leftBox  += "px";
+   theGreenBox.style.left = leftBox;
+}
 
+/*
+function animateGreenBox() {
+   setInterval(moveGreenBox, 100, 5);
+}
+*/
+ 
  // initialize the redbox
  theRedBox.style.width ="40px";
 theRedBox.style.height = "40px";

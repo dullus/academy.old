@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Web kurz 03</title>
+
+    <meta name="description" content="Web kurz 03">
+    <meta name="author" content="Ness KDC">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/white.css" id="theme">
+    <link rel="stylesheet" href="lib/css/atom-one-light.css">
+
+    <style>
+        .subhead--navy {
+            color: #2a76dd;
+        }
+
+        code.subhead {
+            color: brown;
+            text-transform: initial;
+            font-weight: bold;
+            white-space: nowrap;
+        }
+
+        .reveal section img {
+            box-shadow: none;
+            border: none;
+            background: transparent;
+            padding: 0;
+            margin: 0;
+        }
+
+        .reveal section img.fifty {
+            max-width: 50%;
+        }
+
+        .reveal pre code {
+            font-size: 1.1em;
+            line-height: 1.2em;
+            font-family: Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+            color: #383a42;
+            background: #fafafa;
+        }
+
+        .reveal h2,
+        .reveal h3,
+        .reveal h4,
+        .reveal h5 {
+            text-transform: none;
+        }
+
+    </style>
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+
+    <!--[if lt IE 9]><script src="lib/js/html5shiv.js"></script><![endif]-->
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <h1>Web 03</h1>
+                <img alt="*" class="fifty" src="img/nesstrain-logo.png" style="background-color: #fefefe;padding: 10px;" />
+                <h2>Responsive web design</h2>
+            </section>
+
+            <section>
+                <section>
+                    <h3>#1 Čo je to responzívny web</h3>
+                    <p>Responzívny dizajn dovoľuje našej webstránke aby sa prispôsobovala zariadeniam na ktorých si ju užívatelia pozerajú.</p>
+                    <img alt="*" class="fifty" src="img/03/responsive-devices.png" />
+                </section>
+                <section>
+                    <h3>HiDPI (retina), viewport</h3>
+                    <img alt="*" src="img/03/iphone-comparison.png" />
+                </section>
+                <section>
+                    <h3>Pixel density</h3>
+                    <img alt="*" src="img/03/pixel-comparison.png" />
+                </section>
+                <section>
+                    <h3>Asset sizes</h3>
+                    <img alt="*" src="img/03/asset-sizes.png" />
+                </section>
+                <section>
+                    <h3>Photoshop generator</h3>
+                    <img alt="*" src="img/03/photoshop-assets.png" />
+                </section>
+                <section>
+                    <h3>Photoshop generator</h3>
+                    <h4>File ⇒ Generate ⇒ Image Assets</h4>
+                    <p>Nazvite vrstvu ako:</p>
+                    <pre style="width:initial;"><code data-trim class="html" style="max-height: initial;">
+100% logo@2x.png, 50% logo.png, 150% logo@3x.png
+                    </code></pre>
+                </section>
+                <section>
+                    <h3>Picture</h3>
+                    <pre style="width:initial;"><code data-trim class="html" style="max-height: initial;">
+&lt;picture&gt;
+  &lt;source media=&quot;(max-width: 640px)&quot;
+    srcset=&quot;img/logo.png, img/logo@2x.png 2x, img/logo@3x.png 3x&quot;&gt;
+  &lt;img src=&quot;img/logo.png&quot; alt=&quot;logo&quot;/&gt;
+&lt;/picture&gt;
+                    </code></pre>
+                </section>
+            </section>
+            <section>
+                <h3>#2 Ako prispôsobiť web</h3>
+                <ul>
+                    <li>Špeciálna “mobilná” verzia stránky (<a href="http://mobile.nytimes.com/">http://mobile.nytimes.com/</a>)</li>
+                    <li>Adaptívny web dizajn</li>
+                    <li>Responzívny web dizajn</li>
+                </ul>
+                <img alt="*" class="fifty" src="img/03/responsive-showcase.png" />
+            </section>
+            <section>
+                <h3>#3 Adaptívny web dizajn</h3>
+                <p>
+                    Je veľmi podobný responzívnemu, akurát sa neprispôsobuje obsah stránky zariadeniu, ale máme napísané
+                    špeciálne pravidlá <code class="subhead">media queries</code>, ktorými cielime zmeny len pre určitú šírku / výšku.
+                </p>
+                <p>
+                    Tieto šírky nazývame css <code class="subhead">breakpoints</code> / body zmeny.
+                    (napríklad pre šírky 320px, 760px, 1200px, 1600px)
+                </p>
+            </section>
+            <section>
+                <h3>#4 Responzívny web dizajn</h3>
+                <p>
+                    Responzívny dizajn sa prispôsobuje obsahu ako voda. Naplň vodu do poháru a voda sa stane pohárom.
+                    Naplň vodu do veľkej fľaše a voda sa stane fľašou.
+                </p>
+                <img alt="*" class="fifty" src="img/03/responsive-water.png" />
+
+            </section>
+            <section>
+                <h3>#5 Mobile first</h3>
+                <p>Google ranking</p>
+                <p>Ľudia dnes nakupujú hlavne cez mobily (vačšia konverzia)</p>
+                <pre style="width:initial;"><code data-trim class="html" style="max-height: initial;">
+&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+                </code></pre>
+            </section>
+            <section>
+                <h1>#6 Let's get started</h1>
+            </section>
+            <section>
+                <section>
+                    <h3>#7 Media queries</h3>
+                    <pre style="width:initial;"><code data-trim class="css" style="max-height: initial;">
+@media screen and (min-width: 320px) {
+    .box {
+        background-color: red;
+    }
+}
+                    </code></pre>
+                </section>
+                <section>
+                    <h4>
+                        <span class="subhead--navy">A</span>: Pridajte
+                        <code class="subhead">viewport</code> meta tag do vašej stránky
+                    </h4>
+                </section>
+                <section>
+                    <h4>
+                        <span class="subhead--navy">B</span>: Pre prvý nadpis na stránke pridajte id atribút s hodnotou
+                        <code class="subhead">catch-phrase</code>, zmeňte farbu tohto nadpisu pomocou css
+                    </h4>
+                </section>
+                <section>
+                    <h4>
+                        <span class="subhead--navy">C</span>: Pre zariadenia mobilné zariadenia (menšie ako 768px) upravte písmo na
+                        <code class="subhead">Georgia</code> o veľkosti <code class="subhead">120px</code> a
+                        <code class="subhead">letter-spacing</code> na hodnotu
+                        <code class="subhead">-2px</code>
+                    </h4>
+                </section>
+                <section>
+                    <h4>
+                        <span class="subhead--navy">D</span>: Opravte pretečenie na šírku
+                    </h4>
+                    <p>Náš dizajn je rozbitý, pretože obrázok má veľké rozmery.</p>
+                    <img alt="*" class="fifty" src="img/03/broken-width.png" />
+                </section>
+                <section>
+                    <h4>
+                        <span class="subhead--navy">D</span>: Opravte pretečenie na šírku
+                    </h4>
+                    <p>Trik na responzívny obrázok</p>
+                    <pre style="width:initial;"><code data-trim class="css" style="max-height: initial;">
+.img-home {
+    ...
+    max-width: 100%;
+    height: auto;
+}
+                    </code></pre>
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <h3>#8 Media Queries - rozšírené</h3>
+                    <h4>
+                        <span class="subhead--navy">A</span>: Vytvorte špeciálne css (nový súbor s názvom
+                        <code class="subhead">print.css</code>) pre tlač, tak aby bol celý web čierno biely (biele pozadie, čierne písmo).
+                    </h4>
+                </section>
+                <section>
+                    <h4>
+                        <span class="subhead--navy">B</span>: Pridajte toto css do štýlov vašej stránky pod ostatné
+                        deklarácie štýlov aby ste videli či zmenilo všetko ako malo.
+                    </h4>
+                </section>
+                <section>
+                    <h4>
+                        <span class="subhead--navy">C</span>: Použite media-query atribút
+                        <code class="subhead">print</code> aby sa tieto štýly aplikovali len pre tlač
+                        <code class="subhead">media="print"</code>
+                    </h4>
+                </section>
+                <section>
+                    <h3>Pravidlá "a súčasne" (and), "alebo" (čiarka)</h3>
+                    <pre style="width:initial;"><code data-trim class="css" style="max-height: initial;">
+@media (min-width: 700px), handheld and (orientation: portrait) {
+    &hellip;
+}
+                    </code></pre>
+                    <h4>
+                        <span class="subhead--navy">D</span>: Zmeňte predošlé media query tak, aby pôsobilo len na
+                        mobilné zariadenia v landscape orientácii (horizontálna poloha)
+                    </h4>
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <h3>#9 Flexibilná štruktúra - zlaté pravidlo responzivity</h3>
+                    Jednotlivé šírky elementov sa zadávajú v percentách. Štruktúra reaguje na rôzné šírky zariadení.
+                    <p><strong><code class="subhead">Target / context (container)</code> = result</strong></p>
+                    <p><strong><code>300px / 1000px = 0.3</code> ⇒ 30%</strong></p>
+                    <p><strong><code>375px / 800px = 0.46875</code> ⇒ 46.875%</strong> (nezaokrúhľovať, používame aj 6 desatinných miest)</p>
+                </section>
+
+                <section>
+                    <h4>
+                        <span class="subhead--navy">A</span>: Použite vstupný projekt
+                        <a href="http://codepen.io/anon/pen/LbdOqp">http://codepen.io/anon/pen/LbdOqp</a>. Pridajte do
+                        <code class="subhead">index.html</code> prelinkovanie na css súbor.
+                    </h4>
+                </section>
+                <section>
+                    <h4>
+                        <span class="subhead--navy">B</span>: Pre element s triedou
+                        <code class="subhead">wrapper</code> zmeňte atribút <code class="subhead">width</code> na
+                        <code class="subhead">max-width</code>. Následne prepočítajte pre element aside hodnotu
+                        <code class="subhead">width</code> na percentá. Vďaka pravidlu
+                        <code class="subhead">flex: 1</code> pre
+                        <code class="subhead">.main</code> sa šírka hlavného prvku vyrátava automaticky.
+                    </h4>
+                </section>
+                <section>
+                    <h4>
+                        <span class="subhead--navy">C</span>: Do
+                        <code class="subhead">aside</code> pridajte navigáciu s piatimi rôznymi linkami pomocou
+                        <code class="subhead">nav</code>, <code class="subhead">ul</code>,
+                        <code class="subhead">li</code>, <code class="subhead">a</code> elementov
+                        (nie je potrebné použiť žiadne triedy ani id-čka). Web by sa mal správať čiastočne responzívne.
+                    </h4>
+                </section>
+                <section>
+                    <h4>
+                        <span class="subhead--navy">D</span>: Zapnite si mobilné zobrazenie pre devTools a zistite šírku
+                        obrazovky pre iPhone 6 plus. Pre túto šírku napíšte media-query a pre elementy
+                        <code class="subhead">aside</code> a
+                        <code class="subhead">.main</code> pridajte pravidlo
+                        <code class="subhead">width: 100%</code>. Pridajte prepisujúce pravidlo
+                        <code class="subhead">flex-direction: column</code>. Zároveň zmeňte poradie flex prvkov.
+                    </h4>
+                </section>
+                <section>
+                    <h4>
+                        <span class="subhead--navy">E</span>: Naštýlujte menu tak, aby bolo v horizontálnej polohe a aby
+                        jednotlivé odkazy vyzerali ako tlačidlá. Môžete využiť pravidlo
+                        <code class="subhead">border-radius: 10px</code>
+                    </h4>
+                </section>
+                <section>
+                    <h4>
+                        <span class="subhead--navy">F</span>: Vytvorte element
+                        <code class="subhead">article</code> a pridajte doň nadpis a 3 odstavece textu. Zmenšite text
+                        odstavcov a na article pridajte mierny
+                        <code class="subhead">padding</code> 20px v percentuálnej mierke. Pod tieto odstavce vytvorte
+                        <code class="subhead">div</code> kontajner s triedou <code class="subhead">gallery</code>
+                    </h4>
+                </section>
+                <section>
+                    <h4>
+                        <span class="subhead--navy">G</span>: Do “galérie” pridajte 6 obrázkov (napr.
+                        <a href="https://goo.gl/JACR7B">https://goo.gl/JACR7B</a> ).
+                        Všimnite si že obrázky sú čiastočne responzívne vďaka povahe webu. My to vylepšíme flexboxom
+                        a responzívnou technikou pre obrázky.
+                    </h4>
+                </section>
+                <section>
+                    <h4>
+                        <span class="subhead--navy">H</span>: Každý obrázok “zawrapujte” (zabaľte) do elementu div s triedou
+                        <code class="subhead">gallery-box</code>. Nastavte
+                        <code class="subhead">.gallery</code> element aby sa správal podľa pravidiel FLEX (
+                        <code class="subhead">row</code>, <code class="subhead">wrap</code>,
+                        <code class="subhead">justify-content: space-around</code>)
+                    </h4>
+                </section>
+                <section>
+                    <h4>
+                        <span class="subhead--navy">I</span>: Pre obrázky nastavte pravidlá, aby sa šírka obrázka
+                        vyplnila na maximum a výška automaticky. Pridajte <code class="subhead">padding</code> 0.5% pre elementy
+                        <code class="subhead">.gallery-box</code>
+                    </h4>
+                </section>
+                <section>
+                    <h4>
+                        <span class="subhead--navy">J</span>: Približne pri 930 pixeloch sa nám dizajn mierne rozbije. Nastavte všetkým
+                        <code class="subhead">.gallery-box</code> elementom pravidlo
+                        <code class="subhead">flex:auto</code> . Využite media query s and operátorom aby ste zmenili šírku
+                        <code class="subhead">.gallery-box</code> elementov na 48%, len v prípade že
+                        šírka je väčšia ako šírka iPhone a menšia ako 930px
+                    </h4>
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h3>Bonus talk a úloha</h3>
+                    <h4>Font sizing:
+                        <code class="subhead">px | em | rem | vw</code> &hellip;. Naštýlujte nadpis tak, aby využíval jednotku
+                        <code class="subhead">vw</code>
+                    </h4>
+                </section>
+                <section>
+                    <h3>Bonus 2</h3>
+                    <h4>Pripravte responzívny header pre projekt</h4>
+                </section>
+            </section>
+
+            <section>
+                <h3>Bonus material</h3>
+                <p>
+                    Ďaľšie príklady pravidel pre media queries môžete nájst napríklad tu:
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#Pseudo-BNF">media queries</a>
+                </p>
+                <p><a href="https://css-tricks.com/responsive-images-css/">Viac o high-resolution obrázkoch</a></p>
+                <p>
+                    Debuggovanie na vlastnom mobile pomocout
+                    <a href="https://developers.google.com/web/tools/chrome-devtools/remote-debugging/">remote-debuggingu</a>
+                </p>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+        // Full list of configuration options available at:
+        // https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: true,
+
+            transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+            // Optional reveal.js plugins
+            dependencies: [
+                { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                { src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+                { src: 'plugin/zoom-js/zoom.js', async: true },
+                { src: 'plugin/notes/notes.js', async: true }
+            ]
+        });
+    </script>
+
+</body>
+
+</html>

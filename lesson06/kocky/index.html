@@ -7,13 +7,33 @@
     <link rel="stylesheet" href="css/styles.css" type="text/css" />
   </head>
   <body>
-    <button onclick="stopBox()">Stop</button>
-    <section id="blue-box" class="simple-box"></section>
+    <main>
 
-    <button onclick="increaseBox(5)" class="buttonIncrease">+</button>
-    <button onclick="increaseBox(-5)" class="buttonIncrease">-</button>
-    <section id="red-box" class="simple-box"></section>
+      <section class="redBoxZone">
+        <h3>Red box</h3>
+        <p>Increase size</p>
+        <button  class="changeSize" onclick="increaseBox(5)">+</button>
+        <button class="changeSize" onclick="increaseBox(-5)">-</button>
+        </button>
+        <section id="redBox"></section>
+      </section>
 
-    <script src="js/main.js"></script>
+      <section class="blueBoxZone">
+        <h3>Blue box</h3>
+        <p>Move from left to right</p>
+        <button class="moveToLeft" onclick="moveBlueBox(20)">+</button>
+        <button class="moveToLeft" onclick="moveBlueBox(-20)">-</button>
+        <section id="blueBox"></section>
+      </section>
+
+      <section class="greenBoxZone">
+        <h3>Green box</h3>
+        <p>Animate move from left to right</p>
+        <button id="launch"  onclick="setTimeout(moveGreenBox(20), 1000)">Launch</button>
+        <section id="greenBox"></section>
+      </section>
+
+      <script src="js/main.js"></script>
+    </main>
   </body>
 </html>
