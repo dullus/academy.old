@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+  <html>
+    <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <title>Lesson 7 - FE JavaScript</title>
+      <link rel="stylesheet" href="node_modules/reveal.js/dist/reset.css" />
+      <link rel="stylesheet" href="node_modules/reveal.js/dist/reveal.css" />
+      <link
+        rel="stylesheet"
+        href="node_modules/reveal.js/dist/theme/league.css"
+      />
+      <!-- Theme used for syntax highlighted code -->
+      <!--link rel="stylesheet" href="plugin/highlight/monokai.css" /-->
+      <link
+        rel="stylesheet"
+        href="node_modules/reveal.js/plugin/highlight/atom-one-light.min.css"
+      />
+    </head>
+    <body>
+      <main class="reveal">
+        <article class="slides">
+          <section>
+            <h1>FE JavaScript</h1>
+            <h3>Lesson 7</h3>
+            <img alt="*" src="img/01/ness.png" height="190" />
+            <div>
+              🙈 dalibor.schon@ness.com<br />
+              🙉 lukas.orgovan@ness.com<br />
+              🙊 erik.fecko@ness.com
+            </div>
+          </section>
+
+          <section>
+            <h2>Document Object Model (DOM)</h2>
+            <img src="img/07/dom-in-js.jpg" alt="DOM" />
+          </section>
+
+          <section>
+            <h1>DOM</h1>
+            <h3>Selecting elements</h3>
+            <span>document.querySelector</span>
+            <div style="font-size: 1.2rem">
+              returns the first
+              <em style="color: greenyellow">HTMLElement</em> within the
+              document that matches the specified selector, or group of
+              selectors. If no matches are found,
+              <em style="color: greenyellow">null</em> is returned.
+            </div>
+            <div style="display: flex">
+              <div>
+                <pre style="width: initial"><code data-trim class="html">
+<div id="box"></div>
+<nav class="menu">
+  <ul>
+    <li>one</li>
+    <li class="active">two</li>
+  </ul>
+</nav>
+                </code></pre>
+              </div>
+              <div>
+                <pre
+                  style="width: initial"
+                ><code data-trim class="javascript hljs">
+let tag;
+// select by id
+tag = document.querySelector('#box');
+// select by class
+tag = document.querySelector('.menu');
+// select by tag
+tag = document.querySelector('nav');
+                </code></pre>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <h1>DOM</h1>
+            <h3>Selecting elements</h3>
+            <span>document.querySelectorAll</span>
+            <div style="font-size: 1.2rem">
+              returns a <strong>static</strong>
+              <em style="color: greenyellow">NodeList</em> representing a list
+              of the document's elements that match the specified group of
+              selectors.
+            </div>
+            <div style="display: flex">
+              <div>
+                <pre style="width: initial"><code data-trim class="html">
+  <ul>
+    <li>one</li>
+    <li class="active">two</li>
+    <li>three</li>
+  </ul>
+                </code></pre>
+              </div>
+              <div>
+                <pre
+                  style="width: initial"
+                ><code data-trim class="javascript hljs">
+let tag;
+// select all &lt;li&gt; tags
+tags = document.querySelectorAll('li');
+// select only &lt;li class="active"&gt; tags(s)
+tags = document.querySelectorAll('li.active');
+                </code></pre>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <h1>DOM</h1>
+            <h3>Selecting elements</h3>
+            <ul>
+              <li>
+                document.getElementById
+                <div style="font-size: 1.2rem">
+                  Returns an
+                  <em style="color: greenyellow">HTMLElement</em> object
+                  describing the DOM element object matching the specified ID,
+                  or <em style="color: greenyellow">null</em> if no matching
+                  element was found in the document.
+                </div>
+              </li>
+              <li>
+                [document].getElementsByClassName
+                <div style="font-size: 1.2rem">
+                  Returns a <strong>live</strong>
+                  <em style="color: greenyellow">HTMLCollection</em>
+                  representing a list of the document's elements that match the
+                  specified class or <em style="color: greenyellow">null</em> if
+                  no matching element was found in the document (or parent
+                  element).
+                </div>
+              </li>
+              <li>
+                [document].getElementsByTagName
+                <div style="font-size: 1.2rem">
+                  Returns a <strong>live</strong>
+                  <em style="color: greenyellow">HTMLCollection</em>
+                  representing a list of the document's elements that match the
+                  specified tag or <em style="color: greenyellow">null</em> if
+                  no matching element was found in the document (or parent
+                  element).
+                </div>
+              </li>
+              <li>
+                document.getElementsByName
+                <div style="font-size: 1.2rem">
+                  Returns a <strong>live</strong>
+                  <em style="color: greenyellow">NodeList</em> representing a
+                  list of the document's elements that match the specified name
+                  attribute or <em style="color: greenyellow">null</em> if no
+                  matching element was found
+                </div>
+              </li>
+            </ul>
+          </section>
+
+          <section>
+            <h1>DOM</h1>
+            <h3>Selecting elements</h3>
+            <div style="display: flex">
+              <div>
+                <pre style="width: initial"><code data-trim class="html">
+<div id="box"></div>
+<nav class="menu">
+  <ul>
+    <li>one</li>
+    <li class="active">two</li>
+    <li>three</li>
+  </ul>
+</nav>
+<input name="surname" value="Smith">
+                </code></pre>
+              </div>
+              <div>
+                <pre
+                  style="width: initial"
+                ><code data-trim class="javascript hljs">
+let tag;
+tag = document.getElementById('box');
+
+// parent is document
+tags = document.getElementsByClassName('menu');
+// parent is element
+var myEl = document.querySelector('ul');
+tags = myEl.getElementsByClassName('active');
+
+tags = document.getElementsByTagName('li');
+tags = document.getElementsByName('surname');
+                </code></pre>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <h1>DOM</h1>
+            <h3>Add element, attribute, class</h3>
+            <ul>
+              <li>
+                document.createElement(<em>tagName</em>);
+                <div style="font-size: 1.2rem">
+                  Method creates the HTML element specified by <em>tagName</em>.
+                  Return value is hhe new
+                  <em style="color: greenyellow">HTMLElement</em>.
+                </div>
+              </li>
+              <li>
+                [Element].setAttribute(<em>name</em>, <em>value</em>);
+                <div style="font-size: 1.2rem">
+                  Sets the value of an attribute on the specified element. If
+                  the attribute already exists, the value is updated; otherwise
+                  a new attribute is added with the specified name and value.
+                </div>
+              </li>
+              <li>
+                [parentElement].appendChild(<em>childElement</em>);
+                <div style="font-size: 1.2rem">
+                  Method adds a node to the end of the list of children of a
+                  specified parent node.
+                </div>
+              </li>
+            </ul>
+          </section>
+
+          <section>
+            <h1>DOM</h1>
+            <h3>Add element, attribute, class</h3>
+            <div style="display: flex">
+              <div>
+                <pre style="width: initial"><code data-trim class="html">
+<!-- before -->
+<div id="empty"></div>
+
+<!-- after -->
+<div id="empty">
+  <span class="mine"></span>
+</div>
+                </code></pre>
+              </div>
+              <div>
+                <pre
+                  style="width: initial"
+                ><code data-trim class="javascript hljs">
+var parentTag = document.getElementById('empty');
+// create new tag (somewhere in memory)
+var myTag = document.createElement('span');
+// add attribute
+myTag.setAttribute('class', 'mine');
+// append to parent
+parentTag.appendChild(myTag);
+                </code></pre>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <h1>DOM</h1>
+            <h3>innerText vs innerHTML</h3>
+            <ul>
+              <li>
+                [Element].innerText = <em>text</em>;
+                <div style="font-size: 1.2rem">
+                  The innerText property represents the "rendered" text content
+                  of a node
+                </div>
+              </li>
+              <li>
+                [Element].innerHTML = <em>html text</em>;
+                <div style="font-size: 1.2rem">
+                  The Element property innerHTML gets or sets the HTML or XML
+                  markup contained within the element.
+                </div>
+              </li>
+            </ul>
+          </section>
+
+          <section>
+            <h1>DOM</h1>
+            <h3>innerText vs innerHTML</h3>
+            <div style="display: flex">
+              <div>
+                <pre style="width: initial"><code data-trim class="html">
+<div id="empty">
+  <span class="mine"></span>
+</div>
+                </code></pre>
+              </div>
+              <div>
+                <pre
+                  style="width: initial"
+                ><code data-trim class="javascript hljs">
+// add rendered text
+myTag.innerText = 'ahoj';
+// tell DOM to render HTML inside tag
+myTag.innerHTML = '<em>moo</em>';
+// see difference
+myTag.innerText = '<em>moo</em>';
+                </code></pre>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <h1>DOM</h1>
+            <h3>Remove element, attribute, class</h3>
+            <ul>
+              <li>
+                [Element].removeAttribute(<em>name</em>);
+                <div style="font-size: 1.2rem">
+                  Method removes the attribute with the specified name from the
+                  element.
+                </div>
+              </li>
+              <li>
+                [Element].remove();
+                <div style="font-size: 1.2rem">
+                  Method removes the element from the tree it belongs to.
+                </div>
+              </li>
+            </ul>
+          </section>
+
+          <section>
+            <h1>DOM</h1>
+            <h3>Remove element, attribute, class</h3>
+            <div style="display: flex">
+              <div>
+                <pre style="width: initial"><code data-trim class="html">
+<!-- before -->
+<div id="empty">
+  <span class="mine"></span>
+</div>
+<!-- after -->
+...<span></span>...
+<!-- after -->
+<div id="empty"></div>
+                </code></pre>
+              </div>
+              <div>
+                <pre
+                  style="width: initial"
+                ><code data-trim class="javascript hljs">
+// remove class attribute
+myTag.removeAttribute('class');
+// remove tag from DOM
+myTag.remove();
+                </code></pre>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <h2>JavaScript</h2>
+            <h3>Placing JS in HTML page</h3>
+            <ul>
+              <li>in head</li>
+              <li>in body</li>
+              <li>in body at end</li>
+            </ul>
+          </section>
+        </article>
+      </main>
+
+      <script src="node_modules/reveal.js/dist/reveal.js"></script>
+      <script src="node_modules/reveal.js/plugin/notes/notes.js"></script>
+      <script src="node_modules/reveal.js/plugin/markdown/markdown.js"></script>
+      <script src="node_modules/reveal.js/plugin/highlight/highlight.js"></script>
+      <script>
+        Reveal.initialize({
+          hash: true,
+          plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+        });
+      </script>
+    </body>
+  </html>
+</html>
