@@ -26,6 +26,13 @@ blueBox.style.left = "40px";
 console.log(blueBox.style.left);
 
 function moveToLeft() {
+   let leftBox = parseInt(blueBox.style.left);
+
+   if(leftBox >= 1400) {
+      return;
+   }
+   leftBox += 40;
+
+   blueBox.style.left = leftBox + "px";
 
 }
-setInterval(moveToLeft(), 500);
