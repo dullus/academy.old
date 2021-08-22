@@ -72,3 +72,7 @@ legend {
   background-color: var(--color-button--background);
   border-color: var(--color-button--border);
 }
+
+.alert {
+  display: none;
+}

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <html>
+    <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <title>Lesson 9 - FE JavaScript</title>
+      <link rel="stylesheet" href="node_modules/reveal.js/dist/reset.css" />
+      <link rel="stylesheet" href="node_modules/reveal.js/dist/reveal.css" />
+      <link
+        rel="stylesheet"
+        href="node_modules/reveal.js/dist/theme/league.css"
+      />
+      <!-- Theme used for syntax highlighted code -->
+      <!--link rel="stylesheet" href="plugin/highlight/monokai.css" /-->
+      <link
+        rel="stylesheet"
+        href="node_modules/reveal.js/plugin/highlight/atom-one-light.min.css"
+      />
+    </head>
+    <body>
+      <main class="reveal">
+        <article class="slides">
+          <section>
+            <h1>FE JavaScript</h1>
+            <h3>Lesson 9</h3>
+            <img alt="*" src="img/01/ness.png" height="190" />
+            <div>
+              🙈 dalibor.schon@ness.com<br />
+              🙉 lukas.orgovan@ness.com<br />
+              🙊 erik.fecko@ness.com
+            </div>
+          </section>
+
+          <section>
+            <h2>JavaScript</h2>
+            <h3>Shadowing</h3>
+            <p>
+              Variable shadowing occurs when a variable of an inner scope is
+              defined with the same name as a variable in the outer scope
+            </p>
+            <img
+              src="img/09/shadow.png"
+              style="height: 220px"
+              alt="shadowing"
+            />
+          </section>
+
+          <section>
+            <h2>JavaScript</h2>
+            <h3>Hoisting</h3>
+            <p>
+              <strong>Hoisting</strong> is JS behavior in which function or
+              variable can be used before declaration.
+            </p>
+            <ul>
+              <li>
+                variable hoisting - only "var" is hoisted, not "let" or "const"
+              </li>
+              <li>
+                function hoisting - simple "function xx(){}" is hoisted, not
+                function expression "var xx = function(){}"
+              </li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>JavaScript</h2>
+            <h3>Array</h3>
+            <img src="img/09/arrays.png" alt="arrays" />
+          </section>
+
+          <section>
+            <h2>JavaScript</h2>
+            <h3>Array - map, reduce, filter</h3>
+            <img
+              style="height: 450px"
+              src="img/09/map-filter-reduce-in-emoji.png"
+              alt="map, filter, reduce"
+            />
+          </section>
+
+          <section>
+            <h2>JavaScript</h2>
+            <h3>Object, Class</h3>
+            <p>Fun Fact - everything in JS is an object</p>
+            <img src="img/09/js-logo.png" style="height: 300px" alt="JS logo" />
+          </section>
+
+          <section>
+            <h2>JavaScript</h2>
+            <h3>Scope, Closure</h3>
+            <p>
+              The <strong>scope</strong> is a policy that manages the
+              accessibility of variables.
+            </p>
+            <p>
+              ES5 (before 2015) had only <strong>Global Scope</strong> and
+              <strong>Function Scope</strong>. ES6 added
+              <strong>Block Scope</strong> by using "let" and "const".
+            </p>
+          </section>
+
+          <section>
+            <h2>JavaScript</h2>
+            <h3>Closure</h3>
+            <p>
+              A <strong>closure</strong> is the combination of a function
+              bundled together (enclosed) with references to its surrounding
+              state. Gives you access to an outer function’s scope from an inner
+              function. In JavaScript, closures are created every time a
+              function is created, at function creation time.
+            </p>
+          </section>
+        </article>
+      </main>
+
+      <script src="node_modules/reveal.js/dist/reveal.js"></script>
+      <script src="node_modules/reveal.js/plugin/notes/notes.js"></script>
+      <script src="node_modules/reveal.js/plugin/markdown/markdown.js"></script>
+      <script src="node_modules/reveal.js/plugin/highlight/highlight.js"></script>
+      <script>
+        Reveal.initialize({
+          hash: true,
+          plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+        });
+      </script>
+    </body>
+  </html>
+</html>

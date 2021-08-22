@@ -3,37 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JS test</title>
+    <title>Kocky</title>
     <link rel="stylesheet" href="css/styles.css" type="text/css" />
   </head>
   <body>
-    <main>
+    <section class="redBoxZone">
+      <h3>Red box</h3>
+      <p>Increase size</p>
+      <button class="changeSize" onclick="increaseSize(10)">+</button>
+      <button class="changeSize" onclick="increaseSize(-10)">-</button>
+      <section id="redBox"></section>
+    </section>
 
-      <section class="redBoxZone">
-        <h3>Red box</h3>
-        <p>Increase size</p>
-        <button  class="changeSize" onclick="increaseBox(5)">+</button>
-        <button class="changeSize" onclick="increaseBox(-5)">-</button>
-        </button>
-        <section id="redBox"></section>
-      </section>
-
-      <section class="blueBoxZone">
-        <h3>Blue box</h3>
-        <p>Move from left to right</p>
-        <button class="moveToLeft" onclick="moveBlueBox(20)">+</button>
-        <button class="moveToLeft" onclick="moveBlueBox(-20)">-</button>
-        <section id="blueBox"></section>
-      </section>
-
-      <section class="greenBoxZone">
-        <h3>Green box</h3>
-        <p>Animate move from left to right</p>
-        <button id="launch"  onclick="setTimeout(moveGreenBox(20), 1000)">Launch</button>
-        <section id="greenBox"></section>
-      </section>
-
-      <script src="js/main.js"></script>
-    </main>
+    <section class="blueBoxZone">
+      <h3>Blue box</h3>
+      <p>Move from left to right</p>
+      <button class="moveToLeft" onclick="setInterval(moveToLeft(), 500)">
+        Start
+      </button>
+      <section id="blueBox"></section>
+    </section>
+    <script src="js/main.js"></script>
   </body>
 </html>
