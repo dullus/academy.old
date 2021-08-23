@@ -44,22 +44,24 @@ class Hero {
         console.log('hero created')
     }
     takeHit = (hit) => {
-        if (this.defense > 0) {
-            this.defense = this.defense - hit;
-            if (this.defense < 0) {
-                let hitCrossDefense = this.defense * (-1);
-                this.defense = 0;
-                this.hp = this.hp - hitCrossDefense
-                if (this.hp < 0) {
-                    this.hp = 0;
-                    console.log('Superman je shitny hero, nevydrzal --->RIP<---')
-                }
+        this.defense = this.defense - hit;
+        if (this.defense <= 0) {
+            let hitCrossDefense = this.defense * (-1);
+            this.defense = 0;
+            this.hp = this.hp - hitCrossDefense
+            if (this.hp <= 0) {
+                this.hp = 0;
+                console.log('Superman je shitny hero, nevydrzal --->RIP<---')
             }
-
         }
+
     }
 }
 
 const superman = new Hero('Duri Mokry', 'laser',)
-superman.takeHit(111);
+superman.takeHit(10);
+console.log(superman)
+
+superman.takeHit(10);
+
 console.log(superman)
