@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <title>Calculator</title>
+  </head>
+
+  <body>
+    <div class="all">
+      <img class="logo" padding-top: 110px; src="./img/logo.svg" alt="logo" />
+
+      <div class="main">
+        <div class="left">
+          <div class="inputTag">
+            <span class="tags">Bill</span>
+            <textarea
+              class="text"
+              name="Bill"
+              id="Bill"
+              cols=""
+              rows="1"
+              placeholder="0"
+            ></textarea>
+          </div>
+          <div class="inputTag">
+            <span class="tags">Select tip %</span>
+            <div class="buttons">
+              <div class="buttons1">
+                <button>5%</button>
+                <button>10%</button>
+                <button>15%</button>
+              </div>
+              <div class="buttons2">
+                <button>20%</button>
+                <button>50%</button>
+                <textarea
+                  placeholder="Custom"
+                  class="text"
+                  name="Custom"
+                  id="Custom"
+                  rows="1"
+                ></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="inputTag">
+            <span class="tags">Number of people</span>
+            <textarea
+              class="text"
+              name="N_o_p"
+              id="N_o_p"
+              cols=""
+              rows="1"
+              placeholder="0"
+            ></textarea>
+          </div>
+        </div>
+        <div class="right">
+          <div class="rightItems">
+            <div class="rightText">
+              <span class="textTip"><strong>Tip Amount</strong></span>
+              <span class="textPersons">/ person</span>
+            </div>
+            <textarea
+              placeholder="$45.1"
+              class="text2"
+              name="Tip_ammount"
+              id="Tip_ammount"
+              cols=""
+              rows="1"
+            ></textarea>
+          </div>
+          <div class="rightItems">
+            <div class="rightText">
+              <span class="textTip"><strong>Total</strong></span>
+              <span class="textPersons">/ person</span>
+            </div>
+            <textarea
+              placeholder="$81.1"
+              class="text2"
+              name="Total"
+              id="Total"
+              cols=""
+              rows="1"
+            ></textarea>
+          </div>
+          <button id="reset"><strong>RESET</strong></button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
