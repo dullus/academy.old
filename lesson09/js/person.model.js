@@ -4,7 +4,7 @@ function Person(name, surname, age) {
   this.name = name;
   this.surname = surname;
   this.originalName = this.name + ' ' + this.surname;
-  this.fullName = function() {
+  this.fullName = () => `${this.name} ${this.surname}`//function() {
     return this.name + ' ' + this.surname;
   }
 }
