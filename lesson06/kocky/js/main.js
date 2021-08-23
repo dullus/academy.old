@@ -1,4 +1,4 @@
-const redBox = document.getElementById('redBox');
+const redBox = document.querySelector('#redBox');
 
 redBox.style.width = "40px";
 redBox.style.height = "40px";
@@ -18,21 +18,30 @@ function increaseSize(offset) {
 
 }
 
-const blueBox = document.getElementById('blueBox');
-console.log(blueBox);
+const blueBox = document.querySelector('#blueBox');
+
+console.dir(blueBox);
+
+/*
 blueBox.style.width = "40px";
 blueBox.style.height = "40px";
 blueBox.style.left = "40px";
+*/
+
 console.log(blueBox.style.left);
 
-function moveToLeft() {
-   let leftBox = parseInt(blueBox.style.left);
+function moveToLeft(offset) {
+   let leftBox = parseInt(blueBox.style.of);
 
    if(leftBox >= 1400) {
       return;
    }
-   leftBox += 40;
+   leftBox += offset;
 
    blueBox.style.left = leftBox + "px";
 
+}
+
+function animateBox(offset) {
+   setInterval(moveToLeft, 500,offset);
 }
