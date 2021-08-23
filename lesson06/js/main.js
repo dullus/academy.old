@@ -17,7 +17,33 @@ if (sucet > 10) {
     console.log('malo');
 } 
 
-const krabicka = document.querySelector('.box');
+const krabicka = document.querySelector('#box');
 console.log(krabicka);
-console.dir(krabicka);
-krabicka.style.fontSize = '500px';
+// krabicka.style.width = '500px';
+// krabicka.style.left = '500px'
+
+
+console.log(sucet);
+
+
+function widthFunction() {
+    krabicka.style.width = krabicka.style.width + 1 + 'px';
+
+}
+
+widthFunction();
+
+for (i = 1 ;i < 800; i++){
+    
+    
+    (function(i){
+
+        window.setTimeout(function(){
+            krabicka.style.width = i + 'px';
+        }, i * 10);
+    
+      }(i));
+    
+    }
+
+    
