@@ -6,9 +6,9 @@
 console.log('%c---myFunction---', 'background: #ddd; color: #111');
 var a = 'hi';
 function myFunction(){
-  console.log(`out: ${a}`);
+  console.log('out: ' + a); //ekvivalentny zapis
   var b = 'hello';
-  console.log(`in: ${b}`);
+  console.log(`in: ${b}`);  //ekvivalentny zapis
 }
 myFunction();
 // out: hi
