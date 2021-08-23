@@ -1,14 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>#box { width: 40px; height: 40px; background: red;}</style>
-</head>
-<body>
-    <div id="box"></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Boxes</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <div class="box-wrapper" id="wrapper" onclick="move('#firstBox')">
+      <div class="box" id="firstBox"></div>
+    </div>
+    <div class="box-wrapper">
+      <div class="box" id="secondBox"></div>
+    </div>
+    <div class="box-wrapper">
+      <div class="box" id="thirdBox"></div>
+    </div>
+    <div class="box-wrapper">
+      <div class="box" id="fourthBox"></div>
+    </div>
+    <div class="box-wrapper">
+      <div class="box" id="sixthBox"></div>
+    </div>
+    <div class="box-wrapper">
+      <div class="box" id="fifthBox"></div>
+    </div>
+    <button onclick="increaseSpeed()" id="increase">+</button>
+    <button onclick="decreaseSpeed()" id="decrease">-</button>
+    <button onclick="startMove()" id="start">START</button>
+    <button onclick="stopMove()" id="stop">STOP</button>
+    <button onclick="randomAll()" id="color">Random color</button>
     <script src="js/main.js"></script>
-</body>
+  </body>
 </html>
