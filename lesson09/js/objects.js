@@ -140,7 +140,7 @@ const myObj = pick(obj, 'a', 'c');
 /**
  * Simple runtime check if 'obj' fullfills interface
  * e.g. Checks only if all 'props' are present in 'obj'.
- * 
+ *  
  * @param obj:any - object to check
  * @param props:string[] - list of properties to check
  * @returns boolean
