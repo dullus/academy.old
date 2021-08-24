@@ -22,26 +22,27 @@ const blueBox = document.querySelector('#blueBox');
 
 console.dir(blueBox);
 
-/*
-blueBox.style.width = "40px";
-blueBox.style.height = "40px";
-blueBox.style.left = "40px";
-*/
+blueBox.style.top = "0px";
+blueBox.style.left = "0px";
 
-console.log(blueBox.style.left);
 
 function moveToLeft(offset) {
-   let leftBox = parseInt(blueBox.style.of);
+   let  leftBox = parseInt(blueBox.style.left);
 
-   if(leftBox >= 1400) {
+   if(leftBox >= 1800) {
       return;
    }
    leftBox += offset;
 
    blueBox.style.left = leftBox + "px";
-
 }
 
+let animateHandler;
+
 function animateBox(offset) {
-   setInterval(moveToLeft, 500,offset);
+   animateHandler = setInterval(moveToLeft, 50,offset);
+}
+
+function stopAnimatedBox() {
+   clearInterval(animateHandler);
 }
