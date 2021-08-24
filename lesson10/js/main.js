@@ -38,11 +38,26 @@ class Hero {
         this.defence = 10;
         console.log('hero created')
     }
-    takeHit = (hit) => {
-        if()
-    } 
 }
-
 
 const superman = new Hero('Clark Kent', 'laser');
 console.log(superman)
+
+takeHit = (hit) => {
+          if(hit > 0 && superman.defence > 0){
+              superman.defence -= hit;
+              return superman.defence;
+          }
+     }
+
+function damageDef () {
+    let defenceDamage = superman.defence;
+    defenceDamage = Math.abs(defenceDamage);
+    return defenceDamage;
+}
+
+ function damageHp() {
+    let hpDamage = superman.hp - damageDef();
+    return hpDamage;
+}
+
