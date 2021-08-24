@@ -36,28 +36,22 @@ class Hero {
         this.weapon = weapon;
         this.hp = 100;
         this.defence = 10;
-        console.log('hero created')
+        console.log('hero created');
     }
-}
+        takeHit = (hit) => {
+            this.defence = this.defence - hit;
+            let defenceAbs = Math.abs(this.defence);
+            // return defenceAbs;
+            this.hp = this.hp - defenceAbs;
+            defenceAbs = 0;
+            this.defence = 0;
+            if(this.hp <= 0){
+                console.log('Hero is dead....you monster!!')
+            } else {
+                console.log('Still alive! Get gim!')
+            }          
+      }
+    }
 
 const superman = new Hero('Clark Kent', 'laser');
 console.log(superman)
-
-takeHit = (hit) => {
-          if(hit > 0 && superman.defence > 0){
-              superman.defence -= hit;
-              return superman.defence;
-          }
-     }
-
-function damageDef () {
-    let defenceDamage = superman.defence;
-    defenceDamage = Math.abs(defenceDamage);
-    return defenceDamage;
-}
-
- function damageHp() {
-    let hpDamage = superman.hp - damageDef();
-    return hpDamage;
-}
-
