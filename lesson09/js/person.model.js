@@ -10,7 +10,7 @@ function Person(name, surname, age) {
 }
 
 Person.prototype.getPerson = function() {
-  return 'Person: ' +  this.fullName() + ', age: ' + this.age;
+   return 'Person: ' +  this.fullName() + ', age: ' + this.age;
 }
 
 // ES6
