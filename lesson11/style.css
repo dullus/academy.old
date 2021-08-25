@@ -1,7 +1,23 @@
 body {
-    background: black;
+  background: black;
 }
 #game {
-    width: 100px;
-    height: 100px;
+  position: relative;
+  width: 400px;
+  height: 400px;
+  margin: auto;
+  background: url("assets/floor_1.png");
+}
+
+#wizzard {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+}
+
+#deamon {
+  position: absolute;
+  top: 0px;
+  left: 200px;
 }
