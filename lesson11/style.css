@@ -2,6 +2,25 @@ body {
     background: black;
 }
 #game {
-    width: 100px;
-    height: 100px;
+    width: 400px;
+    height: 400px;
+    background: url('assets/floor_1.png');
+    margin: 0 auto;
+    position: relative;
+}
+
+#wizzard {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 1000;
+}
+
+#demon {
+    position: absolute;
+    top: 0;
+    left: 200px;
+}
+#score {
+    color: #fff;
 }
