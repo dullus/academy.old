@@ -16,12 +16,46 @@ class Hero {
             else if (event.key === 'ArrowLeft') {
                 this.moveLeft();
             }
+
+            else if (event.key === 'ArrowUp') {
+                this.moveUp();
+            }
+
+            else if (event.key === 'ArrowDown') {
+                this.moveDown();
+            }
+
         })
     }
 
     moveRight = () => {
         if (this.position[0] < this.world.width - this.dimension[0] -this.moveBy ) {
             this.position[0] += this.moveBy;
+            this.updatePostion();
+        }
+    }
+
+    moveLeft = () => {
+        if (this.position[0] < this.world.width - this.dimension[0] -this.moveBy ) {
+            this.position[0] -= this.moveBy;
+            this.updatePostion();
+        }
+    }
+
+
+
+    moveDown = () => {
+        if (this.position[1] < this.world.width - this.dimension[1] -this.moveBy ) {
+            this.position[1] += this.moveBy;
+            this.updatePostion();
+        }
+    }
+
+
+    
+    moveUp = () => {
+        if (this.position[1] < this.world.width - this.dimension[1] -this.moveBy ) {
+            this.position[1] -= this.moveBy;console.log("up");
             this.updatePostion();
         }
     }
