@@ -2,7 +2,7 @@ class World {
     constructor(){
 
         this.width = 400;
-        this.height = 400;
+        this.heigth = 400;
         this.score = 0;
         this.enemies = [];
 
