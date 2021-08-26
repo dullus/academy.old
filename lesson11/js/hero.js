@@ -24,6 +24,7 @@ class Hero {
                 this.moveDown();
             }
         })
+        
     }
 
     moveRight = () =>{
