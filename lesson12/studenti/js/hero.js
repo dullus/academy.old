@@ -1,7 +1,12 @@
-// should extend Sprite
-class Hero {
+import { Sprite } from './sprite.js'
+
+class Hero extends Sprite {
   constructor() {
-    // set some name, type, moveBy
+    super();
+    this.alive = true;
+    this.name = 'Wizzard';
+    this.type = 'hero';
+    this.moveBy = 5;
   }
 }
 
