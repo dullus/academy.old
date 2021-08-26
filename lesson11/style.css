@@ -1,7 +1,26 @@
 body {
-    background: black;
+  background: black;
 }
 #game {
-    width: 100px;
-    height: 100px;
+  width: 400px;
+  height: 400px;
+  background: url(assets/floor_1.png);
+  margin: 0 auto;
+  position: relative;
+}
+#elfFemale {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+}
+
+#demon {
+  position: absolute;
+  top: 0px;
+  left: 200px;
+}
+
+#score {
+  color: white;
 }
