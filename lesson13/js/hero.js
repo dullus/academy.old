@@ -6,7 +6,7 @@ class Hero extends Sprite {
     this.alive = true;
     this.name = 'Wizzard';
     this.type = 'hero';
-    this.moveBy = 5;
+    this.moveBy = 15.5;
   }
 }
 
