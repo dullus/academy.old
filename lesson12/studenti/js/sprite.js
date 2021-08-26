@@ -1,5 +1,5 @@
 class Sprite {
-  constructor(playground = { width: 400, height: 400 }) {
+  constructor(playground = { width: 400, height: 400 }) { //default parameter
     this.position = { left: undefined, top: undefined };
     this.dimension = { x: undefined, y: undefined };
     this.playground = playground;
