@@ -18,26 +18,39 @@ class World {
       score: document.getElementById("score"),
       sound: document.getElementById("sound")
     };
+    const keyPressed = {};
 
-    document.addEventListener("keydown", (event) => {
-      switch (event.key) {
-        case "ArrowRight":
-          this.hero.moveRight();
-          break;
-        case "ArrowLeft":
-          this.hero.moveLeft();
-          break;
-        case "ArrowUp":
-          this.hero.moveUp();
-          break;
-        case "ArrowDown":
-          this.hero.moveDown();
-          break;
-        default:
-          console.log(event.key);
-          break;
+    const moveLoop = ()=> {
+      if(keyPressed.ArrowDown){
+        this.hero.moveDown();
+      }
+      if(keyPressed.ArrowLeft){
+        this.hero.moveLeft();
+      }
+      if(keyPressed.ArrowUp){
+        this.hero.moveUp();
+      }
+      if(keyPressed.ArrowRight){
+        this.hero.moveRight();
       }
       this.positionChanged();
+      window.requestAnimationFrame(moveLoop);
+    }
+
+    window.requestAnimationFrame(moveLoop);
+    document.addEventListener("keydown", ({key}) => {
+      if (['ArrowDown','ArrowLeft', 'ArrowRight', 'ArrowUp'].includes(key)){
+      keyPressed[key] = true;
+      console.log(keyPressed);
+      }
+      // this.positionChanged();
+    });
+    document.addEventListener("keyup", ({key}) => {
+    if (['ArrowDown','ArrowLeft', 'ArrowRight', 'ArrowUp'].includes(key)){
+      keyPressed[key] = false;
+      console.log(keyPressed);
+      }
+      ;
     });
   }
 
@@ -81,7 +94,7 @@ class World {
       // randomize placement
       let maxNum = this.playground.width - element.offsetWidth;
       element.style.left = `${this.getRandomInt(maxNum)}px`;
-      maxNum = this.playground.height - element.offsetTop;
+      maxNum = this.playground.height - element.offsetHeight;
       element.style.top = `${this.getRandomInt(maxNum)}px`;
       // create enemy object
       const enemy = new Enemy(`Demon ${idx}`);
