@@ -20,14 +20,14 @@ class Sprite {
       this.position.left += this.moveBy;
       this.updatePostion();
     }
-  };
+  }
 
   moveLeft() {
     if (this.position.left > 0) {
       this.position.left -= this.moveBy;
       this.updatePostion();
     }
-  };
+  }
 
   moveUp() {
     if (this.position.top > 0) {

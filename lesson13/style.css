@@ -1,5 +1,6 @@
 body {
   background: black;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 #game {
@@ -8,6 +9,7 @@ body {
   background: url(assets/floor_1.png);
   margin: 0 auto;
   position: relative;
+  display: flex;
 }
 
 .hero {
@@ -21,4 +23,13 @@ body {
 
 #score {
   color: #fff;
+}
+
+#victory {
+  color: white;
+  font-size: 100px;
+  text-transform: uppercase;
+  position: relative;
+  text-align: center;
+  margin: auto;
 }
