@@ -15,7 +15,8 @@ class World {
     this.enemies = [];
     this.element = {
       game: document.getElementById("game"),
-      score: document.getElementById("score")
+      score: document.getElementById("score"),
+      sound: document.getElementById("sound"),
     };
 
     document.addEventListener("keydown", (event) => {
@@ -43,23 +44,53 @@ class World {
   init() {
     // cleanup old game
     // generate hero
+    this.generateHero();
     // generate enemies
+    for (let i = 1; i <= MAX_ENEMIES; i++) {
+      this.generateEnemy(i);
+    }
   }
 
   generateHero() {
     // create hero element
+    const element = document.createElement("img");
+    element.setAttribute("id", "hero");
+    element.setAttribute("class", "hero");
     // add id and class
     // due async nature of "src" propagation, prepare callback when img loaded
     element.addEventListener("load", () => {
+      const hero = new Hero();
+      hero.init(element);
+      this.hero = hero;
       // create hero object
       // push to enemies stack
     });
-    // add img src
-    // append to game
+    element.setAttribute("src", "assets/wizzard.gif");
+    this.element.game.appendChild(element);
   }
 
   generateEnemy(idx) {
-    // create enemy element, similar to hero but some random position
+    const element = document.createElement("img");
+    element.setAttribute("id", `demon${idx}`);
+    element.setAttribute("class", "demon");
+    element.addEventListener("load", () => {
+      // randomize placement
+      let maxNum = this.playground.width - element.offsetWidth;
+      element.style.left = `${this.getRandomInt(maxNum)}px`;
+      maxNum = this.playground.height - element.offsetHeight;
+      element.style.top = `${this.getRandomInt(maxNum)}px`;
+      // create enemy object
+      const enemy = new Enemy(`Demon ${idx}`);
+      enemy.init(element);
+      // push to enemies stack
+      this.enemies.push(enemy);
+    });
+    element.setAttribute("src", "assets/big-demon-idle.gif");
+    // append to game
+    this.element.game.appendChild(element);
+  }
+  getRandomInt(max) {
+    return Math.floor(Math.random() * max);
   }
 
   updateScore() {
@@ -78,7 +109,10 @@ class World {
       .forEach((enemy) => {
         if (this.collision(this.hero.position, enemy.position)) {
           // update score
+          this.updateScore();
           // kill enemy
+          this.element.sound.play();
+          enemy.kill();
         }
       });
   }
@@ -86,7 +120,10 @@ class World {
   collision(hero, enemy) {
     let collided = false;
     // think of some collision model
-    if (false) {
+    if (
+      Math.abs(enemy.left - hero.left) < COLLISION_THRESHOLD &&
+      Math.abs(enemy.top - hero.top) < COLLISION_THRESHOLD
+    ) {
       collided = true;
     }
     return collided;

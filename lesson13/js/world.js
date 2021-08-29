@@ -13,31 +13,40 @@ class World {
     this.score = 0;
     this.hero = undefined;
     this.enemies = [];
+    this.badAssTiles = [];
+
     this.element = {
       game: document.getElementById("game"),
       score: document.getElementById("score"),
-      sound: document.getElementById("sound")
+      sound: document.getElementById("sound"),
     };
-
-    document.addEventListener("keydown", (event) => {
-      switch (event.key) {
-        case "ArrowRight":
-          this.hero.moveRight();
-          break;
-        case "ArrowLeft":
-          this.hero.moveLeft();
-          break;
-        case "ArrowUp":
-          this.hero.moveUp();
-          break;
-        case "ArrowDown":
-          this.hero.moveDown();
-          break;
-        default:
-          console.log(event.key);
-          break;
+    const keyPressed = {};
+    const moveLoop = () => {
+      if (keyPressed.ArrowDown) {
+        this.hero.moveDown();
+      }
+      if (keyPressed.ArrowLeft) {
+        this.hero.moveLeft();
+      }
+      if (keyPressed.ArrowUp) {
+        this.hero.moveUp();
+      }
+      if (keyPressed.ArrowRight) {
+        this.hero.moveRight();
       }
       this.positionChanged();
+      window.requestAnimationFrame(moveLoop);
+    };
+    window.requestAnimationFrame(moveLoop);
+    document.addEventListener("keydown", ({ key }) => {
+      if (["ArrowDown", "ArrowUp", "ArrowLeft", "ArrowRight"].includes(key))
+        keyPressed[key] = true;
+      console.log(keyPressed);
+    });
+    document.addEventListener("keyup", ({ key }) => {
+      if (["ArrowDown", "ArrowUp", "ArrowLeft", "ArrowRight"].includes(key))
+        keyPressed[key] = false;
+      console.log(keyPressed);
     });
   }
 
@@ -46,6 +55,21 @@ class World {
     this.resetScore();
     this.enemies.forEach((enemy) => enemy.element.remove());
     this.enemies = [];
+    if (this.hero) {
+      this.hero.element.remove();
+    }
+
+    for (let i = 0; i < this.badAssTiles.length; i++) {
+      const removelElm = document.getElementById(`badAssTile${i}`);
+      if (removelElm) {
+        removelElm.remove();
+      }
+    }
+    this.badAssTiles = [];
+
+    this.generateBadAssTile();
+
+    this.hero = undefined;
     // generate hero
     this.generateHero();
     // generate enemies
@@ -81,7 +105,7 @@ class World {
       // randomize placement
       let maxNum = this.playground.width - element.offsetWidth;
       element.style.left = `${this.getRandomInt(maxNum)}px`;
-      maxNum = this.playground.height - element.offsetTop;
+      maxNum = this.playground.height - element.offsetHeight;
       element.style.top = `${this.getRandomInt(maxNum)}px`;
       // create enemy object
       const enemy = new Enemy(`Demon ${idx}`);
@@ -112,18 +136,30 @@ class World {
     this.enemies
       .filter((enemy) => enemy.alive)
       .forEach((enemy) => {
-        if (this.collision(this.hero.position, enemy.position)) {
+        if (this.collisionEnemy(this.hero.position, enemy.position)) {
           // update score
           this.updateScore();
           // kill enemy
           enemy.kill();
           // play sound
           this.element.sound.play();
+
+          if (this.score === this.enemies.length) {
+            this.endGame();
+          }
         }
       });
+    if (this.hero && this.collisionBadAssTile(this.hero.position)) {
+      this.endGame();
+    }
   }
 
-  collision(hero, enemy) {
+  endGame() {
+    const result = confirm("end game");
+    this.init();
+  }
+
+  collisionEnemy(hero, enemy) {
     let collided = false;
     if (
       Math.abs(enemy.left - hero.left) < COLLISION_THRESHOLD &&
@@ -132,6 +168,35 @@ class World {
       collided = true;
     }
     return collided;
+  }
+  collisionBadAssTile(hero) {
+    const collided = this.badAssTiles.some((badAssTile) => {
+      if (
+        Math.abs(badAssTile[0] - hero.left) < COLLISION_THRESHOLD &&
+        Math.abs(badAssTile[1] - hero.top) < COLLISION_THRESHOLD
+      ) {
+        return true;
+      }
+      return false;
+    });
+    return collided;
+  }
+
+  generateBadAssTile() {
+    const numberTiles = Math.floor(Math.random() * 10);
+    for (let i = 0; i < numberTiles; i++) {
+      const x = Math.floor(Math.random() * (24 - 0 + 1) + 0) * 16;
+      const y = Math.floor(Math.random() * (24 - 0 + 1) + 0) * 16;
+      this.badAssTiles.push([x, y]);
+
+      //generating badAssTileElement game div
+      let element = document.createElement("img");
+      element.setAttribute("id", `badAssTile${i}`);
+      element.setAttribute("class", "badAssTile");
+      element.style.left = `${x}px`;
+      element.style.top = `${y}px`;
+      this.element.game.appendChild(element);
+    }
   }
 }
 

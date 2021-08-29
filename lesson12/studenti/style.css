@@ -22,11 +22,3 @@ body {
 #score {
   color: #fff;
 }
-
-.badAssTile {
-  background: url(/lesson13/assets/floor_spikes_anim_f3.png);
-  z-index: 10;
-  position: absolute;
-  width: 16px;
-  height: 16px;
-}
