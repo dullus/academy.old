@@ -1,0 +1,15 @@
+.todoElm {
+  background-color: rosybrown;
+  text-align: center;
+  margin: 20px;
+  padding: 10px;
+  border: 1px solid black;
+}
+.todoDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+input {
+  display: block;
+}

@@ -1,7 +1,7 @@
 let tag;
 
-console.info("tag = document.querySelector('#box');")
-tag = document.querySelector('#box');
+console.info("tag = document.querySelector('#box');");
+tag = document.querySelector("#box");
 console.log(tag);
 /*
 console.info("tag = document.querySelector('.menu');");
@@ -47,3 +47,8 @@ tags.namedItem('surname');
 
 document.getElementsByTagName('input').namedItem('surname');
 */
+console.log("asfsdaf");
+
+fetch("https://jsonplaceholder.typicode.com/todos/1")
+  .then((response) => response.json())
+  .then(({ data }) => {});
