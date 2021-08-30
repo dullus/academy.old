@@ -18,3 +18,33 @@ function createTodoTitle(title) {
 
     return titleElement;
 }
+
+/ * part 2 */
+
+fetch('mocks/todo.json')
+  .then(response => response.json())
+  .then(data => {
+     console.log(data)
+  });
+
+function fakeAsync() {
+  return new Promise(( resolve, reject ) => {
+    window.setTimeout(()=>{
+      const fortune = Math.floor(Math.random() * 2);
+      if (fortune === 0) {
+        resolve('ok')
+      } else {
+        reject('bad');
+      }
+    }, 1000);
+  })
+}
+
+const fa = fakeAsync()
+  .then((data)=> console.log(data))
+  .catch((err) => console.log(err))
+  .finally(() => console.log(fa));
+
+console.log(fa);
+console.log(2);
+console.log(3);
