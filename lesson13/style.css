@@ -8,6 +8,7 @@ body {
   background: url(assets/floor_1.png);
   margin: 0 auto;
   position: relative;
+  display: flex;
 }
 
 .hero {
@@ -21,4 +22,12 @@ body {
 
 #score {
   color: #fff;
+}
+#endGame {
+  text-align: center;
+  margin: auto;
+  position: relative;
+  color: #fff;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
