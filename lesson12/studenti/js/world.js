@@ -15,8 +15,12 @@ class World {
     this.enemies = [];
     this.element = {
       game: document.getElementById("game"),
+<<<<<<< HEAD
       score: document.getElementById("score"),
       sound: document.getElementById("sound");
+=======
+      score: document.getElementById("score")
+>>>>>>> 716c7c14d40b41fece1302e0cb91749efa5bf45a
     };
 
     document.addEventListener("keydown", (event) => {
@@ -44,17 +48,21 @@ class World {
   init() {
     // cleanup old game
     // generate hero
+<<<<<<< HEAD
 
     this.generateHero();
 
     for (let i = 1 ; i <= MAX_ENEMIES; i++) {
         this.generateEnemy(i);
     }
+=======
+>>>>>>> 716c7c14d40b41fece1302e0cb91749efa5bf45a
     // generate enemies
   }
 
   generateHero() {
     // create hero element
+<<<<<<< HEAD
 
     const element = document.createElement('img');
     element.setAttribute('id', 'hero');
@@ -74,10 +82,21 @@ class World {
     
     // append to game
     this.element.game.appendChild(element);
+=======
+    // add id and class
+    // due async nature of "src" propagation, prepare callback when img loaded
+    element.addEventListener("load", () => {
+      // create hero object
+      // push to enemies stack
+    });
+    // add img src
+    // append to game
+>>>>>>> 716c7c14d40b41fece1302e0cb91749efa5bf45a
   }
 
   generateEnemy(idx) {
     // create enemy element, similar to hero but some random position
+<<<<<<< HEAD
     const element = document.createElement('img');
     element.setAttribute('id', `demon${idx}`);
     element.setAttribute('class', 'demon');
@@ -97,6 +116,8 @@ class World {
 
   getRandomInt(max) {
     return Math.floor(Math.random() * max);
+=======
+>>>>>>> 716c7c14d40b41fece1302e0cb91749efa5bf45a
   }
 
   updateScore() {
@@ -115,8 +136,12 @@ class World {
       .forEach((enemy) => {
         if (this.collision(this.hero.position, enemy.position)) {
           // update score
+<<<<<<< HEAD
           this.updateScore();
           enemy.kill();
+=======
+          // kill enemy
+>>>>>>> 716c7c14d40b41fece1302e0cb91749efa5bf45a
         }
       });
   }

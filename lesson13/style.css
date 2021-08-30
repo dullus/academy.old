@@ -1,0 +1,28 @@
+body {
+  background: black;
+}
+
+#game {
+  width: 400px;
+  height: 400px;
+  background: url(assets/floor_1.png);
+  margin: 0 auto;
+  position: relative;
+}
+
+.hero {
+  position: absolute;
+  z-index: 1000;
+}
+
+.demon {
+  position: absolute;
+}
+
+.barrier {
+  position: absolute;
+}
+
+#score {
+  color: #fff;
+}

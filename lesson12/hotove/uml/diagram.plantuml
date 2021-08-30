@@ -1,0 +1,59 @@
+@startuml
+abstract Sprite {
+  +position: IWidthHeight
+  +dimension: IDimensions
+  +playground: IWidthHeight
+  +element: HTMLImageElement
+  +moveBy: number
+  +init(): void
+  +moveRight(): void
+  +moveLeft(): void
+  +moveUp(): void
+  +moveDown(): void
+  -updatePosition(): void
+}
+class Hero {
+  +name: string
+  +type: 'hero'
+}
+class Enemy {
+  +alive: boolean
+  +name: string
+  +type: 'demon'
+  -chaos: <typeof setInterval>
+  +kill(): void
+  -randomStep(): void
+}
+class World {
+  +playground: IWidthHeight
+  +score: number
+  -hero: Hero
+  -enemies: Enemy[]
+  -element: IGameElements
+  +init(): void
+  -generateHero(): void
+  -generateEnemy(): void
+  -getRandomInt(): number
+  -updateScore(): void
+  -resetScore(): void
+  -positionChanged(): void
+  -collision(): void
+}
+interface IDimensions {
+  x: number
+  y: number
+}
+interface IGameElements {
+  game: HTMLDivElement
+  score: HTMLDivElement
+  sound: HTMLAudioElement
+}
+interface IWidthHeight {
+  width: number
+  height: number
+}
+Sprite <|-- Hero
+Sprite <|-- Enemy
+World *-- Hero
+World *-- Enemy
+@enduml

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <html>
+    <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <title>Lesson 12 - FE JavaScript</title>
+      <link rel="stylesheet" href="node_modules/reveal.js/dist/reset.css" />
+      <link rel="stylesheet" href="node_modules/reveal.js/dist/reveal.css" />
+      <link
+        rel="stylesheet"
+        href="node_modules/reveal.js/dist/theme/league.css"
+      />
+      <!-- Theme used for syntax highlighted code -->
+      <!--link rel="stylesheet" href="plugin/highlight/monokai.css" /-->
+      <link
+        rel="stylesheet"
+        href="node_modules/reveal.js/plugin/highlight/atom-one-light.min.css"
+      />
+      <style>
+        .yell {
+          color: yellow;
+        }
+      </style>
+    </head>
+    <body>
+      <main class="reveal">
+        <article class="slides">
+          <section>
+            <h1>FE JavaScript</h1>
+            <h3>Lesson 12</h3>
+            <img alt="*" src="img/01/ness.png" height="190" />
+            <div>
+              🙈 dalibor.schon@ness.com<br />
+              🙉 lukas.orgovan@ness.com<br />
+              🙊 erik.fecko@ness.com
+            </div>
+          </section>
+
+          <section>
+            <h2>Object Oriented Programming (OOP)</h2>
+            <h3>in JavaScript(ES2020)</h3>
+            <ul>
+              <li>
+                <b>Object-Oriented Programming</b> - a concept used by
+                programmers to develop fully independent units of code. Each
+                independent unit is known as an <b class="yell">object</b>.
+              </li>
+              <li>
+                <b>Object</b> - something that has
+                <b class="yell">properties</b> and
+                <b class="yell">methods.</b>
+              </li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Class</h2>
+            <ul>
+              <li>
+                <b>Class</b> - "recipe" where objects derive their abilities.
+              </li>
+              <li>
+                You can make your own classes with their own properties and
+                methods.
+              </li>
+              <li>
+                Class is not used directly but needs
+                <b class="yell">instance</b> = object which we can use and
+                manipulate.
+              </li>
+              <li>
+                in OOP we speak also about <b class="yell">abstract class</b> -
+                can't be instiantiated, serves only for inheritance purposes.
+                (❌JS ✅TS)
+              </li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Interface, visibility</h2>
+            <ul>
+              <li>
+                <b>Interface</b> - "recipe" which properties should object have.
+                Can serve as <b>implementation</b> requirement for class. (❌JS
+                ✅TS)
+              </li>
+              <li>
+                <b>Properties and Methods</b> can have prefixes
+                <ul>
+                  <li>
+                    <b class="yell">◻️ static</b> - accessible without
+                    instantiating
+                  </li>
+                  <li>
+                    <b class="yell">🟢 public</b> - freely available and can be
+                    modified
+                  </li>
+                  <li>
+                    <b class="yell">🟠 protected</b> - avialable for direct
+                    children only (❌JS ✅TS)
+                  </li>
+                  <li>
+                    <b class="yell">🔴 private</b> - available for class only
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>JS implementation</h2>
+            <pre style="width: initial"><code data-trim class="javascript hljs">
+class SomeClass {
+  #propPrivate;
+  static SOME_CONST = 5;
+  constructor() {
+    this.propPublic = 'pub';
+    this.#propPrivate = 'priv';
+  }
+  static methodStatic() { console.log(this.SOME_CONST + 1); }
+  methodPublic() { console.log('public'); }
+  #methodPrivate() { console.log('private'); }
+}
+            </code></pre>
+          </section>
+
+          <section>
+            <h2>JS implementation</h2>
+            <pre style="width: initial"><code data-trim class="javascript hljs">
+SomeClass.SOME_CONST
+// 5
+SomeClass.methodStatic()
+// 6
+let obj = new SomeClass();
+obj.propPublic
+// "pub"
+obj.methodPublic()
+// "public"
+obj.#propPrivate
+// SyntaxError: Private field '#propPrivate' must be declared
+// in an enclosing class
+            </code></pre>
+          </section>
+
+          <section>
+            <h2>Inheritance</h2>
+            <p>
+              As any person inherits features from their parents, classes can
+              act the same way. You can create a class that
+              <b class="yell">inherits</b> its capabilities from another class.
+            </p>
+          </section>
+
+          <section>
+            <h2>Inheritance</h2>
+            <pre style="width: initial"><code data-trim class="javascript hljs">
+class Mammal {
+  constructor() {
+    this.legs = 4;
+  }
+  doSound() { console.log('Not yet implemented'); }
+}
+
+class Dog extends Mammal {
+  constructor() { super(); }
+  doSound() { console.log('wuff wuff'); }
+}
+
+class Ape extends Mammal {
+  constructor() { super(); this.legs = 2; }
+  doSound() { console.log('huhuhu hahaha'); }
+}
+            </code></pre>
+          </section>
+
+          <section>
+            <h2>JS implementation</h2>
+            <pre style="width: initial"><code data-trim class="javascript hljs">
+let husky = new Dog();
+husky.legs
+// 4
+husky.doSound()
+// wuff wuff
+let judy = new Ape();
+judy.legs
+// 2
+judy.doSound()
+// "huhuhu hahaha"
+            </code></pre>
+          </section>
+
+          <section>
+            <h2>Unified Modeling Language (UML)</h2>
+            <p>
+              General-purpose, developmental, modeling language in the field of
+              software engineering that is intended to provide a standard way to
+              visualize the design of a system.
+            </p>
+            <p>
+              <a href="https://en.wikipedia.org/wiki/Unified_Modeling_Language"
+                >https://en.wikipedia.org/wiki/Unified_Modeling_Language</a
+              >
+            </p>
+            <p>
+              <a href="https://plantuml.com/">https://plantuml.com/</a>
+            </p>
+          </section>
+
+          <section>
+            <h2>UML - Class Diagram</h2>
+            <img src="img/12/diagram.png" alt="Class Diagram" />
+          </section>
+        </article>
+      </main>
+
+      <script src="node_modules/reveal.js/dist/reveal.js"></script>
+      <script src="node_modules/reveal.js/plugin/notes/notes.js"></script>
+      <script src="node_modules/reveal.js/plugin/markdown/markdown.js"></script>
+      <script src="node_modules/reveal.js/plugin/highlight/highlight.js"></script>
+      <script>
+        Reveal.initialize({
+          hash: true,
+          plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+        });
+      </script>
+    </body>
+  </html>
+</html>

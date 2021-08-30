@@ -1,4 +1,5 @@
 body {
+<<<<<<< HEAD
   background: black;
 }
 #game {
@@ -24,4 +25,30 @@ body {
 
 #score {
   color: white;
+=======
+    background: black;
+}
+#game {
+    width: 400px;
+    height: 400px;
+    background: url('assets/floor_1.png');
+    margin: 0 auto;
+    position: relative;
+}
+
+#wizzard {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 1000;
+}
+
+#demon {
+    position: absolute;
+    top: 0;
+    left: 200px;
+}
+#score {
+    color: #fff;
+>>>>>>> 716c7c14d40b41fece1302e0cb91749efa5bf45a
 }
