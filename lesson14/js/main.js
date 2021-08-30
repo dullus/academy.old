@@ -1,11 +1,26 @@
-fetch('https://jsonplaceholder.typicode.com/todos')
+fetch('mocks/todo.json')
   .then(response => response.json())
   .then(data => {
-     const todocka = data.map(todo => createTodoTitle(todo.title));
-     console.log(todocka)
-    document.getElementById('todoTitle').append(...todocka)
-
+     console.log(data)
   });
+
+function fakeAsync() {
+    return new Promise((resolve, reject) => {
+        window.setTimeout(() => {
+            const fortune = Math.floor(Math.random() * 2);
+
+            if (fortune == 0) {
+                resolve('ok')
+            } else {
+                reject('bad')
+            }
+        }, 1000);
+    })
+}
+
+fakeAsync()
+  .then((data) => console.log(data))
+  .catch((err) => console.log(err));
 
 function renderData(title) {
     const titleElement = createTodoTitle(title)
