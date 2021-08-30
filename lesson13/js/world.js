@@ -114,6 +114,10 @@ class World {
   updateScore() {
     this.score++;
     this.element.score.innerHTML = `Score: ${this.score}`;
+    if(this.score === 10){
+      window.alert('You WIN');
+      location.reload();
+    }
   }
 
   resetScore() {
