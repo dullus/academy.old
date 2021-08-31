@@ -3,17 +3,6 @@ fetch('https://jsonplaceholder.typicode.com/todos')
   .then(data => {
     
      renderData(data)
-
-     
-     document.addEventListener('change', e =>{
-      if(e.target.checked){
-       alert('Stlacil si checkbox, ktory patri datam s id:'+e.target.id)
-      
-      }
-      
-    })
-    
-
   });
 
   let dataId;
@@ -45,7 +34,13 @@ function createTodoTitle(data)  {
     
 }
 
-
+document.addEventListener('change', e =>{
+  if(e.target.checked){
+   alert('Stlacil si checkbox, ktory patri datam s id:'+e.target.id)
+  console.log(e)
+  }
+  
+})
 
 
 
