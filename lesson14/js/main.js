@@ -27,7 +27,7 @@ function createCheckbox(data) {
     const checkbox = document.createElement('INPUT');
     checkbox.setAttribute('type', 'checkbox')
     checkbox.setAttribute('id', `checkbox${data.id}`)
-    checkbox.addEventListener('click', () => window.alert(`Id: ${data.id}`))
+    checkbox.addEventListener('change', () => window.alert(`Id: ${data.id}`))
     wrapper.appendChild(checkbox)
     
     const label = document.createElement('LABEL');      
