@@ -19,7 +19,6 @@ for (let i = 0; i < data.length; i++){
     checkbox.type = 'checkbox';
     mainPanel.appendChild(checkbox);
     }
-    
   }
 
 
