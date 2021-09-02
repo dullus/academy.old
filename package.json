@@ -1,0 +1,26 @@
+{
+  "name": "academy",
+  "version": "1.0.0",
+  "description": "- https://websitesetup.org/wp-content/uploads/2019/08/HTML-CHEAT-SHEET.png\r  - https://www.w3schools.com/tags/default.asp\r  - https://developer.mozilla.org/en-US/docs/Web/HTML/Element",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dullus/academy.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dullus/academy/issues"
+  },
+  "homepage": "https://github.com/dullus/academy#readme",
+  "dependencies": {
+    "tslib": "^2.3.1",
+    "typescript": "^4.4.2"
+  }
+}
