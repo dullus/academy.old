@@ -1,0 +1,15 @@
+{
+    "compileOnSave": false,
+    "compilerOptions": {
+    "baseUrl": "./",
+    "sourceMap": true,
+    "declaration": false,
+    "target": "es2020",
+    "module": "es2020",
+    "lib": [
+    "es2018",
+    "dom"
+    ]
+  }
+}
+   
