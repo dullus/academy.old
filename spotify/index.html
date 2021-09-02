@@ -12,17 +12,22 @@
   <body>
     <div id="body-wraper">
       <nav id="left-nav-bar">
+        <div id="spotify">
+          <i class="fab fa-spotify left-nav-icon" id="spotify-icon"></i>
+          <h3 id="h3-spotify">Spotify</h3>
+        </div>
+
         <ul class="nav-ul">
           <h3>Discover</h3>
           <li class="nav-li">
             <div>
-              <i class="fas fa-compass"></i>
+              <i class="fas fa-compass left-nav-icon"></i>
               Explore
             </div>
           </li>
           <li class="nav-li">
             <div>
-              <i class="fas fa-broadcast-tower"></i>
+              <i class="fas fa-broadcast-tower left-nav-icon"></i>
               Radio
             </div>
           </li>
@@ -32,76 +37,79 @@
           <h3>Library</h3>
           <li class="nav-li">
             <div>
-              <i class="fas fa-music"></i>
+              <i class="fas fa-music left-nav-icon"></i>
               Songs
             </div>
           </li>
           <li class="nav-li">
             <div>
-              <i class="fas fa-compact-disc"></i>
+              <i class="fas fa-compact-disc left-nav-icon"></i>
               Albums
             </div>
           </li>
           <li class="nav-li">
             <div>
-              <i class="fas fa-microphone"></i>
+              <i class="fas fa-microphone left-nav-icon"></i>
               Artist
             </div>
           </li>
           <li class="nav-li">
             <div>
-              <i class="fas fa-heart"></i>
+              <i class="fas fa-heart left-nav-icon"></i>
               Favorties
             </div>
           </li>
         </ul>
 
         <ul class="nav-ul">
-          <div>
+          <div id="playlist">
             <h3>Playlist</h3>
-            <i class="fas fa-plus"></i>
+            <i class="fas fa-plus left-nav-icon" id="playlist-icon"></i>
           </div>
           <li class="nav-li">
             <div>
-              <i class="fas fa-bars"></i>
+              <i class="fas fa-bars left-nav-icon"></i>
               Discover Weekly
             </div>
           </li>
           <li class="nav-li">
-            <div><i class="fas fa-bars"></i> Relax</div>
+            <div><i class="fas fa-bars left-nav-icon"></i> Relax</div>
           </li>
           <li class="nav-li">
-            <div><i class="fas fa-bars"></i> WorkOut</div>
+            <div><i class="fas fa-bars left-nav-icon"></i> WorkOut</div>
           </li>
           <li class="nav-li">
-            <div><i class="fas fa-bars"></i> My Music</div>
+            <div><i class="fas fa-bars left-nav-icon"></i> My Music</div>
           </li>
         </ul>
       </nav>
 
       <div id="main-wraper">
         <header>
-          <div>
-            <i class="fas fa-arrow-left"></i>
-            <i class="fas fa-arrow-right"></i>
-          </div>
-          <div>
-            <div>
-              <i class="fas fa-search"></i>
+          <div class="header-split-wrap">
+            <div class="header-split-wraper-content">
+              <i class="fas fa-chevron-left header-arrows"></i>
+              <i class="fas fa-chevron-right header-arrows"></i>
             </div>
-            <input type="text" class="input-search" placeholder="Search" />
+            <div class="header-split-wraper-content" id="search-box">
+              <i class="fas fa-search" id="magnifier"></i>
+              <input type="text" class="input-search" placeholder="Search" />
+            </div>
           </div>
-          <div>
-            <div href="">PREMIUM</div>
-            <i class="fas fa-bell"></i>
+
+          <div class="header-split-wrap" id="header-split-right-wraper">
+            <div class="header-split-wraper-content">PREMIUM</div>
+            <i class="fas fa-bell header-split-wraper-content"></i>
             <img
               src="assets/najvacsi-frajer-JA.jpg"
               alt="PeknyTypek"
-              width="35px"
-              height="35px"
+              width="25px"
+              height="25px"
+              class="header-split-wraper-content"
+              id="user-img"
             />
-            <p>Dzuky</p>
-            <i class="fas fa-chevron-down"></i>
+            <p class="header-split-wraper-content">Dzuky</p>
+            <i class="fas fa-chevron-down header-split-wraper-content"></i>
           </div>
         </header>
 
@@ -110,18 +118,22 @@
             <h2>Artist</h2>
             <i class="fas fa-check-circle"></i>
           </div>
-          <h1>Rihana</h1>
+          <h1>Saul</h1>
         </section>
 
         <ul class="main-list-artist-function-buttons">
           <li class="artist-function-buttons">
-            <div>
+            <div id="play-button">
               <i class="fas fa-play"></i>
-              Play
+              <p>Play</p>
             </div>
           </li>
-          <li class="artist-function-buttons">Follow</li>
-          <li class="artist-function-buttons">...</li>
+          <li class="artist-function-buttons"><p>Follow</p></li>
+          <li class="artist-function-buttons" id="triple-dot-background">
+            <div>
+              <p id="triple-dot">...</p>
+            </div>
+          </li>
         </ul>
 
         <ul class="main-list-artist-nav">
