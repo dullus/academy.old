@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spotify</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/fonts.css" />
+    <script
+      src="https://kit.fontawesome.com/d03b1f5ced.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=PT+Sans&display=swap");
+  </style>
+  <body>
+    <div id="hahaha" style="background-image: url(images/haha_bw.png)">
+      <div class="gridContainer">
+        <div id="leftSection">
+          <div id="logoWrapper">
+            <i class="fab fa-spotify" id="spotifyLogo"></i>
+            <h2 id="navHeading">Spotify</h2>
+          </div>
+          <nav id="navDiscover">
+            <h3>Discover</h3>
+            <ul class="leftMenu">
+              <div class="leftMenu_liWrapper">
+                <i class="far fa-compass"></i>
+                <li>Explore</li>
+              </div>
+              <div class="leftMenu_liWrapper">
+                <i class="fas fa-broadcast-tower"></i>
+                <li>Radio</li>
+              </div>
+            </ul>
+          </nav>
+
+          <nav id="navLibrary">
+            <h3>Library</h3>
+            <ul class="leftMenu">
+              <div class="leftMenu_liWrapper">
+                <i class="fas fa-music"></i>
+                <li>Songs</li>
+              </div>
+              <div class="leftMenu_liWrapper">
+                <i class="fas fa-record-vinyl"></i>
+                <li>Albums</li>
+              </div>
+              <div class="leftMenu_liWrapper">
+                <i class="fas fa-microphone" id="micIcon"></i>
+                <li>Artists</li>
+              </div>
+              <div class="leftMenu_liWrapper">
+                <i class="fas fa-heart"></i>
+                <li>Favorites</li>
+              </div>
+            </ul>
+          </nav>
+
+          <nav id="navPlaylists">
+            <div id="navPlaylists_wrapper">
+              <h3>Playlists</h3>
+              <i class="fas fa-plus"></i>
+            </div>
+            <ul class="leftMenu">
+              <div class="leftMenu_liWrapper">
+                <img src="" alt="" />
+                <li>Discover Weekly</li>
+              </div>
+              <div class="leftMenu_liWrapper">
+                <img src="" alt="" />
+                <li>Relax</li>
+              </div>
+              <div class="leftMenu_liWrapper">
+                <img src="" alt="" />
+                <li>WorkOut</li>
+              </div>
+              <div class="leftMenu_liWrapper">
+                <img src="" alt="" />
+                <li>My Music</li>
+              </div>
+            </ul>
+          </nav>
+        </div>
+
+        <div id="rightSection">
+          <nav id="rightSection_nav">
+            <div id="rightSection_nav--left">
+              <i class="fas fa-chevron-left" id="rightSection_nav_icon"></i>
+              <i class="fas fa-chevron-right" id="rightSection_nav_icon"></i>
+              <input type="text" placeholder="Search" id="searchBar" />
+            </div>
+
+            <div id="rightSection_nav--right">
+              <div>Premium</div>
+              <i class="fas fa-bell" id="rightSection_nav_icon"></i>
+              <img
+                src="images/logo_asylab-modified.png"
+                alt="Asylab logo"
+                id="logoAsylab"
+              />
+              <div>Asylab</div>
+              <i
+                class="fas fa-chevron-down"
+                id="rightSection_nav_icon--bottomArrow"
+              ></i>
+            </div>
+          </nav>
+
+          <section id="mainSection">
+            <section id="artistSection">
+              <div id="mainSection_artistSection_wrapper">
+                <p id="description">Artist</p>
+                <i class="fas fa-check-circle" id="checCircle"></i>
+              </div>
+              <h1>Rihanna</h1>
+            </section>
+
+            <section id="buttons">
+              <div id="topSection_buttons_left">
+                <div class="rightSection_button">Play</div>
+                <div class="rightSection_button">Follow</div>
+                <div
+                  class="rightSection_button"
+                  id="rightSection_button--small"
+                >
+                  ...
+                </div>
+              </div>
+              <div id="topSection_buttons_rightText">
+                <p>Monthly listeners</p>
+                <p>48,343,948</p>
+              </div>
+            </section>
+
+            <nav>
+              <ul id="navig">
+                <li>Overview</li>
+                <li>Fans also like</li>
+                <li>About</li>
+                <li>Concerts</li>
+              </ul>
+            </nav>
+
+            <section id="listLatestRelease">
+              <h2>Latest Release</h2>
+              <div id="listLatestRelease_row">
+                <img
+                  src="images/All_the_stars.jpg"
+                  alt="All the stars"
+                  class="listImage"
+                />
+                <div>
+                  <p>Black Panther</p>
+                  <p id="date">Feb 9, 2018</p>
+                </div>
+              </div>
+            </section>
+
+            <section id="listPopular">
+              <div id="headings">
+                <h2>Popular</h2>
+                <h2>Fans Also Like</h2>
+              </div>
+
+              <div class="listPopular_row">
+                <img
+                  src="images/All_the_stars.jpg"
+                  alt="All the stars"
+                  class="listImage"
+                />
+                <p>All The Stars</p>
+                <p>Explicit</p>
+                <p>3:52</p>
+                <p>821,421,002</p>
+                <img
+                  src="images/Big_Sean.jpg"
+                  alt="Big Sean"
+                  class="listImage_artist"
+                />
+                <p>Big Sean</p>
+              </div>
+
+              <div class="listPopular_row">
+                <img
+                  src="images/Chapter_six.jfif"
+                  alt="Chapter six"
+                  class="listImage"
+                />
+                <p>Chapter Six</p>
+                <p>Explicit</p>
+                <p>3:45</p>
+                <p>316,994,683</p>
+                <img
+                  src="images/J_Cole.png"
+                  alt="J Cole"
+                  class="listImage_artist"
+                />
+                <p>J. Cole</p>
+              </div>
+
+              <div class="listPopular_row">
+                <img src="images/HUMBLE..jpg" alt="HUMBLE." class="listImage" />
+                <p>Humble.</p>
+                <p>Explicit</p>
+                <p>2:57</p>
+                <p>44,358,238</p>
+                <img
+                  src="images/2chainz.jpg"
+                  alt="2 Chainz"
+                  class="listImage_artist"
+                />
+                <p>2 Chainz</p>
+              </div>
+
+              <div class="listPopular_row">
+                <img
+                  src="images/Poetic_justice.jfif"
+                  alt="Poetic justice"
+                  class="listImage"
+                />
+                <img src="" alt="" />
+                <p>Poetic Justice</p>
+                <p>Explicit</p>
+                <p>3:31</p>
+                <p>22,179,532</p>
+                <img
+                  src="images/wale.jpg"
+                  alt="Wale"
+                  class="listImage_artist"
+                />
+                <p>Wale</p>
+              </div>
+            </section>
+          </section>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
