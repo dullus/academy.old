@@ -1,0 +1,70 @@
+:root {
+  --darker-gray: #323232;
+  --spotify-green: #01b949;
+}
+
+body {
+  height: 100%;
+  display: flex;
+  background-image: url("../assets/Nirvana-Wallpaper-Cobain-Glasses-Look-1024x576.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+}
+
+.mainScreen {
+  height: 100vh;
+  color: white;
+}
+
+.section {
+  color: var(--darker-gray);
+  margin-left: 15px;
+}
+
+#first {
+  background-color: rgba(0, 0, 0, 0.9);
+  flex: 15%;
+}
+
+.leftContent {
+  height: 33%;
+}
+
+#second {
+  flex: 80%;
+}
+
+.rightContent {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+#searchBar {
+  height: 10%;
+}
+
+#artist {
+  height: 20%;
+}
+
+#tabs {
+  height: 10%;
+  display: flex;
+  margin: 0px;
+  padding: 0px;
+}
+
+.tabItems {
+  margin: 0px 50px -0 0;
+  padding: 10px;
+}
+
+#songs {
+  height: 60%;
+}
+
+.fas {
+  padding: 10px 20px;
+}
