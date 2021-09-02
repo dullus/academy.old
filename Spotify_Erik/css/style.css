@@ -24,13 +24,34 @@
 
 .section_right {
   width: 75%;
+  display: flex;
+  flex-direction: column;
 }
 .body_top {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  flex-flow: row wrap;
+
   align-items: center;
+  height: 10%;
+}
+
+.body_middle {
+  display: flex;
+  flex-direction: column;
+}
+
+.mid_mid {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.ul_nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 40%;
 }
 
 .user {
@@ -53,6 +74,10 @@
 i {
   padding-right: 10%;
 }
+
+li {
+  list-style: none;
+}
 #plus {
   padding-left: 50%;
 }
@@ -63,4 +88,44 @@ i {
 }
 .arrow {
   padding: 10%;
+}
+
+.top_left {
+  display: flex;
+  flex-direction: row;
+}
+
+#artist {
+  display: flex;
+  flex-direction: row;
+}
+
+.artist {
+  justify-content: unset;
+}
+
+.artist_content {
+  display: flex;
+  flex-direction: row;
+  width: 60%;
+}
+
+.track {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.right_bottom {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+}
+
+.main_buttons {
+  margin-right: 10px;
+  height: 27px;
+
+  padding: 0 15px;
+  font-weight: 500;
 }
