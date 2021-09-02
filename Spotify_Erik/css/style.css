@@ -1,0 +1,21 @@
+.main {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.body_top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.user {
+  display: flex;
+  flex-direction: row;
+}
+
+.user_info {
+  display: flex;
+  flex-direction: row;
+}
