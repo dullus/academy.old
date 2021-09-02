@@ -6,7 +6,7 @@
 body {
   height: 100%;
   display: flex;
-  background-image: url("../assets/Nirvana-Wallpaper-Cobain-Glasses-Look-1024x576.jpg");
+  background-image: url("../assets/nirvana_background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   margin: 0px;
@@ -26,7 +26,7 @@ body {
 
 #first {
   background-color: rgba(0, 0, 0, 0.9);
-  flex: 15%;
+  flex: 20%;
 }
 
 .leftContent {
@@ -35,11 +35,12 @@ body {
 
 #second {
   flex: 80%;
-}
-
-.rightContent {
   background-color: rgba(0, 0, 0, 0.9);
 }
+/* 
+.rightContent {
+  background-color: rgba(0, 0, 0, 0.9);
+} */
 
 #searchBar {
   height: 10%;
@@ -66,5 +67,34 @@ body {
 }
 
 .fas {
-  padding: 10px 20px;
+  margin: 0 20px;
+}
+
+.albumImage {
+  width: 4%;
+  height: 4%;
+  border-radius: 5px;
+}
+
+.icons {
+  width: 10px;
+  height: 10px;
+}
+/* 
+#magnifier {
+  position: absolute;
+  background-color: white;
+  left: 300px;
+} */
+
+#searchBar {
+  background: white;
+}
+
+#searchInput {
+  border: none;
+}
+
+#topBar {
+  display: flex;
 }
