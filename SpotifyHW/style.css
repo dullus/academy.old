@@ -6,6 +6,8 @@
   --color-background: #0a0a0a;
 }
 #pageContent {
+  display: flex;
+  flex-direction: row;
   width: 100%;
   height: 100%;
   position: absolute;
@@ -139,4 +141,73 @@
   height: 10%;
   width: 10%;
   padding-right: 10px;
+}
+.rightPageSide {
+  color: var(--color-darkerWhite);
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+#topNavBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  height: 5%;
+  padding-top: 20px;
+}
+#topNavLeft {
+  display: flex;
+  flex-direction: row;
+}
+#backArrow {
+  height: 80%;
+  width: 80%;
+}
+#forwardArrow {
+  height: 80%;
+  width: 80%;
+}
+#searchIcon {
+  width: 20%;
+  height: 80%;
+}
+#topNavLeft input[type="text"] {
+  padding: 6px;
+}
+#topNavRight {
+  display: flex;
+  flex-direction: row;
+}
+#premiumText {
+  background-color: grey;
+  height: 60%;
+  text-align: center;
+  width: 100%;
+  padding: 10px;
+  border-radius: 15px;
+}
+#bellIcon {
+  height: 70%;
+  width: 20%;
+  padding-top: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+.playSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.leftSidePlaySection {
+  display: flex;
+  flex-direction: row;
+}
+.navigationSection {
+  display: flex;
+  flex-direction: row;
+}
+#songListTitle {
+  display: flex;
+  flex-direction: row;
 }
