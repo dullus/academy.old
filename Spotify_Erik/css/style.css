@@ -59,8 +59,9 @@
 .ul_nav {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
-  width: 40%;
+  justify-content: space-between;
+  width: 60%;
+  padding-inline-start: 0px;
 }
 
 .user {
@@ -129,7 +130,7 @@ li {
 .right_bottom {
   display: flex;
   flex-direction: column;
-  width: 70%;
+  width: 100%;
 }
 
 .main_buttons {
@@ -138,6 +139,15 @@ li {
 
   padding: 0 15px;
   font-weight: 500;
+}
+
+.titles {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.overview_artist {
+  width: 75%;
 }
 
 #Spot_logo {
