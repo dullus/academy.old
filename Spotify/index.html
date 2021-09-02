@@ -32,24 +32,42 @@
     </div>
     <div class="mainScreen" id="second">
       <div id="topBar">
-        <div>
-          <i class="fas fa-chevron-left"></i>
-          <i class="fas fa-chevron-right"></i>
+        <div style="display: flex">
+          <div>
+            <i class="fas fa-chevron-left"></i>
+            <i class="fas fa-chevron-right"></i>
+          </div>
+          <div class="rightContent" id="searchBar">
+            <img
+              class="icons"
+              id="magnifier"
+              src="./assets/icons/loupe.png"
+              alt=""
+            />
+            <input id="searchInput" type="text" placeholder="Search" />
+          </div>
         </div>
-        <div class="rightContent" id="searchBar">
-          <img
-            class="icons"
-            id="magnifier"
-            src="./assets/icons/loupe.png"
-            alt=""
-          />
-          <input id="searchInput" type="text" placeholder="Search" />
+        <div style="display: flex">
+          <div>Premium</div>
+          <div><i class="fas fa-bell"></i></div>
+          <div>Stano <i class="fas fa-chevron-down"></i></div>
         </div>
       </div>
       <div class="rightContent" id="artist">
         Artist
         <img class="icons" src="./assets/icons/check.svg" alt="" />
         <h1>Nirvana</h1>
+        <div style="display: flex; justify-content: space-between">
+          <div style="display: flex">
+            <div>Play</div>
+            <div>Follow</div>
+            <i class="fas fa-ellipsis-h"></i>
+          </div>
+          <div>
+            <div>MONTHLY LISTENERS</div>
+            <div>48,343948</div>
+          </div>
+        </div>
       </div>
       <div class="rightContent" id="tabs">
         <div class="tabItems">OVERVIEW</div>
@@ -57,9 +75,12 @@
         <div class="tabItems">ABOUT</div>
         <div class="tabItems">CONCERTS</div>
       </div>
-      <div class="rightContent" id="songs">
-        <div>
-          Latest Release
+      <div class="rightContent" style="display: flex">
+        <div id="latest">Latest Release</div>
+        <div>Fans Also Like</div>
+      </div>
+      <div class="rightContent" style="display: flex; height: 100%">
+        <div id="songs">
           <div>
             <img
               class="albumImage"
@@ -68,40 +89,92 @@
             />
             About A Girl
           </div>
-        </div>
-        <div>
-          Popular
-          <div>
-            <img
-              class="albumImage"
-              src="./assets/album_covers/song1.PNG"
-              alt=""
-            />
-            Lithium
-          </div>
-          <div>
-            <img
-              class="albumImage"
-              src="./assets/album_covers/song2.PNG"
-              alt=""
-            />
-            Heart-Shaped box
-          </div>
-          <div>
-            <img
-              class="albumImage"
-              src="./assets/album_covers/song3.PNG"
-              alt=""
-            />
-            Pennyroyal Tea
-          </div>
-          <div>
-            <img
-              class="albumImage"
-              src="./assets/album_covers/song5.PNG"
-              alt=""
-            />
-            Blew
+          <div>Popular</div>
+          <div id="popular">
+            <div class="songDetail">
+              <div>
+                <img
+                  class="albumImage"
+                  src="./assets/album_covers/song1.PNG"
+                  alt=""
+                />
+                Lithium
+              </div>
+              <div>EXPLICIT</div>
+              <div>4:00</div>
+              <div>100,000,000</div>
+              <div class="similarArtistsBox">
+                <img
+                  class="similarArtistsImage"
+                  src="./assets/similar_artists/pearl_jam.jpg"
+                  alt=""
+                />
+                <div>Pearl Jam</div>
+              </div>
+            </div>
+            <div class="songDetail">
+              <div>
+                <img
+                  class="albumImage"
+                  src="./assets/album_covers/song2.PNG"
+                  alt=""
+                />
+                Heart-Shaped box
+              </div>
+              <div>EXPLICIT</div>
+              <div>4:00</div>
+              <div>100,000,000</div>
+              <div class="similarArtistsBox">
+                <img
+                  class="similarArtistsImage"
+                  src="./assets/similar_artists/alice_in_chains.jpg"
+                  alt=""
+                />
+                <div>Alice In Chains</div>
+              </div>
+            </div>
+            <div class="songDetail">
+              <div>
+                <img
+                  class="albumImage"
+                  src="./assets/album_covers/song3.PNG"
+                  alt=""
+                />
+                Pennyroyal Tea
+              </div>
+              <div>EXPLICIT</div>
+              <div>4:00</div>
+              <div>100,000,000</div>
+              <div class="similarArtistsBox">
+                <img
+                  class="similarArtistsImage"
+                  src="./assets/similar_artists/artic_mokeys.jpeg"
+                  alt=""
+                />
+                <div>Artic Monkeys</div>
+              </div>
+            </div>
+            <div class="songDetail">
+              <div>
+                <img
+                  class="albumImage"
+                  src="./assets/album_covers/song5.PNG"
+                  alt=""
+                />
+                Blew
+              </div>
+              <div>EXPLICIT</div>
+              <div>4:00</div>
+              <div>100,000,000</div>
+              <div class="similarArtistsBox">
+                <img
+                  class="similarArtistsImage"
+                  src="./assets/similar_artists/soundgarden.jpg"
+                  alt=""
+                />
+                <div>Soundgarden</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
