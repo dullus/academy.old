@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  --color-darkPastelGreen: #01b949;
+  --color-lightGrey: #d7d7d7;
+  --color-malibu: #68abdd;
+  font-size: 12px;
+  list-style: none;
+}
+.main_box {
+  position: relative;
+  background-image: url("assets/eminem-background.png");
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  opacity: 0, 5;
+  display: flex;
+}
+.main_box .sidebar_menu {
+  height: 100vh;
+  width: 240px;
+  left: 0px;
+  background: rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 0px 6px rgba(255, 255, 255, 0.5);
+}
+.sidebar_menu .menu {
+  width: 100%;
+}
+.sidebar_menu .spotify-icon {
+  color: #d7d7d7;
+  opacity: 70%;
+}
+.sidebar_menu .menu li {
+  padding: 10px 20px;
+}
+.side-menu-containers {
+  margin-left: 13px;
+}
+.sidebar_menu .menu i {
+  color: #fff;
+  padding-right: 8px;
+}
+.sidebar_menu .menu a {
+  color: #fff;
+  font-size: 10px;
+  text-decoration: none;
+}
+.sidebar_menu .menu .spotify-top {
+  margin-top: 30px;
+}
+.heading-of-li {
+  color: #d7d7d7;
+  padding-bottom: 5px;
+  margin-left: 16px;
+  margin-top: 10px;
+  opacity: 70%;
+}
+
+.playlist {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #d7d7d7;
+  padding-bottom: 5px;
+  position: relative;
+}
+#side-bar-playlist-plus-icon {
+  position: absolute;
+  top: 15px;
+  right: 40px;
+  cursor: pointer;
+}
+.second {
+  color: cornsilk;
+}
+.discover {
+  padding-top: 8px;
+}
+@media screen and (max-width: 600px) {
+  .main_box .sidebar_menu {
+    display: none;
+  }
+}
