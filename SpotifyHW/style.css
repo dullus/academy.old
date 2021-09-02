@@ -8,8 +8,8 @@
 #pageContent {
   display: flex;
   flex-direction: row;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   position: absolute;
   background-color: var(--color-background);
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
@@ -43,8 +43,8 @@
 #discoverItem1 {
   padding: 8px;
   padding-left: 30px;
-  padding-top: 50px;
-  font-size: 0.9rem;
+  padding-top: 30px;
+  font-size: 0.8rem;
 }
 #explorePic {
   height: 8%;
@@ -54,7 +54,7 @@
 #discoverItem2 {
   padding: 8px;
   padding-left: 30px;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
 #radioPic {
   height: 8%;
@@ -71,8 +71,8 @@
 #libraryItem1 {
   padding: 8px;
   padding-left: 30px;
-  padding-top: 50px;
-  font-size: 0.9rem;
+  padding-top: 30px;
+  font-size: 0.8rem;
 }
 #songsPic {
   height: 10%;
@@ -82,7 +82,7 @@
 #libraryItem2 {
   padding: 8px;
   padding-left: 30px;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
 #albumsPic {
   height: 10%;
@@ -92,7 +92,7 @@
 #libraryItem3 {
   padding: 8px;
   padding-left: 30px;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
 #artistsPic {
   height: 10%;
@@ -102,7 +102,7 @@
 #libraryItem4 {
   padding: 8px;
   padding-left: 30px;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
 #favoritesPic {
   height: 10%;
@@ -119,23 +119,23 @@
 #playlistsItem1 {
   padding: 8px;
   padding-left: 30px;
-  padding-top: 50px;
-  font-size: 0.9rem;
+  padding-top: 30px;
+  font-size: 0.8rem;
 }
 #playlistsItem2 {
   padding: 8px;
   padding-left: 30px;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
 #playlistsItem3 {
   padding: 8px;
   padding-left: 30px;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
 #playlistsItem4 {
   padding: 8px;
   padding-left: 30px;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
 .listPic {
   height: 10%;
@@ -146,7 +146,7 @@
   color: var(--color-darkerWhite);
   display: flex;
   flex-direction: column;
-  width: 80%;
+  width: 80vw;
 }
 #topNavBar {
   display: flex;
@@ -154,7 +154,8 @@
   justify-content: space-between;
   width: 100%;
   height: 5%;
-  padding-top: 20px;
+  padding: 15px;
+  margin-top: 10px;
 }
 #topNavLeft {
   display: flex;
@@ -181,7 +182,7 @@
 }
 #premiumText {
   background-color: grey;
-  height: 60%;
+  height: 40%;
   text-align: center;
   width: 100%;
   padding: 10px;
@@ -194,20 +195,93 @@
   padding-left: 50px;
   padding-right: 50px;
 }
+.artistSection {
+  margin-top: 30px;
+}
+#artist {
+}
+#nameOfArtist {
+  font-size: 3rem;
+}
 .playSection {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin-top: 20px;
 }
 .leftSidePlaySection {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  width: 20%;
+}
+#playButton {
+  padding: 10px;
+  border-radius: 20px;
+  background-color: var(--color-mainGreen);
+  width: 30%;
+  text-align: center;
+}
+#playIcon {
+  width: 20%;
+  height: 80%;
+}
+#followButton {
+  padding: 10px;
+  border-radius: 20px;
+  background-color: rgba(169, 169, 169, 0.3);
+  width: 30%;
+  text-align: center;
+}
+.rightSidePlaySection {
+  opacity: 0.3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .navigationSection {
   display: flex;
   flex-direction: row;
+  margin-top: 30px;
+}
+.latestRelease {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+#latestAlbum {
+  margin-top: 10px;
+}
+#sm2 {
+  width: 5%;
+  height: 80%;
 }
 #songListTitle {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+}
+#song1 {
+}
+#MoP {
+  height: 5%;
+  width: 5%;
+}
+#song2 {
+}
+#ajfa {
+  width: 5%;
+  height: 5%;
+}
+#song3 {
+}
+#tba {
+  width: 5%;
+  height: 5%;
+}
+#song4 {
+}
+#dm {
+  width: 5%;
+  height: 5%;
 }
