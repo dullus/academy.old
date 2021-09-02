@@ -3,20 +3,31 @@
   --spotify-green: #01b949;
 }
 
+html {
+  height: 100%;
+}
+
 body {
   height: 100%;
-  display: flex;
-  background-image: url("../assets/nirvana_background.jpg");
-  background-repeat: no-repeat;
+  background: url("../assets/nirvana_background.jpg") no-repeat center center
+    fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
   margin: 0px;
   font-family: "Montserrat", sans-serif;
-  font-size: 12px;
-  overflow: hidden;
+  font-size: 1.5vh;
+}
+
+#contentWrapper {
+  height: -webkit-fill-available;
+  padding: 25px;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.9);
 }
 
 .mainScreen {
-  height: 100vh;
   color: white;
 }
 
@@ -26,17 +37,18 @@ body {
 }
 
 #first {
-  background-color: rgba(0, 0, 0, 0.9);
   flex: 20%;
 }
 
 .leftContent {
   height: 33%;
+  justify-content: space-around;
+  display: flex;
+  flex-direction: column;
 }
 
 #second {
   flex: 80%;
-  background-color: rgba(0, 0, 0, 0.9);
 }
 
 #searchBar {
@@ -57,11 +69,6 @@ body {
 .tabItems {
   margin: 0px 50px -0 0;
   padding: 10px;
-}
-
-#songs {
-  height: 100%;
-  width: 100%;
 }
 
 .fas {
@@ -109,11 +116,30 @@ body {
 }
 
 #popular {
-  height: 80%;
+  height: 50vh;
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.leftTabs {
+  padding: 20px;
+}
+
+.songDetail {
+  align-items: center;
+  text-align: right;
 }
 
 .similarArtistsBox {
+  width: 15%;
   display: flex;
+  align-items: center;
+}
+
+.albumBox {
+  width: 30%;
+  text-align: left;
+  display: flex;
+  align-items: center;
 }
