@@ -6,6 +6,7 @@
     <title>Spotify</title>
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="css/media_query.css">
     <script
       src="https://kit.fontawesome.com/d03b1f5ced.js"
       crossorigin="anonymous"
@@ -118,14 +119,14 @@
             </div>
 
             <div id="rightSection_header_right">
-              <div>Premium</div>
+              <div id="rightSection_header_right_button">Premium</div>
               <i class="fas fa-bell" id="rightSection_header_right_icon"></i>
               <img
                 src="images/logo_asylab-modified.png"
                 alt="Asylab logo"
                 id="logoAsylab"
               />
-              <div>Asylab</div>
+              <div id="asylabText">Asylab</div>
               <i
                 class="fas fa-chevron-down"
                 id="rightSection_header_icon--bottomArrow"
@@ -167,10 +168,33 @@
 
             <nav>
               <ul id="navig">
+                <div class="navig_wrapper">
                 <li class="navigItem">Overview</li>
+                <div class="navig_wrapper--icon">
+                <i class="fas fa-circle" id="left_navig--icon"></i>
+              </div>
+              </div>
+
+                <div class="navig_wrapper">
                 <li class="navigItem">Fans also like</li>
+                <div class="navig_wrapper--icon">
+                <i class="fas fa-circle" id="left_navig--icon"></i>
+              </div>
+              </div>
+
+                <div class="navig_wrapper">
                 <li class="navigItem">About</li>
+                <div class="navig_wrapper--icon">
+                <i class="fas fa-circle" id="left_navig--icon"></i>
+              </div>
+              </div>
+
+                <div class="navig_wrapper">
                 <li class="navigItem">Concerts</li>
+                <div class="navig_wrapper--icon">
+                <i class="fas fa-circle" id="left_navig--icon"></i>
+              </div>
+              </div>
               </ul>
             </nav>
 
@@ -180,7 +204,7 @@
                 <img
                   src="images/All_the_stars.jpg"
                   alt="All the stars"
-                  class="listImage"
+                  class="listImage" id="listImage--margin"
                 />
                 <div>
                   <p class="bold">Black Panther</p>
@@ -201,8 +225,9 @@
                   alt="All the stars"
                   class="listImage"
                 />
+                <i class="fas fa-pause" id="iconPause"></i>
                 <p class="songName">All The Stars</p>
-                <p class="tableItem">Explicit</p>
+                <p class="tableItem--border">Explicit</p>
                 <p class="tableItem">3:52</p>
                 <p class="tableItem">821,421,002</p>
                 <img
@@ -219,8 +244,9 @@
                   alt="Chapter six"
                   class="listImage"
                 />
+                <i class="fas fa-pause" id="iconPause"></i>
                 <p class="songName">Chapter Six</p>
-                <p class="tableItem">Explicit</p>
+                <p class="tableItem--border">Explicit</p>
                 <p class="tableItem">3:45</p>
                 <p class="tableItem">316,994,683</p>
                 <img
@@ -233,8 +259,9 @@
 
               <div class="listPopular_row">
                 <img src="images/HUMBLE..jpg" alt="HUMBLE." class="listImage" />
+                <i class="fas fa-pause" id="iconPause"></i>
                 <p class="songName" id="songName--uppercase">Humble.</p>
-                <p class="tableItem">Explicit</p>
+                <p class="tableItem--border">Explicit</p>
                 <p class="tableItem">2:57</p>
                 <p class="tableItem">44,358,238</p>
                 <img
@@ -251,9 +278,10 @@
                   alt="Poetic justice"
                   class="listImage"
                 />
+                <i class="fas fa-pause" id="iconPause"></i>
             
                 <p class="songName">Poetic Justice</p>
-                <p class="tableItem">Explicit</p>
+                <p class="tableItem--border">Explicit</p>
                 <p class="tableItem">3:31</p>
                 <p class="tableItem">22,179,532</p>
                 <img
