@@ -2,5 +2,127 @@
   --color-mainGreen: #01b949;
   --color-darkerGreen: #0a7a34;
   --color-mainWhite: #ececec;
-  --color-darkerWhite: #a1a1a1;
+  --color-darkerWhite: #dadada;
+  --color-background: #0a0a0a;
+}
+#pageContent {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: var(--color-background);
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+#leftSideNavBar {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 20%;
+  color: var(--color-darkerWhite);
+  background-color: var(--color-background);
+}
+#leftMenuItem1 {
+  padding-top: 10px;
+  padding-left: 10px;
+  height: 8%;
+}
+#spotifyIcon {
+  height: 90%;
+  background: transparent;
+}
+.discoverNav {
+  padding: 10px;
+}
+#discoverNavLabel {
+  color: #343434;
+  opacity: 0.9;
+}
+#discoverItem1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 8px;
+  font-size: 1rem;
+}
+#explorePic {
+  height: 10%;
+  width: 10%;
+}
+#discoverItem2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 8px;
+  font-size: 1rem;
+}
+#radioPic {
+  height: 10%;
+  width: 10%;
+}
+.libraryNav {
+  padding: 10px;
+}
+#libraryNavLabel {
+  color: #343434;
+  opacity: 0.9;
+}
+#libraryItem1 {
+  padding: 8px;
+  font-size: 1.1rem;
+}
+#songsPic {
+  height: 10%;
+  width: 10%;
+}
+#libraryItem2 {
+  padding: 8px;
+  font-size: 1.1rem;
+}
+#albumsPic {
+  height: 10%;
+  width: 10%;
+}
+#libraryItem3 {
+  padding: 8px;
+  font-size: 1.1rem;
+}
+#artistsPic {
+  height: 10%;
+  width: 10%;
+}
+#libraryItem4 {
+  padding: 8px;
+  font-size: 1.1rem;
+}
+#favoritesPic {
+  height: 10%;
+  width: 10%;
+}
+.playlistsNav {
+  padding: 10px;
+}
+#playlistsNavLabel {
+  color: #343434;
+  opacity: 0.9;
+}
+#playlistsItem1 {
+  padding: 8px;
+  font-size: 1.1rem;
+}
+#playlistsItem2 {
+  padding: 8px;
+  font-size: 1.1rem;
+}
+#playlistsItem3 {
+  padding: 8px;
+  font-size: 1.1rem;
+}
+#playlistsItem4 {
+  padding: 8px;
+  font-size: 1.1rem;
+}
+.listPic {
+  height: 10%;
+  width: 10%;
 }
