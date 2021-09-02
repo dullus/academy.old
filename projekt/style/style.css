@@ -7,13 +7,13 @@
 }
 
 #middlePanel {
-  flex: 75%;
+  flex: 82%;
   opacity: 0.4;
   position: relative;
 }
-.sidebar {
-  flex: 25%;
-  opacity: 0.4;
+
+.middleBtn {
+  padding-right: 40px;
 }
 
 html,
@@ -81,14 +81,9 @@ label {
   padding-top: 260px;
 }
 
-#tablecontainer {
-  color: white;
-  padding-top: 200px;
-}
-
-th,
-td {
-  padding: 15px;
+td,
+tr {
+  padding: 10px;
   text-align: left;
 }
 
@@ -133,7 +128,7 @@ span {
 }
 
 #btns {
-  padding-top: 200px;
+  padding-top: 80px;
   padding-bottom: 20px;
 }
 
@@ -142,7 +137,7 @@ span {
 }
 
 #latest {
-  padding-top: 20px;
+  padding-top: 40px;
   padding-bottom: 20px;
 }
 
@@ -150,21 +145,65 @@ span {
   padding-bottom: 20px;
 }
 
-#wrapper {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding-bottom: 300px;
+#listtablecontainer {
+  /*  padding-left: 40px;
+  padding-top: 60px;
+  padding-bottom: 200px;
+  background-color: red;
+  width: 30px;*/
 }
 
-#listtablecontainer {
-  padding-top: 200px;
+#tablecontainer {
+  /*   padding-bottom: 200px;
   padding-left: 20px;
-  color: white;
   padding-right: 20px;
+  width: 300px;*/
 }
 
 #popular {
-  padding-bottom: 20px;
-  padding-top: 100px;
+  padding-bottom: 140px;
+  padding-top: 60px;
+}
+
+.icon-bar {
+  flex: 18%;
+  opacity: 0.4;
+}
+
+.icon-bar element:hover {
+  background-color: green;
+}
+
+#element {
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-bottom: 10px;
+}
+.imgp {
+  padding-right: 20px;
+}
+
+.FirstMenu {
+  padding-bottom: 40px;
+  margin-top: 20px;
+  padding-top: 40px;
+  color: white;
+}
+.SecondMenu {
+  padding-bottom: 40px;
+  color: white;
+}
+.ThirdMenu {
+  padding-bottom: 40px;
+  color: white;
+}
+
+.menuText {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+table {
+  float: left;
+  width: 50%;
 }
