@@ -6,43 +6,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/font-awesome.css" />
+    <link rel="stylesheet" href="css/all.css" />
     <title>Document</title>
   </head>
   <div class="main">
     <div class="section_left">
-      <p id="Spotyfi">Spotyfi</p>
+      <p id="Spotyfi"><i class="fab fa-spotify"></i>Spotyfi</p>
       <p class="list-header">Discover</p>
       <ul class="navigation">
-        <li class="nav_item">Explore</li>
-        <li class="nav_item">Radio</li>
+        <li class="nav_item">
+          <i class="fa fa-compass" aria-hidden="true"></i>Explore
+        </li>
+        <li class="nav_item">
+          <i class="fa fa-podcast" aria-hidden="true"></i>Radio
+        </li>
       </ul>
       <p class="list-header">Library</p>
       <ul class="navigation">
-        <li class="nav_item">Songs</li>
-        <li class="nav_item">Albums</li>
-        <li class="nav_item">Artist</li>
-        <li class="nav_item">Favorites</li>
+        <li class="nav_item">
+          <i class="fa fa-music" aria-hidden="true"></i>Songs
+        </li>
+        <li class="nav_item"><i class="fas fa-compact-disc"></i>Albums</li>
+        <li class="nav_item"><i class="fas fa-microphone"></i>Artist</li>
+        <li class="nav_item"><i class="fas fa-heart"></i>Favorites</li>
       </ul>
-      <p class="list-header">Playlist</p>
+      <p class="list-header">Playlist <i id="plus" class="fas fa-plus"></i></p>
       <ul class="navigation">
-        <li class="nav_item">Discover Weekly</li>
-        <li class="nav_item">Relax</li>
-        <li class="nav_item">WorkOut</li>
-        <li class="nav_item">My music</li>
+        <li class="nav_item">
+          <i class="fa fa-align-justify" aria-hidden="true"></i>Discover Weekly
+        </li>
+        <li class="nav_item">
+          <i class="fa fa-align-justify" aria-hidden="true"></i>Relax
+        </li>
+        <li class="nav_item">
+          <i class="fa fa-align-justify" aria-hidden="true"></i>WorkOut
+        </li>
+        <li class="nav_item">
+          <i class="fa fa-align-justify" aria-hidden="true"></i>My music
+        </li>
       </ul>
     </div>
-    <div class="body_right">
+    <div class="section_right">
       <div class="body_top">
         <div class="page_arrows">
-          <span class="arrow"></span>
-          <span class="arrow"></span>
+          <span class="arrow"><i class="fas fa-chevron-left"></i></span>
+          <span class="arrow"><i class="fas fa-chevron-right"></i></span>
         </div>
         <i></i>
         <i></i>
         <input type="text" placeholder="Search" />
         <div class="user">
           <button id="premium">Premium</button>
-          <i></i>
+          <i id="bell" class="fas fa-bell"></i>
           <div class="user_info">
             <i></i>
             <p id="user">Asylab</p>
