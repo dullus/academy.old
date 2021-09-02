@@ -39,26 +39,25 @@
   opacity: 0.9;
 }
 #discoverItem1 {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
   padding: 8px;
-  font-size: 1rem;
+  padding-left: 30px;
+  padding-top: 50px;
+  font-size: 0.9rem;
 }
 #explorePic {
-  height: 10%;
-  width: 10%;
+  height: 8%;
+  width: 8%;
+  padding-right: 10px;
 }
 #discoverItem2 {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
   padding: 8px;
-  font-size: 1rem;
+  padding-left: 30px;
+  font-size: 0.9rem;
 }
 #radioPic {
-  height: 10%;
-  width: 10%;
+  height: 8%;
+  width: 8%;
+  padding-right: 10px;
 }
 .libraryNav {
   padding: 10px;
@@ -69,35 +68,44 @@
 }
 #libraryItem1 {
   padding: 8px;
-  font-size: 1.1rem;
+  padding-left: 30px;
+  padding-top: 50px;
+  font-size: 0.9rem;
 }
 #songsPic {
   height: 10%;
   width: 10%;
+  padding-right: 10px;
 }
 #libraryItem2 {
   padding: 8px;
-  font-size: 1.1rem;
+  padding-left: 30px;
+  font-size: 0.9rem;
 }
 #albumsPic {
   height: 10%;
   width: 10%;
+  padding-right: 10px;
 }
 #libraryItem3 {
   padding: 8px;
-  font-size: 1.1rem;
+  padding-left: 30px;
+  font-size: 0.9rem;
 }
 #artistsPic {
   height: 10%;
   width: 10%;
+  padding-right: 10px;
 }
 #libraryItem4 {
   padding: 8px;
-  font-size: 1.1rem;
+  padding-left: 30px;
+  font-size: 0.9rem;
 }
 #favoritesPic {
   height: 10%;
   width: 10%;
+  padding-right: 10px;
 }
 .playlistsNav {
   padding: 10px;
@@ -108,21 +116,27 @@
 }
 #playlistsItem1 {
   padding: 8px;
-  font-size: 1.1rem;
+  padding-left: 30px;
+  padding-top: 50px;
+  font-size: 0.9rem;
 }
 #playlistsItem2 {
   padding: 8px;
-  font-size: 1.1rem;
+  padding-left: 30px;
+  font-size: 0.9rem;
 }
 #playlistsItem3 {
   padding: 8px;
-  font-size: 1.1rem;
+  padding-left: 30px;
+  font-size: 0.9rem;
 }
 #playlistsItem4 {
   padding: 8px;
-  font-size: 1.1rem;
+  padding-left: 30px;
+  font-size: 0.9rem;
 }
 .listPic {
   height: 10%;
   width: 10%;
+  padding-right: 10px;
 }
