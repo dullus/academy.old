@@ -15,7 +15,7 @@
     @import url("https://fonts.googleapis.com/css2?family=PT+Sans&display=swap");
   </style>
   <body>
-    <div id="hahaha" style="background-image: url(images/haha_bw.png)">
+    <div id="hahaha" style="background-image: url(images/bckg.jfif)">
       <div class="gridContainer">
         <div id="leftSection">
           <div id="logoWrapper">
@@ -63,21 +63,37 @@
               <h3>Playlists</h3>
               <i class="fas fa-plus"></i>
             </div>
-            <ul class="leftMenu">
+            <ul class="leftMenu" id="leftMenu--bottom">
               <div class="leftMenu_liWrapper">
-                <img src="" alt="" />
+                <img
+                  src="images/playlist.svg"
+                  alt="Logo Playlists"
+                  class="logoPlaylist"
+                />
                 <li>Discover Weekly</li>
               </div>
-              <div class="leftMenu_liWrapper">
-                <img src="" alt="" />
+              <div class="leftMenu_liWrapper" >
+                <img
+                  src="images/playlist.svg"
+                  alt="Logo Playlists"
+                  class="logoPlaylist"
+                />
                 <li>Relax</li>
               </div>
               <div class="leftMenu_liWrapper">
-                <img src="" alt="" />
+                <img
+                  src="images/playlist.svg"
+                  alt="Logo Playlists"
+                  class="logoPlaylist"
+                />
                 <li>WorkOut</li>
               </div>
               <div class="leftMenu_liWrapper">
-                <img src="" alt="" />
+                <img
+                  src="images/playlist.svg"
+                  alt="Logo Playlists"
+                  class="logoPlaylist"
+                />
                 <li>My Music</li>
               </div>
             </ul>
@@ -85,16 +101,25 @@
         </div>
 
         <div id="rightSection">
-          <nav id="rightSection_nav">
-            <div id="rightSection_nav--left">
-              <i class="fas fa-chevron-left" id="rightSection_nav_icon"></i>
-              <i class="fas fa-chevron-right" id="rightSection_nav_icon"></i>
-              <input type="text" placeholder="Search" id="searchBar" />
+          <header id="rightSection_header">
+            <div id="rightSection_header_left">
+              <i
+                class="fas fa-chevron-left"
+                id="rightSection_header_left_icon"
+              ></i>
+              <i
+                class="fas fa-chevron-right"
+                id="rightSection_header_left_icon"
+              ></i>
+              <div id="searchBarWrapper">
+                <i class="fas fa-search" id="logoMagnifyingGlass"></i>
+                <input type="text" placeholder="Search" id="searchBar" />
+              </div>
             </div>
 
-            <div id="rightSection_nav--right">
+            <div id="rightSection_header_right">
               <div>Premium</div>
-              <i class="fas fa-bell" id="rightSection_nav_icon"></i>
+              <i class="fas fa-bell" id="rightSection_header_right_icon"></i>
               <img
                 src="images/logo_asylab-modified.png"
                 alt="Asylab logo"
@@ -103,14 +128,14 @@
               <div>Asylab</div>
               <i
                 class="fas fa-chevron-down"
-                id="rightSection_nav_icon--bottomArrow"
+                id="rightSection_header_icon--bottomArrow"
               ></i>
             </div>
-          </nav>
+          </header>
 
-          <section id="mainSection">
-            <section id="artistSection">
-              <div id="mainSection_artistSection_wrapper">
+          <section id="rightSection_main">
+            <section id="rightSection_main_artists">
+              <div id="rightSection_main_artists_wrapper">
                 <p id="description">Artist</p>
                 <i class="fas fa-check-circle" id="checCircle"></i>
               </div>
@@ -118,11 +143,17 @@
             </section>
 
             <section id="buttons">
-              <div id="topSection_buttons_left">
-                <div class="rightSection_button">Play</div>
-                <div class="rightSection_button">Follow</div>
+              <div id="rightSection_main_buttons">
                 <div
-                  class="rightSection_button"
+                  class="rightSection_main_button"
+                  id="rightSection_main_button--flex"
+                >
+                  <i class="fas fa-play" id="logoPlay"></i>
+                  <p>Play</p>
+                </div>
+                <div class="rightSection_main_button">Follow</div>
+                <div
+                  class="rightSection_main_button"
                   id="rightSection_button--small"
                 >
                   ...
@@ -136,10 +167,10 @@
 
             <nav>
               <ul id="navig">
-                <li>Overview</li>
-                <li>Fans also like</li>
-                <li>About</li>
-                <li>Concerts</li>
+                <li class="navigItem">Overview</li>
+                <li class="navigItem">Fans also like</li>
+                <li class="navigItem">About</li>
+                <li class="navigItem">Concerts</li>
               </ul>
             </nav>
 
@@ -152,7 +183,7 @@
                   class="listImage"
                 />
                 <div>
-                  <p>Black Panther</p>
+                  <p class="bold">Black Panther</p>
                   <p id="date">Feb 9, 2018</p>
                 </div>
               </div>
@@ -161,7 +192,7 @@
             <section id="listPopular">
               <div id="headings">
                 <h2>Popular</h2>
-                <h2>Fans Also Like</h2>
+                <h2 id="rightHeading">Fans Also Like</h2>
               </div>
 
               <div class="listPopular_row">
@@ -170,16 +201,16 @@
                   alt="All the stars"
                   class="listImage"
                 />
-                <p>All The Stars</p>
-                <p>Explicit</p>
-                <p>3:52</p>
-                <p>821,421,002</p>
+                <p class="songName">All The Stars</p>
+                <p class="tableItem">Explicit</p>
+                <p class="tableItem">3:52</p>
+                <p class="tableItem">821,421,002</p>
                 <img
                   src="images/Big_Sean.jpg"
                   alt="Big Sean"
                   class="listImage_artist"
                 />
-                <p>Big Sean</p>
+                <p id="listPopular_row--white">Big Sean</p>
               </div>
 
               <div class="listPopular_row">
@@ -188,30 +219,30 @@
                   alt="Chapter six"
                   class="listImage"
                 />
-                <p>Chapter Six</p>
-                <p>Explicit</p>
-                <p>3:45</p>
-                <p>316,994,683</p>
+                <p class="songName">Chapter Six</p>
+                <p class="tableItem">Explicit</p>
+                <p class="tableItem">3:45</p>
+                <p class="tableItem">316,994,683</p>
                 <img
                   src="images/J_Cole.png"
                   alt="J Cole"
                   class="listImage_artist"
                 />
-                <p>J. Cole</p>
+                <p id="listPopular_row--white">J. Cole</p>
               </div>
 
               <div class="listPopular_row">
                 <img src="images/HUMBLE..jpg" alt="HUMBLE." class="listImage" />
-                <p>Humble.</p>
-                <p>Explicit</p>
-                <p>2:57</p>
-                <p>44,358,238</p>
+                <p class="songName" id="songName--uppercase">Humble.</p>
+                <p class="tableItem">Explicit</p>
+                <p class="tableItem">2:57</p>
+                <p class="tableItem">44,358,238</p>
                 <img
                   src="images/2chainz.jpg"
                   alt="2 Chainz"
                   class="listImage_artist"
                 />
-                <p>2 Chainz</p>
+                <p id="listPopular_row--white">2 Chainz</p>
               </div>
 
               <div class="listPopular_row">
@@ -220,17 +251,20 @@
                   alt="Poetic justice"
                   class="listImage"
                 />
-                <img src="" alt="" />
-                <p>Poetic Justice</p>
-                <p>Explicit</p>
-                <p>3:31</p>
-                <p>22,179,532</p>
+            
+                <p class="songName">Poetic Justice</p>
+                <p class="tableItem">Explicit</p>
+                <p class="tableItem">3:31</p>
+                <p class="tableItem">22,179,532</p>
                 <img
                   src="images/wale.jpg"
                   alt="Wale"
                   class="listImage_artist"
                 />
-                <p>Wale</p>
+                <p id="listPopular_row--white">Wale</p>
+              </div>
+
+            
               </div>
             </section>
           </section>
