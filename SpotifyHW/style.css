@@ -238,25 +238,36 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 20%;
+  width: 30%;
 }
 #playButton {
   padding: 10px;
   border-radius: 20px;
   background-color: var(--color-mainGreen);
-  width: 30%;
+  width: 45%;
+  height: 40%;
   text-align: center;
 }
 #playIcon {
-  width: 20%;
-  height: 80%;
+  width: 10%;
+  height: 70%;
 }
 #followButton {
   padding: 10px;
   border-radius: 20px;
-  background-color: rgba(169, 169, 169, 0.3);
-  width: 30%;
+  background-color: rgba(169, 169, 169, 0.2);
+  margin-left: 25px;
+  width: 45%;
+  height: 40%;
   text-align: center;
+}
+#moreButton {
+  padding: 10px;
+  margin-left: 25px;
+  border-radius: 40px;
+  background-color: rgba(169, 169, 169, 0.2);
+  width: 8%;
+  height: 40%;
 }
 #monthlyListeners {
   margin-right: 80px;
@@ -311,6 +322,9 @@
 #sm2 {
   width: 80%;
   height: 100%;
+}
+#dateOfLR {
+  color: var(--color-darkerGreen);
 }
 #songListTitle {
   display: flex;
@@ -394,6 +408,8 @@
   width: 10%;
 }
 .bandPicRightSide {
+  display: flex;
+  flex-direction: row;
   width: 20%;
   margin-left: 60px;
 }
@@ -401,4 +417,7 @@
   height: 60%;
   width: 15%;
   border-radius: 30px;
+}
+.bandPicName {
+  margin-left: 20px;
 }
