@@ -60,20 +60,6 @@ body {
   padding-top: 420px;
 }
 
-#rightTittle {
-  margin-top: 40px;
-  color: white;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  position: absolute;
-}
-#rightBigTittle {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  color: white;
-  position: absolute;
-}
-
 label {
   padding-right: 30px;
   color: white;
@@ -119,6 +105,9 @@ span {
 #site-search {
   padding-top: 20px;
   padding-bottom: 20px;
+  background-image: url("/icons/search.png");
+  background-repeat: no-repeat;
+  height: 20px;
 }
 
 #btns {
@@ -208,4 +197,23 @@ tr {
 #wrapper {
   display: flex;
   flex-direction: row;
+}
+
+#pipe {
+}
+
+#wraptext {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 20px;
+  padding-top: 40px;
+}
+
+#rightTittle {
+  color: white;
+  position: absolute;
+}
+#rightBigTittle {
+  color: white;
+  position: absolute;
 }
