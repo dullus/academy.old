@@ -30,28 +30,28 @@
   #rightSection_main {
     margin: 0%;
   }
-  #rightSection_main_artists {
+  #rightSection_main_artist {
     font-size: 20px;
   }
 
   h1 {
     font-size: 90px;
   }
-  #buttons {
+  #rightSection_main_buttons {
     display: block;
     font-size: 20px;
     margin-right: 0%;
   }
-  #rightSection_main_buttons {
+  #rightSection_main_buttons_wrapper {
     width: 100%;
   }
-  #topSection_buttons_rightText {
+  #rightSection_main_buttons_sideText {
     margin-top: 20px;
   }
   .rightSection_main_button {
     width: 23%;
   }
-  #navig {
+  #rightSection_main_navig {
     width: 100%;
     font-size: 16px;
   }
@@ -80,7 +80,7 @@
   #listPopular {
     margin-top: 9%;
   }
-  #rightHeading {
+  #listPopular_headings--right {
     width: auto;
   }
   .listPopular_row {
@@ -91,7 +91,8 @@
     width: 8%;
     height: auto;
   }
-  #iconPause {
+  #iconPause:hover,
+  #iconPause:focus {
     padding-left: 15px;
     width: 2%;
     color: whitesmoke;
@@ -107,7 +108,7 @@
   .tableItem {
     width: 50px;
   }
-  #column6 {
+  #tableItem--number {
     width: 140px;
   }
   .listImage_artist {
@@ -115,12 +116,12 @@
     height: 3.5%;
     margin: 0px 8px;
   }
-  #listPopular_row--white {
+  #listPopular_row--whiteHover {
     width: 100px;
   }
 }
 @media screen and (max-width: 751px) {
-  #rightHeading {
+  #listPopular_headings--right {
     display: none;
   }
 
@@ -133,7 +134,7 @@
   #iconPause {
     font-size: 12px;
   }
-  #listPopular_row--white {
+  #listPopular_row--whiteHover {
     display: none;
   }
 
@@ -171,7 +172,7 @@
     font-size: 14px;
     margin-top: 6px;
   }
-  #navig {
+  #rightSection_main_navig {
     flex-wrap: wrap;
   }
 }

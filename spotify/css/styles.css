@@ -18,7 +18,7 @@ body {
   margin-right: 15px;
 }
 
-#asylabText {
+#rightSection_header_right_text {
   margin-right: 15px;
 }
 
@@ -46,7 +46,7 @@ ul {
   margin: 0%;
 }
 
-#hahaha {
+#background_wrapper {
   background-position: center;
   background-repeat: no-repeat;
   background-position-y: unset;
@@ -88,7 +88,6 @@ ul {
   width: 80px;
   border-radius: 25px;
   text-align: center;
-  text-transform: uppercase;
 }
 
 #rightSection_header_icon--bottomArrow {
@@ -106,14 +105,6 @@ ul {
 #navHeading {
   color: var(--color-matterhorn);
   font-size: 14px;
-}
-#navDiscover {
-  /* height: 20%; */
-}
-#navLibrary {
-  /* height: 35%; */
-}
-#navPlaylists {
 }
 
 #spotifyLogo {
@@ -151,7 +142,7 @@ ul {
   padding: 0%;
   width: 50%;
 }
-#leftMenu--bottom {
+#leftMenu--bottomSection {
   width: 70%;
 }
 
@@ -163,7 +154,7 @@ i {
   padding-right: 10px;
 }
 
-.logoPlaylist {
+.iconPlaylist {
   width: 8%;
   margin: 0% 18px 0% 18px;
 }
@@ -188,7 +179,7 @@ i {
   margin: 0% 0%;
   width: 60%;
 }
-#logoMagnifyingGlass {
+#iconMagnifyingGlass {
   color: var(--color-matterhorn);
   padding-left: 6%;
   width: 8%;
@@ -212,7 +203,7 @@ i {
   align-items: center;
 }
 
-#rightSection_main_artists_wrapper {
+#rightSection_main_artist_wrapper {
   display: flex;
   align-items: center;
   margin-top: 4%;
@@ -220,7 +211,7 @@ i {
 #description {
   margin: 0;
 }
-#checCircle {
+#iconCheckCircle {
   color: var(--color-malibu);
   padding-left: 1%;
 }
@@ -228,7 +219,7 @@ h1 {
   font-size: 36px;
   margin: 0.5% 0% 0% 0%;
 }
-#rightSection_main_buttons {
+#rightSection_main_buttons_wrapper {
   display: flex;
   width: 35%;
   justify-content: start;
@@ -237,14 +228,14 @@ h1 {
   display: flex;
   width: 20%;
 }
-#buttons {
+#rightSection_main_buttons {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 1.5% 3% 0% 0%;
 }
 
-#navig {
+#rightSection_main_navig {
   font-size: 12px;
   letter-spacing: 1pt;
   margin-top: 3%;
@@ -252,7 +243,6 @@ h1 {
   padding: 0%;
   justify-content: space-between;
   width: 48%;
-  text-transform: uppercase;
 }
 
 .navig_wrapper:hover {
@@ -270,8 +260,12 @@ h1 {
   color: transparent;
 }
 
-.navigItem:focus,
-.navigItem:hover {
+#left_navig--icon:focus,
+#left_navig--icon:hover {
+  color: var(--color-darkPastelGreen);
+}
+
+.navig_wrapper:hover {
   color: var(--color-darkPastelGreen);
 }
 
@@ -296,11 +290,11 @@ p {
   display: flex;
   justify-content: center;
 }
-#logoPlay {
+#iconPlay {
   padding-right: 6%;
   padding-left: 0%;
 }
-#topSection_buttons_rightText {
+#rightSection_main_buttons_sideText {
   text-align: right;
   color: var(--color-matterhorn);
   text-transform: uppercase;
@@ -336,7 +330,7 @@ p {
   margin-top: 2%;
 }
 
-#headings {
+#listPopular_headings {
   display: flex;
   justify-content: space-between;
   margin-bottom: 2%;
@@ -357,16 +351,16 @@ p {
   color: var(--color-darkPastelGreen);
 }
 
-#column6 {
+#tableItem--number {
   text-align: right;
 }
 
-#listPopular_row--white:hover,
-#listPopular_row--white:focus {
+#listPopular_row--whiteHover:hover,
+#listPopular_row--whiteHover:focus {
   color: var(--color-whiteSmoke);
 }
 
-#listPopular_row--white {
+#listPopular_row--whiteHover {
   width: 100px;
 }
 
@@ -389,7 +383,7 @@ p {
 #date {
   color: var(--color-darkPastelGreen);
 }
-#rightHeading {
+#listPopular_headings--right {
   width: 14%;
 }
 
@@ -412,7 +406,6 @@ p {
   margin-right: 7%;
   color: var(--color-matterhorn);
   font-size: 11px;
-  text-transform: uppercase;
 }
 
 .tableItem--border:hover,
@@ -422,4 +415,8 @@ p {
 }
 #invisible {
   display: none;
+}
+
+.uppercase {
+  text-transform: uppercase;
 }
