@@ -205,3 +205,41 @@ body {
   font-weight: bold;
   text-align: left;
 }
+
+.tabItems:hover .dotUnderTabs {
+  visibility: visible;
+}
+.tabItems:hover {
+  color: var(--spotify-green);
+}
+
+#monthly {
+  color: var(--darker-gray);
+  text-align: right;
+  font-weight: bold;
+}
+
+#monthly > * {
+  margin: 15px;
+}
+
+.playPauseButton {
+  visibility: hidden;
+}
+
+.songDetail:hover {
+  color: var(--spotify-green);
+}
+
+.songDetail:hover .playPauseButton {
+  color: white;
+  visibility: visible;
+}
+
+.songDetail:hover .similarArtistsBox {
+  color: white;
+}
+
+.songDetail:focus {
+  color: tomato;
+}
