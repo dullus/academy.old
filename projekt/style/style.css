@@ -124,20 +124,24 @@ span {
 
 #latest {
   padding-top: 80px;
+  color: white;
   padding-bottom: 20px;
 }
 
 #imgpanther {
   padding-top: 5px;
+  color: white;
 }
 
 #panther {
   padding-left: 20px;
+  color: white;
 }
 
 #popular {
   padding-bottom: 20px;
-  padding-top: 60px;
+  padding-top: 20px;
+  color: white;
 }
 
 .icon-bar {
@@ -157,16 +161,18 @@ span {
 .FirstMenu {
   padding-bottom: 40px;
   margin-top: 20px;
-  padding-top: 40px;
+  padding-top: 60px;
   color: white;
 }
 .SecondMenu {
   padding-bottom: 40px;
   color: white;
+  padding-top: 60px;
 }
 .ThirdMenu {
   padding-bottom: 40px;
   color: white;
+  padding-top: 60px;
 }
 
 .menuText {
