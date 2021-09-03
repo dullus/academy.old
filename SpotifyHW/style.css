@@ -15,7 +15,6 @@
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
 }
-
 #leftSideNavBar {
   display: flex;
   flex-direction: column;
@@ -24,7 +23,7 @@
   color: var(--color-darkerWhite);
   background-color: var(--color-background);
 }
-#leftMenuItem1 {
+#spotifyLogo {
   padding-top: 10px;
   padding-left: 10px;
   height: 8%;
@@ -41,18 +40,18 @@
   opacity: 0.9;
   margin-left: 15px;
 }
-#discoverItem1 {
-  padding: 8px;
-  padding-left: 30px;
-  padding-top: 30px;
-  font-size: 0.8rem;
-}
 #explorePic {
   height: 8%;
   width: 8%;
   padding-right: 10px;
 }
-#discoverItem2 {
+.leftMenuItem1 {
+  padding: 8px;
+  padding-left: 30px;
+  padding-top: 30px;
+  font-size: 0.8rem;
+}
+.leftMenuItem {
   padding: 8px;
   padding-left: 30px;
   font-size: 0.8rem;
@@ -70,45 +69,24 @@
   opacity: 0.9;
   margin-left: 15px;
 }
-#libraryItem1 {
-  padding: 8px;
-  padding-left: 30px;
-  padding-top: 30px;
-  font-size: 0.8rem;
-}
 #songsPic {
-  height: 10%;
-  width: 10%;
+  height: 8%;
+  width: 8%;
   padding-right: 10px;
-}
-#libraryItem2 {
-  padding: 8px;
-  padding-left: 30px;
-  font-size: 0.8rem;
 }
 #albumsPic {
-  height: 10%;
-  width: 10%;
+  height: 8%;
+  width: 8%;
   padding-right: 10px;
-}
-#libraryItem3 {
-  padding: 8px;
-  padding-left: 30px;
-  font-size: 0.8rem;
 }
 #artistsPic {
-  height: 10%;
-  width: 10%;
+  height: 8%;
+  width: 8%;
   padding-right: 10px;
 }
-#libraryItem4 {
-  padding: 8px;
-  padding-left: 30px;
-  font-size: 0.8rem;
-}
 #favoritesPic {
-  height: 10%;
-  width: 10%;
+  height: 8%;
+  width: 8%;
   padding-right: 10px;
 }
 .playlistsNav {
@@ -119,30 +97,9 @@
   opacity: 0.9;
   margin-left: 15px;
 }
-#playlistsItem1 {
-  padding: 8px;
-  padding-left: 30px;
-  padding-top: 30px;
-  font-size: 0.8rem;
-}
-#playlistsItem2 {
-  padding: 8px;
-  padding-left: 30px;
-  font-size: 0.8rem;
-}
-#playlistsItem3 {
-  padding: 8px;
-  padding-left: 30px;
-  font-size: 0.8rem;
-}
-#playlistsItem4 {
-  padding: 8px;
-  padding-left: 30px;
-  font-size: 0.8rem;
-}
 .listPic {
-  height: 10%;
-  width: 10%;
+  height: 8%;
+  width: 8%;
   padding-right: 10px;
 }
 .rightPageSide {
@@ -180,9 +137,15 @@
   height: 80%;
 }
 #topNavLeft input[type="text"] {
-  padding: 6px;
+  padding: 10px;
   border-radius: 20px;
   width: 100%;
+  background-image: url("./icons/search.png");
+  background-size: 23px;
+  background-position-x: 10px;
+  background-position-y: 4px;
+  background-repeat: no-repeat;
+  text-align: start;
 }
 #topNavRight {
   display: flex;
@@ -295,6 +258,7 @@
 }
 #about {
   width: 15%;
+  margin-left: 20px;
 }
 #concerts {
   width: 15%;
