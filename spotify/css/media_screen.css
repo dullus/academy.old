@@ -147,13 +147,27 @@
   .listPopular_row {
     flex-flow: wrap;
   }
-
+  h1 {
+    font-size: 50px;
+  }
+  h2 {
+    font-size: 24px;
+  }
+  #listLatestRelease_row {
+    font-size: 20px;
+  }
+  .listPopular_row {
+    margin-bottom: 10%;
+  }
   #rightSection {
     padding-right: 18px;
   }
   .tableItem--border {
     font-size: 13px;
     width: 50px;
+  }
+  #tableItem--number {
+    text-align: left;
   }
   #rightSection_header {
     display: inline-block;
