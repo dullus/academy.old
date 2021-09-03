@@ -258,9 +258,9 @@ span:hover {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
-  background: rgb(95, 93, 88);
-  margin-right: 200px;
-  width: 600px;
+  padding-left: 80px;
+  width: 85%;
+  align-items: center;
 }
 
 #site-search {
@@ -270,15 +270,11 @@ span:hover {
   margin-top: 20px;
   padding-bottom: 20px;
   padding-right: 20px;
-  flex: 10%;
 }
 
 #topbtn {
   color: white;
   padding-bottom: 20px;
-  padding-left: 20px;
-  padding-right: 20px;
-  flex: 10%;
 }
 
 #iconsTop3 {
@@ -288,7 +284,6 @@ span:hover {
   padding-left: 20opx;
   background: url(/icons/bell.png);
   background-repeat: no-repeat;
-  flex: 10%;
 }
 
 #iconsTop2 {
@@ -298,5 +293,4 @@ span:hover {
   padding-right: 20px;
   background: url(/icons/lab.png);
   background-repeat: no-repeat;
-  flex: 10%;
 }
