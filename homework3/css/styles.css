@@ -1,7 +1,7 @@
 :root {
   font-size: 62.5%;
   --color-blackish: #101010;
-  --color-greenish: #01B949;
+  --color-greenish: #01b949;
 }
 
 .wrapper-grid {
@@ -15,14 +15,17 @@
 #left-grid {
   display: grid;
   grid-gap: 0.5rem;
-  grid-template-columns: 1 fr;
+  grid-template-columns: 20vw;
   grid-template-rows: repeat(14, 6rem);
 }
 
 .item {
-  margin-left: 1.5rem;
+  margin-left: 2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   font-size: 3rem;
-  text-align: center;
+  text-align: left;
   line-height: 4rem;
   font-family: Arial, Helvetica, sans-serif;
   letter-spacing: 0.3rem;
@@ -113,24 +116,22 @@ a.left-menu-link:hover {
 /* RIGHT GRID */
 
 #right-grid {
-  background-image: url("/homework3/img/infected_mushroom_wallpaper.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  opacity: 0.5;
-  width:100%;
-  height:20vh;
+  width: 100%;
+  height: 20vh;
   display: grid;
   color: white;
   font-family: Arial, Helvetica, sans-serif;
   grid-gap: 0.2rem;
   grid-template-columns: [col-start]repeat(12, 5vw) [col-end];
-  grid-template-rows: repeat(12, 4rem);
+  grid-template-rows: repeat(14, 6rem);
   align-items: center;
   grid-template-areas:
     "arrow-left  arrow-right search-bar search-bar search-bar .. premium premium bell asyl-lab asyl-lab arrow-down"
     "artist . . . . . . . . . . .  "
-    "band_name band_name band_name . . . . . . . . .  "
-    "play play follow follow three-dots three-dots . . . . .monthly_listeners"
+    "band_name band_name band_name band_name band_name band_name . . . . . .  "
+    "band_name band_name band_name band_name band_name band_name . . . . . .  "
+    "band_name band_name band_name band_name band_name band_name . . . . . .  "
+    "play play play follow follow follow three-dots three-dots . . monthly_listeners monthly_listeners"
     "overview overview fans_also_like fans_also_like  about about  concerts concerts . . . . "
     "latest_release latest_release . . . . . . . . . ."
     "movie movie . . . . . . . . . ."
@@ -143,9 +144,17 @@ a.left-menu-link:hover {
 .material-icons {
   color: white;
 }
+.band_name img {
+  width: 100%;
+  height: auto;
+}
+.input-search {
+  border-radius: 2rem;
+}
 .monthly_listeners {
-     
   grid-area: monthly_listeners;
+  display: flex;
+  flex-direction: column;
 }
 .image1 {
   background-color: var(--color-blackish);
@@ -163,7 +172,7 @@ a.left-menu-link:hover {
   grid-area: image3;
 }
 .image4 {
-  background-color: var(--color-blackish);  
+  background-color: var(--color-blackish);
   size: 1vw 1vh;
   grid-area: image4;
 }
@@ -173,7 +182,7 @@ a.left-menu-link:hover {
 }
 .play-pause2 {
   background-color: var(--color-blackish);
-  color:var(--color-greenish);
+  color: var(--color-greenish);
   grid-area: play-pause2;
 }
 .play-pause3 {
@@ -181,7 +190,7 @@ a.left-menu-link:hover {
   grid-area: play-pause3;
 }
 .play-pause4 {
-  background-color: var(--color-blackish);   
+  background-color: var(--color-blackish);
   grid-area: play-pause4;
 }
 .song1 {
@@ -189,8 +198,8 @@ a.left-menu-link:hover {
   grid-area: song1;
 }
 .song2 {
-  background-color: var(--color-blackish);  
-  color:var(--color-greenish);
+  background-color: var(--color-blackish);
+  color: var(--color-greenish);
   grid-area: song2;
 }
 .song3 {
@@ -202,24 +211,24 @@ a.left-menu-link:hover {
   grid-area: song4;
 }
 .explicit1 {
-  background-color: var(--color-blackish); 
+  background-color: var(--color-blackish);
   grid-area: explicit1;
 }
 .explicit2 {
   background-color: var(--color-blackish);
-  color:var(--color-greenish);
+  color: var(--color-greenish);
   grid-area: explicit2;
 }
 .explicit3 {
-  background-color: var(--color-blackish); 
+  background-color: var(--color-blackish);
   grid-area: explicit3;
 }
 .explicit4 {
-  background-color: var(--color-blackish); 
+  background-color: var(--color-blackish);
   grid-area: explicit4;
 }
 #explicit {
-  border:1px solid white;
+  border: 1px solid white;
   border-radius: 3rem;
   width: 3.2rem;
 }
@@ -229,7 +238,7 @@ a.left-menu-link:hover {
 }
 .length2 {
   background-color: var(--color-blackish);
-  color:var(--color-greenish);
+  color: var(--color-greenish);
   grid-area: length2;
 }
 .length3 {
@@ -237,7 +246,7 @@ a.left-menu-link:hover {
   grid-area: length3;
 }
 .length4 {
-  background-color: var(--color-blackish); 
+  background-color: var(--color-blackish);
   grid-area: length4;
 }
 .view_count1 {
@@ -246,7 +255,7 @@ a.left-menu-link:hover {
 }
 .view_count2 {
   background-color: var(--color-blackish);
-  color:var(--color-greenish);
+  color: var(--color-greenish);
   grid-area: view_count2;
 }
 .view_count3 {
@@ -264,7 +273,7 @@ a.left-menu-link:hover {
 }
 .also_star2 {
   background-color: var(--color-blackish);
-  color:var(--color-greenish);
+  color: var(--color-greenish);
   display: flex;
   grid-area: also_star2;
 }
@@ -281,12 +290,12 @@ a.left-menu-link:hover {
 
 .star {
   text-decoration: none;
-  color:white;
+  color: white;
 }
 
 .popular {
   color: white;
-     
+
   grid-area: popular;
 }
 .fans_also_like_2 {
@@ -295,7 +304,7 @@ a.left-menu-link:hover {
 }
 .movie {
   color: white;
-  background-color: var(--color-blackish); 
+  background-color: var(--color-blackish);
   grid-area: movie;
 }
 .latest_release {
@@ -304,11 +313,11 @@ a.left-menu-link:hover {
   grid-area: latest_release;
 }
 .overview {
-  background-color: var(--color-blackish);  
+  background-color: var(--color-blackish);
   grid-area: overview;
 }
 .fans_also_like {
-  background-color: var(--color-blackish);   
+  background-color: var(--color-blackish);
   grid-area: fans_also_like;
 }
 
@@ -317,7 +326,7 @@ a.left-menu-link:hover {
   grid-area: about;
 }
 .concerts {
-  background-color: var(--color-blackish);    
+  background-color: var(--color-blackish);
   grid-area: concerts;
 }
 .central_menu_link a {
@@ -330,10 +339,14 @@ a.left-menu-link:hover {
 
 .arrow-left {
   background-color: var(--color-blackish);
+  align-items: center;
+  justify-items: center;
   grid-area: arrow-left;
 }
 .arrow-right {
-  background-color: var(--color-blackish);  
+  background-color: var(--color-blackish);
+  align-items: center;
+  justify-items: center;
   grid-area: arrow-right;
 }
 .search-bar {
@@ -349,12 +362,12 @@ a.left-menu-link:hover {
   grid-area: arrow-down;
 }
 .asyl-lab {
-  background-color: var(--color-blackish);  
+  background-color: var(--color-blackish);
   color: white;
   grid-area: asyl-lab;
 }
 .bell {
-  background-color: var(--color-blackish);    
+  background-color: var(--color-blackish);
   grid-area: bell;
 }
 .premium {
@@ -371,8 +384,9 @@ button#premium {
   color: white;
   font-size: 1.5rem;
   grid-area: artist;
-  display:flex;
+  display: flex;
   align-items: center;
+  justify-items: center;
 }
 
 .band_name {
@@ -380,56 +394,129 @@ button#premium {
   font-weight: bolder;
   grid-area: band_name;
 }
+.band_name h1 {
+  font-size: 3rem;
+}
 
 .play {
-  margin-left: 1rem;
   grid-area: play;
-  font-size: 1rem;
 }
 .play a {
   text-decoration: none;
   color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  width: 14rem;
+  font-size: 2rem;
+  height: 4rem;
+  border-radius: 3rem;
+
+  background-color: gray;
+  opacity: 0.2;
+  color: color;
+
+  border: 1px solid gray;
+  text-decoration: none;
 }
 .play a:hover {
-  display: inline-block;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  width: 14rem;
+  font-size: 2rem;
+  height: 4rem;
+  border-radius: 3rem;
+
   background-color: #01b949;
   color: white;
-  border-radius: 1rem;
-  width: 200px
+
   text-decoration: none;
 }
 .follow {
   grid-area: follow;
-  font-size: 1rem;
 }
 .follow a {
   text-decoration: none;
   color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  width: 14rem;
+  font-size: 2rem;
+  height: 4rem;
+  border-radius: 3rem;
+
+  background-color: gray;
+  opacity: 0.2;
+  color: color;
+  border: 1px solid gray;
+  text-decoration: none;
 }
 .follow a:hover {
-  display: inline-block;
-  background-color: #01b949;
+  text-decoration: none;
   color: white;
-  border-radius: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  width: 14rem;
+  font-size: 2rem;
+  height: 4rem;
+  border-radius: 3rem;
+
+  background-color: #01b949;
+  opacity: 0.2;
+  color: color;
+  border: 1px solid gray;
   text-decoration: none;
 }
 
 .three-dots {
   grid-area: three-dots;
-  font-size: 1rem;
 }
 .three-dots a {
   text-decoration: none;
   color: white;
-}
-.three-dots a:hover {
-  display: inline-block;
-  background-color: #01b949;
-  color: white;
-  border-radius: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  width: 14rem;
+  font-size: 2rem;
+  height: 4rem;
+  border-radius: 3rem;
+
+  background-color: gray;
+  opacity: 0.2;
+  color: color;
+  border: 1px solid gray;
   text-decoration: none;
 }
+.three-dots a:hover {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 
+  width: 14rem;
+  font-size: 2rem;
+  height: 4rem;
+  border-radius: 3rem;
 
- 
-
+  background-color: #01b949;
+  opacity: 0.2;
+  color: color;
+  border: 1px solid gray;
+  text-decoration: none;
+}
