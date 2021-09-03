@@ -245,3 +245,21 @@ li {
   width: 60%;
   padding-left: 2%;
 }
+
+.main_buttons:hover {
+  background-color: var(--color-green);
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+#premium:hover {
+  background-color: var(--color-green);
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.ul_nav > li:hover {
+  color: var(--color-green);
+
+  cursor: pointer;
+}
