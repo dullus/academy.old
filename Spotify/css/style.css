@@ -206,6 +206,16 @@ body {
   text-align: left;
 }
 
+.dotUnderTabs {
+  margin-top: 10px;
+  visibility: hidden;
+  padding: 0px;
+  width: 7px;
+  height: 7px;
+  border-radius: 7px;
+  background-color: var(--spotify-green);
+}
+
 .tabItems:hover .dotUnderTabs {
   visibility: visible;
 }
