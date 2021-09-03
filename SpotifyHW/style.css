@@ -10,7 +10,7 @@
   flex-direction: row;
   width: 98%;
   height: 100%;
-  position: absolute;
+  position: relative;
   background-color: var(--color-background);
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
@@ -124,7 +124,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 100%;
+  width: 110%;
   height: 5%;
   padding: 15px;
   margin-top: 10px;
@@ -157,13 +157,17 @@
 #topNavLeft input[type="text"] {
   padding: 10px;
   border-radius: 20px;
-  width: 100%;
+  width: 90%;
   background-image: url("./icons/search.png");
   background-size: 23px;
   background-position-x: 10px;
   background-position-y: 4px;
   background-repeat: no-repeat;
   text-align: start;
+  margin-left: 30px;
+}
+#topNavLeft input[type="text"]:focus {
+  outline: none;
 }
 #topNavRight {
   display: flex;
@@ -216,6 +220,11 @@
   width: 100%;
 }
 #artist {
+}
+#veriCheck {
+  height: 11px;
+  width: 11px;
+  margin-left: 3px;
 }
 #nameOfArtist {
   font-size: 2.5rem;
@@ -381,9 +390,9 @@
   cursor: pointer;
 }
 #song1Text {
-  margin-left: 20px;
+  margin-left: 50px;
   padding: 8px;
-  width: 35%;
+  width: 32%;
 }
 #song2 {
   display: flex;
@@ -400,9 +409,9 @@
   cursor: pointer;
 }
 #song2Text {
-  margin-left: 20px;
+  margin-left: 50px;
   padding: 8px;
-  width: 35%;
+  width: 32%;
 }
 #song3 {
   display: flex;
@@ -419,9 +428,9 @@
   cursor: pointer;
 }
 #song3Text {
-  margin-left: 20px;
+  margin-left: 50px;
   padding: 8px;
-  width: 35%;
+  width: 32%;
 }
 #song4 {
   display: flex;
@@ -438,11 +447,13 @@
   cursor: pointer;
 }
 #song4Text {
-  margin-left: 20px;
+  margin-left: 50px;
   padding: 8px;
-  width: 35%;
+  width: 32%;
 }
 .songInfo {
+  border-radius: 30px;
+
   width: 10%;
   color: #3a3a3a;
   font-size: 0.8rem;
@@ -470,7 +481,6 @@
 .bandPicName {
   margin-left: 20px;
 }
-
 @media only screen and (max-width: 1200px) {
   .songInfo {
     display: none;
@@ -506,5 +516,58 @@
   }
   .songList {
     width: 100%;
+  }
+  .rightSidePlaySection {
+    display: none;
+  }
+}
+@media only screen and (max-width: 900px) {
+  #leftSideNavBar {
+    display: none;
+  }
+  .rightPageSide {
+    margin-left: 100px;
+  }
+  #playButton {
+    width: 30%;
+  }
+}
+@media only screen and (max-width: 800px) {
+  #leftSideNavBar {
+    display: none;
+  }
+  .rightPageSide {
+    margin-left: 100px;
+  }
+  #playButton {
+    width: 40%;
+  }
+}
+@media only screen and (max-width: 700px) {
+  #leftSideNavBar {
+    display: none;
+  }
+  .rightPageSide {
+    margin-left: 100px;
+  }
+  #playButton {
+    width: 40%;
+  }
+  .leftSidePlaySection {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  #leftSideNavBar {
+    display: none;
+  }
+  .rightPageSide {
+    margin-left: 100px;
+  }
+  #playButton {
+    width: 40%;
+  }
+  .leftSidePlaySection {
+    width: 70%;
   }
 }
