@@ -81,12 +81,6 @@ label {
   padding-top: 260px;
 }
 
-td,
-tr {
-  padding: 10px;
-  text-align: left;
-}
-
 tr:hover {
   background-color: rgb(92, 131, 82);
 }
@@ -145,21 +139,6 @@ span {
   padding-bottom: 20px;
 }
 
-#listtablecontainer {
-  /*  padding-left: 40px;
-  padding-top: 60px;
-  padding-bottom: 200px;
-  background-color: red;
-  width: 30px;*/
-}
-
-#tablecontainer {
-  /*   padding-bottom: 200px;
-  padding-left: 20px;
-  padding-right: 20px;
-  width: 300px;*/
-}
-
 #popular {
   padding-bottom: 140px;
   padding-top: 60px;
@@ -205,5 +184,16 @@ span {
 
 table {
   float: left;
-  width: 50%;
+}
+
+#elementTable {
+  padding-right: 260px;
+}
+
+td,
+tr {
+  text-align: left;
+}
+
+.element2 {
 }
