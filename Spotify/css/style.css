@@ -478,6 +478,24 @@ footer {
   }
 }
 
+@media screen and (max-width: 800px), screen and (max-height: 1100px) {
+  #monthly,
+  .navigationArrows,
+  #premiumButton,
+  .songInformation,
+  #bellIcon {
+    display: none;
+  }
+
+  #navigationSearchWrapper {
+    width: 30vw;
+  }
+
+  #searchBar {
+    width: 25vw;
+  }
+}
+
 /* .tbdInformationWrapper {
   display: flex;
   align-items: center;
