@@ -1,1 +1,177 @@
+@media screen and (max-width: 1065px) {
+  #navDiscover {
+    display: none;
+  }
+  #navLibrary {
+    display: none;
+  }
+  #navPlaylists {
+    display: none;
+  }
+  #navHeading {
+    display: none;
+  }
+  #leftSection {
+    width: 5%;
+  }
+  .gridContainer {
+    padding: 1.5% 4% 2.9% 3%;
+  }
+  #rightSection {
+    width: 95%;
+  }
+  #rightSection_header {
+    font-size: 20px;
+  }
 
+  #rightSection_header_right {
+    width: auto;
+  }
+  #rightSection_main {
+    margin: 0%;
+  }
+  #rightSection_main_artists {
+    font-size: 20px;
+  }
+
+  h1 {
+    font-size: 90px;
+  }
+  #buttons {
+    display: block;
+    font-size: 20px;
+    margin-right: 0%;
+  }
+  #rightSection_main_buttons {
+    width: 100%;
+  }
+  #topSection_buttons_rightText {
+    margin-top: 20px;
+  }
+  .rightSection_main_button {
+    width: 23%;
+  }
+  #navig {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  #rightSection_button--small {
+    margin-right: 0%;
+    margin-left: 400px;
+  }
+
+  #listLatestRelease {
+    display: flex;
+    font-size: 24px;
+    margin-top: 5%;
+  }
+  h2 {
+    font-size: 30px;
+  }
+  #listLatestRelease_row {
+    margin-top: 0%;
+  }
+  #listImage--margin {
+    width: 10%;
+    height: auto;
+    margin-left: 3%;
+  }
+  #listPopular {
+    margin-top: 9%;
+  }
+  #rightHeading {
+    width: auto;
+  }
+  .listPopular_row {
+    font-size: 20px;
+  }
+
+  .listImage {
+    width: 8%;
+    height: auto;
+  }
+  #iconPause {
+    padding-left: 15px;
+    width: 2%;
+    color: whitesmoke;
+    font-size: 12px;
+  }
+  .songName {
+    width: 140px;
+  }
+  .tableItem--border {
+    font-size: 16px;
+    margin-right: 15px;
+  }
+  .tableItem {
+    width: 50px;
+  }
+  #column6 {
+    width: 140px;
+  }
+  .listImage_artist {
+    width: 6.5%;
+    height: 3.5%;
+    margin: 0px 8px;
+  }
+  #listPopular_row--white {
+    width: 100px;
+  }
+}
+@media screen and (max-width: 751px) {
+  #rightHeading {
+    display: none;
+  }
+
+  .listImage_artist {
+    display: none;
+  }
+  .listPopular_row {
+    font-size: 18px;
+  }
+  #iconPause {
+    font-size: 12px;
+  }
+  #listPopular_row--white {
+    display: none;
+  }
+
+  #rightSection_button--small {
+    margin-left: 27%;
+  }
+}
+
+@media screen and (max-width: 455px) {
+  .listPopular_row {
+    flex-flow: wrap;
+  }
+
+  #rightSection {
+    padding-right: 18px;
+  }
+  .tableItem--border {
+    font-size: 13px;
+    width: 50px;
+  }
+  #rightSection_header {
+    display: inline-block;
+    width: 97%;
+  }
+  #rightSection_header_left {
+    width: 100%;
+  }
+
+  #searchBarWrapper {
+    width: 80%;
+    padding: 5px 0px;
+  }
+
+  #rightSection_header_right {
+    font-size: 14px;
+    margin-top: 6px;
+  }
+  #navig {
+    flex-wrap: wrap;
+  }
+}

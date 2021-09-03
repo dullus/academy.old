@@ -71,6 +71,11 @@ ul {
   padding: 0%;
   width: 10%;
 }
+#rightSection_header_left_icon-rightChevron {
+  padding: 0%;
+  width: 10%;
+  color: var(--color-matterhorn);
+}
 
 #rightSection_header_right_icon {
   padding-left: 28px;
@@ -197,6 +202,7 @@ i {
 #searchBar:focus,
 #searchBar:hover {
   border-style: none;
+  outline: none;
 }
 
 #rightSection_header_right {
@@ -281,11 +287,14 @@ p {
   padding: 10px;
   margin-right: 20px;
 }
+.rightSection_main_button:hover,
+.rightSection_main_button:focus {
+  background-color: var(--color-darkPastelGreen);
+}
 
 #rightSection_main_button--flex {
   display: flex;
   justify-content: center;
-  background-color: var(--color-darkPastelGreen);
 }
 #logoPlay {
   padding-right: 6%;
@@ -348,6 +357,10 @@ p {
   color: var(--color-darkPastelGreen);
 }
 
+#column6 {
+  text-align: right;
+}
+
 #listPopular_row--white:hover,
 #listPopular_row--white:focus {
   color: var(--color-whiteSmoke);
@@ -406,4 +419,7 @@ p {
 .tableItem--border:focus {
   color: var(--color-darkPastelGreen);
   border-color: var(--color-darkPastelGreen);
+}
+#invisible {
+  display: none;
 }
