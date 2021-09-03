@@ -102,7 +102,7 @@ ul li .left-nav-icon {
   position: relative;
   display: flex;
   flex-direction: column;
-  width: 78%;
+  width: 72%;
   margin: 1% 1% 2% 2%;
 }
 
@@ -111,18 +111,26 @@ header {
   display: flex;
   flex-direction: row;
   align-items: center;
-  width: 90%;
+  width: 100%;
   justify-content: space-between;
   font-size: 10px;
+  color: var(--color-fontWhite);
 }
 header .header-split-wrap {
   position: static;
   display: flex;
   flex-direction: row;
   align-items: center;
+  box-sizing: border-box;
 }
 header #header-split-right-wraper {
-  margin-right: 5%;
+  margin-right: 10%;
+}
+/* ////////////////////////////////////////////////// */
+@media only screen and (max-width: 850px) {
+  header #header-split-right-wraper {
+    margin-right: 15%;
+  }
 }
 header .header-split-wrap p {
   margin: 0 1%;
@@ -172,6 +180,11 @@ header .header-arrows {
 
 #main-artist-name {
   display: flex;
+  color: var(--color-fontWhite);
+  font-weight: bold;
+  width: 100%;
+  height: 10%;
+
   flex-direction: column;
 }
 #main-artist-name div {
@@ -192,21 +205,27 @@ header .header-arrows {
 /* end of main-section*/
 
 /* main list of artist function buttons*/
+div#main-artist-info {
+  height: 15%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
 ul.main-list-artist-function-buttons {
   position: relative;
-  font-size: 10px;
+  font-size: 8px;
   display: flex;
   flex-direction: row;
   list-style-type: none;
-  height: 100%;
-  width: 45%;
+  height: 60%;
+  width: 70%;
   padding: 0;
-  margin: 2% 0;
+  margin: 2% 0% 0 0;
   align-items: center;
 }
 ul.main-list-artist-function-buttons .artist-function-buttons {
-  width: 85%;
-  margin: 0 4% 0 0;
+  width: 70%;
+  margin: 0 6% 0 0;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -219,15 +238,31 @@ ul.main-list-artist-function-buttons .artist-function-buttons p {
   color: #fefefe;
 }
 ul.main-list-artist-function-buttons #triple-dot {
-  font-size: 20px;
-  height: 100%;
+  font-size: 18px;
+  /* */
   display: flex;
   transform: translate(0, -5px);
 }
 ul.main-list-artist-function-buttons #triple-dot-background {
-  width: 23%;
-  height: 100%;
+  width: 18%;
+  /* */
   border-radius: 50%;
+}
+
+#main-listeners {
+  color: rgba(142, 133, 133, 0.59);
+  width: 100%;
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  margin: 2% 10% 0 0;
+  text-align: right;
+  padding: 0;
+  height: 100%;
+}
+#main-listeners p {
+  padding: 0;
+  margin: 0;
 }
 
 ul.main-list-artist-function-buttons #play-button {
@@ -237,10 +272,52 @@ ul.main-list-artist-function-buttons #play-button {
   justify-content: space-around;
   align-items: center;
 }
+ul.main-list-artist-function-buttons #play-button p {
+  margin-left: 8%;
+}
 ul.main-list-artist-function-buttons #play-button i {
   margin: 0 15% 0 0;
   position: absolute;
 }
-
 /* end of main list fun butt*/
+
+/*start of main-list-artist-nav*/
+ul.main-list-artist-nav {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  width: 85%;
+  height: 15%;
+  list-style-type: none;
+  color: var(--color-fontWhite);
+  font-weight: bold;
+  font-size: 13px;
+  padding: 0;
+  margin: 0 0;
+}
+ul.main-list-artist-nav li {
+  padding: 0;
+  margin: 2% 7% 3% 0;
+  display: flex;
+  flex-direction: column;
+}
+ul.main-list-artist-nav p {
+  margin: 4% 0;
+}
+ul.main-list-artist-nav .artist-nav-dot {
+  height: 2.5px;
+  width: 2.5px;
+  border: 1px solid var(--color-hoverLightGreen);
+  background-color: var(--color-hoverLightGreen);
+  border-radius: 50%;
+  display: flex;
+  visibility: hidden;
+  margin: auto;
+}
+/*end of main-list-artist-nav*/
+
+/* start of main-artist-latest-release*/
+
+/* end of main-artist-latest-release*/
+
 /* end of main wraper and content*/
