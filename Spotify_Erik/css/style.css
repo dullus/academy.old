@@ -4,6 +4,7 @@
   --color-black: #0a0a0a;
   --color-grey: #2a2a2a;
   --color-darkGreen: #098b3a;
+  --color-transparent: rgba(255, 255, 255, 0.15);
 }
 
 .main {
@@ -15,11 +16,12 @@
   font-size: 18px;
   width: 100vw;
   height: 100vh;
+  font-family: sans-serif;
 }
 
 .section_left {
   width: 25%;
-  height: 100%;
+  height: 90%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -67,6 +69,7 @@
 .user {
   display: flex;
   flex-direction: row;
+  width: 35%;
 }
 
 .user_info {
@@ -124,7 +127,7 @@ li {
 .track {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: flex-start;
 }
 
 .right_bottom {
@@ -145,6 +148,8 @@ li {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin-top: 10%;
+  width: 100%;
 }
 .overview_artist {
   width: 75%;
@@ -158,4 +163,85 @@ li {
 #Spotify {
   color: var(--color-grey);
   font-size: 25px;
+}
+
+.track_title {
+  margin-left: 2%;
+  margin-right: 25%;
+  margin-top: 5%;
+}
+
+.explicit {
+  margin-left: 2%;
+  margin-right: 10%;
+  margin-top: 5%;
+}
+
+.length {
+  margin-left: 2%;
+  margin-right: 5%;
+  margin-top: 5%;
+}
+
+.track_plays {
+  margin-left: 2%;
+  margin-right: 5%;
+  margin-top: 5%;
+}
+
+.overview_related {
+  display: flex;
+  flex-direction: column;
+  margin-left: 2%;
+  justify-content: inherit;
+  margin-top: 4%;
+}
+
+#bell {
+  margin-top: 13%;
+  margin-left: 3%;
+}
+
+#premium {
+  border-radius: 35px;
+  height: 100%;
+  background-color: var(--color-transparent);
+  color: var(--color-white);
+  padding: 5%;
+  padding-left: 8%;
+  padding-right: 8%;
+  margin-top: 5%;
+  margin-right: 3%;
+  font-size: 20px;
+}
+#Asylab {
+  height: 65%;
+  margin-top: 5%;
+  margin-top: 18%;
+}
+
+#user {
+  margin-top: 30%;
+  font-size: 20px;
+}
+
+.buttons {
+  width: 40%;
+}
+
+.main_buttons {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: var(--color-white);
+  border-radius: 35px;
+  font-size: 16px;
+  margin: 3%;
+  background: transparent;
+}
+
+.nav_item:hover {
+  background-color: var(--color-green);
+  border-radius: 30px;
+  cursor: pointer;
+  width: 60%;
+  padding-left: 2%;
 }
