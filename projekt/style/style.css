@@ -223,36 +223,6 @@ span:hover {
   background-color: rgb(92, 131, 82);
 }
 
-#site-search {
-  margin-top: 20px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  background-image: url("/icons/search.png");
-  background-repeat: no-repeat;
-  height: 5px;
-}
-
-#iconsTop3 {
-  color: white;
-  padding-left: 200px;
-  padding-top: 20px;
-
-  margin-right: 250px;
-}
-
-#iconsTop2 {
-  padding-top: 20px;
-  padding-left: 200px;
-  padding-right: 30px;
-  color: white;
-}
-
-#topbtn {
-  padding-left: 80px;
-  color: white;
-  margin-top: 20px;
-}
-
 .middleBtn:hover {
   background-color: rgb(92, 131, 82);
 }
@@ -281,11 +251,52 @@ span:hover {
   padding-top: 60px;
 }
 
-#TopWrapper {
-  display: flex;
-  flex-direction: row;
-  padding-right: 40px;
-}
 #middleText {
   color: white;
+}
+#mPanel {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  background: rgb(95, 93, 88);
+  margin-right: 200px;
+  width: 600px;
+}
+
+#site-search {
+  background-image: url("/icons/search.png");
+  background-repeat: no-repeat;
+  height: 5px;
+  margin-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 20px;
+  flex: 10%;
+}
+
+#topbtn {
+  color: white;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  flex: 10%;
+}
+
+#iconsTop3 {
+  color: white;
+  padding-bottom: 20px;
+  padding-right: 20px;
+  padding-left: 20opx;
+  background: url(/icons/bell.png);
+  background-repeat: no-repeat;
+  flex: 10%;
+}
+
+#iconsTop2 {
+  color: white;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background: url(/icons/lab.png);
+  background-repeat: no-repeat;
+  flex: 10%;
 }
