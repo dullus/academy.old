@@ -88,8 +88,8 @@
         <header>
           <div class="header-split-wrap">
             <div class="header-split-wraper-content">
-              <i class="fas fa-chevron-left header-arrows"></i>
-              <i class="fas fa-chevron-right header-arrows"></i>
+              <i class="fas fa-chevron-left"></i>
+              <i class="fas fa-chevron-right"></i>
             </div>
             <div class="header-split-wraper-content" id="search-box">
               <i class="fas fa-search" id="magnifier"></i>
@@ -98,7 +98,12 @@
           </div>
 
           <div class="header-split-wrap" id="header-split-right-wraper">
-            <div class="header-split-wraper-content">PREMIUM</div>
+            <div
+              class="header-split-wraper-content artist-function-buttons"
+              id="premium-button"
+            >
+              PREMIUM
+            </div>
             <i class="fas fa-bell header-split-wraper-content"></i>
             <img
               src="assets/najvacsi-frajer-JA.jpg"
@@ -144,27 +149,32 @@
 
         <ul class="main-list-artist-nav">
           <li class="artist-nav">
-            <p>OVERVIEW</p>
-            <div class="artist-nav-dot"></div>
+            <p>OVERVIEW
+              <div class="artist-nav-dot"></div>
+            </p>
+            
           </li>
           <li class="artist-nav">
-            <p>FANS ALSO LIKE</p>
-            <div class="artist-nav-dot"></div>
+            <p>FANS ALSO LIKE
+              <div class="artist-nav-dot"></div>
+            </p>
+            
           </li>
           <li class="artist-nav">
-            <p>ABOUT</p>
-            <div class="artist-nav-dot"></div>
-            <!-- hover -> bottom border or new div !-->
+            <p>ABOUT
+              <div class="artist-nav-dot"></div>
+            </p>
+            
           </li>
-          <li class="artist-nav">
-            <p>CONCERTS</p>
-            <div class="artist-nav-dot"></div>
-
-            <!-- hover -> bottom border or new div !-->
+          <li class="artist-nav ">
+            <p>CONCERTS
+              <div class="artist-nav-dot"></div>
+            </p>
+            
           </li>
         </ul>
 
-        <section class="main-artist-latest-release">
+        <div class="main-artist-latest-release">
           <h2>Latest Release</h2>
           <div>
             <img
@@ -178,9 +188,9 @@
               <p>Feb 9, 2018</p>
             </div>
           </div>
-        </section>
+        </div>
 
-        <div id="main-split-wraper">
+        <div id="main-songs-wraper">
           <ul class="main-list-artist-popular-songs">
             <h2>Popular</h2>
             <li class="artist-popular-song">
@@ -190,13 +200,15 @@
                 width="40px"
                 height="40px"
               />
-              <i class="fas fa-play"></i>
-              <i class="fas fa-pause"></i>
-              <!--HIDDEN ICON !! -> hover->visible -->
+              <div class="pause-play-button">
+                <i class="fas fa-play"></i>
+                <i class="fas fa-pause"></i></div>
               <p class="art-pop-song-name">All The Stars</p>
-              <div>EXPLICIT</div>
+              <div class="right-wraper-of-songs">
+                <div class="explicit">EXPLICIT</div>
               <p class="art-pop-song-time">3:52</p>
               <p class="art-pop-song-views">315,154,689</p>
+              </div>
             </li>
             <li class="artist-popular-song">
               <img
@@ -205,13 +217,15 @@
                 width="40px"
                 height="40px"
               />
-              <i class="fas fa-play"></i>
-              <i class="fas fa-pause"></i>
-              <!--HIDDEN ICON !! -> hover->visible -->
+              <div  class="pause-play-button">
+                <i class="fas fa-play"></i>
+                <i class="fas fa-pause"></i></div>
               <p class="art-pop-song-name">All The Stars</p>
-              <div>EXPLICIT</div>
+              <div class="right-wraper-of-songs">
+              <div class="explicit">EXPLICIT</div>
               <p class="art-pop-song-time">3:52</p>
               <p class="art-pop-song-views">315,154,689</p>
+            </div>
             </li>
             <li class="artist-popular-song">
               <img
@@ -220,13 +234,16 @@
                 width="40px"
                 height="40px"
               />
-              <i class="fas fa-play"></i>
+              <div  class="pause-play-button">
+                <i class="fas fa-play"></i>
               <i class="fas fa-pause"></i>
-              <!--HIDDEN ICON !! -> hover->visible -->
+              </div>
               <p class="art-pop-song-name">All The Stars</p>
-              <div>EXPLICIT</div>
+              <div class="right-wraper-of-songs">
+              <div class="explicit">EXPLICIT</div>
               <p class="art-pop-song-time">3:52</p>
               <p class="art-pop-song-views">315,154,689</p>
+              </div>
             </li>
             <li class="artist-popular-song">
               <img
@@ -235,52 +252,59 @@
                 width="40px"
                 height="40px"
               />
-              <i class="fas fa-play"></i>
+              <div  class="pause-play-button">
+                <i class="fas fa-play"></i>
               <i class="fas fa-pause"></i>
-              <!--HIDDEN ICON !! -> hover->visible -->
+              </div>
               <p class="art-pop-song-name">All The Stars</p>
-              <div>EXPLICIT</div>
+              <div class="right-wraper-of-songs">
+              <div class="explicit">EXPLICIT</div>
               <p class="art-pop-song-time">3:52</p>
               <p class="art-pop-song-views">315,154,689</p>
+                </div>
             </li>
           </ul>
 
           <ul id="main-right-list-artists">
             <h2>Fans Also Like</h2>
-            <li class="rigt-list-artist">
+            <li class="right-list-artist">
               <img
                 src="assets/gleb.jpg"
                 alt="Glebzoo"
                 width="40px"
                 height="40px"
+                style="border-radius: 50%;"
               />
               <p>Big Sean</p>
             </li>
-            <li class="rigt-list-artist">
+            <li class="right-list-artist">
               <img
                 src="assets/roko.jpg"
                 alt="Roko"
                 width="40px"
                 height="40px"
+                style="border-radius: 50%;"
               />
               <p>J. Cole</p>
             </li>
-            <li class="rigt-list-artist">
+            <li class="right-list-artist">
               <img
                 src="assets/gleb.jpg"
                 alt="Glebzoo"
                 width="40px"
                 height="40px"
+                style="border-radius: 50%;"
               />
 
               <p>2 Chainz</p>
             </li>
-            <li class="rigt-list-artist">
+            <li class="right-list-artist">
               <img
                 src="assets/roko.jpg"
                 alt="Roko"
                 width="40px"
                 height="40px"
+                style="border-radius: 50%;"
               />
               <p>Wale</p>
             </li>
