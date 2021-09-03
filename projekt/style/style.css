@@ -103,16 +103,6 @@ span {
   color: white;
 }
 
-#site-search {
-  margin-top: 20px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  background-image: url("/icons/search.png");
-  background-repeat: no-repeat;
-  height: 5px;
-  width: 100px;
-}
-
 #btns {
   padding-top: 80px;
   padding-bottom: 20px;
@@ -135,12 +125,6 @@ span {
 
 #panther {
   padding-left: 20px;
-  color: white;
-}
-
-#popular {
-  padding-bottom: 20px;
-  padding-top: 20px;
   color: white;
 }
 
@@ -195,6 +179,7 @@ tr {
 }
 
 #tablecontainer {
+  color: white;
 }
 
 #listtablecontainer {
@@ -226,14 +211,6 @@ tr {
   position: absolute;
 }
 
-#iconsTop {
-  padding-left: 100px;
-}
-#iconsTop2 {
-  padding-left: 600px;
-  padding-right: 10px;
-}
-
 .middleBtn:hover {
   background-color: rgb(92, 131, 82);
 }
@@ -245,17 +222,39 @@ span:hover {
   background-color: rgb(92, 131, 82);
 }
 
-#iconsTop3 {
-  padding-right: 20px;
-  padding-bottom: 40px;
+#site-search {
+  margin-top: 20px;
   padding-top: 20px;
+  padding-bottom: 20px;
+  background-image: url("/icons/search.png");
+  background-repeat: no-repeat;
+  height: 5px;
+}
+
+#iconsTop3 {
+  color: white;
+  padding-left: 200px;
+  padding-top: 20px;
+  height: 20px;
+  width: 20px;
+  margin-right: 20px;
+}
+
+#iconsTop2 {
+  padding-top: 20px;
+  width: 20px;
+  height: 20px;
+  padding-left: 200px;
+  padding-right: 30px;
   color: white;
 }
 
 #topbtn {
-  padding-left: 400px;
+  padding-left: 20px;
   color: white;
-  padding-right: 20px;
+  margin-top: 20px;
+  width: 80px;
+  height: 20px;
 }
 
 .middleBtn:hover {
@@ -267,4 +266,26 @@ span:hover {
 }
 #element:hover {
   background-color: rgb(92, 131, 82);
+}
+#popular2 {
+  padding-bottom: 20px;
+  padding-top: 40px;
+  color: white;
+}
+
+#popular {
+  padding-bottom: 20px;
+  padding-top: 40px;
+  color: white;
+  padding-right: 580px;
+}
+#wrapperTexts {
+  display: flex;
+  flex-direction: row;
+  padding-top: 60px;
+}
+
+#TopWrapper {
+  display: flex;
+  flex-direction: row;
 }
