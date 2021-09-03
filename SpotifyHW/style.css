@@ -41,8 +41,8 @@
   margin-left: 15px;
 }
 #explorePic {
-  height: 8%;
-  width: 8%;
+  height: 13px;
+  width: 13px;
   padding-right: 10px;
 }
 .leftMenuItem1 {
@@ -50,7 +50,7 @@
   padding-left: 30px;
   margin-top: 30px;
   font-size: 0.8rem;
-  margin-right: 30px;
+  margin-right: 90px;
 }
 .leftMenuItem1:hover {
   background-color: var(--color-mainGreen);
@@ -61,7 +61,7 @@
   padding: 8px;
   padding-left: 30px;
   font-size: 0.8rem;
-  margin-right: 30px;
+  margin-right: 90px;
 }
 .leftMenuItem:hover {
   background-color: var(--color-mainGreen);
@@ -69,8 +69,8 @@
   cursor: pointer;
 }
 #radioPic {
-  height: 8%;
-  width: 8%;
+  height: 13px;
+  width: 13px;
   padding-right: 10px;
 }
 .libraryNav {
@@ -82,23 +82,23 @@
   margin-left: 15px;
 }
 #songsPic {
-  height: 8%;
-  width: 8%;
+  height: 13px;
+  width: 13px;
   padding-right: 10px;
 }
 #albumsPic {
-  height: 8%;
-  width: 8%;
+  height: 13px;
+  width: 13px;
   padding-right: 10px;
 }
 #artistsPic {
-  height: 8%;
-  width: 8%;
+  height: 13px;
+  width: 13px;
   padding-right: 10px;
 }
 #favoritesPic {
-  height: 8%;
-  width: 8%;
+  height: 13px;
+  width: 13px;
   padding-right: 10px;
 }
 .playlistsNav {
@@ -110,8 +110,8 @@
   margin-left: 15px;
 }
 .listPic {
-  height: 8%;
-  width: 8%;
+  height: 13px;
+  width: 13px;
   padding-right: 10px;
 }
 .rightPageSide {
@@ -139,10 +139,16 @@
   width: 80%;
   margin-right: 7px;
 }
+#backArrow:hover {
+  cursor: pointer;
+}
 #forwardArrow {
   margin-left: 7px;
   height: 60%;
   width: 80%;
+}
+#forwardArrow:hover {
+  cursor: pointer;
 }
 #searchIcon {
   width: 20%;
@@ -173,6 +179,9 @@
   border-radius: 15px;
   font-size: 1rem;
 }
+#premiumText:hover {
+  cursor: pointer;
+}
 #bellIcon {
   height: 60%;
   width: 4%;
@@ -180,9 +189,15 @@
   margin-left: 40px;
   margin-right: 40px;
 }
+#bellIcon:hover {
+  cursor: pointer;
+}
 #asylabLogo {
   width: 8%;
   margin-right: 10px;
+}
+#asylabLogo:hover {
+  cursor: pointer;
 }
 #asylabText {
   text-align: center;
@@ -192,6 +207,9 @@
 #downArrow {
   height: 60%;
   margin-top: 10px;
+}
+#downArrow:hover {
+  cursor: pointer;
 }
 .artistSection {
   margin-top: 20px;
@@ -218,10 +236,14 @@
 #playButton {
   padding: 10px;
   border-radius: 20px;
-  background-color: var(--color-mainGreen);
+  background-color: rgba(169, 169, 169, 0.2);
   width: 45%;
   height: 40%;
   text-align: center;
+}
+#playButton:hover {
+  cursor: pointer;
+  background-color: var(--color-mainGreen);
 }
 #playIcon {
   width: 10%;
@@ -236,6 +258,10 @@
   height: 40%;
   text-align: center;
 }
+#followButton:hover {
+  cursor: pointer;
+  background-color: var(--color-mainGreen);
+}
 #moreButton {
   padding: 10px;
   margin-left: 25px;
@@ -243,6 +269,10 @@
   background-color: rgba(169, 169, 169, 0.2);
   width: 8%;
   height: 40%;
+}
+#moreButton:hover {
+  cursor: pointer;
+  background-color: var(--color-mainGreen);
 }
 #monthlyListeners {
   margin-right: 80px;
@@ -265,15 +295,34 @@
 #overview {
   width: 15%;
 }
+#overview:hover {
+  cursor: pointer;
+  border-radius: 30px;
+  border-color: var(--color-mainGreen);
+  border-width: 30px;
+  color: var(--color-darkerGreen);
+}
 #fansAlsoLike {
   width: 15%;
+}
+#fansAlsoLike:hover {
+  cursor: pointer;
+  color: var(--color-darkerGreen);
 }
 #about {
   width: 15%;
   margin-left: 20px;
 }
+#about:hover {
+  cursor: pointer;
+  color: var(--color-darkerGreen);
+}
 #concerts {
   width: 15%;
+}
+#concerts:hover {
+  cursor: pointer;
+  color: var(--color-darkerGreen);
 }
 .latestRelease {
   display: flex;
@@ -285,6 +334,9 @@
   flex-direction: column;
   padding: 10px;
   margin-top: 5px;
+}
+.latestReleaseDetails:hover {
+  cursor: pointer;
 }
 #flexLRRow {
   display: flex;
@@ -298,6 +350,9 @@
 #sm2 {
   width: 80%;
   height: 100%;
+}
+#sm2:hover {
+  cursor: pointer;
 }
 #dateOfLR {
   color: var(--color-darkerGreen);
@@ -321,6 +376,10 @@
   height: 4%;
   width: 4%;
 }
+#song1:hover {
+  color: var(--color-darkerGreen);
+  cursor: pointer;
+}
 #song1Text {
   margin-left: 20px;
   padding: 8px;
@@ -335,6 +394,10 @@
 #ajfa {
   width: 4%;
   height: 4%;
+}
+#song2:hover {
+  color: var(--color-darkerGreen);
+  cursor: pointer;
 }
 #song2Text {
   margin-left: 20px;
@@ -351,6 +414,10 @@
   width: 4%;
   height: 4%;
 }
+#song3:hover {
+  color: var(--color-darkerGreen);
+  cursor: pointer;
+}
 #song3Text {
   margin-left: 20px;
   padding: 8px;
@@ -366,16 +433,19 @@
   width: 4%;
   height: 4%;
 }
+#song4:hover {
+  color: var(--color-darkerGreen);
+  cursor: pointer;
+}
 #song4Text {
   margin-left: 20px;
   padding: 8px;
   width: 35%;
 }
 .songInfo {
-  border-color: white;
-  border-width: 10px;
-  border-radius: 20px;
   width: 10%;
+  color: #3a3a3a;
+  font-size: 0.8rem;
 }
 .songLength {
   width: 10%;
@@ -389,6 +459,9 @@
   width: 20%;
   margin-left: 60px;
 }
+.bandPicRightSide:hover {
+  color: var(--color-darkerWhite);
+}
 .bandPic {
   height: 60%;
   width: 15%;
@@ -396,4 +469,42 @@
 }
 .bandPicName {
   margin-left: 20px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .songInfo {
+    display: none;
+  }
+  #topNavBar {
+    height: 4%;
+  }
+  #about {
+    margin-left: 40px;
+  }
+  .leftMenuItem {
+    width: 80%;
+  }
+  .leftMenuItem1 {
+    width: 80%;
+  }
+  .leftSidePlaySection {
+    width: 35%;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  #topNavBar {
+    height: 30px;
+  }
+  .leftSidePlaySection {
+    width: 40%;
+  }
+  .bandPicRightSide {
+    display: none;
+  }
+  #fansAlsoLikeRight {
+    display: none;
+  }
+  .songList {
+    width: 100%;
+  }
 }
