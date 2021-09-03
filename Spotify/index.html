@@ -78,9 +78,12 @@
             </div>
           </div>
           <div>
-            <div>Premium</div>
+            <div class="actionButtons">Premium</div>
             <div><i class="fas fa-bell"></i></div>
-            <div>Stano <i class="fas fa-chevron-down"></i></div>
+            <div>
+              <img id="avatar" src="./assets/avatar.jpg" alt="" />
+              Stano <i class="fas fa-chevron-down"></i>
+            </div>
           </div>
         </div>
         <div id="artist">
@@ -90,22 +93,36 @@
           </div>
           <h1>Nirvana</h1>
         </div>
-        <div style="display: flex; justify-content: space-between">
+        <div class="actionButtonsClass">
           <div id="actionButtonId">
             <div class="actionButtons"><i class="fas fa-play"></i>Play</div>
             <div class="actionButtons">Follow</div>
-            <div class="actionButtons"><i class="fas fa-ellipsis-h"></i></div>
+            <div id="dotsIcon" class="actionButtons">
+              <i class="fas fa-ellipsis-h"></i>
+            </div>
           </div>
-          <div>
+          <div id="monthly">
             <div>MONTHLY LISTENERS</div>
             <div>48,343948</div>
           </div>
         </div>
         <div id="tabs">
-          <div class="tabItems">OVERVIEW</div>
-          <div class="tabItems">FANS ALSO LIKE</div>
-          <div class="tabItems">ABOUT</div>
-          <div class="tabItems">CONCERTS</div>
+          <div class="tabItems">
+            <div>OVERVIEW</div>
+            <div class="dotUnderTabs"></div>
+          </div>
+          <div class="tabItems">
+            <div>FANS ALSO LIKE</div>
+            <div class="dotUnderTabs"></div>
+          </div>
+          <div class="tabItems">
+            <div>ABOUT</div>
+            <div class="dotUnderTabs"></div>
+          </div>
+          <div class="tabItems">
+            <div>CONCERTS</div>
+            <div class="dotUnderTabs"></div>
+          </div>
         </div>
         <div id="songs">
           <div id="latest">Latest Release</div>
@@ -129,11 +146,18 @@
                   src="./assets/album_covers/song1.PNG"
                   alt=""
                 />
-                Lithium
+                <div class="playPauseButton">
+                  <i class="fas fa-pause"></i>
+                </div>
+                <div>Lithium</div>
               </div>
-              <div>EXPLICIT</div>
-              <div>4:00</div>
-              <div>100,000,000</div>
+              <div>
+                <div>
+                  <div>EXPLICIT</div>
+                  <div>4:00</div>
+                  <div>100,000,000</div>
+                </div>
+              </div>
               <div class="similarArtistsBox">
                 <img
                   class="similarArtistsImage"
@@ -150,7 +174,10 @@
                   src="./assets/album_covers/song2.PNG"
                   alt=""
                 />
-                Heart-Shaped box
+                <div class="playPauseButton">
+                  <i class="fas fa-pause"></i>
+                </div>
+                <div>Heart-Shaped box</div>
               </div>
               <div>EXPLICIT</div>
               <div>4:00</div>
@@ -171,19 +198,22 @@
                   src="./assets/album_covers/song3.PNG"
                   alt=""
                 />
-                Pennyroyal Tea
+                <div class="playPauseButton">
+                  <i class="fas fa-pause"></i>
+                </div>
+                <div>Pennyroyal Tea</div>
               </div>
               <div>EXPLICIT</div>
               <div>4:00</div>
               <div>100,000,000</div>
-              <div class="similarArtistsBox">
+              <!-- <div class="similarArtistsBox">
                 <img
                   class="similarArtistsImage"
                   src="./assets/similar_artists/artic_mokeys.jpeg"
                   alt=""
                 />
                 <div>Artic Monkeys</div>
-              </div>
+              </div> -->
             </div>
             <div class="songDetail">
               <div class="albumBox">
@@ -192,23 +222,24 @@
                   src="./assets/album_covers/song5.PNG"
                   alt=""
                 />
-                Blew
+                <div class="playPauseButton">
+                  <i class="fas fa-pause"></i>
+                </div>
+                <div>Blew</div>
               </div>
               <div>EXPLICIT</div>
               <div>4:00</div>
               <div>100,000,000</div>
-              <div class="similarArtistsBox">
+              <!-- <div class="similarArtistsBox">
                 <img
                   class="similarArtistsImage"
                   src="./assets/similar_artists/soundgarden.jpg"
                   alt=""
                 />
                 <div>Soundgarden</div>
-              </div>
+              </div> -->
             </div>
           </div>
-        </div>
-      </div>
     </div>
   </body>
 </html>
