@@ -14,6 +14,7 @@
 
 .middleBtn {
   padding-right: 40px;
+  color: white;
 }
 
 html,
@@ -235,26 +236,21 @@ span:hover {
   color: white;
   padding-left: 200px;
   padding-top: 20px;
-  height: 20px;
-  width: 20px;
-  margin-right: 20px;
+
+  margin-right: 250px;
 }
 
 #iconsTop2 {
   padding-top: 20px;
-  width: 20px;
-  height: 20px;
   padding-left: 200px;
   padding-right: 30px;
   color: white;
 }
 
 #topbtn {
-  padding-left: 20px;
+  padding-left: 80px;
   color: white;
   margin-top: 20px;
-  width: 80px;
-  height: 20px;
 }
 
 .middleBtn:hover {
@@ -288,4 +284,8 @@ span:hover {
 #TopWrapper {
   display: flex;
   flex-direction: row;
+  padding-right: 40px;
+}
+#middleText {
+  color: white;
 }
