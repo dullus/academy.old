@@ -140,7 +140,7 @@ span {
 }
 
 #popular {
-  padding-bottom: 140px;
+  padding-bottom: 80px;
   padding-top: 60px;
 }
 
@@ -195,5 +195,8 @@ tr {
   text-align: left;
 }
 
-.element2 {
+#tablecontainer {
+}
+
+#listtablecontainer {
 }
