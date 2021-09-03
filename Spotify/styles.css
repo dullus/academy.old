@@ -17,7 +17,6 @@
   background-size: cover;
   height: 100vh;
   width: 100%;
-  opacity: 0, 5;
   display: flex;
 }
 .main_box .sidebar_menu {
@@ -109,6 +108,7 @@
   justify-content: space-between;
   width: 100%;
   padding: 13px 5px;
+  height: 8%;
 }
 .navbar__container .search-container {
   margin-left: 15px;
@@ -181,7 +181,8 @@
   padding: 0 4px;
 }
 .navbar__container-right-user i {
-  font-size: 15px;
+  font-size: 23px;
+  opacity: 0.8;
 }
 .navbar__container-right i:last-of-type {
   font-size: 13px;
@@ -209,6 +210,7 @@
 .section__main-headline {
   font-size: 3rem;
   font-weight: 900;
+  margin-bottom: 12px;
 }
 .section__main-buttons {
   margin-bottom: 20px;
@@ -222,12 +224,14 @@
   margin-right: 10px;
   width: 100px;
   cursor: pointer;
+  transition: 0.3s;
 }
 .section__main-buttons span {
   background-color: #3737377d;
   padding: 6px 9px;
   border-radius: 17px;
   cursor: pointer;
+  transition: 0.3s;
 }
 .section__main__buttons-play i {
   margin-right: 10px;
@@ -240,8 +244,9 @@
 }
 .section__main-list-ul {
   display: flex;
-  width: 600px;
+  width: 68%;
   justify-content: space-between;
+  padding-bottom: 10px;
 }
 .section__main-list__ul-li {
   display: flex;
@@ -251,6 +256,7 @@
   font-weight: 500;
   cursor: pointer;
   position: relative;
+  transition: 0.3s;
 }
 .section__main-list__ul-li:hover #section__main-list-dot {
   background-color: green;
@@ -258,6 +264,7 @@
 .section__main-list__ul-li a {
   color: white;
   text-decoration: none;
+  transition: 0.3s;
 }
 #section__main-list-dot {
   background-color: transparent;
@@ -267,21 +274,13 @@
   border: none;
   align-self: center;
   margin-top: 5px;
+  transition: 0.3s;
 }
 
 .section__main-list__ul-li a:hover {
   color: var(--color-darkPastelGreen);
 }
-/* #dot:hover {
-  position: absolute;
-  height: 6px;
-  width: 6px;
-  display: block;
-  background-color: aliceblue;
-  top: 0;
-  left: 0;
-  border-radius: 5px;
-} */
+
 .section--latest_releases {
   font-weight: 500;
   margin-bottom: 20px;
@@ -291,6 +290,7 @@
   align-items: center;
   cursor: pointer;
   margin-bottom: 15px;
+  transition: 0.3s;
 }
 .latest_releases-container:hover #latest_releases_container_img-p {
   color: var(--color-darkPastelGreen);
@@ -312,6 +312,7 @@
 .popular-item {
   display: flex;
   justify-content: space-between;
+  transition: 0.3s;
 }
 
 .popular_item-left {
@@ -346,6 +347,7 @@
 .popular_item-right {
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 
 .popular_item-right button {
@@ -374,11 +376,11 @@
 }
 .fun_also-container {
   position: absolute;
-  top: 30%;
+  top: 32%;
   right: 7%;
   display: flex;
   flex-direction: column;
-  height: 60%;
+  height: 62%;
   justify-content: space-between;
   align-items: flex-end;
 }
@@ -412,4 +414,15 @@
   .main_box .sidebar_menu {
     display: none;
   }
+}
+@media screen and (max-width: 1000px) {
+  .fun_also-container {
+    display: none;
+  }
+  .navbar__container-right {
+    width: 35%;
+  }
+  /* .navbar__container-right {
+    width: 60%;
+  } */
 }
