@@ -15,7 +15,7 @@
 #left-grid {
   display: grid;
   grid-gap: 0.5rem;
-  grid-template-columns: 20vw;
+  grid-template-columns: 25vw;
   grid-template-rows: repeat(14, 6rem);
 }
 
@@ -32,14 +32,21 @@
   background-color: var(--color-blackish);
 }
 a.left-menu-link {
+  display: flex;
+  justify-content: left;
+  align-content: center;
   text-decoration: none;
   color: white;
   font-size: 1.4rem;
+  width: 18rem;
+  height: 4rem;
+  border-radius: 3rem;
 }
 a.left-menu-link:hover {
-  display: inline-block;
   background-color: #01b949;
-  border-radius: 0.3rem;
+  width: 18rem;
+  height: 4rem;
+  border-radius: 3rem;
 }
 
 .item-1 {
