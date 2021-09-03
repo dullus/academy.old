@@ -224,11 +224,6 @@ h1 {
   align-items: center;
 }
 
-.navigationArrows > * {
-  position: relative;
-  left: 0px;
-}
-
 .navigationArrows {
   color: var(--darker-gray);
 }
@@ -288,6 +283,7 @@ h1 {
 }
 
 #monthly {
+  display: inline;
   margin-right: 3vw;
   color: var(--darker-gray);
   text-align: right;
@@ -342,10 +338,10 @@ h1 {
 }
 
 #avatar {
-  border: 7px solid white;
-  border-radius: 70px;
-  width: 70px;
-  height: 70px;
+  border: 0.3vh solid white;
+  border-radius: 3vh;
+  width: 3vh;
+  height: 3vh;
   margin-right: 15px;
 }
 
@@ -428,6 +424,58 @@ footer {
 #playIcon {
   position: absolute;
   left: 17.5vw;
+}
+
+@media screen and (max-width: 400px), screen and (max-height: 900px) {
+  #first,
+  .mainScreen,
+  #fansAlsoLike,
+  #monthly,
+  .navigationArrows,
+  #accountDetails,
+  .songInformation {
+    display: none;
+  }
+
+  body {
+    padding: 2vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+      url("../assets/nirvana_background.jpg") no-repeat center center;
+    background-size: contain;
+    background-position: top;
+    height: 96%;
+  }
+
+  #actionButtonId {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+
+  #searchBar,
+  #navigationSearchWrapper {
+    width: 95%;
+  }
+
+  .actionButtons,
+  #dotsIcon {
+    margin: 0px;
+    width: 25%;
+  }
+
+  .actionButtonsClass {
+    position: absolute;
+    bottom: 2vh;
+    width: 90%;
+  }
+
+  .tabItems {
+    margin: auto;
+  }
+
+  .popular {
+    height: 50vh;
+  }
 }
 
 /* .tbdInformationWrapper {
