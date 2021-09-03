@@ -9,10 +9,10 @@
   </head>
   <body>
     <div class="mainScreen" id="first">
-      <div id="logoSection">
-        <div>- + *</div>
-        <i class="fab fa-spotify"></i>Spotify
+      <div class="tbdInformationWrapper">
+        <!-- <div id="infomatingTextTop">TBD</div> -->
       </div>
+      <div id="logoSection"><i class="fab fa-spotify"></i>Spotify</div>
       <div id="discoverSection" class="leftContent">
         <div class="section">Discover</div>
         <div class="songSection">
@@ -82,7 +82,7 @@
           </div>
         </div>
         <div id="accountDetails">
-          <div class="actionButtons">Premium</div>
+          <div id="premiumButton" class="actionButtons">Premium</div>
           <div><i id="bellIcon" class="fas fa-bell"></i></div>
           <div id="avatarDetail">
             <img id="avatar" src="./assets/avatar.jpg" alt="" />
@@ -92,12 +92,10 @@
         </div>
       </div>
       <div id="artist">
-        <div>
-          Artist
-          <img class="icons" src="./assets/icons/check.svg" alt="" />
-        </div>
-        <h1>Nirvana</h1>
+        <div>Artist</div>
+        <img id="checkedIcon" src="./assets/icons/check.svg" alt="" />
       </div>
+      <h1>Nirvana</h1>
       <div class="actionButtonsClass">
         <div id="actionButtonId">
           <div class="actionButtons">
@@ -132,14 +130,17 @@
         </div>
       </div>
       <div id="latest">
-        Latest Release
-        <div>
+        <div id="lastestSong">Latest Release</div>
+        <div class="albumBox">
           <img
             class="albumImage"
-            src="./assets/album_covers/song4.PNG"
+            src="./assets/album_covers/song4.jpg"
             alt=""
           />
-          About A Girl
+          <div>
+            <div>About A Girl</div>
+            <div id="songDate">June 15, 1989</div>
+          </div>
         </div>
       </div>
       <div id="bottomContent">
@@ -158,7 +159,7 @@
               <div>Lithium</div>
             </div>
             <div class="songInformation">
-              <div>EXPLICIT</div>
+              <div id="explicit">EXPLICIT</div>
               <div>4:00</div>
               <div>100,000,000</div>
             </div>
@@ -176,7 +177,7 @@
               <div>Heart-Shaped box</div>
             </div>
             <div class="songInformation">
-              <div>EXPLICIT</div>
+              <div id="explicit">EXPLICIT</div>
               <div>4:00</div>
               <div>100,000,000</div>
             </div>
@@ -194,7 +195,7 @@
               <div>Pennyroyal Tea</div>
             </div>
             <div class="songInformation">
-              <div>EXPLICIT</div>
+              <div id="explicit">EXPLICIT</div>
               <div>4:00</div>
               <div>100,000,000</div>
             </div>
@@ -212,7 +213,7 @@
               <div>Blew</div>
             </div>
             <div class="songInformation">
-              <div>EXPLICIT</div>
+              <div id="explicit">EXPLICIT</div>
               <div>4:00</div>
               <div>100,000,000</div>
             </div>
@@ -256,13 +257,9 @@
       </div>
     </div>
     <footer>
-      <div id="bottomAlbum" class="albumBox">
-        <img class="albumImage" src="./assets/album_covers/song5.PNG" alt="" />
-        <div class="playPauseButton">
-          <i class="fas fa-pause"></i>
-        </div>
-        <div>Blew</div>
-      </div>
+      <!-- <div class="tbdInformationWrapper">
+        <div id="infomatingTextBottom">TBD</div>
+      </div> -->
     </footer>
   </body>
 </html>
