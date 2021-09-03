@@ -73,6 +73,7 @@ body {
 .leftContent {
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
 }
 
 #tabs {
@@ -83,6 +84,7 @@ body {
 #tabs > * {
   margin: 4vh 5vw;
   margin-left: 0px;
+  margin-bottom: 0px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -99,8 +101,8 @@ body {
   color: var(--spotify-green);
 }
 
-#lastestSong {
-  margin-bottom: 1.5vw;
+#latestSong {
+  margin: 1.75vw 0px;
 }
 
 .albumImage {
@@ -402,6 +404,16 @@ footer {
 #premiumButton {
   width: 6vw;
   margin-right: 0px;
+}
+
+.songSection > i {
+  position: absolute;
+  left: 2.5vw;
+}
+
+#playIcon {
+  position: absolute;
+  left: 17.5vw;
 }
 
 /* .tbdInformationWrapper {
