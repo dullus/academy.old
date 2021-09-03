@@ -8,18 +8,17 @@
 html {
   height: 100%;
   overflow: hidden;
-  /* background-color: rgba(0, 0, 0, 0.9); */
 }
 
 /* body style settings */
 body {
-  background: url("../assets/nirvana_background.jpg") no-repeat center center
-    fixed;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url("../assets/nirvana_background.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  height: 86%;
+  height: 92%;
   margin: 0 auto;
   font-family: "Montserrat", sans-serif;
   font-size: 1.5vh;
@@ -29,13 +28,15 @@ body {
 #contentWrapper {
   flex: 80%;
   height: -webkit-fill-available;
-  padding: 0 25px;
+  padding-top: 25px;
   display: flex;
   flex-direction: column;
 }
 
 /* font color for whole page */
 .mainScreen {
+  display: flex;
+  flex-direction: column;
   color: white;
 }
 
@@ -46,9 +47,13 @@ body {
 
 #first {
   flex: 20%;
+  padding-left: 25px;
+  padding-top: 25px;
+  /* background: rgba(0, 0, 0, 0.8); */
 }
 
 #bottomContent {
+  height: 100%;
   display: flex;
   flex-direction: row;
 }
@@ -57,9 +62,18 @@ body {
   flex: 80%;
 }
 
+#discoverSection {
+  flex: 10%;
+}
+
+#librarySecttion,
+#playlistsSection {
+  flex: 25%;
+}
+
 .leftContent {
-  height: 33%;
-  justify-content: space-around;
+  /* height: ; */
+  /* justify-content: space-around; */
   display: flex;
   flex-direction: column;
 }
@@ -80,12 +94,13 @@ body {
 .songSection:hover,
 .actionButtons:hover {
   background: var(--spotify-green);
-  border-radius: 30px;
+  /* border-radius: 100px; */
 }
 
-.fas {
-  margin: 0 20px;
-}
+/* .fas {
+  position: absolute;
+  left: 95px;
+} */
 
 .albumImage {
   width: 7vh;
@@ -106,11 +121,6 @@ body {
 
 #magnifier {
   background-color: white;
-}
-
-.songDetail {
-  display: flex;
-  justify-content: space-between;
 }
 
 #popular,
@@ -134,7 +144,9 @@ body {
 
 .songDetail {
   align-items: center;
-  text-align: right;
+  /* text-align: right; */
+  display: flex;
+  justify-content: space-between;
 }
 
 .similarArtistsBox {
@@ -154,17 +166,19 @@ body {
   width: 15%;
 }
 
+.playPauseButton > * {
+  position: relative;
+  left: 0px;
+}
+
 .songSection {
-  width: 50%;
+  border-radius: 2vw;
+  width: fit-content;
+  padding: 15px 125px;
   height: 10%;
   display: flex;
   align-items: center;
-}
-
-.songSection:hover,
-.actionButtons:hover {
-  background: var(--spotify-green);
-  border-radius: 20px;
+  justify-content: center;
 }
 
 #actionButtonId {
@@ -182,7 +196,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 30px;
 }
 
 .actionButtonsClass {
@@ -192,15 +205,26 @@ body {
 }
 
 #topBar {
+  color: white;
   display: flex;
   justify-content: space-between;
   height: 5%;
+}
+
+#topBar[i] {
+  position: relative;
+  left: 0px;
 }
 
 #topBar > * {
   display: flex;
   height: 100%;
   align-items: center;
+}
+
+.navigationArrows > * {
+  position: relative;
+  left: 0px;
 }
 
 .navigationArrows {
@@ -227,11 +251,20 @@ body {
 }
 
 #searchIcon {
-  margin-right: 5px;
+  margin: 20px;
 }
 
+#bellIcon,
+#downArrowIcon,
+#playIcon {
+  position: relative;
+  left: 0px;
+}
 #searchInput {
   border: none;
+  height: 90%;
+  width: 80%;
+  font-size: 26px;
 }
 
 ::placeholder {
@@ -281,18 +314,12 @@ body {
   visibility: visible;
 }
 
-.songDetail:hover .similarArtistsBox {
-  color: white;
-}
-
-.songDetail:focus {
-  color: tomato;
-}
-
 #avatar {
-  border-radius: 50px;
-  width: 50px;
-  height: 50px;
+  border: 7px solid white;
+  border-radius: 70px;
+  width: 70px;
+  height: 70px;
+  margin-right: 15px;
 }
 
 .fa-play {
@@ -300,6 +327,8 @@ body {
 }
 
 #dotsIcon {
+  position: relative;
+  left: 0px;
   width: 50px;
   border-radius: 50px;
 }
@@ -312,4 +341,32 @@ body {
   display: flex;
   width: 50%;
   justify-content: space-evenly;
+}
+
+footer {
+  height: 8%;
+  background: red;
+  position: absolute;
+  display: flex;
+  width: 100%;
+  bottom: 0px;
+}
+
+#accountDetails {
+  width: 25%;
+  justify-content: space-evenly;
+}
+
+#avatarDetail {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#navigationSearchWrapper {
+  width: 25%;
+}
+
+#navigationSearchWrapper > * {
+  margin: 0 auto;
 }

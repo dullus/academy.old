@@ -9,11 +9,16 @@
   </head>
   <body>
     <div class="mainScreen" id="first">
-      <div><i class="fab fa-spotify"></i>Spotify</div>
-      <div class="leftContent">
+      <div id="logoSection">
+        <div>- + *</div>
+        <i class="fab fa-spotify"></i>Spotify
+      </div>
+      <div id="discoverSection" class="leftContent">
         <div class="section">Discover</div>
         <div class="songSection">
-          <i class="fas fa-compass"></i>
+          <div>
+            <i class="fas fa-compass"></i>
+          </div>
           <div>Explore</div>
         </div>
         <div class="songSection">
@@ -21,7 +26,7 @@
           <div>Radio</div>
         </div>
       </div>
-      <div class="leftContent">
+      <div id="librarySecttion" class="leftContent">
         <div class="section">Library</div>
         <div class="songSection">
           <i class="fas fa-music"></i>
@@ -40,7 +45,7 @@
           <div>Favorites</div>
         </div>
       </div>
-      <div class="leftContent">
+      <div id="playlistsSection" class="leftContent">
         <div class="section">Playlists</div>
         <div class="songSection">
           <i class="fas fa-bars"></i>
@@ -60,9 +65,9 @@
         </div>
       </div>
     </div>
-    <div id="contentWrapper">
+    <div class="mainScreen" id="contentWrapper">
       <div id="topBar">
-        <div>
+        <div id="navigationSearchWrapper">
           <div class="navigationArrows">
             <i class="fas fa-chevron-left"></i>
           </div>
@@ -70,185 +75,194 @@
             <i class="fas fa-chevron-right"></i>
           </div>
           <div id="searchBar">
-            <div>
-              <i id="searchIcon" class="fas fa-search"></i>
+            <div id="searchIcon">
+              <i class="fas fa-search"></i>
             </div>
             <input id="searchInput" type="text" placeholder="Search" />
           </div>
         </div>
-        <div>
+        <div id="accountDetails">
           <div class="actionButtons">Premium</div>
-          <div><i class="fas fa-bell"></i></div>
-          <div>
+          <div><i id="bellIcon" class="fas fa-bell"></i></div>
+          <div id="avatarDetail">
             <img id="avatar" src="./assets/avatar.jpg" alt="" />
-            Stano <i class="fas fa-chevron-down"></i>
+            <div>Stano</div>
           </div>
+          <i id="downArrowIcon" class="fas fa-chevron-down"></i>
         </div>
       </div>
-      <div class="mainScreen" id="second">
-        <div id="artist">
-          <div>
-            Artist
-            <img class="icons" src="./assets/icons/check.svg" alt="" />
-          </div>
-          <h1>Nirvana</h1>
+      <div id="artist">
+        <div>
+          Artist
+          <img class="icons" src="./assets/icons/check.svg" alt="" />
         </div>
-        <div class="actionButtonsClass">
-          <div id="actionButtonId">
-            <div class="actionButtons"><i class="fas fa-play"></i>Play</div>
-            <div class="actionButtons">Follow</div>
-            <div id="dotsIcon" class="actionButtons">
-              <i class="fas fa-ellipsis-h"></i>
+        <h1>Nirvana</h1>
+      </div>
+      <div class="actionButtonsClass">
+        <div id="actionButtonId">
+          <div class="actionButtons">
+            <i id="playIcon" class="fas fa-play"></i>Play
+          </div>
+          <div class="actionButtons">Follow</div>
+          <div id="dotsIcon" class="actionButtons">
+            <i class="fas fa-ellipsis-h"></i>
+          </div>
+        </div>
+        <div id="monthly">
+          <div>MONTHLY LISTENERS</div>
+          <div>48,343948</div>
+        </div>
+      </div>
+      <div id="tabs">
+        <div class="tabItems">
+          <div>OVERVIEW</div>
+          <div class="dotUnderTabs"></div>
+        </div>
+        <div class="tabItems">
+          <div>FANS ALSO LIKE</div>
+          <div class="dotUnderTabs"></div>
+        </div>
+        <div class="tabItems">
+          <div>ABOUT</div>
+          <div class="dotUnderTabs"></div>
+        </div>
+        <div class="tabItems">
+          <div>CONCERTS</div>
+          <div class="dotUnderTabs"></div>
+        </div>
+      </div>
+      <div id="latest">
+        Latest Release
+        <div>
+          <img
+            class="albumImage"
+            src="./assets/album_covers/song4.PNG"
+            alt=""
+          />
+          About A Girl
+        </div>
+      </div>
+      <div id="bottomContent">
+        <div id="popular">
+          <div>Popular</div>
+          <div class="songDetail">
+            <div class="albumBox">
+              <img
+                class="albumImage"
+                src="./assets/album_covers/song1.PNG"
+                alt=""
+              />
+              <div class="playPauseButton">
+                <i class="fas fa-pause"></i>
+              </div>
+              <div>Lithium</div>
+            </div>
+            <div class="songInformation">
+              <div>EXPLICIT</div>
+              <div>4:00</div>
+              <div>100,000,000</div>
             </div>
           </div>
-          <div id="monthly">
-            <div>MONTHLY LISTENERS</div>
-            <div>48,343948</div>
+          <div class="songDetail">
+            <div class="albumBox">
+              <img
+                class="albumImage"
+                src="./assets/album_covers/song2.PNG"
+                alt=""
+              />
+              <div class="playPauseButton">
+                <i class="fas fa-pause"></i>
+              </div>
+              <div>Heart-Shaped box</div>
+            </div>
+            <div class="songInformation">
+              <div>EXPLICIT</div>
+              <div>4:00</div>
+              <div>100,000,000</div>
+            </div>
+          </div>
+          <div class="songDetail">
+            <div class="albumBox">
+              <img
+                class="albumImage"
+                src="./assets/album_covers/song3.PNG"
+                alt=""
+              />
+              <div class="playPauseButton">
+                <i class="fas fa-pause"></i>
+              </div>
+              <div>Pennyroyal Tea</div>
+            </div>
+            <div class="songInformation">
+              <div>EXPLICIT</div>
+              <div>4:00</div>
+              <div>100,000,000</div>
+            </div>
+          </div>
+          <div class="songDetail">
+            <div class="albumBox">
+              <img
+                class="albumImage"
+                src="./assets/album_covers/song5.PNG"
+                alt=""
+              />
+              <div class="playPauseButton">
+                <i class="fas fa-pause"></i>
+              </div>
+              <div>Blew</div>
+            </div>
+            <div class="songInformation">
+              <div>EXPLICIT</div>
+              <div>4:00</div>
+              <div>100,000,000</div>
+            </div>
           </div>
         </div>
-        <div id="tabs">
-          <div class="tabItems">
-            <div>OVERVIEW</div>
-            <div class="dotUnderTabs"></div>
-          </div>
-          <div class="tabItems">
-            <div>FANS ALSO LIKE</div>
-            <div class="dotUnderTabs"></div>
-          </div>
-          <div class="tabItems">
-            <div>ABOUT</div>
-            <div class="dotUnderTabs"></div>
-          </div>
-          <div class="tabItems">
-            <div>CONCERTS</div>
-            <div class="dotUnderTabs"></div>
-          </div>
-        </div>
-        <div id="latest">
-          Latest Release
-          <div>
+        <div id="fansAlsoLike">
+          <div>Fans Also Like</div>
+          <div class="similarArtistsBox">
             <img
-              class="albumImage"
-              src="./assets/album_covers/song4.PNG"
+              class="similarArtistsImage"
+              src="./assets/similar_artists/pearl_jam.jpg"
               alt=""
             />
-            About A Girl
+            <div>Pearl Jam</div>
+          </div>
+          <div class="similarArtistsBox">
+            <img
+              class="similarArtistsImage"
+              src="./assets/similar_artists/alice_in_chains.jpg"
+              alt=""
+            />
+            <div>Alice In Chains</div>
+          </div>
+          <div class="similarArtistsBox">
+            <img
+              class="similarArtistsImage"
+              src="./assets/similar_artists/artic_mokeys.jpeg"
+              alt=""
+            />
+            <div>Artic Monkeys</div>
+          </div>
+          <div class="similarArtistsBox">
+            <img
+              class="similarArtistsImage"
+              src="./assets/similar_artists/soundgarden.jpg"
+              alt=""
+            />
+            <div>Soundgarden</div>
           </div>
         </div>
-        <div id="bottomContent">
-          <div id="popular">
-            <div>Popular</div>
-            <div class="songDetail">
-              <div class="albumBox">
-                <img
-                  class="albumImage"
-                  src="./assets/album_covers/song1.PNG"
-                  alt=""
-                />
-                <div class="playPauseButton">
-                  <i class="fas fa-pause"></i>
-                </div>
-                <div>Lithium</div>
-              </div>
-              <div class="songInformation">
-                <div>EXPLICIT</div>
-                <div>4:00</div>
-                <div>100,000,000</div>
-              </div>
-            </div>
-            <div class="songDetail">
-              <div class="albumBox">
-                <img
-                  class="albumImage"
-                  src="./assets/album_covers/song2.PNG"
-                  alt=""
-                />
-                <div class="playPauseButton">
-                  <i class="fas fa-pause"></i>
-                </div>
-                <div>Heart-Shaped box</div>
-              </div>
-              <div class="songInformation">
-                <div>EXPLICIT</div>
-                <div>4:00</div>
-                <div>100,000,000</div>
-              </div>
-            </div>
-            <div class="songDetail">
-              <div class="albumBox">
-                <img
-                  class="albumImage"
-                  src="./assets/album_covers/song3.PNG"
-                  alt=""
-                />
-                <div class="playPauseButton">
-                  <i class="fas fa-pause"></i>
-                </div>
-                <div>Pennyroyal Tea</div>
-              </div>
-              <div class="songInformation">
-                <div>EXPLICIT</div>
-                <div>4:00</div>
-                <div>100,000,000</div>
-              </div>
-            </div>
-            <div class="songDetail">
-              <div class="albumBox">
-                <img
-                  class="albumImage"
-                  src="./assets/album_covers/song5.PNG"
-                  alt=""
-                />
-                <div class="playPauseButton">
-                  <i class="fas fa-pause"></i>
-                </div>
-                <div>Blew</div>
-              </div>
-              <div class="songInformation">
-                <div>EXPLICIT</div>
-                <div>4:00</div>
-                <div>100,000,000</div>
-              </div>
-            </div>
-          </div>
-          <div id="fansAlsoLike">
-            <div>Fans Also Like</div>
-            <div class="similarArtistsBox">
-              <img
-                class="similarArtistsImage"
-                src="./assets/similar_artists/pearl_jam.jpg"
-                alt=""
-              />
-              <div>Pearl Jam</div>
-            </div>
-            <div class="similarArtistsBox">
-              <img
-                class="similarArtistsImage"
-                src="./assets/similar_artists/alice_in_chains.jpg"
-                alt=""
-              />
-              <div>Alice In Chains</div>
-            </div>
-            <div class="similarArtistsBox">
-              <img
-                class="similarArtistsImage"
-                src="./assets/similar_artists/artic_mokeys.jpeg"
-                alt=""
-              />
-              <div>Artic Monkeys</div>
-            </div>
-            <div class="similarArtistsBox">
-              <img
-                class="similarArtistsImage"
-                src="./assets/similar_artists/soundgarden.jpg"
-                alt=""
-              />
-              <div>Soundgarden</div>
-            </div>
-          </div>
-        </div>
-        <div style="height: 10%; background: red"></div>
       </div>
     </div>
+    <footer>
+      <div id="bottomAlbum" class="albumBox">
+        <img class="albumImage" src="./assets/album_covers/song5.PNG" alt="" />
+        <div class="playPauseButton">
+          <i class="fas fa-pause"></i>
+        </div>
+        <div>Blew</div>
+      </div>
+    </footer>
   </body>
 </html>
