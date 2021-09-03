@@ -9,14 +9,19 @@
 
 .main {
   display: flex;
-  /* justify-content: space-between; */
   flex-direction: row;
   background-color: var(--color-black);
   color: var(--color-white);
   font-size: 18px;
-  width: 100vw;
-  height: 100vh;
+  width: 99vw;
+  height: 96vh;
   font-family: sans-serif;
+  background-image: url(/academy/Spotify_Erik/img/1476592829564.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-position-y: unset;
+  background-position-x: initial;
+  background-size: 100%;
 }
 
 .section_left {
@@ -24,7 +29,7 @@
   height: 90%;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
 .section_right {
@@ -56,6 +61,10 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+.monthly_number {
+  margin-left: 53%;
 }
 
 .ul_nav {
@@ -111,6 +120,10 @@ li {
 #artist {
   display: flex;
   flex-direction: row;
+}
+
+#arrow_right {
+  color: var(--color-grey);
 }
 
 .artist {
@@ -172,8 +185,9 @@ li {
 
 .track_title {
   margin-left: 2%;
-  margin-right: 25%;
+  margin-right: 26%;
   margin-top: 5%;
+  width: -webkit-fill-available;
 }
 
 .explicit {
@@ -181,6 +195,10 @@ li {
   margin-right: 10%;
   margin-top: 5%;
   color: var(--color-transparent);
+}
+
+.explicit:hover {
+  color: var(--color-green);
 }
 
 .length {
@@ -259,7 +277,7 @@ li {
   padding-left: 7%;
   padding-right: 8%;
   padding-top: 2%;
-  padding-bottom: 7%;
+  padding-bottom: 6%;
   border: none;
 }
 
@@ -283,6 +301,13 @@ li {
   cursor: pointer;
 }
 
+#checkmark {
+  color: blue;
+  font-size: 15px;
+  margin-top: 2%;
+  margin-left: 1%;
+}
+
 .ul_nav > li:hover {
   color: var(--color-green);
 
@@ -294,12 +319,44 @@ li {
   cursor: pointer;
 }
 
-img {
+.related_img {
   height: 36px;
   border-radius: 90%;
   margin-top: 1%;
 }
 
+.album {
+  height: 29px;
+  padding-top: 71%;
+}
+
 .related_artist_name {
   margin-top: 1%;
+}
+
+.text_field {
+  border-radius: 20px;
+  outline: none;
+  border-style: none;
+  background-image: url(/academy/Spotify_Erik/img/magglass.png);
+  background-size: 15px;
+  background-repeat: no-repeat;
+  background-position-x: 5px;
+  background-position-y: 5px;
+}
+
+@media screen and (max-width: 1065px) {
+  .main {
+    font-size: 13px;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .section_left {
+    display: none;
+  }
+
+  .section_right {
+    width: 100vw;
+  }
 }
