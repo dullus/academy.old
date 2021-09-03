@@ -192,6 +192,7 @@
   display: flex;
   flex-direction: column;
   margin-left: 25px;
+  position: relative;
 }
 .section-artist {
   display: flex;
@@ -239,17 +240,36 @@
 }
 .section__main-list-ul {
   display: flex;
+  width: 600px;
+  justify-content: space-between;
 }
-.section__main-list-ul li {
-  padding: 5px 0px;
-  padding-right: 25px;
-  margin-right: 15px;
+.section__main-list__ul-li {
+  display: flex;
+  flex-direction: column;
+  padding: 5px 0;
   font-size: 1.2rem;
   font-weight: 500;
   cursor: pointer;
   position: relative;
 }
-.section__main-list-ul li:hover {
+.section__main-list__ul-li:hover #section__main-list-dot {
+  background-color: green;
+}
+.section__main-list__ul-li a {
+  color: white;
+  text-decoration: none;
+}
+#section__main-list-dot {
+  background-color: transparent;
+  width: 5px;
+  height: 5px;
+  border-radius: 13px;
+  border: none;
+  align-self: center;
+  margin-top: 5px;
+}
+
+.section__main-list__ul-li a:hover {
   color: var(--color-darkPastelGreen);
 }
 /* #dot:hover {
@@ -354,10 +374,20 @@
 }
 .fun_also-container {
   position: absolute;
-  top: 49%;
+  top: 30%;
   right: 7%;
   display: flex;
   flex-direction: column;
+  height: 60%;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.fun_also-container .fun_also_like {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 91px;
+  align-items: self-end;
 }
 .fun_also-container .headlight {
   padding-bottom: 20px;
@@ -366,12 +396,17 @@
   display: flex;
   align-items: center;
   margin-bottom: 18px;
+  justify-content: flex-end;
 }
 .img-container img {
   height: 35px;
   width: 35px;
   border-radius: 25px;
   margin-right: 12px;
+}
+.monthly_listners {
+  text-align: right;
+  color: #373737;
 }
 @media screen and (max-width: 600px) {
   .main_box .sidebar_menu {
