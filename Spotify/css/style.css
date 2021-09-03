@@ -7,28 +7,31 @@
 /* page height */
 html {
   height: 100%;
+  overflow: hidden;
+  /* background-color: rgba(0, 0, 0, 0.9); */
 }
 
 /* body style settings */
 body {
-  height: 100%;
   background: url("../assets/nirvana_background.jpg") no-repeat center center
     fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  margin: 0px;
+  height: 86%;
+  margin: 0 auto;
   font-family: "Montserrat", sans-serif;
   font-size: 1.5vh;
+  display: flex;
 }
-
 /* page wrapper settings */
 #contentWrapper {
+  flex: 80%;
   height: -webkit-fill-available;
-  padding: 25px;
+  padding: 0 25px;
   display: flex;
-  background-color: rgba(0, 0, 0, 0.9);
+  flex-direction: column;
 }
 
 /* font color for whole page */
@@ -45,6 +48,15 @@ body {
   flex: 20%;
 }
 
+#bottomContent {
+  display: flex;
+  flex-direction: row;
+}
+
+#songs {
+  flex: 80%;
+}
+
 .leftContent {
   height: 33%;
   justify-content: space-around;
@@ -52,20 +64,23 @@ body {
   flex-direction: column;
 }
 
-#second {
-  flex: 80%;
-}
-
 #tabs {
-  height: 10%;
   display: flex;
-  margin: 0px;
   padding: 0px;
+  align-items: center;
 }
 
-.tabItems {
-  margin: 0px 50px -0 0;
-  padding: 10px;
+#tabs > * {
+  margin: 50px 100px;
+  margin-left: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.songSection:hover,
+.actionButtons:hover {
+  background: var(--spotify-green);
+  border-radius: 30px;
 }
 
 .fas {
@@ -98,11 +113,19 @@ body {
   justify-content: space-between;
 }
 
-#popular {
+#popular,
+#fansAlsoLike {
   height: 50vh;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+}
+#popular {
+  flex: 80%;
+}
+
+#fansAlsoLike {
+  flex: 20%;
 }
 
 .leftTabs {
@@ -115,9 +138,9 @@ body {
 }
 
 .similarArtistsBox {
-  width: 15%;
   display: flex;
   align-items: center;
+  justify-content: flex-start;
 }
 
 .albumBox {
@@ -145,15 +168,27 @@ body {
 }
 
 #actionButtonId {
-  width: 20vw;
+  width: 25vw;
   display: flex;
   align-items: center;
 }
 
 .actionButtons {
-  width: 50%;
-  height: 100%;
+  width: 30%;
+  height: 4vh;
   text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 30px;
+}
+
+.actionButtonsClass {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 #topBar {
@@ -271,4 +306,10 @@ body {
 
 #artist {
   margin-top: 50px;
+}
+
+.songInformation {
+  display: flex;
+  width: 50%;
+  justify-content: space-evenly;
 }

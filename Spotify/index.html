@@ -8,84 +8,84 @@
     <link href="./css/all.css" rel="stylesheet" />
   </head>
   <body>
+    <div class="mainScreen" id="first">
+      <div><i class="fab fa-spotify"></i>Spotify</div>
+      <div class="leftContent">
+        <div class="section">Discover</div>
+        <div class="songSection">
+          <i class="fas fa-compass"></i>
+          <div>Explore</div>
+        </div>
+        <div class="songSection">
+          <i class="fas fa-broadcast-tower"></i>
+          <div>Radio</div>
+        </div>
+      </div>
+      <div class="leftContent">
+        <div class="section">Library</div>
+        <div class="songSection">
+          <i class="fas fa-music"></i>
+          <div>Songs</div>
+        </div>
+        <div class="songSection">
+          <i class="fas fa-compact-disc"></i>
+          <div>Albums</div>
+        </div>
+        <div class="songSection">
+          <i class="fas fa-microphone"></i>
+          <div>Artists</div>
+        </div>
+        <div class="songSection">
+          <i class="fas fa-heart"></i>
+          <div>Favorites</div>
+        </div>
+      </div>
+      <div class="leftContent">
+        <div class="section">Playlists</div>
+        <div class="songSection">
+          <i class="fas fa-bars"></i>
+          <div>Discover Weekly</div>
+        </div>
+        <div class="songSection">
+          <i class="fas fa-bars"></i>
+          <div>Relax</div>
+        </div>
+        <div class="songSection">
+          <i class="fas fa-bars"></i>
+          <div>Workout</div>
+        </div>
+        <div class="songSection">
+          <i class="fas fa-bars"></i>
+          <div>My Music</div>
+        </div>
+      </div>
+    </div>
     <div id="contentWrapper">
-      <div class="mainScreen" id="first">
-        <div><i class="fab fa-spotify"></i>Spotify</div>
-        <div class="leftContent">
-          <div class="section">Discover</div>
-          <div class="songSection">
-            <i class="fas fa-compass"></i>
-            <div>Explore</div>
+      <div id="topBar">
+        <div>
+          <div class="navigationArrows">
+            <i class="fas fa-chevron-left"></i>
           </div>
-          <div class="songSection">
-            <i class="fas fa-broadcast-tower"></i>
-            <div>Radio</div>
+          <div class="navigationArrows">
+            <i class="fas fa-chevron-right"></i>
           </div>
-        </div>
-        <div class="leftContent">
-          <div class="section">Library</div>
-          <div class="songSection">
-            <i class="fas fa-music"></i>
-            <div>Songs</div>
-          </div>
-          <div class="songSection">
-            <i class="fas fa-compact-disc"></i>
-            <div>Albums</div>
-          </div>
-          <div class="songSection">
-            <i class="fas fa-microphone"></i>
-            <div>Artists</div>
-          </div>
-          <div class="songSection">
-            <i class="fas fa-heart"></i>
-            <div>Favorites</div>
+          <div id="searchBar">
+            <div>
+              <i id="searchIcon" class="fas fa-search"></i>
+            </div>
+            <input id="searchInput" type="text" placeholder="Search" />
           </div>
         </div>
-        <div class="leftContent">
-          <div class="section">Playlists</div>
-          <div class="songSection">
-            <i class="fas fa-bars"></i>
-            <div>Discover Weekly</div>
-          </div>
-          <div class="songSection">
-            <i class="fas fa-bars"></i>
-            <div>Relax</div>
-          </div>
-          <div class="songSection">
-            <i class="fas fa-bars"></i>
-            <div>Workout</div>
-          </div>
-          <div class="songSection">
-            <i class="fas fa-bars"></i>
-            <div>My Music</div>
+        <div>
+          <div class="actionButtons">Premium</div>
+          <div><i class="fas fa-bell"></i></div>
+          <div>
+            <img id="avatar" src="./assets/avatar.jpg" alt="" />
+            Stano <i class="fas fa-chevron-down"></i>
           </div>
         </div>
       </div>
       <div class="mainScreen" id="second">
-        <div id="topBar">
-          <div>
-            <div class="navigationArrows">
-              <i class="fas fa-chevron-left"></i>
-            </div>
-            <div class="navigationArrows">
-              <i class="fas fa-chevron-right"></i>
-            </div>
-            <div id="searchBar">
-              <div>
-                <i id="searchIcon" class="fas fa-search"></i>
-              </div>
-              <input id="searchInput" type="text" placeholder="Search" />
-            </div>
-          </div>
-          <div>
-            <div class="actionButtons">Premium</div>
-            <div><i class="fas fa-bell"></i></div>
-            <div>
-              <img id="avatar" src="./assets/avatar.jpg" alt="" />
-              Stano <i class="fas fa-chevron-down"></i>
-            </div>
-          </div>
-        </div>
         <div id="artist">
           <div>
             Artist
@@ -124,8 +124,8 @@
             <div class="dotUnderTabs"></div>
           </div>
         </div>
-        <div id="songs">
-          <div id="latest">Latest Release</div>
+        <div id="latest">
+          Latest Release
           <div>
             <img
               class="albumImage"
@@ -134,11 +134,10 @@
             />
             About A Girl
           </div>
+        </div>
+        <div id="bottomContent">
           <div id="popular">
-            <div style="display: flex; justify-content: space-between">
-              <div>Popular</div>
-              <div>Fans Also Like</div>
-            </div>
+            <div>Popular</div>
             <div class="songDetail">
               <div class="albumBox">
                 <img
@@ -151,20 +150,10 @@
                 </div>
                 <div>Lithium</div>
               </div>
-              <div>
-                <div>
-                  <div>EXPLICIT</div>
-                  <div>4:00</div>
-                  <div>100,000,000</div>
-                </div>
-              </div>
-              <div class="similarArtistsBox">
-                <img
-                  class="similarArtistsImage"
-                  src="./assets/similar_artists/pearl_jam.jpg"
-                  alt=""
-                />
-                <div>Pearl Jam</div>
+              <div class="songInformation">
+                <div>EXPLICIT</div>
+                <div>4:00</div>
+                <div>100,000,000</div>
               </div>
             </div>
             <div class="songDetail">
@@ -179,16 +168,10 @@
                 </div>
                 <div>Heart-Shaped box</div>
               </div>
-              <div>EXPLICIT</div>
-              <div>4:00</div>
-              <div>100,000,000</div>
-              <div class="similarArtistsBox">
-                <img
-                  class="similarArtistsImage"
-                  src="./assets/similar_artists/alice_in_chains.jpg"
-                  alt=""
-                />
-                <div>Alice In Chains</div>
+              <div class="songInformation">
+                <div>EXPLICIT</div>
+                <div>4:00</div>
+                <div>100,000,000</div>
               </div>
             </div>
             <div class="songDetail">
@@ -203,17 +186,11 @@
                 </div>
                 <div>Pennyroyal Tea</div>
               </div>
-              <div>EXPLICIT</div>
-              <div>4:00</div>
-              <div>100,000,000</div>
-              <!-- <div class="similarArtistsBox">
-                <img
-                  class="similarArtistsImage"
-                  src="./assets/similar_artists/artic_mokeys.jpeg"
-                  alt=""
-                />
-                <div>Artic Monkeys</div>
-              </div> -->
+              <div class="songInformation">
+                <div>EXPLICIT</div>
+                <div>4:00</div>
+                <div>100,000,000</div>
+              </div>
             </div>
             <div class="songDetail">
               <div class="albumBox">
@@ -227,19 +204,51 @@
                 </div>
                 <div>Blew</div>
               </div>
-              <div>EXPLICIT</div>
-              <div>4:00</div>
-              <div>100,000,000</div>
-              <!-- <div class="similarArtistsBox">
-                <img
-                  class="similarArtistsImage"
-                  src="./assets/similar_artists/soundgarden.jpg"
-                  alt=""
-                />
-                <div>Soundgarden</div>
-              </div> -->
+              <div class="songInformation">
+                <div>EXPLICIT</div>
+                <div>4:00</div>
+                <div>100,000,000</div>
+              </div>
             </div>
           </div>
+          <div id="fansAlsoLike">
+            <div>Fans Also Like</div>
+            <div class="similarArtistsBox">
+              <img
+                class="similarArtistsImage"
+                src="./assets/similar_artists/pearl_jam.jpg"
+                alt=""
+              />
+              <div>Pearl Jam</div>
+            </div>
+            <div class="similarArtistsBox">
+              <img
+                class="similarArtistsImage"
+                src="./assets/similar_artists/alice_in_chains.jpg"
+                alt=""
+              />
+              <div>Alice In Chains</div>
+            </div>
+            <div class="similarArtistsBox">
+              <img
+                class="similarArtistsImage"
+                src="./assets/similar_artists/artic_mokeys.jpeg"
+                alt=""
+              />
+              <div>Artic Monkeys</div>
+            </div>
+            <div class="similarArtistsBox">
+              <img
+                class="similarArtistsImage"
+                src="./assets/similar_artists/soundgarden.jpg"
+                alt=""
+              />
+              <div>Soundgarden</div>
+            </div>
+          </div>
+        </div>
+        <div style="height: 10%; background: red"></div>
+      </div>
     </div>
   </body>
 </html>
