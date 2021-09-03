@@ -1,0 +1,463 @@
+:root {
+  font-size: 62.5%;
+}
+
+.wrapper-grid {
+  display: flex;
+  flex-direction: row;
+  background-image: url(/homework3/img/infected.jpg);
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+ opacity:0.99;
+}
+
+/* LEFT GRID */
+
+#left-grid {
+  display: grid;
+  grid-gap: 0.5rem;
+  grid-template-columns: 1 fr;
+  grid-template-rows: repeat(14, 6rem);
+}
+
+.item {
+  margin-left: 1.5rem;
+  font-size: 3rem;
+  text-align: center;
+  line-height: 4rem;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 0.3rem;
+}
+a.left-menu-link {
+  text-decoration: none;
+  color: white;
+  font-size: 1.4rem;
+}
+a.left-menu-link:hover {
+  display: inline-block;
+  background-color: #01b949;
+  border-radius: 0.3rem;
+}
+
+.item-1 {
+  color: lightgray;
+  font-size: 1.2rem;
+  text-align: left;
+}
+.item-2 {
+  color: lightgray;
+  font-size: 1.2rem;
+  text-align: left;
+}
+.item-3 {
+  color: white;
+  font-size: 1.2rem;
+  text-align: left;
+}
+.item-4 {
+  color: white;
+  font-size: 1.2rem;
+  text-align: left;
+}
+.item-5 {
+  color: white;
+  font-size: 1.2rem;
+  text-align: left;
+}
+.item-6 {
+  color: white;
+  font-size: 1.2rem;
+  text-align: left;
+}
+.item-7 {
+  color: white;
+  font-size: 1.2rem;
+  text-align: left;
+}
+.item-8 {
+  color: white;
+  font-size: 1.2rem;
+  text-align: left;
+}
+.item-9 {
+  color: white;
+  font-size: 1.2rem;
+  text-align: left;
+}
+.item-10 {
+  color: white;
+  font-size: 1.2rem;
+  text-align: left;
+}
+.item-11 {
+  color: white;
+  font-size: 1.2rem;
+  text-align: left;
+}
+.item-12 {
+  color: white;
+  font-size: 1.2rem;
+  text-align: left;
+}
+.item-13 {
+  color: white;
+  font-size: 1.2rem;
+  text-align: left;
+}
+.item-14 {
+  color: white;
+  font-size: 1.2rem;
+  text-align: left;
+}
+
+/* RIGHT GRID */
+
+#right-grid {
+  display: grid;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  grid-gap: 0.2rem;
+  grid-template-columns: [col-start]repeat(12, 5vw) [col-end];
+  grid-template-rows: repeat(12, 4rem);
+  align-items: center;
+  grid-template-areas:
+    "arrow-left  arrow-right search-bar search-bar search-bar .. premium premium bell asyl-lab asyl-lab arrow-down"
+    "artist . . . . . . . . . . .  "
+    "band_name band_name band_name . . . . . . . . .  "
+    "play play follow follow three-dots three-dots . . . . .monthly_listeners"
+    "overview overview fans_also_like fans_also_like  about about  concerts concerts . . . . "
+    "latest_release latest_release . . . . . . . . . ."
+    "movie movie . . . . . . . . . ."
+    "popular popular . . . . . . . . fans_also_like_2 fans_also_like_2"
+    "image1  play-pause1 song1 . . . . explicit1 length1 view_count1 also_star1 also_star1"
+    "image2 play-pause2 song2 . . . . explicit2 length2 view_count2 also_star2 also_star2"
+    "image3  play-pause3 song3 . . . . explicit3 length3 view_count3 also_star3 also_star3"
+    "image4  play-pause4 song4 . . . . explicit4 length4 view_count4 also_star4 also_star4";
+}
+.material-icons {
+  color: white;
+}
+.monthly_listeners {
+     
+  grid-area: monthly_listeners;
+}
+.image1 {
+     
+  size: 1vw 1vh;
+  grid-area: image1;
+}
+.image2 {
+     
+  size: 1vw 1vh;
+  grid-area: image2;
+}
+.image3 {
+     
+  size: 1vw 1vh;
+  grid-area: image3;
+}
+.image4 {
+     
+  size: 1vw 1vh;
+  grid-area: image4;
+}
+.play-pause1 {
+     
+  grid-area: play-pause1;
+}
+.play-pause2 {
+     
+  grid-area: play-pause2;
+}
+.play-pause3 {
+     
+  grid-area: play-pause3;
+}
+.play-pause4 {
+     
+  grid-area: play-pause4;
+}
+.song1 {
+     
+  grid-area: song1;
+}
+.song2 {
+     
+  grid-area: song2;
+}
+.song3 {
+     
+  grid-area: song3;
+}
+.song4 {
+     
+  grid-area: song4;
+}
+.explicit1 {
+     
+  grid-area: explicit1;
+}
+.explicit2 {
+     
+  grid-area: explicit2;
+}
+.explicit3 {
+     
+  grid-area: explicit3;
+}
+.explicit4 {
+     
+  grid-area: explicit4;
+}
+.length1 {
+     
+  grid-area: length1;
+}
+.length2 {
+     
+  grid-area: length2;
+}
+.length3 {
+     
+  grid-area: length3;
+}
+.length4 {
+     
+  grid-area: length4;
+}
+.view_count1 {
+     
+  grid-area: view_count1;
+}
+.view_count2 {
+     
+  grid-area: view_count2;
+}
+.view_count3 {
+     
+  grid-area: view_count3;
+}
+.view_count4 {
+     
+  grid-area: view_count4;
+}
+.also_star1 {
+     
+  display: flex;
+  grid-area: also_star1;
+}
+.also_star2 {
+     
+  display: flex;
+  grid-area: also_star2;
+}
+.also_star3 {
+     
+  display: flex;
+  grid-area: also_star3;
+}
+.also_star4 {
+     
+  display: flex;
+  grid-area: also_star4;
+}
+
+.star {
+  text-decoration: none;
+  color:white;
+}
+
+.popular {
+  color: white;
+     
+  grid-area: popular;
+}
+.fans_also_like_2 {
+  background-color: rgb(10, 10, 10) y;
+  grid-area: fans_also_like_2;
+}
+.movie {
+  color: white;
+     
+  grid-area: movie;
+}
+.latest_release {
+     
+  color: white;
+  grid-area: latest_release;
+}
+.overview {
+     
+  grid-area: overview;
+}
+.fans_also_like {
+     
+  grid-area: fans_also_like;
+}
+
+.about {
+  background-color: rgb(10, 10, 10) y;
+  grid-area: about;
+}
+.concerts {
+     
+  grid-area: concerts;
+}
+.central_menu_link a {
+  text-decoration: none;
+  color: white;
+}
+.central_menu_link a:hover {
+  color: #01b949;
+}
+
+.arrow-left {
+     
+  grid-area: arrow-left;
+}
+.arrow-right {
+     
+  grid-area: arrow-right;
+}
+.search-bar {
+     
+  grid-area: search-bar;
+}
+#search {
+  border-radius: 10px;
+}
+.arrow-down {
+     
+  grid-area: arrow-down;
+}
+.asyl-lab {
+     
+  color: white;
+  grid-area: asyl-lab;
+}
+.bell {
+     
+  grid-area: bell;
+}
+.premium {
+     
+  grid-area: premium;
+}
+button#premium {
+  border-radius: 0.5rem;
+  width: 10rem;
+  background-color: grey;
+}
+
+.artist {
+  /*     */
+  color: white;
+  font-size: 1.5rem;
+  grid-area: artist;
+}
+
+.band_name {
+  color: white;
+  font-weight: bolder;
+  grid-area: band_name;
+}
+
+.play {
+  margin-left: 1rem;
+  grid-area: play;
+  font-size: 1rem;
+}
+.play a {
+  text-decoration: none;
+  color: white;
+}
+.play a:hover {
+  display: inline-block;
+  background-color: #01b949;
+  color: white;
+  border-radius: 1rem;
+  width: 200px
+  text-decoration: none;
+}
+.follow {
+  grid-area: follow;
+  font-size: 1rem;
+}
+.follow a {
+  text-decoration: none;
+  color: white;
+}
+.follow a:hover {
+  display: inline-block;
+  background-color: #01b949;
+  color: white;
+  border-radius: 1rem;
+  text-decoration: none;
+}
+
+.three-dots {
+  grid-area: three-dots;
+  font-size: 1rem;
+}
+.three-dots a {
+  text-decoration: none;
+  color: white;
+}
+.three-dots a:hover {
+  display: inline-block;
+  background-color: #01b949;
+  color: white;
+  border-radius: 1rem;
+  text-decoration: none;
+}
+
+/*
+ .line-1 {
+  background-color: azure;
+  grid-area: line-1;
+}
+.line-2 {
+  background-color: brown;
+  grid-area: line-2;
+}
+.line-3 {
+  background-color: coral;
+  grid-area: line-3;
+}
+.line-4 {
+  background-color: darkorchid;
+  grid-area: line-4;
+}
+.line-5 {
+  background-color: firebrick;
+  grid-area: line-5;
+}
+.line-6 {
+  background-color: greenyellow;
+  grid-area: line-6;
+}
+.line-7 {
+  background-color: hotpink;
+  grid-area: line-7;
+}
+.line-8 {
+  background-color: indianred;
+  grid-area: line-8;
+}
+.line-9 {
+  background-color: lightskyblue;
+  grid-area: line-9;
+}
+.line-10 {
+  background-color: mediumseagreen;
+  grid-area: line-10;
+}
+.line-11 {
+  background-color: navajowhite;
+  grid-area: line-11;
+}
+.line-12 {
+  background-color: olivedrab;
+  grid-area: line-12;
+} */
