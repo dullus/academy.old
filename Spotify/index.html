@@ -13,74 +13,102 @@
         <div><i class="fab fa-spotify"></i>Spotify</div>
         <div class="leftContent">
           <div class="section">Discover</div>
-          <div class="leftTabs"><i class="fas fa-compass"></i>Explore</div>
-          <div class="leftTabs">
-            <i class="fas fa-broadcast-tower"></i>Radio
+          <div class="songSection">
+            <i class="fas fa-compass"></i>
+            <div>Explore</div>
+          </div>
+          <div class="songSection">
+            <i class="fas fa-broadcast-tower"></i>
+            <div>Radio</div>
           </div>
         </div>
         <div class="leftContent">
           <div class="section">Library</div>
-          <div><i class="fas fa-music"></i>Songs</div>
-          <div><i class="fas fa-compact-disc"></i>Albums</div>
-          <div><i class="fas fa-microphone"></i>Artists</div>
-          <div><i class="fas fa-heart"></i>Favorites</div>
+          <div class="songSection">
+            <i class="fas fa-music"></i>
+            <div>Songs</div>
+          </div>
+          <div class="songSection">
+            <i class="fas fa-compact-disc"></i>
+            <div>Albums</div>
+          </div>
+          <div class="songSection">
+            <i class="fas fa-microphone"></i>
+            <div>Artists</div>
+          </div>
+          <div class="songSection">
+            <i class="fas fa-heart"></i>
+            <div>Favorites</div>
+          </div>
         </div>
         <div class="leftContent">
           <div class="section">Playlists</div>
-          <div><i class="fas fa-bars"></i>Discover Weekly</div>
-          <div><i class="fas fa-bars"></i>Relax</div>
-          <div><i class="fas fa-bars"></i>Workout</div>
-          <div><i class="fas fa-bars"></i>My Music</div>
+          <div class="songSection">
+            <i class="fas fa-bars"></i>
+            <div>Discover Weekly</div>
+          </div>
+          <div class="songSection">
+            <i class="fas fa-bars"></i>
+            <div>Relax</div>
+          </div>
+          <div class="songSection">
+            <i class="fas fa-bars"></i>
+            <div>Workout</div>
+          </div>
+          <div class="songSection">
+            <i class="fas fa-bars"></i>
+            <div>My Music</div>
+          </div>
         </div>
       </div>
       <div class="mainScreen" id="second">
         <div id="topBar">
-          <div style="display: flex">
-            <div>
+          <div>
+            <div class="navigationArrows">
               <i class="fas fa-chevron-left"></i>
+            </div>
+            <div class="navigationArrows">
               <i class="fas fa-chevron-right"></i>
             </div>
-            <div class="rightContent" id="searchBar">
-              <img
-                class="icons"
-                id="magnifier"
-                src="./assets/icons/loupe.png"
-                alt=""
-              />
+            <div id="searchBar">
+              <div>
+                <i id="searchIcon" class="fas fa-search"></i>
+              </div>
               <input id="searchInput" type="text" placeholder="Search" />
             </div>
           </div>
-          <div style="display: flex">
+          <div>
             <div>Premium</div>
             <div><i class="fas fa-bell"></i></div>
             <div>Stano <i class="fas fa-chevron-down"></i></div>
           </div>
         </div>
-        <div class="rightContent" id="artist">
-          Artist
-          <img class="icons" src="./assets/icons/check.svg" alt="" />
+        <div id="artist">
+          <div>
+            Artist
+            <img class="icons" src="./assets/icons/check.svg" alt="" />
+          </div>
           <h1>Nirvana</h1>
-          <div style="display: flex; justify-content: space-between">
-            <div style="display: flex">
-              <div>Play</div>
-              <div>Follow</div>
-              <i class="fas fa-ellipsis-h"></i>
-            </div>
-            <div>
-              <div>MONTHLY LISTENERS</div>
-              <div>48,343948</div>
-            </div>
+        </div>
+        <div style="display: flex; justify-content: space-between">
+          <div id="actionButtonId">
+            <div class="actionButtons"><i class="fas fa-play"></i>Play</div>
+            <div class="actionButtons">Follow</div>
+            <div class="actionButtons"><i class="fas fa-ellipsis-h"></i></div>
+          </div>
+          <div>
+            <div>MONTHLY LISTENERS</div>
+            <div>48,343948</div>
           </div>
         </div>
-        <div class="rightContent" id="tabs">
+        <div id="tabs">
           <div class="tabItems">OVERVIEW</div>
           <div class="tabItems">FANS ALSO LIKE</div>
           <div class="tabItems">ABOUT</div>
           <div class="tabItems">CONCERTS</div>
         </div>
-        <div id="latest">Latest Release</div>
-
         <div id="songs">
+          <div id="latest">Latest Release</div>
           <div>
             <img
               class="albumImage"
@@ -103,9 +131,9 @@
                 />
                 Lithium
               </div>
-              <div style="width: 15%">EXPLICIT</div>
-              <div style="width: 15%">4:00</div>
-              <div style="width: 15%">100,000,000</div>
+              <div>EXPLICIT</div>
+              <div>4:00</div>
+              <div>100,000,000</div>
               <div class="similarArtistsBox">
                 <img
                   class="similarArtistsImage"
@@ -124,9 +152,9 @@
                 />
                 Heart-Shaped box
               </div>
-              <div style="width: 15%">EXPLICIT</div>
-              <div style="width: 15%">4:00</div>
-              <div style="width: 15%">100,000,000</div>
+              <div>EXPLICIT</div>
+              <div>4:00</div>
+              <div>100,000,000</div>
               <div class="similarArtistsBox">
                 <img
                   class="similarArtistsImage"
@@ -145,9 +173,9 @@
                 />
                 Pennyroyal Tea
               </div>
-              <div style="width: 15%">EXPLICIT</div>
-              <div style="width: 15%">4:00</div>
-              <div style="width: 15%">100,000,000</div>
+              <div>EXPLICIT</div>
+              <div>4:00</div>
+              <div>100,000,000</div>
               <div class="similarArtistsBox">
                 <img
                   class="similarArtistsImage"
@@ -166,9 +194,9 @@
                 />
                 Blew
               </div>
-              <div style="width: 15%">EXPLICIT</div>
-              <div style="width: 15%">4:00</div>
-              <div style="width: 15%">100,000,000</div>
+              <div>EXPLICIT</div>
+              <div>4:00</div>
+              <div>100,000,000</div>
               <div class="similarArtistsBox">
                 <img
                   class="similarArtistsImage"

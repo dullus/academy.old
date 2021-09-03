@@ -1,12 +1,15 @@
+/* declaring page colors */
 :root {
   --darker-gray: #323232;
   --spotify-green: #01b949;
 }
 
+/* page height */
 html {
   height: 100%;
 }
 
+/* body style settings */
 body {
   height: 100%;
   background: url("../assets/nirvana_background.jpg") no-repeat center center
@@ -20,6 +23,7 @@ body {
   font-size: 1.5vh;
 }
 
+/* page wrapper settings */
 #contentWrapper {
   height: -webkit-fill-available;
   padding: 25px;
@@ -27,6 +31,7 @@ body {
   background-color: rgba(0, 0, 0, 0.9);
 }
 
+/* font color for whole page */
 .mainScreen {
   color: white;
 }
@@ -49,14 +54,6 @@ body {
 
 #second {
   flex: 80%;
-}
-
-#searchBar {
-  height: 10%;
-}
-
-#artist {
-  height: 20%;
 }
 
 #tabs {
@@ -82,8 +79,8 @@ body {
 }
 
 .icons {
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
 }
 
 .similarArtistsImage {
@@ -94,20 +91,6 @@ body {
 
 #magnifier {
   background-color: white;
-}
-
-#searchBar {
-  background: white;
-  height: 20px;
-}
-
-#searchInput {
-  border: none;
-}
-
-#topBar {
-  display: flex;
-  justify-content: space-between;
 }
 
 .songDetail {
@@ -142,4 +125,83 @@ body {
   text-align: left;
   display: flex;
   align-items: center;
+}
+
+.songDetail > * {
+  width: 15%;
+}
+
+.songSection {
+  width: 50%;
+  height: 10%;
+  display: flex;
+  align-items: center;
+}
+
+.songSection:hover,
+.actionButtons:hover {
+  background: var(--spotify-green);
+  border-radius: 20px;
+}
+
+#actionButtonId {
+  width: 20vw;
+  display: flex;
+  align-items: center;
+}
+
+.actionButtons {
+  width: 50%;
+  height: 100%;
+  text-align: center;
+}
+
+#topBar {
+  display: flex;
+  justify-content: space-between;
+  height: 5%;
+}
+
+#topBar > * {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+.navigationArrows {
+  color: var(--darker-gray);
+}
+
+.navigationArrows:hover {
+  color: white;
+}
+
+#searchBar {
+  display: flex;
+  background: white;
+  padding: 5px 0px;
+  border-radius: 20px;
+  width: 15vw;
+  height: 2.5vh;
+  color: black;
+  align-items: center;
+}
+
+#searchBar.input {
+  height: 100%;
+}
+
+#searchIcon {
+  margin-right: 5px;
+}
+
+#searchInput {
+  border: none;
+}
+
+::placeholder {
+  color: black;
+  font-size: 1.5vh;
+  font-weight: bold;
+  text-align: left;
 }
