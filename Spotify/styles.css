@@ -88,7 +88,7 @@
   right: 40px;
   cursor: pointer;
 }
-.second {
+.main-container {
   width: 100%;
   color: white;
   height: 100%;
@@ -161,6 +161,11 @@
   padding: 4px 16px;
   border-radius: 15px;
   border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.navbar__container-right button:hover {
+  background-color: var(--color-darkPastelGreen);
 }
 .navbar__container-right-user {
   display: flex;
@@ -248,7 +253,7 @@
 }
 .section__main-list-ul {
   display: flex;
-  width: 68%;
+  width: 54%;
   justify-content: space-between;
   padding-bottom: 10px;
 }
@@ -318,6 +323,9 @@
   justify-content: space-between;
   transition: 0.3s;
 }
+.popular-item:hover {
+  color: var(--color-darkPastelGreen);
+}
 
 .popular_item-left {
   display: flex;
@@ -344,6 +352,8 @@
   position: absolute;
   top: 13px;
   right: 69%;
+  transition: 0.3s;
+  color: white;
 }
 .popular_item-left p {
   padding-left: 40px;
@@ -363,10 +373,12 @@
   padding: 1px 10px;
   font-size: 0.8rem;
   margin-right: 18%;
+  transition: 0.4s;
 }
 .popular_item-right p {
   color: white;
   margin-right: 18%;
+  transition: 0.4s;
 }
 .popular_item-right:hover #popular_item_right-button {
   border: 2px solid var(--color-darkPastelGreen);
@@ -380,11 +392,11 @@
 }
 .fun_also-container {
   position: absolute;
-  top: 32%;
+  top: 23%;
   right: 7%;
   display: flex;
   flex-direction: column;
-  height: 62%;
+  height: 71%;
   justify-content: space-between;
   align-items: flex-end;
 }
@@ -426,6 +438,9 @@
   .navbar__container-right {
     width: 35%;
   }
+  .section__main-list-ul {
+    width: 68%;
+  }
   /* .navbar__container-right {
     width: 60%;
   } */
@@ -438,10 +453,31 @@
   .navbar__container-right button {
     margin-bottom: 15px;
   }
+  .section-artist {
+    padding-top: 0px;
+  }
+  .section__main-list-ul {
+    padding-bottom: 0px;
+  }
+  .section__main-buttons {
+    margin-bottom: 12px;
+  }
 }
 @media screen and (max-width: 500px) {
   .searchbox {
     padding: 2px;
+  }
+  .section__main-list-ul {
+    width: 90%;
+  }
+  #search-input {
+    width: 40%;
+  }
+  .navbar__container-left-arrows {
+    margin-right: 5px;
+  }
+  .popular_item-left p {
+    padding-left: 20px;
   }
 }
 @media screen and (min-height: 850px) {
@@ -508,5 +544,8 @@
     top: 23%;
     right: 10%;
     height: 62%;
+  }
+  .popular_item-left:hover #popular_item-pause {
+    display: none;
   }
 }
