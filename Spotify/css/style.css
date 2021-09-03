@@ -173,9 +173,9 @@ h1 {
   align-items: center;
 }
 
-.songDetail > * {
+/* .songDetail > * {
   width: 15%;
-}
+} */
 
 .songSection {
   border-radius: 2vw;
@@ -316,6 +316,10 @@ h1 {
   border-radius: 1vh;
 }
 
+.songDetail:hover .songInformation #explicit {
+  color: var(--spotify-green);
+  border-color: var(--spotify-green);
+}
 /* explicit hover todo */
 
 .songDetail:hover {
@@ -325,6 +329,16 @@ h1 {
 .songDetail:hover .playPauseButton {
   color: white;
   visibility: visible;
+}
+
+#plusIcon {
+  width: 4.5vw;
+  color: white;
+}
+
+#playlistStyleWrapper {
+  display: flex;
+  justify-content: space-between;
 }
 
 #avatar {
