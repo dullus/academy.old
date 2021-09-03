@@ -13,7 +13,7 @@
 }
 .main_box {
   position: relative;
-  background-image: url("assets/eminem-background.png");
+  background-image: url("assets/eminem-background-photoshoped.jpg");
   background-size: cover;
   height: 100vh;
   width: 100%;
@@ -93,6 +93,7 @@
   width: 100%;
   color: white;
   height: 100%;
+  position: relative;
 }
 .discover {
   padding-top: 8px;
@@ -243,7 +244,6 @@
   padding: 5px 0px;
   padding-right: 25px;
   margin-right: 15px;
-  margin-left: 7px;
   font-size: 1.2rem;
   font-weight: 500;
   cursor: pointer;
@@ -300,6 +300,7 @@
   align-items: center;
   cursor: pointer;
   position: relative;
+  width: 28%;
 }
 .popular_item-left:hover #popular_item-pause {
   display: block;
@@ -316,8 +317,8 @@
   font-size: 15px;
   display: none;
   position: absolute;
-  top: 18px;
-  right: 61%;
+  top: 13px;
+  right: 69%;
 }
 .popular_item-left p {
   padding-left: 40px;
@@ -350,6 +351,27 @@
 }
 .popular_item-right:hover #popular__item_right-p-second {
   color: var(--color-darkPastelGreen);
+}
+.fun_also-container {
+  position: absolute;
+  top: 49%;
+  right: 7%;
+  display: flex;
+  flex-direction: column;
+}
+.fun_also-container .headlight {
+  padding-bottom: 20px;
+}
+.img-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 18px;
+}
+.img-container img {
+  height: 35px;
+  width: 35px;
+  border-radius: 25px;
+  margin-right: 12px;
 }
 @media screen and (max-width: 600px) {
   .main_box .sidebar_menu {
