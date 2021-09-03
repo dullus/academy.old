@@ -1,15 +1,13 @@
 :root {
   font-size: 62.5%;
+  --color-blackish: #101010;
+  --color-greenish: #01B949;
 }
 
 .wrapper-grid {
   display: flex;
   flex-direction: row;
-  background-image: url(/homework3/img/infected.jpg);
-  background-size: cover;
-  height: 100vh;
-  width: 100%;
- opacity:0.99;
+  background-color: var(--color-blackish);
 }
 
 /* LEFT GRID */
@@ -28,6 +26,7 @@
   line-height: 4rem;
   font-family: Arial, Helvetica, sans-serif;
   letter-spacing: 0.3rem;
+  background-color: var(--color-blackish);
 }
 a.left-menu-link {
   text-decoration: none;
@@ -114,6 +113,12 @@ a.left-menu-link:hover {
 /* RIGHT GRID */
 
 #right-grid {
+  background-image: url("/homework3/img/infected_mushroom_wallpaper.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.5;
+  width:100%;
+  height:20vh;
   display: grid;
   color: white;
   font-family: Arial, Helvetica, sans-serif;
@@ -143,122 +148,133 @@ a.left-menu-link:hover {
   grid-area: monthly_listeners;
 }
 .image1 {
-     
+  background-color: var(--color-blackish);
   size: 1vw 1vh;
   grid-area: image1;
 }
 .image2 {
-     
+  background-color: var(--color-blackish);
   size: 1vw 1vh;
   grid-area: image2;
 }
 .image3 {
-     
+  background-color: var(--color-blackish);
   size: 1vw 1vh;
   grid-area: image3;
 }
 .image4 {
-     
+  background-color: var(--color-blackish);  
   size: 1vw 1vh;
   grid-area: image4;
 }
 .play-pause1 {
-     
+  background-color: var(--color-blackish);
   grid-area: play-pause1;
 }
 .play-pause2 {
-     
+  background-color: var(--color-blackish);
+  color:var(--color-greenish);
   grid-area: play-pause2;
 }
 .play-pause3 {
-     
+  background-color: var(--color-blackish);
   grid-area: play-pause3;
 }
 .play-pause4 {
-     
+  background-color: var(--color-blackish);   
   grid-area: play-pause4;
 }
 .song1 {
-     
+  background-color: var(--color-blackish);
   grid-area: song1;
 }
 .song2 {
-     
+  background-color: var(--color-blackish);  
+  color:var(--color-greenish);
   grid-area: song2;
 }
 .song3 {
-     
+  background-color: var(--color-blackish);
   grid-area: song3;
 }
 .song4 {
-     
+  background-color: var(--color-blackish);
   grid-area: song4;
 }
 .explicit1 {
-     
+  background-color: var(--color-blackish); 
   grid-area: explicit1;
 }
 .explicit2 {
-     
+  background-color: var(--color-blackish);
+  color:var(--color-greenish);
   grid-area: explicit2;
 }
 .explicit3 {
-     
+  background-color: var(--color-blackish); 
   grid-area: explicit3;
 }
 .explicit4 {
-     
+  background-color: var(--color-blackish); 
   grid-area: explicit4;
 }
+#explicit {
+  border:1px solid white;
+  border-radius: 3rem;
+  width: 3.2rem;
+}
 .length1 {
-     
+  background-color: var(--color-blackish);
   grid-area: length1;
 }
 .length2 {
-     
+  background-color: var(--color-blackish);
+  color:var(--color-greenish);
   grid-area: length2;
 }
 .length3 {
-     
+  background-color: var(--color-blackish);
   grid-area: length3;
 }
 .length4 {
-     
+  background-color: var(--color-blackish); 
   grid-area: length4;
 }
 .view_count1 {
-     
+  background-color: var(--color-blackish);
   grid-area: view_count1;
 }
 .view_count2 {
-     
+  background-color: var(--color-blackish);
+  color:var(--color-greenish);
   grid-area: view_count2;
 }
 .view_count3 {
-     
+  background-color: var(--color-blackish);
   grid-area: view_count3;
 }
 .view_count4 {
-     
+  background-color: var(--color-blackish);
   grid-area: view_count4;
 }
 .also_star1 {
-     
+  background-color: var(--color-blackish);
   display: flex;
   grid-area: also_star1;
 }
 .also_star2 {
-     
+  background-color: var(--color-blackish);
+  color:var(--color-greenish);
   display: flex;
   grid-area: also_star2;
 }
 .also_star3 {
-     
+  background-color: var(--color-blackish);
   display: flex;
   grid-area: also_star3;
 }
 .also_star4 {
-     
+  background-color: var(--color-blackish);
   display: flex;
   grid-area: also_star4;
 }
@@ -279,20 +295,20 @@ a.left-menu-link:hover {
 }
 .movie {
   color: white;
-     
+  background-color: var(--color-blackish); 
   grid-area: movie;
 }
 .latest_release {
-     
+  background-color: var(--color-blackish);
   color: white;
   grid-area: latest_release;
 }
 .overview {
-     
+  background-color: var(--color-blackish);  
   grid-area: overview;
 }
 .fans_also_like {
-     
+  background-color: var(--color-blackish);   
   grid-area: fans_also_like;
 }
 
@@ -301,7 +317,7 @@ a.left-menu-link:hover {
   grid-area: about;
 }
 .concerts {
-     
+  background-color: var(--color-blackish);    
   grid-area: concerts;
 }
 .central_menu_link a {
@@ -313,35 +329,36 @@ a.left-menu-link:hover {
 }
 
 .arrow-left {
-     
+  background-color: var(--color-blackish);
   grid-area: arrow-left;
 }
 .arrow-right {
-     
+  background-color: var(--color-blackish);  
   grid-area: arrow-right;
 }
 .search-bar {
-     
+  background-color: var(--color-blackish);
   grid-area: search-bar;
 }
 #search {
-  border-radius: 10px;
+  width: 10rem;
+  border-radius: 3rem;
 }
 .arrow-down {
-     
+  background-color: var(--color-blackish);
   grid-area: arrow-down;
 }
 .asyl-lab {
-     
+  background-color: var(--color-blackish);  
   color: white;
   grid-area: asyl-lab;
 }
 .bell {
-     
+  background-color: var(--color-blackish);    
   grid-area: bell;
 }
 .premium {
-     
+  background-color: var(--color-blackish);
   grid-area: premium;
 }
 button#premium {
@@ -351,10 +368,11 @@ button#premium {
 }
 
 .artist {
-  /*     */
   color: white;
   font-size: 1.5rem;
   grid-area: artist;
+  display:flex;
+  align-items: center;
 }
 
 .band_name {
@@ -412,52 +430,6 @@ button#premium {
   text-decoration: none;
 }
 
-/*
- .line-1 {
-  background-color: azure;
-  grid-area: line-1;
-}
-.line-2 {
-  background-color: brown;
-  grid-area: line-2;
-}
-.line-3 {
-  background-color: coral;
-  grid-area: line-3;
-}
-.line-4 {
-  background-color: darkorchid;
-  grid-area: line-4;
-}
-.line-5 {
-  background-color: firebrick;
-  grid-area: line-5;
-}
-.line-6 {
-  background-color: greenyellow;
-  grid-area: line-6;
-}
-.line-7 {
-  background-color: hotpink;
-  grid-area: line-7;
-}
-.line-8 {
-  background-color: indianred;
-  grid-area: line-8;
-}
-.line-9 {
-  background-color: lightskyblue;
-  grid-area: line-9;
-}
-.line-10 {
-  background-color: mediumseagreen;
-  grid-area: line-10;
-}
-.line-11 {
-  background-color: navajowhite;
-  grid-area: line-11;
-}
-.line-12 {
-  background-color: olivedrab;
-  grid-area: line-12;
-} */
+
+ 
+
