@@ -59,7 +59,6 @@
   border: none;
   border-radius: 20px;
   background: #01b949;
-  /* width: 180px; */
   width: fit-content;
   cursor: pointer;
 }
@@ -73,7 +72,6 @@
   margin-top: 10px;
   opacity: 70%;
 }
-
 .playlist {
   display: flex;
   justify-content: space-between;
@@ -102,7 +100,6 @@
   display: flex;
   height: auto;
 }
-
 .navbar__container {
   display: flex;
   justify-content: space-between;
@@ -176,7 +173,6 @@
 }
 .bell-icon-container span {
   position: absolute;
-  /* font-size: 10px; */
   background-color: var(--color-darkPastelGreen);
   bottom: 8px;
   left: 7px;
@@ -285,11 +281,9 @@
   margin-top: 5px;
   transition: 0.3s;
 }
-
 .section__main-list__ul-li a:hover {
   color: var(--color-darkPastelGreen);
 }
-
 .section--latest_releases {
   font-weight: 500;
   margin-bottom: 20px;
@@ -326,7 +320,6 @@
 .popular-item:hover {
   color: var(--color-darkPastelGreen);
 }
-
 .popular_item-left {
   display: flex;
   height: 3rem;
@@ -441,9 +434,6 @@
   .section__main-list-ul {
     width: 68%;
   }
-  /* .navbar__container-right {
-    width: 60%;
-  } */
 }
 @media screen and (max-width: 660px) {
   .navbar__container-right {
@@ -474,6 +464,13 @@
     width: 40%;
   }
   .navbar__container-left-arrows {
+    margin-right: 0px;
+  }
+  .navbar__container-left-arrows #right {
+    padding-left: 5px;
+  }
+  .navbar__container-left-arrows i {
+    padding-right: 0px;
     margin-right: 5px;
   }
   .popular_item-left p {
