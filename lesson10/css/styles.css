@@ -1,0 +1,76 @@
+.superman_image {
+  position: absolute;
+  top: 250px;
+  height: 300px;
+  width: 200px;
+}
+
+#stats {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hp_bar {
+  background: red;
+  width: 500px;
+  height: 20px;
+}
+
+#darkseid_hp {
+  position: absolute;
+  width: 500px;
+  height: 20px;
+  background: blue;
+}
+
+#superman_hp {
+  position: absolute;
+  width: 500px;
+  height: 20px;
+  background: greenyellow;
+}
+
+#gotham {
+  background: url("../images/gotham.jpg");
+  height: 600px;
+  width: auto;
+}
+
+#iceattack {
+  position: absolute;
+  top: 230px;
+  left: 210px;
+  width: 70px;
+  height: 25%;
+  visibility: hidden;
+  transform: rotate(-90deg);
+}
+
+#laserbeam {
+  position: absolute;
+  transform: rotate(93deg);
+  top: 230px;
+  left: 1100px;
+  width: 70px;
+  height: 25%;
+  visibility: hidden;
+}
+
+#darkseid {
+  position: absolute;
+  left: 1070px;
+  top: 270px;
+  transform: scaleX(-1);
+}
+
+p {
+  margin: 0px;
+  position: absolute;
+  height: 20px;
+  width: 100px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
+}

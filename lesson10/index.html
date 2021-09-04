@@ -3,9 +3,39 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Superman vs Darkseid</title>
+    <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
+    <div id="gotham">
+      <div id="stats">
+        <div class="hp_bar">
+          <div id="superman_hp">
+            <p id="supermanHpValue">100 / 100</p>
+          </div>
+        </div>
+        <div class="hp_bar">
+          <div id="darkseid_hp">
+            <p id="darkseidHpValue">100 / 100</p>
+          </div>
+        </div>
+      </div>
+      <img
+        class="superman_image"
+        src="./images/superman.PNG"
+        alt="superman"
+        id="superman"
+      />
+      <img src="./images/darkseid.png" alt="darkseid" id="darkseid" />
+      <img src="./images/ice_attack.png" alt="" id="iceattack" />
+      <img src="./images/laser_beam.png" alt="laserbeam" id="laserbeam" />
+      <div class="buttons">
+        <button id="strikeIce">ICE STRIKE!</button>
+        <button id="autoAttack">Auto Fight!</button>
+        <button id="strikeLaser">GAMMA BEAM STRIKE!</button>
+      </div>
+    </div>
+
     <script src="js/main.js"></script>
   </body>
 </html>
