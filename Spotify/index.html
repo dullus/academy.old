@@ -8,15 +8,12 @@
     <link href="./css/all.css" rel="stylesheet" />
   </head>
   <body>
-    <div class="mainScreen" id="first">
-      <div class="tbdInformationWrapper">
-        <!-- <div id="infomatingTextTop">TBD</div> -->
-      </div>
+    <div class="mainScreen" id="navigationWrapper">
       <div id="logoSection"><i class="fab fa-spotify"></i>Spotify</div>
-      <div id="discoverSection" class="leftContent">
+      <div id="discoverSection" class="navigationContent">
         <div class="section">Discover</div>
         <div class="songSection">
-          <div style="position: absolute; left: 2.5vw">
+          <div>
             <i class="fas fa-compass"></i>
           </div>
           <div>Explore</div>
@@ -26,10 +23,12 @@
           <div>Radio</div>
         </div>
       </div>
-      <div id="librarySecttion" class="leftContent">
+      <div id="librarySecttion" class="navigationContent">
         <div class="section">Library</div>
         <div class="songSection">
-          <i class="fas fa-music"></i>
+          <div>
+            <i class="fas fa-music"></i>
+          </div>
           <div>Songs</div>
         </div>
         <div class="songSection">
@@ -45,7 +44,7 @@
           <div>Favorites</div>
         </div>
       </div>
-      <div id="playlistsSection" class="leftContent">
+      <div id="playlistsSection" class="navigationContent">
         <div id="playlistStyleWrapper" class="section">
           <div>Playlists</div>
           <div id="plusIcon">
@@ -103,8 +102,9 @@
       <h1>Nirvana</h1>
       <div class="actionButtonsClass">
         <div id="actionButtonId">
-          <div class="actionButtons">
-            <i id="playIcon" class="fas fa-play"></i>Play
+          <div id="playButton" class="actionButtons">
+            <div><i class="fas fa-play"></i></div>
+            <div>Play</div>
           </div>
           <div class="actionButtons">Follow</div>
           <div id="dotsIcon" class="actionButtons">
@@ -164,7 +164,7 @@
               <div>Lithium</div>
             </div>
             <div class="songInformation">
-              <div id="explicit">EXPLICIT</div>
+              <div class="explicit">EXPLICIT</div>
               <div>4:00</div>
               <div>100,000,000</div>
             </div>
@@ -182,7 +182,7 @@
               <div>Heart-Shaped box</div>
             </div>
             <div class="songInformation">
-              <div id="explicit">EXPLICIT</div>
+              <div class="explicit">EXPLICIT</div>
               <div>4:00</div>
               <div>100,000,000</div>
             </div>
@@ -200,7 +200,7 @@
               <div>Pennyroyal Tea</div>
             </div>
             <div class="songInformation">
-              <div id="explicit">EXPLICIT</div>
+              <div class="explicit">EXPLICIT</div>
               <div>4:00</div>
               <div>100,000,000</div>
             </div>
@@ -218,7 +218,7 @@
               <div>Blew</div>
             </div>
             <div class="songInformation">
-              <div id="explicit">EXPLICIT</div>
+              <div class="explicit">EXPLICIT</div>
               <div>4:00</div>
               <div>100,000,000</div>
             </div>
@@ -261,10 +261,6 @@
         </div>
       </div>
     </div>
-    <footer>
-      <!-- <div class="tbdInformationWrapper">
-        <div id="infomatingTextBottom">TBD</div>
-      </div> -->
-    </footer>
+    <footer></footer>
   </body>
 </html>

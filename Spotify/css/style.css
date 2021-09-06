@@ -24,14 +24,6 @@ body {
   font-size: 1.5vh;
   display: flex;
 }
-/* page wrapper settings */
-#contentWrapper {
-  flex: 85%;
-  height: -webkit-fill-available;
-  padding-top: 25px;
-  display: flex;
-  flex-direction: column;
-}
 
 /* font color for whole page */
 .mainScreen {
@@ -40,25 +32,41 @@ body {
   color: white;
 }
 
+/* left navigation */
+#navigationWrapper {
+  flex: 15%;
+  padding-left: 1vw;
+  padding-top: 2.5vh;
+}
+
+/* mid page wrapper settings */
+#contentWrapper {
+  flex: 85%;
+  height: -webkit-fill-available;
+  padding-top: 2.5vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* spotify logo style */
+#logoSection {
+  display: flex;
+  align-items: center;
+  margin: 1.5vh;
+  height: 2vh;
+  color: var(--darker-gray);
+}
+
+/* left navigation content */
+.navigationContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
 .section {
   color: var(--darker-gray);
-  margin-left: 15px;
-}
-
-#first {
-  flex: 15%;
-  padding-left: 25px;
-  padding-top: 25px;
-}
-
-#bottomContent {
-  height: 100%;
-  display: flex;
-  flex-direction: row;
-}
-
-#songs {
-  flex: 80%;
+  margin-left: 1.5vw;
 }
 
 #discoverSection {
@@ -70,10 +78,41 @@ body {
   flex: 25%;
 }
 
-.leftContent {
+.songSection:hover,
+.actionButtons:hover {
+  background: var(--spotify-green);
+}
+
+.songSection {
+  border-radius: 2vw;
+  width: 70%;
+  padding: 1.5vh;
+  height: 10%;
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  align-items: center;
+  justify-content: center;
+}
+
+.songSection > :first-child,
+#playButton > :first-child {
+  flex: 40%;
+  text-align: center;
+}
+
+.songSection > :nth-child(2),
+#playButton > :nth-child(2) {
+  text-align: left;
+  flex: 60%;
+}
+
+#bottomContent {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+#songs {
+  flex: 80%;
 }
 
 #tabs {
@@ -90,12 +129,6 @@ body {
   align-items: center;
 }
 
-.songSection:hover,
-.actionButtons:hover {
-  background: var(--spotify-green);
-  /* border-radius: 100px; */
-}
-
 #songDate {
   line-height: 3vh;
   color: var(--spotify-green);
@@ -103,14 +136,6 @@ body {
 
 #latestSong {
   margin: 1.75vw 0px;
-}
-
-.albumImage {
-  margin: 1vw;
-  margin-left: 0;
-  width: 5vh;
-  height: 5vh;
-  border-radius: 0.5vw;
 }
 
 #checkedIcon {
@@ -142,6 +167,7 @@ h1 {
   flex-direction: column;
   justify-content: space-evenly;
 }
+
 #popular {
   flex: 85%;
 }
@@ -150,13 +176,8 @@ h1 {
   flex: 15%;
 }
 
-.leftTabs {
-  padding: 20px;
-}
-
 .songDetail {
   align-items: center;
-  /* text-align: right; */
   display: flex;
   justify-content: space-between;
 }
@@ -173,18 +194,12 @@ h1 {
   align-items: center;
 }
 
-/* .songDetail > * {
-  width: 15%;
-} */
-
-.songSection {
-  border-radius: 2vw;
-  width: fit-content;
-  padding: 15px 125px;
-  height: 10%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.albumImage {
+  margin: 1vw;
+  margin-left: 0;
+  width: 5vh;
+  height: 5vh;
+  border-radius: 0.5vw;
 }
 
 #actionButtonId {
@@ -235,7 +250,7 @@ h1 {
 #searchBar {
   display: flex;
   background: white;
-  padding: 5px 0px;
+  padding: 0.5vh 0px;
   border-radius: 3vw;
   width: 15vw;
   height: 2.5vh;
@@ -278,6 +293,7 @@ h1 {
 .tabItems:hover .dotUnderTabs {
   visibility: visible;
 }
+
 .tabItems:hover {
   color: var(--spotify-green);
 }
@@ -291,7 +307,7 @@ h1 {
 }
 
 #monthly > * {
-  margin: 15px;
+  margin: 1.5vh;
 }
 
 .playPauseButton {
@@ -300,7 +316,7 @@ h1 {
   visibility: hidden;
 }
 
-#explicit {
+.explicit {
   color: var(--darker-gray);
   display: flex;
   justify-content: center;
@@ -312,11 +328,10 @@ h1 {
   border-radius: 1vh;
 }
 
-.songDetail:hover .songInformation #explicit {
+.songDetail:hover .songInformation .explicit {
   color: var(--spotify-green);
   border-color: var(--spotify-green);
 }
-/* explicit hover todo */
 
 .songDetail:hover {
   color: var(--spotify-green);
@@ -342,7 +357,7 @@ h1 {
   border-radius: 3vh;
   width: 3vh;
   height: 3vh;
-  margin-right: 15px;
+  margin-right: 1vw;
 }
 
 .fa-play {
@@ -394,123 +409,12 @@ footer {
   margin: 0 auto;
 }
 
-.tbdInformationWrapper {
-  height: 2vh;
-}
-
 .fab {
   font-size: 2.5vh;
   margin-right: 0.2vw;
-}
-
-#logoSection {
-  display: flex;
-  align-items: center;
-  margin: 1.5vh;
-  height: 2vh;
-  color: var(--darker-gray);
 }
 
 #premiumButton {
   width: 6vw;
   margin-right: 0px;
 }
-
-.songSection > i {
-  position: absolute;
-  left: 2.5vw;
-}
-
-#playIcon {
-  position: absolute;
-  left: 17.5vw;
-}
-
-@media screen and (max-width: 400px), screen and (max-height: 900px) {
-  #first,
-  .mainScreen,
-  #fansAlsoLike,
-  #monthly,
-  .navigationArrows,
-  #accountDetails,
-  .songInformation {
-    display: none;
-  }
-
-  body {
-    padding: 2vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-      url("../assets/nirvana_background.jpg") no-repeat center center;
-    background-size: contain;
-    background-position: top;
-    height: 96%;
-  }
-
-  #actionButtonId {
-    display: flex;
-    justify-content: space-evenly;
-    width: 100%;
-  }
-
-  #searchBar,
-  #navigationSearchWrapper {
-    width: 95%;
-  }
-
-  .actionButtons,
-  #dotsIcon {
-    margin: 0px;
-    width: 25%;
-  }
-
-  .actionButtonsClass {
-    position: absolute;
-    bottom: 2vh;
-    width: 90%;
-  }
-
-  .tabItems {
-    margin: auto;
-  }
-
-  .popular {
-    height: 50vh;
-  }
-}
-
-@media screen and (max-width: 1100px), screen and (max-height: 1400px) {
-  #monthly,
-  .navigationArrows,
-  #premiumButton,
-  .songInformation,
-  #bellIcon {
-    display: none;
-  }
-
-  #navigationSearchWrapper {
-    width: 30vw;
-  }
-
-  #searchBar {
-    width: 25vw;
-  }
-}
-
-/* .tbdInformationWrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  background: repeating-linear-gradient(45deg, var(--darker-gray), black 10px);
-  color: tomato;
-}
-
-#infomatingText {
-  height: fit-content;
-  display: flex;
-  font-size: 10vh;
-}
-
-#first .tbdInformationWrapper {
-  height: 2vh;
-} */
