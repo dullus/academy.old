@@ -189,7 +189,6 @@ h1 {
 }
 
 .albumBox {
-  width: 30%;
   display: flex;
   align-items: center;
 }
@@ -263,14 +262,14 @@ h1 {
 }
 
 #searchIcon {
-  margin: 20px;
+  margin: 1.5vh;
 }
 
 #searchInput {
   border: none;
   height: 90%;
   width: 80%;
-  font-size: 26px;
+  font-size: 3vh;
 }
 
 ::placeholder {
@@ -417,4 +416,81 @@ footer {
 #premiumButton {
   width: 6vw;
   margin-right: 0px;
+}
+
+@media screen and (max-width: 420px) {
+  #navigationWrapper,
+  .songInformation,
+  #monthly,
+  .navigationArrows,
+  #accountDetails,
+  #fansAlsoLike {
+    display: none;
+  }
+
+  body {
+    background-size: contain;
+    background-position: top;
+  }
+
+  .actionButtonsClass {
+    height: 10%;
+    position: absolute;
+    bottom: 20px;
+    width: 90%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  #actionButtonId {
+    height: 90%;
+    width: 90%;
+    justify-content: space-evenly;
+  }
+
+  .actionButtons {
+    height: 70%;
+  }
+
+  #dotsIcon {
+    width: 30%;
+  }
+  .actionButtonsClass > :first-child > * {
+    width: 30%;
+  }
+
+  #navigationSearchWrapper {
+    width: 100%;
+  }
+
+  #searchBar {
+    width: 95%;
+    height: 100%;
+  }
+
+  #searchIcon {
+    font-size: 2.5vh;
+  }
+
+  ::placeholder {
+    font-size: 2.5vh;
+    font-weight: bold;
+  }
+
+  #artist {
+    font-size: 2vh;
+  }
+
+  #contentWrapper {
+    padding: 2.5vh;
+  }
+
+  #popular {
+    height: 45vh;
+  }
+
+  #tabs > * {
+    margin: 4vh 5vw;
+    margin-left: 0px;
+  }
 }
