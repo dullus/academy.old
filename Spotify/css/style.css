@@ -170,6 +170,7 @@ h1 {
 
 #popular {
   flex: 85%;
+  /* display: none; */
 }
 
 #fansAlsoLike {
