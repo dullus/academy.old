@@ -46,6 +46,16 @@ function getRandomInt(max) {
 }
 
 
+function millisToMinutesAndSeconds(millis) {
+    var minutes = Math.floor(millis / 60000);
+    var seconds = ((millis % 60000) / 1000).toFixed(0);
+    return (
+        seconds == 60 ?
+        (minutes+1) + ":00" :
+        minutes + ":" + (seconds < 10 ? "0" : "") + seconds
+      );
+    }
+
 function createTable(data) {
    
     const wrapper = document.createElement('article')
@@ -66,12 +76,12 @@ function createTable(data) {
     const songLength = document.createElement('p');
     songLength.setAttribute('class', 'tableItem')
     wrapper.appendChild(songLength)
-    songLength.innerHTML = data.durationInMs;
+    songLength.innerHTML = millisToMinutesAndSeconds(data.durationInMs);
 
     const listeners = document.createElement('p');
     listeners.setAttribute('id', 'tableItem--number')
     wrapper.appendChild(listeners)
-    listeners.innerHTML = data.listeners;
+    listeners.innerHTML = data.listeners.toLocaleString('en-US');
 
 
 }
