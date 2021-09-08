@@ -25,5 +25,24 @@ function loadData(data) {
 }
 
 
+fetch('https://613622df8700c50017ef5455.mockapi.io/api/v1/artist/')
+.then(response => response.json())
+.then(data => {
+    const randomArtistId = chooseRandomArtist(data);
+    fetch(`https://613622df8700c50017ef5455.mockapi.io/api/v1/artist/${randomArtistId}/popular`)
+    .then(response => response.json())
+    .then(dataPopular => {
+        console.log(dataPopular)
+       
+    })
+})
 
+
+function chooseRandomArtist(data) {
+    return getRandomInt(data.length);
+}
+
+function getRandomInt(max) {
+    return Math.ceil(Math.random() * max)
+}
 
