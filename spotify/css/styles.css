@@ -216,7 +216,7 @@ i {
   color: var(--color-malibu);
   padding-left: 1%;
 }
-h1 {
+#artistName {
   font-size: 40px;
   margin: 0.5% 0% 0% 0%;
 }
@@ -310,7 +310,7 @@ p {
 }
 
 .listImage {
-  width: 3.5%;
+  width: 4.5%;
   height: 3.5%;
   border-radius: 15%;
 }
@@ -388,7 +388,7 @@ p {
 #iconPause:focus {
   color: var(--color-whiteSmoke);
 }
-#date {
+#releaseDate {
   color: var(--color-darkPastelGreen);
 }
 #listPopular_headings--right {
