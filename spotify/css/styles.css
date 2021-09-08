@@ -254,6 +254,9 @@ h1 {
   justify-content: center;
 }
 
+.navig_wrapper--icon:hover {
+  color: var(--color-darkPastelGreen);
+}
 #left_navig--icon {
   padding: 0px;
   padding-top: 10px;
@@ -352,13 +355,17 @@ p {
   color: var(--color-darkPastelGreen);
 }
 
-#tableItem--number {
-  text-align: right;
+.listPopular_row:hover #iconPause {
+  display: block;
+  color: #fff;
 }
 
-#listPopular_row--whiteHover:hover,
-#listPopular_row--whiteHover:focus {
-  color: var(--color-whiteSmoke);
+.listPopular_row:hover #levt_navig--icon {
+  color: #01b949;
+}
+
+#tableItem--number {
+  text-align: right;
 }
 
 #listPopular_row--whiteHover {
