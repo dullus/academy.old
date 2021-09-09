@@ -57,8 +57,6 @@ function createTable(data) {
     playIcon.setAttribute('id', `playButton${data.id}`)
     leftPartWrapper.appendChild(playIcon)
 
-    createAudio(data);
-
     const songName = document.createElement('p');
     songName.setAttribute('class', 'songName')
     leftPartWrapper.appendChild(songName)
@@ -86,18 +84,53 @@ function millisToMinutesAndSeconds(millis) {
       );
 }
 
-function createAudio(data) {
-    const audio = new Audio(`music/song-${data.id}.mp3`)   
+const array = [];
+function addMusic(data) {
+    const audio = new Audio(`music/song-${data.id}.mp3`)  
+    
+    let a = {
+        audio: audio, 
+        paused: () => {
+            if (audio.paused === true) {
+                return true;
+            } else {
+                return false;
+            }
+        },
+        createdAt: data.createdAt,
+        name: data.name,
+        image: data.image,
+        listeners: data.listeners,
+        duration: data.durationInMs,
+        tag: data.tag,
+        id: data.id,
+        artistId: data.artistId,
+    }
+    console.log(a.paused);
+    array.push(a);
     const play = document.getElementById(`id${data.id}`)
-    play.addEventListener('click', () => audio.play())
-    console.log(data.id)
-    console.log(play)
+   
+    play.addEventListener('click', () => renderAudio(audio, data.id))
 }
+
+function renderAudio(audio, a) {
+    if (audio.paused === true) {
+    audio.play();
+    const x = document.getElementById(`playButton${a}`)
+    x.setAttribute('class', 'fas fa-pause')
+    } else {
+        audio.pause();
+        audio.src = audio.src;
+        const x = document.getElementById(`playButton${a}`)
+        x.setAttribute('class', 'fas fa-play')
+    }
+}
+
+console.log(array);
    
 
 export { loadData }
 export { chooseRandomArtist }
 export { createTable }
-export { createAudio }
+export { addMusic }
 
-//wououo

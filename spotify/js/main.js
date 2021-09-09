@@ -1,6 +1,6 @@
-import { createAudio, loadData } from "./functions.js"
-import { chooseRandomArtist } from "./functions.js"
-import { createTable } from "./functions.js"
+import { loadData, chooseRandomArtist, addMusic, createTable } from "./functions.js"
+
+
 
 fetch('https://613622df8700c50017ef5455.mockapi.io/api/v1/artist/1')
 .then(response => response.json())
@@ -17,7 +17,7 @@ fetch('https://613622df8700c50017ef5455.mockapi.io/api/v1/artist/')
     .then(response => response.json())
     .then(dataPopular => {
         dataPopular.forEach(createTable);
-        dataPopular.forEach(createAudio);
+        dataPopular.forEach(addMusic);
     })
 })
 
