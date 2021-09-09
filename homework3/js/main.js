@@ -18,6 +18,8 @@ function manipulateDOM() {
   readAPI()
   .then(data => {
     console.log(data);
+
+  
     
     const bandName = document.getElementById("band-name")
     bandName.innerHTML = ` ${data.name} ${data.lastName} `;
@@ -28,7 +30,7 @@ function manipulateDOM() {
     const latestReleaseImage = document.getElementById("latest_release_image");
     latestReleaseImage .setAttribute("src", `${data.music.latest.image}`); 
 
-  const albumReleaseDate = document.getElementById('latest_relase_date');
+  const albumReleaseDate = document.getElementById('latest_release_date');
   const x = new Date(Date.parse(data.music.latest.releaseDate)).toLocaleDateString('en-US', {month:'short'});
   const y = new Date(Date.parse(data.music.latest.releaseDate)).toLocaleDateString('en-US', {day: 'numeric'});
   const z = new Date(Date.parse(data.music.latest.releaseDate)).toLocaleDateString('en-US', {year: 'numeric'}); 

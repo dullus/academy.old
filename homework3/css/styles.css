@@ -157,17 +157,20 @@ a.left-menu-link:hover {
 #latest_release_image {
   height: 3.8rem;
 }
+#latest_release_name {
+  margin-bottom: 0.3rem;
+}
+#latest_release_date {
+  margin-top:0.3rem;
+}
 
-/* #latest_relase_date {
-  display: flex;
-  flex-direction: row;
-} */
 .material-icons {
   color: white;
 }
 .band_name img {
   width: 100%;
   height: auto;
+
 }
 
 .input-search {
