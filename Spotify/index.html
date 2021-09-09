@@ -8,6 +8,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
     />
+    <title>Spotify</title>
   </head>
   <body>
     <div class="main_box">
@@ -145,18 +146,18 @@
           <h3 class="section--latest_releases">Latest Releases</h3>
           <div class="latest_releases-container">
             <div class="latest_releases-container-img">
-              <img src="/Spotify/assets/The_Eminem_Show.jpg" alt="eminem1" />
+              <img id="latest_releases-container-img" alt="eminem1" />
             </div>
             <div>
-              <p>Eminem Show</p>
-              <p id="latest_releases_container_img-p">Feb 9, 2018</p>
+              <p id="latest_releases-container-p">Eminem Show</p>
+              <p id="latest_releases_container_date">Feb 9, 2018</p>
             </div>
           </div>
           <h3 class="section--latest_releases">Popular</h3>
           <section class="popular">
-            <div class="popular-item">
+            <div id="popular-item" class="popular-item">
               <div class="popular_item-left">
-                <img src="/Spotify/assets/Eminem2.jpg" alt="eminem1" />
+                <img src="assets/Eminem2.jpg" alt="eminem1" />
                 <i id="popular_item-pause" class="fas fa-pause"></i>
                 <p id="popular_item-name">The Marshal Mathews</p>
               </div>
@@ -167,10 +168,10 @@
               </div>
             </div>
           </section>
-          <section class="popular">
+          <!-- <section class="popular">
             <div class="popular-item">
               <div class="popular_item-left">
-                <img src="/Spotify/assets/EMINEM3.jpg" alt="eminem3" />
+                <img src="assets/Eminem2.jpg" alt="eminem3" />
                 <i id="popular_item-pause" class="fas fa-pause"></i>
                 <p id="popular_item-name">The Eminem Show</p>
               </div>
@@ -184,7 +185,7 @@
           <section class="popular">
             <div class="popular-item">
               <div class="popular_item-left">
-                <img src="/Spotify/assets/The_Eminem_Show.jpg" alt="eminem3" />
+                <img src="assets/The_Eminem_Show.jpg" alt="eminem3" />
                 <i id="popular_item-pause" class="fas fa-pause"></i>
                 <p id="popular_item-name">Eminem Show</p>
               </div>
@@ -198,7 +199,7 @@
           <section class="popular">
             <div class="popular-item">
               <div class="popular_item-left">
-                <img src="/Spotify/assets/eminem4.jpg" alt="eminem4" />
+                <img src="assets/eminem4.jpg" alt="eminem4" />
                 <i id="popular_item-pause" class="fas fa-pause"></i>
                 <p id="popular_item-name">The Slim Shady</p>
               </div>
@@ -208,7 +209,7 @@
                 <p id="popular__item_right-p-second">634,547,458</p>
               </div>
             </div>
-          </section>
+          </section> -->
         </section>
         <section class="fun_also-container">
           <div class="monthly_listners">
@@ -218,24 +219,25 @@
           <div class="fun_also_like">
             <h3 class="headlight">Funs Also like</h3>
             <div class="img-container">
-              <img src="/Spotify/assets/Tupac.jpg" alt="eminem_fun-1" />
+              <img src="assets/Tupac.jpg" alt="eminem_fun-1" />
               <p>Tupac</p>
             </div>
             <div class="img-container">
-              <img src="/Spotify/assets/Jay-z.jpg" alt="Jay-Z" />
+              <img src="assets/Jay-z.jpg" alt="Jay-Z" />
               <p>Jay-Z</p>
             </div>
             <div class="img-container">
-              <img src="/Spotify/assets/Eminem.jpg" alt="eminem" />
+              <img src="assets/Eminem.jpg" alt="eminem" />
               <p>Shady</p>
             </div>
             <div class="img-container">
-              <img src="/Spotify/assets/50cent.jpg" alt="50cent" />
+              <img src="assets/50cent.jpg" alt="50cent" />
               <p>50Cent</p>
             </div>
           </div>
         </section>
       </main>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
