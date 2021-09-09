@@ -1,0 +1,82 @@
+
+const url = 'https://613622df8700c50017ef5455.mockapi.io/api/v1/artist'
+
+
+fetch(url)
+  .then(response => response.json())
+  .then(function (data)  {
+      
+        randomArtistInfo(data[getRandomInt(data.length)]);
+        popularSongs(data);
+        
+
+  });
+
+
+
+function createTodoTitle(title) {
+    const titleElement = document.createElement('p')
+    titleElement.innerHTML = title
+
+    return titleElement;
+}
+
+function popularSongs(data){
+    fetch(`${url}/${getRandomInt(data.length)+1}/popular`)
+        .then(response => response.json())
+        .then(function (data)  {
+            console.log(data);
+            data.forEach(element =>{
+                inputSongs(element)
+                
+            })
+            
+
+            
+    });
+}
+ 
+function inputSongs (element){
+    console.log(element)
+    const elementUl = document.getElementById('main-list-artist-popular-songs');
+        elementUl.style.overflowX = 'hidden';
+        elementUl.style.overflowY = 'scroll';
+        let elementLi = document.createElement('div');
+        elementLi.setAttribute( 'class', "artist-popular-song")
+        console.log(elementLi)
+        
+        
+        let subElementLi = document.createElement('img');
+        subElementLi.setAttribute('src',element.image);
+        subElementLi.setAttribute('alt',element.name);
+        
+        elementLi.appendChild(subElementLi);
+        elementUl.appendChild(elementLi);    
+        
+    
+}
+
+function randomArtistInfo (data){
+    let element = document.getElementById('artist-name');
+    element.innerText = data.name + ' ' +data.lastName;
+    
+    element = document.querySelector('.main-artist-latest-release > div > img');
+    element.src="http://placeimg.com/640/480";
+    element.alt="songImage";
+    element.width="40px";
+    element.height="40px";
+    
+    document.querySelector('.main-artist-latest-release  div > p:nth-child(1)').innerHTML = data.music.latest.name;
+    // const formatedDay = format(new Date(data.music.latest.releaseDate.str.substring(0,4),))
+    document.querySelector('.main-artist-latest-release  div > p:nth-child(2)').innerHTML =  data.music.latest.releaseDate.substring(8,10)+'.'+data.music.latest.releaseDate.substring(5,7)+'.'+data.music.latest.releaseDate.substring(0,4) ;
+
+}
+
+
+
+
+
+
+function getRandomInt(max) {
+    return Math.floor(Math.random() * max);
+  }
