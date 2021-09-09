@@ -162,11 +162,33 @@ li {
   font-weight: 500;
 }
 
+.latest_release {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1%;
+}
+
+.latest_body {
+  display: flex;
+  flex-direction: row;
+  padding-top: 1%;
+}
+
+.song_date {
+  display: flex;
+  flex-direction: column;
+  padding-left: 2%;
+}
+
+#latest_img {
+  height: 39px;
+}
+
 .titles {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-top: 10%;
+  margin-top: 8%;
   width: 100%;
 }
 .overview_artist {
