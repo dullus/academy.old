@@ -310,44 +310,74 @@ p {
 }
 
 .listImage {
-  width: 4.5%;
-  height: 3.5%;
-  border-radius: 15%;
+  width: auto;
+  height: 100%;
 }
-#listImage--margin {
-  margin-right: 3%;
+#listLatestRelease {
+  margin-top: 30px;
+}
+#listLatestRelease_image {
+  width: auto;
+  height: 100%;
+}
+#listLatestRelease_albumInfoWrapper {
+  margin-left: 18px;
 }
 
 .listImage_artist {
-  width: 3.5%;
-  height: 3.5%;
+  width: 35px;
+  height: auto;
   border-radius: 50%;
-  margin-right: 1%;
-  margin-left: 6%;
 }
-#listLatestRelease {
-  margin-top: 3.5%;
-}
-#listLatestRelease_row {
+#lists {
   display: flex;
-  align-items: center;
-  margin-top: 2%;
 }
 
-#listPopular_headings {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 2%;
+.list_heading {
+  margin-bottom: 12px;
 }
+
 #listPopular {
-  margin-top: 2%;
+  margin-top: 25px;
   margin-right: 3%;
+  width: 85%;
+  height: 280px;
+  overflow: overlay;
 }
+.list_imageWrapper {
+  width: 37px;
+  height: 37px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 15%;
+}
+#listFansAlsoLike {
+  width: 15%;
+  margin-top: 25px;
+}
+
 .listPopular_row {
   display: flex;
-  margin-bottom: 2%;
+  height: 60px;
+  margin-bottom: 5px;
   align-items: center;
   justify-content: space-between;
+  padding-right: 50px;
+}
+
+#listLatestRelease_row {
+  display: flex;
+  height: 60px;
+  margin-bottom: 5px;
+  align-items: center;
+}
+
+.listFansAlsoLike_row {
+  display: flex;
+  justify-content: space-between;
+  height: 60px;
+  margin-bottom: 5px;
+  align-items: center;
 }
 
 .listPopular_row:hover,
@@ -368,8 +398,8 @@ p {
   text-align: right;
 }
 
-#listPopular_row--whiteHover {
-  width: 100px;
+.listFansAlsoLike_row-artistName {
+  width: 70%;
 }
 
 .listPopular_row_leftWrapper {

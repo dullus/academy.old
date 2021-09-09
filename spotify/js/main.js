@@ -11,7 +11,7 @@ function loadData(data) {
     const heading = document.getElementById('artistName');
     heading.innerHTML = data.name + " " + data.lastName;
 
-    const albumImage = document.getElementById('listImage--margin')
+    const albumImage = document.getElementById('listLatestRelease_image')
     albumImage.setAttribute('src', data.music.latest.image)
 
     const albumName = document.getElementById('albumName');
@@ -63,10 +63,15 @@ function createTable(data) {
     x.appendChild(wrapper)
     wrapper.setAttribute('class', 'listPopular_row')
 
+    const imageWrapper = document.createElement('div')
+    imageWrapper.setAttribute('class', 'list_imageWrapper')
+    wrapper.appendChild(imageWrapper)
+
+
     const albumImage = document.createElement('img');
     albumImage.setAttribute('src', data.image)
     albumImage.setAttribute('class', 'listImage')
-    wrapper.appendChild(albumImage)
+    imageWrapper.appendChild(albumImage)
 
     const songName = document.createElement('p');
     songName.setAttribute('class', 'songName')
@@ -87,5 +92,3 @@ function createTable(data) {
 }
 
 const y = document.getElementById('listPopular');
-y.style.height = '250px'
-y.style.overflow = 'overlay'
