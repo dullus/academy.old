@@ -366,6 +366,9 @@
 #dateOfLR {
   color: var(--color-darkerGreen);
 }
+.songList {
+  width: 85%;
+}
 #songListTitle {
   display: flex;
   flex-direction: row;
