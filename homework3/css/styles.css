@@ -122,7 +122,7 @@ a.left-menu-link:hover {
   color: white;
   font-family: Arial, Helvetica, sans-serif;
   grid-gap: 0.2rem;
-  grid-template-columns: [col-start]repeat(12, 5vw) [col-end];
+  grid-template-columns: repeat(12, 5vw);
   grid-template-rows: repeat(14, 6rem);
   align-items: center;
   grid-template-areas:
@@ -133,14 +133,35 @@ a.left-menu-link:hover {
     "band_name band_name band_name band_name band_name band_name . . . . . .  "
     "play play play follow follow follow three-dots three-dots . . monthly_listeners monthly_listeners"
     "overview overview fans_also_like fans_also_like  about about  concerts concerts . . . . "
-    "latest_release latest_release . . . . . . . . . ."
-    "movie movie . . . . . . . . . ."
+    "latest_release latest_release latest_release . . . . . . . . ."
+    "latest_release_content latest_release_content  . . . . . . . . . ."
     "popular popular . . . . . . . . fans_also_like_2 fans_also_like_2"
     "image1  play-pause1 song1 . . . . explicit1 length1 view_count1 also_star1 also_star1"
     "image2 play-pause2 song2 . . . . explicit2 length2 view_count2 also_star2 also_star2"
     "image3  play-pause3 song3 . . . . explicit3 length3 view_count3 also_star3 also_star3"
     "image4  play-pause4 song4 . . . . explicit4 length4 view_count4 also_star4 also_star4";
 }
+
+.latest_release_content {
+  display: flex;
+  align-items: center;
+  grid-area: latest_release_content;
+}
+.latest_release_name_and_date {
+  display: flex;
+  flex-direction: column;
+  margin:1.5rem;
+  justify-content:center:
+}
+
+#latest_release_image {
+  height: 3.8rem;
+}
+
+/* #latest_relase_date {
+  display: flex;
+  flex-direction: row;
+} */
 .material-icons {
   color: white;
 }
@@ -148,6 +169,7 @@ a.left-menu-link:hover {
   width: 100%;
   height: auto;
 }
+
 .input-search {
   border-radius: 2rem;
 }
@@ -310,7 +332,11 @@ a.left-menu-link:hover {
 .latest_release {
   background-color: var(--color-blackish);
   color: white;
+  margin-bottom: 3rem;
   grid-area: latest_release;
+}
+#latest-release {
+  display: flex;
 }
 .overview {
   background-color: var(--color-blackish);
