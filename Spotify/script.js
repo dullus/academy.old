@@ -4,9 +4,10 @@ const headerName = document.getElementsByClassName("section__main-headline")[0];
 const latestImg = document.getElementById("latest_releases-container-img");
 const latestName = document.getElementById("latest_releases-container-p");
 const latestDate = document.getElementById("latest_releases_container_date");
-const relativeMusicPath = "./assets/music/";
 const popularContainer = document.getElementById("popular-container");
+const relativeMusicPath = "./assets/music/";
 
+const popularSongsOfRandomArtist = [];
 const artistInfno = () => {
   fetch(`https://613622df8700c50017ef5455.mockapi.io/api/v1/artist/1`)
     .then((res) => res.json())
@@ -26,14 +27,13 @@ const artistInfno = () => {
 function getRandomArtist(max) {
   min = 1;
   max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min) + min);
+  return Math.floor(Math.random() * (max - min));
 }
 const artistData = fetch(
   `https://613622df8700c50017ef5455.mockapi.io/api/v1/artist/`
 )
   .then((res) => res.json())
   .then((data) => {
-    // console.log(data);
     const randomArtist = data[getRandomArtist(data.length)];
     return fetch(
       `https://613622df8700c50017ef5455.mockapi.io/api/v1/artist/${randomArtist.id}`
@@ -41,18 +41,36 @@ const artistData = fetch(
   })
   .then((response) => response.json())
   .then((randomArtist) => {
-    // console.log(randomAuthor);
+    console.log(randomArtist.id);
     headerName.textContent = fullname(randomArtist.name, randomArtist.lastName);
     latestImg.src = randomArtist.music.latest.image;
     latestName.textContent = randomArtist.music.latest.name;
     latestDate.textContent = dateFormat(randomArtist.music.latest.releaseDate);
     return fetch(
-      `https://613622df8700c50017ef5455.mockapi.io/api/v1/artist/${randomArtist.id}`
+      `https://613622df8700c50017ef5455.mockapi.io/api/v1/artist/${randomArtist.id}/popular`
     );
   })
   .then((res) => res.json())
   .then((data) => {
-    console.log(data);
+    popularContainer.innerHTML = data
+      .map((song) => {
+        return `<div id="popular-item" class="popular-item">
+              <div class="popular_item-left">
+                <img src="${song.image}" alt="songX" />
+                <i id="popular_item-pause" class="fas fa-pause"></i>
+                <p id="popular_item-name">${song.name}</p>
+              </div>
+              <div class="popular_item-right">
+                <button id="popular_item_right-button">Explicit</button>
+                <p id="popular__item_right-p">${song.durationInMs}</p>
+                <p id="popular__item_right-p-second">${song.listeners}</p>
+              </div>
+            </div>`;
+      })
+      .join("");
+  })
+  .catch((err) => {
+    console.log(err);
   });
 
 const fullname = (name, surname) => {
@@ -66,22 +84,3 @@ const dateFormat = (date) => {
   const year = myDate.getFullYear();
   return month + " " + day + " " + year;
 };
-
-//Task part[2]
-// Second section: update popular with songs
-
-//Uloha 3
-// const artistData2 = () => {
-//   fetch(`https://613622df8700c50017ef5455.mockapi.io/api/v1/artist/1/popular`)
-//     .then((res) => res.json())
-//     .then((data) => {
-//       const dataWithPaths = data.map((elm) => {
-//         return {
-//           ...elm,
-//           path: `${relativeMusicPath}song-${elm.id}.mp3`,
-//         };
-//       });
-//       // console.log(dataWithPaths);
-//     });
-// };
-// artistData2();

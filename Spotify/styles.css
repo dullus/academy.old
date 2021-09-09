@@ -199,6 +199,8 @@
   flex-direction: column;
   margin-left: 25px;
   position: relative;
+  height: 90vh;
+  width: 73%;
 }
 .section-artist {
   display: flex;
@@ -311,11 +313,20 @@
 .popular {
   margin-right: 30%;
   margin-bottom: 15px;
+  overflow: scroll;
+  overflow-x: hidden;
+  height: auto;
+  width: 85%;
+}
+.popular::-webkit-scrollbar {
+  display: none;
 }
 .popular-item {
   display: flex;
   justify-content: space-between;
   transition: 0.3s;
+  width: 80%;
+  height: 24%;
 }
 .popular-item:hover {
   color: var(--color-darkPastelGreen);
@@ -348,6 +359,10 @@
   transition: 0.3s;
   color: white;
 }
+.popular_item-left p,
+.popular_item-right p {
+  width: 2rem;
+}
 .popular_item-left p {
   padding-left: 40px;
 }
@@ -370,7 +385,7 @@
 }
 .popular_item-right p {
   color: white;
-  margin-right: 18%;
+  margin-right: 28%;
   transition: 0.4s;
 }
 .popular_item-right:hover #popular_item_right-button {
