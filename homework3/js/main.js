@@ -28,7 +28,7 @@ function manipulateDOM() {
     const latestReleaseImage = document.getElementById("latest_release_image");
     latestReleaseImage .setAttribute("src", `${data.music.latest.image}`); 
 
-  const albumReleaseDate = document.getElementById('latest_relase_date');
+  const albumReleaseDate = document.getElementById('latest_release_date');
   const x = new Date(Date.parse(data.music.latest.releaseDate)).toLocaleDateString('en-US', {month:'short'});
   const y = new Date(Date.parse(data.music.latest.releaseDate)).toLocaleDateString('en-US', {day: 'numeric'});
   const z = new Date(Date.parse(data.music.latest.releaseDate)).toLocaleDateString('en-US', {year: 'numeric'}); 
@@ -40,21 +40,6 @@ function manipulateDOM() {
 }
 
 manipulateDOM();
-
-function manipulateDate() {
-  const albumReleaseDate = document.getElementById('latest_relase_date');
-  const x = new Date(Date.parse(data.music.latest.releaseDate)).toLocaleDateString('en-US', {month:'short'});
-
-}
-
-
-// const albumReleaseDate = document.getElementById('date')
-//     const x = new Date(Date.parse(data.music.latest.releaseDate)).toLocaleDateString('en-US', {month:'short'});
-//     const y = new Date(Date.parse(data.music.latest.releaseDate)).toLocaleDateString('en-US', {day: 'numeric'});
-//     const z = new Date(Date.parse(data.music.latest.releaseDate)).toLocaleDateString('en-US', {year: 'numeric'}); 
-    
-//     albumReleaseDate.innerHTML = x + " " + y + ", " + z;
-
 
 
 

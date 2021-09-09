@@ -134,7 +134,7 @@ a.left-menu-link:hover {
     "play play play follow follow follow three-dots three-dots . . monthly_listeners monthly_listeners"
     "overview overview fans_also_like fans_also_like  about about  concerts concerts . . . . "
     "latest_release latest_release latest_release . . . . . . . . ."
-    "latest_release_content latest_release_content  . . . . . . . . . ."
+    "latest_release_content latest_release_content  latest_release_content latest_release_content . . . . . . . ."
     "popular popular . . . . . . . . fans_also_like_2 fans_also_like_2"
     "image1  play-pause1 song1 . . . . explicit1 length1 view_count1 also_star1 also_star1"
     "image2 play-pause2 song2 . . . . explicit2 length2 view_count2 also_star2 also_star2"
@@ -144,24 +144,27 @@ a.left-menu-link:hover {
 
 .latest_release_content {
   display: flex;
+  flex-direction: row;
   align-items: center;
   grid-area: latest_release_content;
 }
 .latest_release_name_and_date {
   display: flex;
   flex-direction: column;
-  margin:1.5rem;
-  justify-content:center:
+  margin: 1.5rem;
 }
 
 #latest_release_image {
   height: 3.8rem;
 }
+#latest_release_name {
+  margin-bottom: 0.3rem;
+}
 
-/* #latest_relase_date {
-  display: flex;
-  flex-direction: row;
-} */
+#latest_release_date {
+  margin-top: 0.3rem;
+}
+
 .material-icons {
   color: white;
 }
