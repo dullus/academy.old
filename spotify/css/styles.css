@@ -390,7 +390,7 @@ p {
   color: #fff;
 }
 
-.listPopular_row:hover #iconPlay {
+.listPopular_row:hover .playButton {
   display: block;
   color: #fff;
 }
@@ -411,6 +411,11 @@ p {
   display: flex;
 }
 
+.listPopular_row_wrapper--left {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .listPopular_row_rightWrapper {
   display: flex;
 }
@@ -419,7 +424,7 @@ p {
   color: transparent;
 }
 
-#iconPlay {
+.playButton {
   color: transparent;
 }
 
