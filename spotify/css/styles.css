@@ -390,6 +390,11 @@ p {
   color: #fff;
 }
 
+.listPopular_row:hover #iconPlay {
+  display: block;
+  color: #fff;
+}
+
 .listPopular_row:hover #levt_navig--icon {
   color: #01b949;
 }
@@ -411,6 +416,10 @@ p {
 }
 #iconPause {
   width: 2%;
+  color: transparent;
+}
+
+#iconPlay {
   color: transparent;
 }
 

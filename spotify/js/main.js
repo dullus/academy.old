@@ -73,6 +73,19 @@ function createTable(data) {
     albumImage.setAttribute('class', 'listImage')
     imageWrapper.appendChild(albumImage)
 
+    const playIcon = document.createElement('i');
+    playIcon.setAttribute('class', 'fas fa-play')
+    playIcon.setAttribute('id', 'iconPlay')
+    wrapper.appendChild(playIcon)
+
+    
+    const songId = data.id;
+    console.log(songId);
+    const audio = new Audio(`music/song-${songId}.mp3`)   
+    playIcon.addEventListener('click', () => audio.play())
+
+
+
     const songName = document.createElement('p');
     songName.setAttribute('class', 'songName')
     wrapper.appendChild(songName)
@@ -88,7 +101,10 @@ function createTable(data) {
     wrapper.appendChild(listeners)
     listeners.innerHTML = data.listeners.toLocaleString('en-US');
 
-
+    
 }
 
-const y = document.getElementById('listPopular');
+
+
+
+
