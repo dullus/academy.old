@@ -366,8 +366,17 @@
 #dateOfLR {
   color: var(--color-darkerGreen);
 }
+.songsSection {
+  display: flex;
+  flex-direction: row;
+}
 .songList {
-  width: 85%;
+  width: 75%;
+}
+.fansAlsoLikeSection {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
 }
 #songListTitle {
   display: flex;
@@ -395,7 +404,7 @@
 #song1Text {
   margin-left: 50px;
   padding: 8px;
-  width: 32%;
+  width: 40%;
 }
 #song2 {
   display: flex;
@@ -414,7 +423,7 @@
 #song2Text {
   margin-left: 50px;
   padding: 8px;
-  width: 32%;
+  width: 40%;
 }
 #song3 {
   display: flex;
@@ -433,7 +442,7 @@
 #song3Text {
   margin-left: 50px;
   padding: 8px;
-  width: 32%;
+  width: 40%;
 }
 #song4 {
   display: flex;
@@ -452,7 +461,7 @@
 #song4Text {
   margin-left: 50px;
   padding: 8px;
-  width: 32%;
+  width: 40%;
 }
 .songInfo {
   border-radius: 30px;
@@ -462,27 +471,33 @@
   font-size: 0.8rem;
 }
 .songLength {
-  width: 10%;
+  width: 15%;
 }
 .songListens {
-  width: 10%;
+  width: 15%;
 }
 .bandPicRightSide {
   display: flex;
   flex-direction: row;
-  width: 20%;
-  margin-left: 60px;
+  width: 100%;
+  padding: 10px;
+  height: 10%;
 }
 .bandPicRightSide:hover {
   color: var(--color-darkerWhite);
+  cursor: pointer;
+  color: var(--color-darkerGreen);
 }
 .bandPic {
-  height: 60%;
-  width: 15%;
+  height: 90%;
+  width: 10%;
   border-radius: 30px;
 }
 .bandPicName {
-  margin-left: 20px;
+  margin-left: 30px;
+  margin-bottom: 20px;
+  width: 60%;
+  padding: 10px;
 }
 @media only screen and (max-width: 1200px) {
   .songInfo {
