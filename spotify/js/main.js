@@ -41,16 +41,36 @@ function inputSongs (element){
     const elementUl = document.getElementById('main-list-artist-popular-songs');
         elementUl.style.overflowX = 'hidden';
         elementUl.style.overflowY = 'scroll';
-        let elementLi = document.createElement('div');
+
+        let elementLi = document.createElement('li');
         elementLi.setAttribute( 'class', "artist-popular-song")
         console.log(elementLi)
-        
         
         let subElementLi = document.createElement('img');
         subElementLi.setAttribute('src',element.image);
         subElementLi.setAttribute('alt',element.name);
-        
         elementLi.appendChild(subElementLi);
+
+        subElementLi = document.createElement('div');
+        subElementLi.setAttribute('class','pause-play-button');
+        elementLi.appendChild(subElementLi);
+
+        let subSubElementLi = document.createElement('i');
+        subSubElementLi.setAttribute('class','fas fa-play');
+        subElementLi.appendChild(subSubElementLi);
+        subSubElementLi = document.createElement('i');
+        subSubElementLi.setAttribute('class','fas fa-pause');
+        subElementLi.appendChild(subSubElementLi);
+        elementLi.appendChild(subElementLi);
+
+        subElementLi = document.createElement('p');
+        subElementLi.setAttribute('class', 'art-pop-song-name');
+        subElementLi.innerHTML = element.name;
+        elementLi.appendChild(subElementLi);
+
+
+
+        
         elementUl.appendChild(elementLi);    
         
     
