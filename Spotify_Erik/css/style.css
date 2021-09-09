@@ -130,6 +130,10 @@ li {
   justify-content: unset;
 }
 
+/* #name {
+  padding-right: 1%;
+} */
+
 .artist_content {
   display: flex;
   flex-direction: row;
