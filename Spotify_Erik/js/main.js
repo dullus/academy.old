@@ -6,7 +6,6 @@ fetch('https://613622df8700c50017ef5455.mockapi.io/api/v1/artist/1')
  
 function loadData(data) {
     
- 
     const heading = document.getElementById('name');
     heading.innerHTML = data.name + " " + data.lastName;
  
