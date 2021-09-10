@@ -607,12 +607,12 @@ div.main-artist-latest-release {
   flex-direction: column;
   width: 100%;
   position: relative;
-  height: 15%;
+  height: 14%;
 }
 div.main-artist-latest-release h2 {
   font-size: 16px;
   font-weight: bold;
-  margin: 1% 0 1% 0;
+  margin: 0 0 1% 0;
 }
 
 div.main-artist-latest-release > div {
@@ -676,10 +676,19 @@ div.main-artist-latest-release:hover p:nth-child(2) {
   margin: 0;
   padding: 0;
 }
-#main-songs-wraper div#songs-wrapper ul {
+#main-songs-wraper div#songs-wrapper ul#main-list-artist-popular-songs {
   list-style-type: none;
-  margin: 0 0;
+  margin: 0 0 3% 0;
   padding: 0;
+  width: 80%;
+  font-size: 16px;
+  color: var(--color-fontWhite);
+}
+#main-songs-wraper div#songs-wrapper ul#main-right-list-artist {
+  list-style-type: none;
+  margin: 0 0 3% 0;
+  padding: 0;
+  width: 77%;
   font-size: 16px;
   color: var(--color-fontWhite);
 }
@@ -750,7 +759,11 @@ li.artist-popular-song {
 #main-songs-wraper ul li.artist-popular-song:hover {
   color: var(--color-hoverLightGreen);
 }
-#main-songs-wraper ul li.artist-popular-song:hover i.fa-pause {
+#main-songs-wraper ul li.artist-popular-song:hover .explicit {
+  color: var(--color-hoverLightGreen);
+  border: 2px solid var(--color-hoverLightGreen);
+}
+#main-songs-wraper ul li.artist-popular-song:hover i.fa-play {
   color: var(--color-fontWhite);
   display: flex;
 }
@@ -836,7 +849,7 @@ ul#main-right-list-artists {
   height: 100%;
   justify-content: right;
 
-  margin: 0 0 3% 5%;
+  margin: 0 0 3% 0;
 }
 ul#main-right-list-artists li.right-list-artist {
   display: flex;

@@ -68,12 +68,37 @@ function inputSongs (element){
         subElementLi.innerHTML = element.name;
         elementLi.appendChild(subElementLi);
 
-
+        subElementLi = document.createElement('div');
+        subElementLi.setAttribute('class','right-wraper-of-songs');
+              
+        subSubElementLi = document.createElement('div');
+        subSubElementLi.setAttribute('class','explicit');
+        subSubElementLi.innerHTML = 'EXPLICIT';
+        subElementLi.appendChild(subSubElementLi);
+       
+        subSubElementLi = document.createElement('p');
+        subSubElementLi.setAttribute('class','art-pop-song-time');
+        subSubElementLi.innerHTML = timeFormating(element.durationInMs);
+        subElementLi.appendChild(subSubElementLi);
+       
+        subSubElementLi = document.createElement('div');
+        subSubElementLi.setAttribute('class','art-pop-song-views');
+        subSubElementLi.innerHTML = element.listeners;
+        subElementLi.appendChild(subSubElementLi);
 
         
-        elementUl.appendChild(elementLi);    
-        
-    
+        elementLi.appendChild(subElementLi);        
+        elementUl.appendChild(elementLi);        
+}
+
+function timeFormating(ms) {
+    var minutes = Math.floor(ms / 60000);
+    var seconds = ((ms % 60000) / 1000).toFixed(0);
+    return (
+        seconds == 60 ?
+        (minutes+1) + ":00" :
+        minutes + ":" + (seconds < 10 ? "0" : "") + seconds
+      );
 }
 
 function randomArtistInfo (data){
