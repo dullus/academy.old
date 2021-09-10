@@ -2,23 +2,22 @@ function GenerateLeftTable() {
   const url = "https://613622df8700c50017ef5455.mockapi.io/api/v1/artist/";
   fetch(url)
     .then((res) => res.json())
-    .then((customers) => {
-      index: String;
+    .then((data) => {
+      index: Number;
       index = (Math.floor(Math.random() * 2) + 1).toString();
-      console.log(index.toString());
 
-      const person = customers[index].name + " " + customers[index].lastName;
-      const image = customers[index].music.latest.image;
-      const latest = customers[index].music.latest.name;
+      const person = data[index].name + " " + data[index].lastName;
+      const image = data[index].music.latest.image;
+      const latest = data[index].music.latest.name;
 
       const month = new Date(
-        Date.parse(customers[index].music.latest.releaseDate)
+        Date.parse(data[index].music.latest.releaseDate)
       ).toLocaleDateString("en-US", { month: "short" });
       const day = new Date(
-        Date.parse(customers[index].music.latest.releaseDate)
+        Date.parse(data[index].music.latest.releaseDate)
       ).toLocaleDateString("en-US", { day: "numeric" });
       const year = new Date(
-        Date.parse(customers[index].music.latest.releaseDate)
+        Date.parse(data[index].music.latest.releaseDate)
       ).toLocaleDateString("en-US", { year: "numeric" });
 
       document.getElementById("pantherYear").innerHTML =
@@ -28,22 +27,20 @@ function GenerateLeftTable() {
       document.getElementById("rightBigTittle").innerHTML = person;
     });
 
-  const columnCount = 4;
-
   fetch(url)
     .then((res) => res.json())
-    .then((customers2) => {
-      var table = document.createElement("table");
-      var div = document.getElementById("tablecontainer");
+    .then((data) => {
+      const table = document.createElement("table");
+      const div = document.getElementById("tablecontainer");
 
-      for (var u = 0; u < 3; u++) {
-        const image = customers2[u].music.latest.image;
-        const latest = customers2[u].music.latest.name;
-        var row = table.insertRow(u);
-        var cell1 = row.insertCell(0);
-        var cell2 = row.insertCell(1);
-        var cell3 = row.insertCell(2);
-        var cell4 = row.insertCell(3);
+      for (u = 0; u < 3; u++) {
+        const image = data[u].music.latest.image;
+        const latest = data[u].music.latest.name;
+        const row = table.insertRow(u);
+        const cell1 = row.insertCell(0);
+        const cell2 = row.insertCell(1);
+        const cell3 = row.insertCell(2);
+        const cell4 = row.insertCell(3);
 
         cell1.setAttribute("background", image);
         cell2.innerHTML = latest;
@@ -61,11 +58,14 @@ function GenerateRightTable() {
   const url = `https://613622df8700c50017ef5455.mockapi.io/api/v1/artist/${index}/popular`;
   fetch(url)
     .then((res) => res.json())
-    .then((customers) => {
-      const image = customers[index].image;
-      const name = customers[index].name;
-      let time = timeFormating(customers[index].durationInMs);
-      const count = customers[index].count;
+    .then((data) => {
+      const image = data[index].image;
+      const name = data[index].name;
+      let time = timeFormating(data[index].durationInMs);
+      const count = data[index].listeners;
+
+      console.log(data);
+
       var table = document.createElement("table");
       table.setAttribute("class", "rightTable");
       var div = document.getElementById("listtablecontainer");
