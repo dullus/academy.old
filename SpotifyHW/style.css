@@ -219,8 +219,6 @@
   margin-top: 20px;
   width: 100%;
 }
-#artist {
-}
 #veriCheck {
   height: 11px;
   width: 11px;
@@ -384,12 +382,6 @@
   justify-content: space-between;
   width: 98%;
 }
-#song1 {
-  display: flex;
-  flex-direction: row;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
 #fansAlsoLikeRight {
   margin-right: 150px;
 }
@@ -397,54 +389,20 @@
   height: 4%;
   width: 4%;
 }
-#song1:hover {
-  color: var(--color-darkerGreen);
-  cursor: pointer;
-}
-#song1Text {
+.songText {
   margin-left: 50px;
   padding: 8px;
   width: 40%;
-}
-#song2 {
-  display: flex;
-  flex-direction: row;
-  margin-top: 20px;
-  margin-bottom: 20px;
 }
 #ajfa {
   width: 4%;
   height: 4%;
 }
-#song2:hover {
-  color: var(--color-darkerGreen);
-  cursor: pointer;
-}
-#song2Text {
-  margin-left: 50px;
-  padding: 8px;
-  width: 40%;
-}
-#song3 {
-  display: flex;
-  flex-direction: row;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
 #tba {
   width: 4%;
   height: 4%;
 }
-#song3:hover {
-  color: var(--color-darkerGreen);
-  cursor: pointer;
-}
-#song3Text {
-  margin-left: 50px;
-  padding: 8px;
-  width: 40%;
-}
-#song4 {
+.song {
   display: flex;
   flex-direction: row;
   margin-top: 20px;
@@ -454,14 +412,9 @@
   width: 4%;
   height: 4%;
 }
-#song4:hover {
+.song:hover {
   color: var(--color-darkerGreen);
   cursor: pointer;
-}
-#song4Text {
-  margin-left: 50px;
-  padding: 8px;
-  width: 40%;
 }
 .songInfo {
   border-radius: 30px;
@@ -475,6 +428,9 @@
 }
 .songListens {
   width: 15%;
+}
+.scrollSong {
+  overflow: auto;
 }
 .bandPicRightSide {
   display: flex;
