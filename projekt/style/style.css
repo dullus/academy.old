@@ -114,19 +114,38 @@ span {
 }
 
 #latest {
-  padding-top: 80px;
+  padding-top: 60px;
   color: white;
   padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 #imgpanther {
-  padding-top: 5px;
   color: white;
+  height: 20px;
+}
+
+#imagePantherImage {
+  color: white;
+  height: 30px;
 }
 
 #panther {
   padding-left: 20px;
   color: white;
+}
+
+#pantherName {
+  color: white;
+  padding-top: 10px;
+  padding-right: 20px;
+}
+
+#pantherYear {
+  color: white;
+  padding-top: 10px;
+  padding-right: 20px;
 }
 
 .icon-bar {
@@ -138,9 +157,6 @@ span {
   padding-left: 5px;
   padding-right: 5px;
   padding-bottom: 10px;
-}
-.imgp {
-  padding-right: 20px;
 }
 
 .FirstMenu {
@@ -181,15 +197,62 @@ tr {
 
 #tablecontainer {
   color: white;
+  height: 200px;
 }
 
 #listtablecontainer {
   color: white;
+  height: 200px;
+}
+
+.rightTable {
+  table-layout: fixed;
+  width: 40%;
+  border-collapse: collapse;
+  color: white;
+}
+
+table {
+  table-layout: fixed;
+  width: 60%;
+  border-collapse: collapse;
+  color: white;
+}
+
+thead th:nth-child(1) {
+  width: 15%;
+}
+
+thead th:nth-child(2) {
+  width: 15%;
+}
+
+thead th:nth-child(3) {
+  width: 15%;
+}
+
+thead th:nth-child(4) {
+  width: 15%;
+}
+
+th,
+td {
+  padding: 20px;
+}
+
+label {
+  padding: 20px;
+}
+
+button {
+  padding: 20px;
 }
 
 #wrapper {
   display: flex;
   flex-direction: row;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 #pipe {
@@ -210,6 +273,7 @@ tr {
 #rightBigTittle {
   color: white;
   position: absolute;
+  padding-top: 20px;
 }
 
 .middleBtn:hover {
@@ -293,4 +357,20 @@ span:hover {
   padding-right: 20px;
   background: url(/icons/lab.png);
   background-repeat: no-repeat;
+}
+
+#fle {
+  display: flex;
+  flex-direction: row;
+}
+
+#data {
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+}
+
+.containerOfTables {
+  display: flex;
+  flex-direction: row;
 }
