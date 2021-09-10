@@ -11,21 +11,14 @@ function loadData(data) {
     albumName.innerHTML = data.music.latest.name;
 
     const albumReleaseDate = document.getElementById('releaseDate')
-    const day = new Date(Date.parse(data.music.latest.releaseDate)).toLocaleDateString('en-US', {month:'short'});
-    const month = new Date(Date.parse(data.music.latest.releaseDate)).toLocaleDateString('en-US', {day: 'numeric'});
-    const year = new Date(Date.parse(data.music.latest.releaseDate)).toLocaleDateString('en-US', {year: 'numeric'}); 
-    
-    albumReleaseDate.innerHTML = day + " " + month + ", " + year;
+    const formattedDate = formatDate(data.music.latest.releaseDate)
+    albumReleaseDate.innerHTML = formattedDate;
 
 
 }
 
 function chooseRandomArtist(data) {
-    return getRandomInt(data.length);
-}
-
-function getRandomInt(max) {
-    return Math.ceil(Math.random() * max)
+    return Math.ceil(Math.random() * data.length);
 }
 
 
@@ -36,6 +29,7 @@ function createTable(data) {
     const x = document.getElementById('listPopular')
     x.appendChild(wrapper)
     wrapper.setAttribute('class', 'listPopular_row')
+    wrapper.setAttribute('id', `listPopular_row${data.id}`)
 
     const leftPartWrapper = document.createElement('div')
     wrapper.appendChild(leftPartWrapper)
@@ -45,7 +39,6 @@ function createTable(data) {
     const imageWrapper = document.createElement('div')
     imageWrapper.setAttribute('class', 'list_imageWrapper')
     leftPartWrapper.appendChild(imageWrapper)
-
 
     const albumImage = document.createElement('img');
     albumImage.setAttribute('src', data.image)
@@ -58,9 +51,15 @@ function createTable(data) {
     leftPartWrapper.appendChild(playIcon)
 
     const songName = document.createElement('p');
-    songName.setAttribute('class', 'songName')
+    songName.setAttribute('class', 'songName tooltip')
     leftPartWrapper.appendChild(songName)
     songName.innerHTML = data.name;
+
+    const tooltip = document.createElement('div')
+    tooltip.setAttribute('class', 'tooltiptext')
+    songName.appendChild(tooltip);
+    const date = formatDate(data.createdAt)
+    tooltip.innerHTML = `Song was created on ${date}`
 
     const songLength = document.createElement('p');
     songLength.setAttribute('class', 'tableItem')
@@ -89,22 +88,11 @@ function addMusic(data) {
     const audio = new Audio(`music/song-${data.id}.mp3`)  
     const id = data.id;
     const isPlaying = false;
-    // let a = {
-    //     audio: audio, 
-    //     isNotPlaying: audio.paused,
-    //     createdAt: data.createdAt,
-    //     name: data.name,
-    //     image: data.image,
-    //     listeners: data.listeners,
-    //     duration: data.durationInMs,
-    //     tag: data.tag,
-    //     id: data.id,
-    //     artistId: data.artistId,
-    // }
-   
-    const play = document.getElementById(`id${data.id}`)
+ 
     array.push({id,audio,isPlaying});
-    play.addEventListener('click', () => renderAudio(data.id, array))
+
+    const play = document.getElementById(`id${data.id}`)
+    play.addEventListener('click',  () => renderAudio(data.id, array))
     
     
 }
@@ -113,34 +101,50 @@ console.log(array)
 
 function renderAudio(id, array) {
     array.forEach(el =>{
-        if (el.audio.paused === true) {
+        
         if(el.id === id ){
+            if (el.audio.paused === true) {
             el.audio.play();
             const x = document.getElementById(`playButton${el.id}`)
             x.setAttribute('class', 'fas fa-pause')
-        }
-        else {
+
+            const popularRow = document.getElementById(`listPopular_row${id}`)
+            popularRow.setAttribute('class', 'listPopular_row playing')
+        } 
+     else if (el.audio.paused === false) {
             el.audio.pause();
+            const x = document.getElementById(`playButton${el.id}`)
+            x.setAttribute('class', 'fas fa-play')
+ 
+            const popularRow = document.getElementById(`listPopular_row${id}`)
+            popularRow.setAttribute('class', 'listPopular_row playing')
+            
+        }
+    }
+        else {                                                                   //id = API song ID
+                                                                                 //el.id = song ID from array
             el.audio.src = el.audio.src;
             const x = document.getElementById(`playButton${el.id}`)
             x.setAttribute('class', 'fas fa-play')
+
+        
         };
         
 
             
-       } else if (el.audio.paused === false) {
-           el.audio.pause();
-           
-           const x = document.getElementById(`playButton${el.id}`)
-           x.setAttribute('class', 'fas fa-play')
-           
-       }
+       
         
     })
   
 }
 
-
+function formatDate(stringDate) {
+    const day = new Date(Date.parse(stringDate)).toLocaleDateString('en-US', {month:'short'});
+    const month = new Date(Date.parse(stringDate)).toLocaleDateString('en-US', {day: 'numeric'});
+    const year = new Date(Date.parse(stringDate)).toLocaleDateString('en-US', {year: 'numeric'}); 
+    
+    return day + " " + month + ", " + year;
+}
 
    
 

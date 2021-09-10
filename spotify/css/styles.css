@@ -440,7 +440,7 @@ p {
 }
 
 .songName {
-  width: 450px;
+  width: 200px;
 }
 
 #songName--uppercase {
@@ -492,4 +492,53 @@ p {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: var(--color-darkPastelGreen);
+}
+
+.playing {
+  color: var(--color-darkPastelGreen);
+}
+
+.paused {
+  color: var(--color-whiteSmoke);
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  overflow: visible;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 200px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  font-size: 13px;
+  font-weight: 50;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
 }
