@@ -87,46 +87,61 @@ function millisToMinutesAndSeconds(millis) {
 const array = [];
 function addMusic(data) {
     const audio = new Audio(`music/song-${data.id}.mp3`)  
-    
-    let a = {
-        audio: audio, 
-        paused: () => {
-            if (audio.paused === true) {
-                return true;
-            } else {
-                return false;
-            }
-        },
-        createdAt: data.createdAt,
-        name: data.name,
-        image: data.image,
-        listeners: data.listeners,
-        duration: data.durationInMs,
-        tag: data.tag,
-        id: data.id,
-        artistId: data.artistId,
-    }
-    console.log(a.paused);
-    array.push(a);
-    const play = document.getElementById(`id${data.id}`)
+    const id = data.id;
+    const isPlaying = false;
+    // let a = {
+    //     audio: audio, 
+    //     isNotPlaying: audio.paused,
+    //     createdAt: data.createdAt,
+    //     name: data.name,
+    //     image: data.image,
+    //     listeners: data.listeners,
+    //     duration: data.durationInMs,
+    //     tag: data.tag,
+    //     id: data.id,
+    //     artistId: data.artistId,
+    // }
    
-    play.addEventListener('click', () => renderAudio(audio, data.id))
+    const play = document.getElementById(`id${data.id}`)
+    array.push({id,audio,isPlaying});
+    play.addEventListener('click', () => renderAudio(data.id, array))
+    
+    
+}
+console.log(array)
+
+
+function renderAudio(id, array) {
+    array.forEach(el =>{
+        if (el.audio.paused === true) {
+        if(el.id === id ){
+            el.audio.play();
+            const x = document.getElementById(`playButton${el.id}`)
+            x.setAttribute('class', 'fas fa-pause')
+        }
+        else {
+            el.audio.pause();
+            el.audio.src = el.audio.src;
+            const x = document.getElementById(`playButton${el.id}`)
+            x.setAttribute('class', 'fas fa-play')
+        };
+        
+
+            
+       } else if (el.audio.paused === false) {
+           el.audio.pause();
+           
+           const x = document.getElementById(`playButton${el.id}`)
+           x.setAttribute('class', 'fas fa-play')
+           
+       }
+        
+    })
+  
 }
 
-function renderAudio(audio, a) {
-    if (audio.paused === true) {
-    audio.play();
-    const x = document.getElementById(`playButton${a}`)
-    x.setAttribute('class', 'fas fa-pause')
-    } else {
-        audio.pause();
-        audio.src = audio.src;
-        const x = document.getElementById(`playButton${a}`)
-        x.setAttribute('class', 'fas fa-play')
-    }
-}
 
-console.log(array);
+
    
 
 export { loadData }
