@@ -189,6 +189,17 @@ a.left-menu-link:hover {
 #image1 {
   height:3rem;
 }
+#image2 {
+  height:3rem;
+}
+#image3 {
+  height:3rem;
+}
+#image4 {
+  height:3rem;
+}
+
+
 .image2 {
   background-color: var(--color-blackish);
   size: 1vw 1vh;

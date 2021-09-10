@@ -59,30 +59,53 @@ async function manipulateDOM() {
   
   albumReleaseDate.innerHTML = x + " " + y + ", " + z;
 
-  // popular section 
+ //// popular section ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
   const popularURL  = `https://613622df8700c50017ef5455.mockapi.io/api/v1/artist/${index}/popular`;
   const popularData = await readAPI(popularURL);
 
   console.log(popularData);
     
+for (let i = 0; i < 4; i++) {
 
-  let element = "image" + "1";
+  console.log("image" + ( i + 1));
 
-  const image1 = document.getElementById(element);
-  image1.setAttribute("src",  `${popularData[1].image}`);
+  let image = document.getElementById("image"+(i +1));
 
-  const song1 = document.getElementById("song1");
-  song1.innerHTML =  `${popularData[1].name}`;
+  console.log(popularData[i].image);
+  image.setAttribute("src", `${popularData[i].image}`);
 
-  const length1 = document.getElementById("length1");
- let time = popularData[1].durationInMs;
- time = timeFormating(time);
- length1.innerHTML = `${time}` ;
+  let song = document.getElementById("song"+ (i + 1));
+  song.innerHTML =  `${popularData[i].name}`;
 
- const view_count1 = document.getElementById("view_count1");
- view_count1.innerHTML =  `${popularData[1].listeners}`;
+  let length = document.getElementById("length"+ (i + 1));
+  let time = popularData[i].durationInMs;
+  time = timeFormating(time);
+  length.innerHTML = `${time}` ;
+
+  let view_count = document.getElementById("view_count"+ (i + 1));
+ view_count.innerHTML =  `${popularData[i].listeners}`;
+
+ console.log("view_count"+ i + 1)
 }
+
+}
+//   let element = "image" + "1";
+
+//   const image1 = document.getElementById(element);
+//   image1.setAttribute("src",  `${popularData[1].image}`);
+
+//   const song1 = document.getElementById("song1");
+//   song1.innerHTML =  `${popularData[1].name}`;
+
+ 
+//  const length1 = document.getElementById("length1");
+//  let time = popularData[1].durationInMs;
+//  time = timeFormating(time);
+//  length1.innerHTML = `${time}` ;
+
+//  const view_count1 = document.getElementById("view_count1");
+//  view_count1.innerHTML =  `${popularData[1].listeners}`;
  
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
