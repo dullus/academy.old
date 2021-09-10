@@ -637,11 +637,15 @@ div.main-artist-latest-release p {
 
   font-size: 15px;
 }
-/*hover effect*/
-div.main-artist-latest-release:hover p:nth-child(2) {
+div.main-artist-latest-release p:nth-child(2) {
   font-size: 14px;
   color: var(--color-hoverLightGreen);
 }
+/*hover effect*/
+/* div.main-artist-latest-release:hover p:nth-child(2) {
+  font-size: 14px;
+  color: var(--color-hoverLightGreen);
+} */
 /*end of hover effect*/
 @media only screen and (max-width: 1060px) {
   div.main-artist-latest-release > div img {
@@ -663,7 +667,7 @@ div.main-artist-latest-release:hover p:nth-child(2) {
   flex-direction: column;
   margin: 0;
   padding: 0;
-  height: 30%;
+  height: 31%;
   width: 100%;
 }
 #songs-wrapper {
@@ -763,10 +767,22 @@ li.artist-popular-song {
   color: var(--color-hoverLightGreen);
   border: 2px solid var(--color-hoverLightGreen);
 }
-#main-songs-wraper ul li.artist-popular-song:hover i.fa-play {
+#main-songs-wraper ul li.artist-popular-song:hover i.fa-play,
+i.fa-pause {
   color: var(--color-fontWhite);
   display: flex;
 }
+
+/*dynamic hover effect with css*/
+.songsHover {
+  color: var(--color-hoverLightGreen);
+}
+.explicitButtonHover {
+  color: var(--color-hoverLightGreen);
+  border: 2px solid var(--color-hoverLightGreen);
+}
+
+/*end off dynamic hover effect with css*/
 /*hover effect */
 
 @media only screen and (max-width: 1060px) {

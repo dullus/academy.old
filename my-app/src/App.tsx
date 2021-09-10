@@ -13,7 +13,6 @@ const App: React.FC= () => {
       <Room/>
       <Room/>
       <Room/>
-      
     </div>
   );
 }
