@@ -39,9 +39,9 @@ return dbAPI;
 async function manipulateDOM() {
   const data = await readAllAPI(urlAPIs);
 
-  console.log(data.length);
   let index = Math.floor(Math.random()*data.length) + 1;
-  console.log(index);
+
+  
 
     const bandName = document.getElementById("band-name")
     bandName.innerHTML = ` ${data[index].name} ${data[index].lastName} `;
@@ -58,15 +58,44 @@ async function manipulateDOM() {
   const z = new Date(Date.parse(data[index].music.latest.releaseDate)).toLocaleDateString('en-US', {year: 'numeric'}); 
   
   albumReleaseDate.innerHTML = x + " " + y + ", " + z;
+
+  // popular section 
+
+  const popularURL  = `https://613622df8700c50017ef5455.mockapi.io/api/v1/artist/${index}/popular`;
+  const popularData = await readAPI(popularURL);
+
+  console.log(popularData);
     
-  }
-manipulateDOM();
 
+  let element = "image" + "1";
 
+  const image1 = document.getElementById(element);
+  image1.setAttribute("src",  `${popularData[1].image}`);
 
+  const song1 = document.getElementById("song1");
+  song1.innerHTML =  `${popularData[1].name}`;
 
+  const length1 = document.getElementById("length1");
+ let time = popularData[1].durationInMs;
+ time = timeFormating(time);
+ length1.innerHTML = `${time}` ;
 
-
-
-
+ const view_count1 = document.getElementById("view_count1");
+ view_count1.innerHTML =  `${popularData[1].listeners}`;
+}
  
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+function timeFormating(ms) {
+  var minutes = Math.floor(ms / 60000);
+  var seconds = ((ms % 60000) / 1000).toFixed(0);
+  return (
+      seconds == 60 ?
+      (minutes+1) + ":00" :
+      minutes + ":" + (seconds < 10 ? "0" : "") + seconds
+    );
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  manipulateDOM();

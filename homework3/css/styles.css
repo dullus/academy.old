@@ -186,6 +186,9 @@ a.left-menu-link:hover {
   size: 1vw 1vh;
   grid-area: image1;
 }
+#image1 {
+  height:3rem;
+}
 .image2 {
   background-color: var(--color-blackish);
   size: 1vw 1vh;
