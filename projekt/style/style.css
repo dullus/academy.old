@@ -198,11 +198,16 @@ tr {
 #tablecontainer {
   color: white;
   height: 200px;
+  overflow-y: auto;
+  padding-right: 20px;
 }
 
 #listtablecontainer {
   color: white;
   height: 200px;
+  overflow-y: auto;
+  margin-right: 20px;
+  padding-right: 20px;
 }
 
 .rightTable {
@@ -242,10 +247,12 @@ td {
 
 label {
   padding: 20px;
+  color: white;
 }
 
 button {
   padding: 20px;
+  color: white;
 }
 
 #wrapper {
@@ -373,4 +380,11 @@ span:hover {
 .containerOfTables {
   display: flex;
   flex-direction: row;
+  padding-bottom: 40px;
+}
+
+#play {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 40px;
 }

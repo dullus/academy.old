@@ -63,22 +63,19 @@ function GenerateRightTable() {
       const name = data[index].name;
       let time = timeFormating(data[index].durationInMs);
       const count = data[index].listeners;
-
-      console.log(data);
-
-      var table = document.createElement("table");
+      const table = document.createElement("table");
       table.setAttribute("class", "rightTable");
-      var div = document.getElementById("listtablecontainer");
+      const div = document.getElementById("listtablecontainer");
 
-      var row1 = table.insertRow(0);
-      var row2 = table.insertRow(0);
-      var row3 = table.insertRow(0);
-      var row4 = table.insertRow(0);
+      const row1 = table.insertRow(0);
+      const row2 = table.insertRow(0);
+      const row3 = table.insertRow(0);
+      const row4 = table.insertRow(0);
 
-      var cell1 = row1.insertCell(0);
-      var cell2 = row2.insertCell(0);
-      var cell3 = row3.insertCell(0);
-      var cell4 = row4.insertCell(0);
+      const cell1 = row1.insertCell(0);
+      const cell2 = row2.insertCell(0);
+      const cell3 = row3.insertCell(0);
+      const cell4 = row4.insertCell(0);
 
       cell1.setAttribute("background", image);
       cell2.innerHTML = name;
