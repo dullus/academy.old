@@ -334,7 +334,7 @@ p {
 }
 
 .list_heading {
-  margin-bottom: 12px;
+  overflow: visible;
 }
 
 #listPopular {
@@ -342,7 +342,7 @@ p {
   margin-right: 3%;
   width: 85%;
   height: 280px;
-  overflow: overlay;
+  overflow: visible;
 }
 .list_imageWrapper {
   width: 37px;
@@ -360,7 +360,7 @@ p {
   display: flex;
   height: 60px;
   margin-bottom: 5px;
-  align-items: center;
+  align-items: end;
   justify-content: space-between;
   padding-right: 50px;
 }
@@ -377,7 +377,7 @@ p {
   justify-content: space-between;
   height: 60px;
   margin-bottom: 5px;
-  align-items: center;
+  align-items: end;
 }
 
 .listPopular_row:hover,
@@ -541,4 +541,14 @@ p {
 .tooltip:hover .tooltiptext {
   visibility: visible;
   opacity: 1;
+}
+
+#songsWrapper {
+  height: 100%;
+  overflow: overlay;
+  margin-top: 13px;
+}
+
+#listFansAlsoLike_row-artistName--top {
+  margin-top: 13px;
 }

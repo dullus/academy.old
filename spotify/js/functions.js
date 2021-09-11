@@ -13,8 +13,6 @@ function loadData(data) {
     const albumReleaseDate = document.getElementById('releaseDate')
     const formattedDate = formatDate(data.music.latest.releaseDate)
     albumReleaseDate.innerHTML = formattedDate;
-
-
 }
 
 function chooseRandomArtist(data) {
@@ -22,11 +20,10 @@ function chooseRandomArtist(data) {
 }
 
 
-
 function createTable(data) {
    
     const wrapper = document.createElement('article')
-    const x = document.getElementById('listPopular')
+    const x = document.getElementById('songsWrapper')
     x.appendChild(wrapper)
     wrapper.setAttribute('class', 'listPopular_row')
     wrapper.setAttribute('id', `listPopular_row${data.id}`)
@@ -71,6 +68,7 @@ function createTable(data) {
     wrapper.appendChild(listeners)
     listeners.innerHTML = data.listeners.toLocaleString('en-US');
 
+    
 }
 
 function millisToMinutesAndSeconds(millis) {
@@ -87,16 +85,19 @@ const array = [];
 function addMusic(data) {
     const audio = new Audio(`music/song-${data.id}.mp3`)  
     const id = data.id;
-    const isPlaying = false;
+    const isNotPlaying = audio.paused;
+    const artistID = data.artistId
  
-    array.push({id,audio,isPlaying});
+    array.push({id,audio, artistID, isNotPlaying});
 
     const play = document.getElementById(`id${data.id}`)
-    play.addEventListener('click',  () => renderAudio(data.id, array))
-    
-    
+    play.addEventListener('click',  () => renderAudio(data.id, array))  
+  
+
 }
+
 console.log(array)
+document.getElementById('rightSection_main_button--flex').addEventListener('click', () => a(shuffleMusic(array)))
 
 
 function renderAudio(id, array) {
@@ -111,14 +112,13 @@ function renderAudio(id, array) {
             const popularRow = document.getElementById(`listPopular_row${id}`)
             popularRow.setAttribute('class', 'listPopular_row playing')
         } 
-     else if (el.audio.paused === false) {
+     else {
             el.audio.pause();
             const x = document.getElementById(`playButton${el.id}`)
             x.setAttribute('class', 'fas fa-play')
  
             const popularRow = document.getElementById(`listPopular_row${id}`)
-            popularRow.setAttribute('class', 'listPopular_row playing')
-            
+            popularRow.setAttribute('class', 'listPopular_row playing')  
         }
     }
         else {                                                                   //id = API song ID
@@ -126,16 +126,8 @@ function renderAudio(id, array) {
             el.audio.src = el.audio.src;
             const x = document.getElementById(`playButton${el.id}`)
             x.setAttribute('class', 'fas fa-play')
-
-        
-        };
-        
-
-            
-       
-        
+        };     
     })
-  
 }
 
 function formatDate(stringDate) {
@@ -148,6 +140,42 @@ function formatDate(stringDate) {
 
    
 
+function shuffleMusic(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+     
+    }   
+    return array;
+}
+
+function a(array) {
+    for (let i = 0; i < array.length; i++) {
+        if (array[i].audio.paused === true) {
+            const x = document.getElementById(`iconPlay`)
+            x.setAttribute('class', 'fas fa-pause')
+        
+            array[0].audio.play();
+        }
+    }
+
+    // let index = 0;
+    // array[index].audio.play()    
+    
+    // for (let i = 0; i < array.length; i++) {
+        
+    // array[index].audio.onended = () => {array[index + 1].audio.play()}
+    // console.log(array)
+}
+
+
+function p(soundArray) {
+    soundArray[0].audio.play();
+    soundArray.forEach(function(element, index, array) 
+    {if (soundArray[index + 1]) {
+        soundArray[index].audio.addEventListener('ended', () => (function() {
+            soundArray[index + 1].audio.play();}, this));      }    });
+        }
 export { loadData }
 export { chooseRandomArtist }
 export { createTable }
