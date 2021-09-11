@@ -119,6 +119,9 @@ for (let i = 0; i < 4; i++) {
     let songChosen = document.getElementById("song"+ (i + 1));
      songChosen.style = "color:green";
 
+    let playPause = document.getElementById("play-pause" + (i+1));
+    playPause.innerHTML = `<i class="material-icons">pause</i> `;
+
      let explicit = document.getElementById("explicit"+ (i+ 1));
      explicit.style = "color:green";
 
@@ -127,6 +130,36 @@ for (let i = 0; i < 4; i++) {
 
      let view_count = document.getElementById("view_count"+  (i + 1));
      view_count.style = "color:green"
+
+    // let audioElement = "audioElement"+ (i+1);
+    // console.log('audioElement = ', audioElement);
+    // audioElement.play();
+
+    switch  (i+1) {
+
+      case 1:
+        audioElement4.pause();
+        audioElement3.pause();
+        audioElement2.pause();
+        audioElement1.play()
+        break;
+    case 2:
+        audioElement4.pause();
+        audioElement3.pause();
+        audioElement1.pause();
+        audioElement2.play();
+        break;
+     case 3:
+      audioElement4.pause();
+      audioElement2.pause();
+      audioElement1.pause();
+        audioElement3.play();
+     case 4:
+      audioElement3.pause();
+      audioElement2.pause();
+      audioElement1.pause();
+        audioElement4.play();
+    }
 
   })
 
@@ -156,3 +189,11 @@ function timeFormating(ms) {
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
   manipulateDOM();
+
+  /////////////////////////////////////////////////////////////////////////////
+  // audio part
+  /////////////////////////////////////////////////////////////////////////////
+  let audioElement1 = new Audio('audio/song-1.mp3');
+  let audioElement2 = new Audio('audio/song-2.mp3');
+  let audioElement3 = new Audio('audio/song-3.mp3');
+  let audioElement4 = new Audio('audio/song-4.mp3');
