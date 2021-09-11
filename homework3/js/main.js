@@ -41,9 +41,7 @@ async function manipulateDOM() {
 
   let index = Math.floor(Math.random()*data.length) + 1;
 
-  
-
-    const bandName = document.getElementById("band-name")
+    const bandName = document.getElementById("band-name");
     bandName.innerHTML = ` ${data[index].name} ${data[index].lastName} `;
 
     const latestReleaseName= document.getElementById("latest_release_name");
@@ -68,15 +66,69 @@ async function manipulateDOM() {
     
 for (let i = 0; i < 4; i++) {
 
-  console.log("image" + ( i + 1));
-
   let image = document.getElementById("image"+(i +1));
 
-  console.log(popularData[i].image);
   image.setAttribute("src", `${popularData[i].image}`);
 
   let song = document.getElementById("song"+ (i + 1));
   song.innerHTML =  `${popularData[i].name}`;
+
+   song.addEventListener("mouseover", () => {
+
+    ///////////////////////////////////////////////////////////////////////////
+    // initialize popular songs
+    ///////////////////////////////////////////////////////////////////////////
+    for( let j = 0; j < 4; j++) {
+    let playPause = document.getElementById("play-pause" + (j+1));
+     playPause.innerHTML = ` `;
+
+     let song = document.getElementById("song"+ (i + 1));
+     song.style = "color:white";
+
+     let explicit = document.getElementById("explicit"+ (i + 1));
+     explicit.style = "color:white";
+
+     let length = document.getElementById("length"+ (i + 1));
+     length.style = "color:white";
+
+     let view_count = document.getElementById("view_count"+  (i + 1));
+     view_count.style = "color:white"
+    }
+
+    ///////////////////////////////////////////////////////////////////////////
+
+    let playPause = document.getElementById("play-pause" + (i+1));
+    playPause.innerHTML = `<i class="material-icons">play_arrow</i>`;
+  });
+
+  song.addEventListener("click", () => {
+
+    for (let j = 0; j < 4; j++) {
+      let song = document.getElementById("song"+ (j+ 1));
+     song.style = "color:white";
+
+     let explicit = document.getElementById("explicit"+ (j + 1));
+     explicit.style = "color:white";
+
+     let length = document.getElementById("length"+ (j + 1));
+     length.style = "color:white";
+
+     let view_count = document.getElementById("view_count"+  (j + 1));
+     view_count.style = "color:white"
+    }
+    let songChosen = document.getElementById("song"+ (i + 1));
+     songChosen.style = "color:green";
+
+     let explicit = document.getElementById("explicit"+ (i+ 1));
+     explicit.style = "color:green";
+
+     let length = document.getElementById("length"+ (i + 1));
+     length.style = "color:green";
+
+     let view_count = document.getElementById("view_count"+  (i + 1));
+     view_count.style = "color:green"
+
+  })
 
   let length = document.getElementById("length"+ (i + 1));
   let time = popularData[i].durationInMs;
@@ -86,27 +138,9 @@ for (let i = 0; i < 4; i++) {
   let view_count = document.getElementById("view_count"+ (i + 1));
  view_count.innerHTML =  `${popularData[i].listeners}`;
 
- console.log("view_count"+ i + 1)
 }
 
 }
-//   let element = "image" + "1";
-
-//   const image1 = document.getElementById(element);
-//   image1.setAttribute("src",  `${popularData[1].image}`);
-
-//   const song1 = document.getElementById("song1");
-//   song1.innerHTML =  `${popularData[1].name}`;
-
- 
-//  const length1 = document.getElementById("length1");
-//  let time = popularData[1].durationInMs;
-//  time = timeFormating(time);
-//  length1.innerHTML = `${time}` ;
-
-//  const view_count1 = document.getElementById("view_count1");
-//  view_count1.innerHTML =  `${popularData[1].listeners}`;
- 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 function timeFormating(ms) {
