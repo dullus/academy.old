@@ -81,3 +81,9 @@
  - https://getbootstrap.com
  - https://getbootstrap.com/docs/5.1/getting-started/introduction/
  - https://getbootstrap.com/docs/5.1/components/buttons/
+
+ ## React
+ - https://reactjs.org/
+ - https://reactjs.org/docs/getting-started.html
+ - https://reactjs.org/tutorial/tutorial.html
+ 
