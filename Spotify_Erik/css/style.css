@@ -218,6 +218,16 @@ li {
   font-size: 25px;
 }
 
+.track_img {
+  display: flex;
+  flex-direction: row;
+}
+
+#track_play {
+  margin-top: 60%;
+  margin-left: 12%;
+}
+
 .track_title {
   margin-left: 2%;
   margin-right: 26%;
@@ -362,7 +372,7 @@ li {
 
 .album {
   height: 29px;
-  padding-top: 71%;
+  padding-top: 50%;
 }
 
 .related_artist_name {

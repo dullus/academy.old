@@ -32,7 +32,6 @@ fetch('https://613622df8700c50017ef5455.mockapi.io/api/v1/artist/')
   .then(response => response.json())
   .then(data => {
     const randomArtist = rngArtist(data);
-    console.log(randomArtist);
     fetch(`https://613622df8700c50017ef5455.mockapi.io/api/v1/artist/${randomArtist}`)
     .then(response => response.json())
     .then(data => {
@@ -70,7 +69,7 @@ function loadData(data) {
 function artistPopularData(dataArtistPopular){
     
     
-    console.log(dataArtistPopular.albumImage)
+    
     const track = document.createElement("div")
     track.setAttribute('class', 'track')
     document.getElementById('all_tracks').appendChild(track)
@@ -84,6 +83,11 @@ function artistPopularData(dataArtistPopular){
     album.setAttribute('src', dataArtistPopular.image)
     album.setAttribute('class', 'album')
 
+    const playImg = document.createElement("i")
+    playImg.setAttribute('class', 'fas fa-play')
+    playImg.setAttribute('id', 'track_play')
+    trackImg.appendChild(playImg)
+    
     const songName = document.createElement("div")
     songName.setAttribute('class', 'track_title')
     track.appendChild(songName)
@@ -114,4 +118,7 @@ function artistPopularData(dataArtistPopular){
         (minutes+1) + ":00" :
         minutes + ":" + (seconds < 10 ? "0" : "") + seconds
       );
+          
 }
+
+
