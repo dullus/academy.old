@@ -142,6 +142,10 @@ li {
   width: 100%;
 }
 
+.tracks {
+  overflow: auto;
+}
+
 .track {
   display: flex;
   flex-direction: row;
