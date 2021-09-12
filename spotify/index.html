@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spotify</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/all.css" />
+    <script type="module" src="js/main.js"></script>
+  </head>
+
+  <body>
+    <div id="body-wraper">
+      <nav id="left-nav-bar">
+        <div id="spotify">
+          <i class="fab fa-spotify left-nav-icon" id="spotify-icon"></i>
+          <h3 id="h3-spotify">Spotify</h3>
+        </div>
+
+        <ul class="nav-ul">
+          <h3>Discover</h3>
+          <li class="nav-li">
+            <div>
+              <i class="fas fa-compass left-nav-icon"></i>
+              Explore
+            </div>
+          </li>
+          <li class="nav-li">
+            <div>
+              <i class="fas fa-broadcast-tower left-nav-icon"></i>
+              Radio
+            </div>
+          </li>
+        </ul>
+
+        <ul class="nav-ul">
+          <h3>Library</h3>
+          <li class="nav-li">
+            <div>
+              <i class="fas fa-music left-nav-icon"></i>
+              Songs
+            </div>
+          </li>
+          <li class="nav-li">
+            <div>
+              <i class="fas fa-compact-disc left-nav-icon"></i>
+              Albums
+            </div>
+          </li>
+          <li class="nav-li">
+            <div>
+              <i class="fas fa-microphone left-nav-icon"></i>
+              Artist
+            </div>
+          </li>
+          <li class="nav-li">
+            <div>
+              <i class="fas fa-heart left-nav-icon"></i>
+              Favorties
+            </div>
+          </li>
+        </ul>
+
+        <ul class="nav-ul">
+          <div id="playlist">
+            <h3>Playlist</h3>
+            <i class="fas fa-plus left-nav-icon" id="playlist-icon"></i>
+          </div>
+          <li class="nav-li">
+            <div>
+              <i class="fas fa-bars left-nav-icon"></i>
+              Discover Weekly
+            </div>
+          </li>
+          <li class="nav-li">
+            <div><i class="fas fa-bars left-nav-icon"></i> Relax</div>
+          </li>
+          <li class="nav-li">
+            <div><i class="fas fa-bars left-nav-icon"></i> WorkOut</div>
+          </li>
+          <li class="nav-li">
+            <div><i class="fas fa-bars left-nav-icon"></i> My Music</div>
+          </li>
+        </ul>
+      </nav>
+
+      <div id="main-wraper">
+        <header>
+          <div class="header-split-wrap">
+            <div class="header-split-wraper-content">
+              <i class="fas fa-chevron-left"></i>
+              <i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="header-split-wraper-content" id="search-box">
+              <i class="fas fa-search" id="magnifier"></i>
+              <input type="text" class="input-search" placeholder="Search" />
+            </div>
+          </div>
+
+          <div class="header-split-wrap" id="header-split-right-wraper">
+            <div
+              class="header-split-wraper-content artist-function-buttons"
+              id="premium-button"
+            >
+              PREMIUM
+            </div>
+            <i class="fas fa-bell header-split-wraper-content"></i>
+            <img
+              src="assets/najvacsi-frajer-JA.jpg"
+              alt="PeknyTypek"
+              width="25px"
+              height="25px"
+              class="header-split-wraper-content"
+              id="user-img"
+            />
+            <p class="header-split-wraper-content">Dzuky</p>
+            <i class="fas fa-chevron-down header-split-wraper-content"></i>
+          </div>
+        </header>
+
+        <section id="main-artist-name">
+          <div>
+            <h2>Artist</h2>
+            <i class="fas fa-check-circle"></i>
+          </div>
+          <h1 id="artist-name"></h1>
+        </section>
+
+        <div id="main-artist-info">
+          <ul class="main-list-artist-function-buttons">
+            <li class="artist-function-buttons">
+              <div id="play-button">
+                <i class="fas fa-play"></i>
+                <p>Play</p>
+              </div>
+            </li>
+            <li class="artist-function-buttons"><p>Follow</p></li>
+            <li class="artist-function-buttons" id="triple-dot-background">
+              <div>
+                <p id="triple-dot">...</p>
+              </div>
+            </li>
+          </ul>
+          <div id="main-listeners">
+            <p>MONTHLY LISTENERS</p>
+            <p>1,548,989</p>
+          </div>
+        </div>
+
+        <ul class="main-list-artist-nav">
+          <li class="artist-nav">
+            <p>OVERVIEW
+              <div class="artist-nav-dot"></div>
+            </p>
+            
+          </li>
+          <li class="artist-nav">
+            <p>FANS ALSO LIKE
+              <div class="artist-nav-dot"></div>
+            </p>
+            
+          </li>
+          <li class="artist-nav">
+            <p>ABOUT
+              <div class="artist-nav-dot"></div>
+            </p>
+            
+          </li>
+          <li class="artist-nav ">
+            <p>CONCERTS
+              <div class="artist-nav-dot"></div>
+            </p>
+            
+          </li>
+        </ul>
+
+        <div class="main-artist-latest-release">
+          <h2>Latest Release</h2>
+          <div>
+            <img
+              
+            />
+            <div>
+              <p></p>
+              <p></p>
+            </div>
+          </div>
+        </div>
+
+       
+
+        <div id="main-songs-wraper">
+          <h2>Popular</h2>
+          <div id="songs-wrapper">
+          <ul id="main-list-artist-popular-songs">
+            <div id="main-list-popular-songs"></div>
+            <!-- <li class="artist-popular-song">
+               <img
+                src="assets/gleb.jpg"
+                alt="Glebzoo"
+                width="40px"
+                height="40px"
+              />
+              <div class="pause-play-button">
+                <i class="fas fa-play"></i>
+                <i class="fas fa-pause"></i></div>
+              <p class="art-pop-song-name">All The Stars</p>
+              <div class="right-wraper-of-songs">
+                <div class="explicit">EXPLICIT</div>
+              <p class="art-pop-song-time">3:52</p>
+              <p class="art-pop-song-views">315,154,689</p>
+              </div> 
+            </li>
+            <li class="artist-popular-song">
+               <img
+                src="assets/roko.jpg"
+                alt="Roko"
+                width="40px"
+                height="40px"
+              />
+              <div  class="pause-play-button">
+                <i class="fas fa-play"></i>
+                <i class="fas fa-pause"></i></div>
+              <p class="art-pop-song-name">All The Stars</p>
+              <div class="right-wraper-of-songs">
+              <div class="explicit">EXPLICIT</div>
+              <p class="art-pop-song-time">3:52</p>
+              <p class="art-pop-song-views">315,154,689</p>
+            </div> 
+            </li>
+            <li class="artist-popular-song">
+               <img
+                src="assets/gleb.jpg"
+                alt="Glebzoo"
+                width="40px"
+                height="40px"
+              />
+              <div  class="pause-play-button">
+                <i class="fas fa-play"></i>
+              <i class="fas fa-pause"></i>
+              </div>
+              <p class="art-pop-song-name">All The Stars</p>
+              <div class="right-wraper-of-songs">
+              <div class="explicit">EXPLICIT</div>
+              <p class="art-pop-song-time">3:52</p>
+              <p class="art-pop-song-views">315,154,689</p> 
+              </div>
+            </li>
+            <li class="artist-popular-song">
+               <img
+                src="assets/roko.jpg"
+                alt="Roko"
+                width="40px"
+                height="40px"
+              />
+              <div  class="pause-play-button">
+                <i class="fas fa-play"></i>
+              <i class="fas fa-pause"></i>
+              </div>
+              <p class="art-pop-song-name">All The Stars</p>
+              <div class="right-wraper-of-songs">
+              <div class="explicit">EXPLICIT</div>
+              <p class="art-pop-song-time">3:52</p>
+              <p class="art-pop-song-views">315,154,689</p>
+                </div> 
+            </li> -->
+          </ul>
+
+          <ul id="main-right-list-artists">
+            <h2>Fans Also Like</h2>
+            <li class="right-list-artist">
+              <img
+                src="assets/gleb.jpg"
+                alt="Glebzoo"
+                width="40px"
+                height="40px"
+                style="border-radius: 50%;"
+              />
+              <p>Big Sean</p>
+            </li>
+            <li class="right-list-artist">
+              <img
+                src="assets/roko.jpg"
+                alt="Roko"
+                width="40px"
+                height="40px"
+                style="border-radius: 50%;"
+              />
+              <p>J. Cole</p>
+            </li>
+            <li class="right-list-artist">
+              <img
+                src="assets/gleb.jpg"
+                alt="Glebzoo"
+                width="40px"
+                height="40px"
+                style="border-radius: 50%;"
+              />
+
+              <p>2 Chainz</p>
+            </li>
+            <!-- <li class="right-list-artist">
+              <img
+                src="assets/roko.jpg"
+                alt="Roko"
+                width="40px"
+                height="40px"
+                style="border-radius: 50%;"
+              />
+              <p>Wale</p>
+            </li> -->
+          </ul>
+        </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
