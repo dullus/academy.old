@@ -140,11 +140,12 @@ li {
   width: 100%;
   justify-content: space-between;
   width: 100%;
+  height: 75%;
 }
 
-.tracks {
-  overflow: auto;
-}
+/* .tracks {
+  overflow: scroll;
+} */
 
 .track {
   display: flex;
@@ -156,6 +157,7 @@ li {
   display: flex;
   flex-direction: column;
   width: 100%;
+  height: 50%;
 }
 
 .right_middle {
@@ -201,6 +203,8 @@ li {
 }
 .overview_artist {
   width: 75%;
+  overflow: scroll;
+  height: 100%;
 }
 
 #Spot_logo {

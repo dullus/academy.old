@@ -37,7 +37,12 @@ fetch('https://613622df8700c50017ef5455.mockapi.io/api/v1/artist/')
     .then(response => response.json())
     .then(data => {
         loadData(data);
-    })
+        fetch(`https://613622df8700c50017ef5455.mockapi.io/api/v1/artist/${randomArtist}/popular`)
+        .then(response => response.json())
+        .then (dataArtistPopular => 
+          dataArtistPopular.forEach(artistPopularData)
+         
+      )})
     function rngArtist(data) {
         return Math.ceil(Math.random() * data.length)
     }
@@ -62,3 +67,41 @@ function loadData(data) {
     albumImage.setAttribute('src', data.music.latest.image)
  
 }
+function artistPopularData(dataArtistPopular){
+    
+    
+    console.log(dataArtistPopular.albumImage)
+    const track = document.createElement("div")
+    track.setAttribute('class', 'track')
+    document.getElementById('all_tracks').appendChild(track)
+
+    const trackImg = document.createElement("div")
+    trackImg.setAttribute('class', 'track_img')
+    track.appendChild(trackImg)
+
+    const album = document.createElement("img")
+    trackImg.appendChild(album)    
+    album.setAttribute('src', dataArtistPopular.image)
+    album.setAttribute('class', 'album')
+
+    const songName = document.createElement("div")
+    songName.setAttribute('class', 'track_title')
+    track.appendChild(songName)
+    songName.innerHTML = dataArtistPopular.name
+
+    const explicit = document.createElement("div")
+    track.appendChild(explicit)
+    explicit.setAttribute('class', 'explicit')
+    explicit.innerHTML = "EXPLICIT"
+
+    const length = document.createElement("div")
+    track.appendChild(length)
+    length.setAttribute('class', 'length')
+    length.innerHTML = dataArtistPopular.durationInMs
+
+    const trackPlays = document.createElement("div")
+    track.appendChild(trackPlays)
+    trackPlays.setAttribute('class', 'track_plays')
+    trackPlays.innerHTML = dataArtistPopular.listeners
+
+  }
