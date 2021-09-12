@@ -140,7 +140,7 @@ li {
   width: 100%;
   justify-content: space-between;
   width: 100%;
-  height: 75%;
+  height: 73%;
 }
 
 /* .tracks {
@@ -204,7 +204,7 @@ li {
 .overview_artist {
   width: 75%;
   overflow-x: hidden;
-  overflow-y: scroll;
+  overflow-y: auto;
   height: 100%;
 }
 
@@ -339,7 +339,7 @@ li {
 #checkmark {
   color: blue;
   font-size: 15px;
-  margin-top: 2%;
+  margin-top: 1%;
   margin-left: 1%;
 }
 
@@ -374,10 +374,10 @@ li {
   outline: none;
   border-style: none;
   background-image: url(/academy/Spotify_Erik/img/magglass.png);
-  background-size: 15px;
+  background-size: 13px;
   background-repeat: no-repeat;
   background-position-x: 5px;
-  background-position-y: 5px;
+  background-position-y: 3px;
 }
 
 @media screen and (max-width: 1065px) {

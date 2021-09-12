@@ -97,7 +97,7 @@ function artistPopularData(dataArtistPopular){
     const length = document.createElement("div")
     track.appendChild(length)
     length.setAttribute('class', 'length')
-    length.innerHTML = dataArtistPopular.durationInMs
+    length.innerHTML = timeTransform(dataArtistPopular.durationInMs)
 
     const trackPlays = document.createElement("div")
     track.appendChild(trackPlays)
@@ -105,3 +105,13 @@ function artistPopularData(dataArtistPopular){
     trackPlays.innerHTML = dataArtistPopular.listeners
 
   }
+
+  function timeTransform(ms) {
+    var minutes = Math.floor(ms / 60000);
+    var seconds = ((ms % 60000) / 1000).toFixed(0);
+    return (
+        seconds == 60 ?
+        (minutes+1) + ":00" :
+        minutes + ":" + (seconds < 10 ? "0" : "") + seconds
+      );
+}
