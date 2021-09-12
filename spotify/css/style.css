@@ -726,6 +726,7 @@ li.artist-popular-song {
   width: 30px;
   height: 40px;
   margin: 0 3px 0 0;
+  color: var(--color-fontWhite);
 }
 #main-songs-wraper .pause-play-button i.fa-play {
   display: none;
@@ -739,7 +740,7 @@ li.artist-popular-song {
   width: 50%;
   font-size: 15px;
 }
-#main-songs-wraper .explicit {
+.explicit {
   display: flex;
   justify-content: center;
   color: var(--color-spotifyGrey);
@@ -760,17 +761,20 @@ li.artist-popular-song {
 }
 /*hover effect */
 /* static click effect*/
-#main-songs-wraper ul li.artist-popular-song:hover {
+/* #main-songs-wraper ul li.artist-popular-song:hover {
   color: var(--color-hoverLightGreen);
 }
 #main-songs-wraper ul li.artist-popular-song:hover .explicit {
   color: var(--color-hoverLightGreen);
   border: 2px solid var(--color-hoverLightGreen);
+} */
+
+.songHoverColor {
+  color: var(--color-hoverLightGreen);
 }
-#main-songs-wraper ul li.artist-popular-song:hover i.fa-play,
-i.fa-pause {
-  color: var(--color-fontWhite);
-  display: flex;
+#main-songs-wraper .explicitHoverColor {
+  color: var(--color-hoverLightGreen);
+  border: 2px solid var(--color-hoverLightGreen);
 }
 
 /*dynamic hover effect with css*/
@@ -906,3 +910,28 @@ ul#main-right-list-artists li.right-list-artist img {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--color-hoverDarkGreen);
 }
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+  z-index: 1;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 2;
+}
+
+/* .tooltip:hover .tooltiptext {
+  visibility: visible;
+} */
