@@ -1,5 +1,4 @@
 function loadData(data) {
-    
 
     const heading = document.getElementById('artistName');
     heading.innerHTML = data.name + " " + data.lastName;
@@ -18,7 +17,6 @@ function loadData(data) {
 function chooseRandomArtist(data) {
     return Math.ceil(Math.random() * data.length);
 }
-
 
 function createTable(data) {
    
@@ -67,8 +65,6 @@ function createTable(data) {
     listeners.setAttribute('id', 'tableItem--number')
     wrapper.appendChild(listeners)
     listeners.innerHTML = data.listeners.toLocaleString('en-US');
-
-    
 }
 
 function millisToMinutesAndSeconds(millis) {
@@ -92,20 +88,13 @@ function addMusic(data) {
     array.push({id,audio, artistID, isPlaying, playlistId});
 
     const play = document.getElementById(`id${data.id}`)
-    play.addEventListener('click',  () => renderAudio(data.id, array))  
-  
-    
+    play.addEventListener('click',  () => renderAudio(data.id, array))    
 }
-console.log(array)
-
-
 
 playRandomSongFromList(array)
 function playRandomSongFromList(array) {
 document.getElementById('rightSection_main_button--flex').addEventListener('click', () => playAllSongs(shuffleMusic(array)))
 }
-
-
 
 function renderAudio(id, array) {
     array.forEach(el =>{
@@ -118,26 +107,21 @@ function renderAudio(id, array) {
 
             const popularRow = document.getElementById(`listPopular_row${id}`)
             popularRow.setAttribute('class', 'listPopular_row playing unclicked')
-        } 
-     else {
-         
-            el.audio.pause();
-            const x = document.getElementById(`playButton${el.id}`)
-            x.setAttribute('class', 'fas fa-play whiteOnHover clicked')
- 
-            const popularRow = document.getElementById(`listPopular_row${id}`)
-            popularRow.setAttribute('class', 'listPopular_row')  
-        }
-    }
-        else {                                                                   
+            } else {   
+                el.audio.pause();
+                const x = document.getElementById(`playButton${el.id}`)
+                x.setAttribute('class', 'fas fa-play whiteOnHover clicked')
+            }
+        } else {                                                                   
             el.audio.pause()
             const popularRow = document.getElementById(`listPopular_row${id}`)
             popularRow.setAttribute('class', 'listPopular_row playing unclicked')
  
+            document.getElementById(`listPopular_row${el.id}`).setAttribute('class', 'listPopular_row')
+
             el.audio.src = el.audio.src;
             const x = document.getElementById(`playButton${el.id}`)
             x.setAttribute('class', 'fas fa-play whiteOnHover')
- 
         };     
     })
 }
@@ -150,44 +134,39 @@ function formatDate(stringDate) {
     return day + " " + month + ", " + year;
 }
 
-   
-
 function shuffleMusic(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
-        
+        [array[i], array[j]] = [array[j], array[i]]; 
     }   
     return array;
 }
 
 function playAllSongs(array) {
     
-    console.log(array)
     if(array.every(noSongsPlaying) === true) {
-    
-     
-    const x = document.getElementById(`iconPlay`)
-    x.setAttribute('class', 'fas fa-pause')
-    document.getElementById('playButton_text').innerHTML = 'Stop'
 
+        const x = document.getElementById(`iconPlay`)
+        x.setAttribute('class', 'fas fa-pause')
+        document.getElementById('playButton_text').innerHTML = 'Stop'
+        document.getElementById('rightSection_main_button--flex').setAttribute('class', 'rightSection_main_button greenPlayButton')
 
-    
-    array[0].audio.play()   
-    console.log('song on index ' + 0 + " is playing") 
-    
-    for (let i = 0; i < array.length; i++) {
         
-    array[i].audio.onended = () => {
-        array[i++].audio.play()
-        console.log('Song on index ' + i + 1 + " is playing") 
-    }}} else {
+
+        for (let i = 0; i < array.length; i++) {
+            
+            array[i].audio.onended = () => {
+            array[i++].audio.play()
+            }
+            array[0].audio.play() 
+        }
+    } else {
         array[(array.findIndex(findIdOfSongPlaying))].audio.pause();
 
         const x = document.getElementById(`iconPlay`)
         x.setAttribute('class', 'fas fa-play')
         document.getElementById('playButton_text').innerHTML = 'Play'
-
+        document.getElementById('rightSection_main_button--flex').setAttribute('class', 'rightSection_main_button')
     }
 }
 
@@ -202,15 +181,10 @@ function findIdOfSongPlaying(element) {
 }
 
 
-//odtial nemazat
-
-
-
-
-
 
 export { loadData }
 export { chooseRandomArtist }
 export { createTable }
 export { addMusic }
 
+// tu prestan mazat

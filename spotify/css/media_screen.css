@@ -62,15 +62,16 @@
   }
 
   #listLatestRelease {
-    display: flex;
+    display: block;
     font-size: 24px;
     margin-top: 5%;
   }
   h2 {
     font-size: 30px;
   }
+
   #listLatestRelease_row {
-    margin-top: 0%;
+    margin-top: 30px;
   }
   #listImage--margin {
     width: 10%;
@@ -88,8 +89,9 @@
   }
 
   .listImage {
-    width: 8%;
-    height: auto;
+    width: auto;
+    height: 100%;
+    position: absolute;
   }
   #iconPause:hover,
   #iconPause:focus {
@@ -112,19 +114,31 @@
     width: 140px;
   }
   .listImage_artist {
-    width: 6.5%;
-    height: 3.5%;
+    width: auto;
+    height: 65%;
     margin: 0px 8px;
   }
   #listPopular_row--whiteHover {
     width: 100px;
+  }
+  #songsWrapper {
+    padding-top: 30px;
   }
 }
 @media screen and (max-width: 751px) {
   #listPopular_headings--right {
     display: none;
   }
+  #listLatestRelease {
+    display: block;
+  }
+  #listFansAlsoLike {
+    display: none;
+  }
 
+  #listLatestRelease_row {
+    margin-top: 5%;
+  }
   .listImage_artist {
     display: none;
   }
@@ -141,6 +155,12 @@
   #rightSection_button--small {
     margin-left: 27%;
   }
+  #listPopular {
+    width: 100%;
+  }
+  #songsWrapper {
+    padding-top: 10px;
+  }
 }
 
 @media screen and (max-width: 455px) {
@@ -153,8 +173,15 @@
   h2 {
     font-size: 24px;
   }
+  #listLatestRelease {
+    display: block;
+  }
+  #listFansAlsoLike {
+    display: none;
+  }
   #listLatestRelease_row {
     font-size: 20px;
+    margin-top: 5%;
   }
   .listPopular_row {
     margin-bottom: 10%;
@@ -188,5 +215,11 @@
   }
   #rightSection_main_navig {
     flex-wrap: wrap;
+  }
+  #listPopular {
+    width: 100%;
+  }
+  #songsWrapper {
+    padding-top: 30px;
   }
 }

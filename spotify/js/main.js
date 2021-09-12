@@ -1,15 +1,11 @@
 import { loadData, chooseRandomArtist, addMusic, createTable } from "./functions.js"
 
 
-
-
-
-
-
 fetch('https://613622df8700c50017ef5455.mockapi.io/api/v1/artist/')
 .then(response => response.json())
 .then(data => {
     const randomArtistId = chooseRandomArtist(data);
+    console.log(randomArtistId)
 
     fetch(`https://613622df8700c50017ef5455.mockapi.io/api/v1/artist/${randomArtistId}`)
     .then(response => response.json())
@@ -20,9 +16,7 @@ fetch('https://613622df8700c50017ef5455.mockapi.io/api/v1/artist/')
     .then(response => response.json())
     .then(dataPopular => {
         dataPopular.forEach(createTable);
-        dataPopular.forEach(addMusic);
-        
-        
+        dataPopular.forEach(addMusic); 
     })
 })
 

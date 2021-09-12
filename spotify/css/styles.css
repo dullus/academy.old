@@ -354,6 +354,7 @@ p {
   position: relative;
   overflow: hidden;
   border-radius: 15%;
+  margin-right: 20px;
 }
 #listFansAlsoLike {
   width: 15%;
@@ -437,6 +438,10 @@ p {
 
 .playButton {
   color: transparent;
+}
+
+.greenPlayButton {
+  background: var(--color-darkPastelGreen);
 }
 
 #iconPause:hover,
