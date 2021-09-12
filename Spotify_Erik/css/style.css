@@ -203,7 +203,8 @@ li {
 }
 .overview_artist {
   width: 75%;
-  overflow: scroll;
+  overflow-x: hidden;
+  overflow-y: scroll;
   height: 100%;
 }
 
