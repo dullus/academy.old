@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
+    <title>Spotify</title>
+  </head>
+  <body>
+    <div class="main_box">
+      <div class="sidebar_menu">
+        <div class="menu">
+          <ul>
+            <div class="spotify-top">
+              <li class="spotify-icon">
+                <i id="spotify-icon" class="fab fa-spotify"></i>
+                <a>Spotify</a>
+                <p class="discover">Discover</p>
+              </li>
+            </div>
+            <div class="side-menu-containers">
+              <li>
+                <i class="fas fa-globe-americas"></i>
+                <a href="#">Explore</a>
+              </li>
+              <li>
+                <i class="fas fa-podcast"></i>
+                <a href="#">Radio</a>
+              </li>
+            </div>
+            <p class="heading-of-li">Library</p>
+            <div class="side-menu-containers">
+              <li>
+                <i class="fas fa-music"></i>
+                <a href="#">Songs</a>
+              </li>
+              <li>
+                <i class="fas fa-compact-disc"></i>
+                <a href="#">Albums</a>
+              </li>
+              <li>
+                <i class="fas fa-microphone"></i>
+                <a href="#">Artists</a>
+              </li>
+              <li>
+                <i class="fas fa-heart"></i>
+                <a href="#">Favourites</a>
+              </li>
+            </div>
+            <div class="playlist">
+              <p class="heading-of-li">Playlist</p>
+              <i id="side-bar-playlist-plus-icon" class="fas fa-plus"></i>
+            </div>
+            <div class="side-menu-containers">
+              <li>
+                <i class="fas fa-bars"></i>
+                <a href="#">Relax</a>
+              </li>
+              <li>
+                <i class="fas fa-bars"></i>
+                <a href="#">Workout</a>
+              </li>
+              <li>
+                <i class="fas fa-bars"></i>
+                <a href="#">My music</a>
+              </li>
+              <li>
+                <i class="fas fa-bars"></i>
+                <a href="#">Discover weekly</a>
+              </li>
+            </div>
+          </ul>
+        </div>
+      </div>
+      <main class="main-container">
+        <nav class="navbar">
+          <div class="navbar__container">
+            <div class="search-container">
+              <div class="navbar__container-left-arrows">
+                <i id="left" class="fas fa-chevron-left"></i>
+                <i id="right" class="fas fa-chevron-right"></i>
+              </div>
+              <div class="searchbox">
+                <i class="fa fa-search"></i>
+                <input
+                  id="search-input"
+                  type="text"
+                  placeholder="Search.."
+                  name="searc"
+                />
+              </div>
+            </div>
+            <div class="navbar__container-right">
+              <button>Premium</button>
+              <div class="bell-icon-container">
+                <span></span>
+                <i class="fas fa-bell"></i>
+              </div>
+              <div class="navbar__container-right-user">
+                <i class="far fa-user-circle"></i>
+                <p>Asylab</p>
+                <i id="#arrow-down" class="fas fa-angle-down"></i>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <section class="section">
+          <div class="section-artist">
+            <h3 class="section__artist-title">Artists</h3>
+            <i class="fas fa-check-circle"></i>
+          </div>
+          <h1 class="section__main-headline"></h1>
+          <div class="section__main-buttons">
+            <button
+              id="section__main__buttons-play"
+              class="section__main__buttons-play"
+            >
+              <i id="section__main__buttons-play-i" class="fas fa-play"></i>Play
+            </button>
+            <button class="section__main__buttons-Follow">Follow</button>
+            <span class="section__main__buttons-Follow-circle"
+              ><i class="fas fa-ellipsis-h"></i
+            ></span>
+          </div>
+          <div class="section__main-list">
+            <ul class="section__main-list-ul">
+              <li class="section__main-list__ul-li">
+                <a class="section__main-list__ul_li-a" href="#">OVERVIEW</a>
+                <span id="section__main-list-dot"></span>
+              </li>
+              <li class="section__main-list__ul-li">
+                <a href="#">FANS ALSO LIKE</a>
+                <span id="section__main-list-dot"></span>
+              </li>
+              <li class="section__main-list__ul-li">
+                <a href="#">ABOUT</a>
+                <span id="section__main-list-dot"></span>
+              </li>
+              <li class="section__main-list__ul-li">
+                <a href="#">CONCERTS</a>
+                <span id="section__main-list-dot"></span>
+              </li>
+            </ul>
+          </div>
+          <h3 class="section--latest_releases">Latest Releases</h3>
+          <div class="latest_releases-container">
+            <div class="latest_releases-container-img">
+              <img id="latest_releases-container-img" alt="eminem1" />
+            </div>
+            <div>
+              <p id="latest_releases-container-p">Eminem Show</p>
+              <p id="latest_releases_container_date">Feb 9, 2018</p>
+            </div>
+          </div>
+          <h3 class="section--latest_releases">Popular</h3>
+          <section id="popular-container" class="popular"></section>
+        </section>
+        <section class="fun_also-container">
+          <div class="monthly_listners">
+            <p>MONTHLY LISTENERS</p>
+            <p>48,514,999</p>
+          </div>
+          <div class="fun_also_like">
+            <h3 class="headlight">Funs Also like</h3>
+            <div class="img-container">
+              <img src="assets/Tupac.jpg" alt="eminem_fun-1" />
+              <p>Tupac</p>
+            </div>
+            <div class="img-container">
+              <img src="assets/Jay-z.jpg" alt="Jay-Z" />
+              <p>Jay-Z</p>
+            </div>
+            <div class="img-container">
+              <img src="assets/Eminem.jpg" alt="eminem" />
+              <p>Shady</p>
+            </div>
+            <div class="img-container">
+              <img src="assets/50cent.jpg" alt="50cent" />
+              <p>50Cent</p>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
