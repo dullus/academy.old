@@ -1,4 +1,9 @@
 function GenerateLeftTable() {
+  let song1 = new Audio("audio/song-1.mp3");
+  let song2 = new Audio("audio/song-2.mp3");
+  let song3 = new Audio("audio/song-3.mp3");
+  let song4 = new Audio("audio/song-4.mp3");
+
   const url = "https://613622df8700c50017ef5455.mockapi.io/api/v1/artist/";
   fetch(url)
     .then((res) => res.json())
@@ -31,24 +36,55 @@ function GenerateLeftTable() {
     .then((res) => res.json())
     .then((data) => {
       const table = document.createElement("table");
+      const span = document.createElement("span");
       const div = document.getElementById("tablecontainer");
 
       for (u = 0; u < 3; u++) {
-        const image = data[u].music.latest.image;
+        let image = data[u].music.latest.image;
         const latest = data[u].music.latest.name;
         const row = table.insertRow(u);
         const cell1 = row.insertCell(0);
         const cell2 = row.insertCell(1);
         const cell3 = row.insertCell(2);
         const cell4 = row.insertCell(3);
-
+        const cell5 = row.insertCell(3);
         cell1.setAttribute("background", image);
-        cell2.innerHTML = latest;
-        cell3.appendChild(document.createElement("BUTTON"));
-        cell4.appendChild(document.createElement("LABEL"));
+        cell2.appendChild(span);
+        cell3.innerHTML = latest;
+        cell4.appendChild(document.createElement("BUTTON"));
+        cell5.appendChild(document.createElement("LABEL"));
         table.appendChild(row);
       }
       div.appendChild(table);
+
+      document.getElementById("playBtn").addEventListener("click", () => {
+        for (let i = 0; i < 4; i++) {
+          if (i == 0) {
+            song1.play();
+            song2.pause();
+            song3.pause();
+            song4.pause();
+          }
+          if (i == 1) {
+            song1.pause();
+            song2.play();
+            song3.pause();
+            song4.pause();
+          }
+          if (i == 2) {
+            song1.pause();
+            song2.pause();
+            song3.play();
+            song4.pause();
+          }
+          if (i == 3) {
+            song1.pause();
+            song2.pause();
+            song3.pause();
+            song4.play();
+          }
+        }
+      });
     });
 }
 

@@ -388,3 +388,20 @@ span:hover {
   flex-direction: row;
   padding-bottom: 40px;
 }
+
+#time1 {
+  padding-right: 200px;
+}
+
+#playIcons {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  padding: 20px;
+  color: white;
+}
+
+#playBtn {
+  padding: 20px;
+  color: white;
+}
