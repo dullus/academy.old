@@ -78,7 +78,7 @@ body {
   flex: 25%;
 }
 
-.songSection:hover,
+/* .songSection:hover, */
 .actionButtons:hover {
   background: var(--spotify-green);
 }
@@ -328,7 +328,7 @@ h1 {
   border-radius: 1vh;
 }
 
-.songDetail:hover .songInformation .explicit {
+/* .songDetail:hover .songInformation .explicit {
   color: var(--spotify-green);
   border-color: var(--spotify-green);
 }
@@ -340,7 +340,7 @@ h1 {
 .songDetail:hover .playPauseButton {
   color: white;
   visibility: visible;
-}
+} */
 
 #plusIcon {
   width: 4.5vw;
@@ -533,4 +533,12 @@ footer {
   .explicit {
     width: 6vw;
   }
+
+  .albumBox .active {
+    color: var(--spotify-green);
+    font-weight: bold;
+  }
+  /* .noTactive {
+    color: white !important;
+  } */
 }
