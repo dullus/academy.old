@@ -43,7 +43,7 @@ function createTable(data) {
     imageWrapper.appendChild(albumImage)
 
     const playIcon = document.createElement('i');
-    playIcon.setAttribute('class', 'fas fa-play')
+    playIcon.setAttribute('class', 'fas fa-play whiteOnHover')
     playIcon.setAttribute('id', `playButton${data.id}`)
     leftPartWrapper.appendChild(playIcon)
 
@@ -85,19 +85,26 @@ const array = [];
 function addMusic(data) {
     const audio = new Audio(`music/song-${data.id}.mp3`)  
     const id = data.id;
-    const isNotPlaying = audio.paused;
+    const isPlaying = false;
     const artistID = data.artistId
+    const playlistId = "popular"
  
-    array.push({id,audio, artistID, isNotPlaying});
+    array.push({id,audio, artistID, isPlaying, playlistId});
 
     const play = document.getElementById(`id${data.id}`)
     play.addEventListener('click',  () => renderAudio(data.id, array))  
   
+    
+}
+console.log(array)
 
+
+
+playRandomSongFromList(array)
+function playRandomSongFromList(array) {
+document.getElementById('rightSection_main_button--flex').addEventListener('click', () => playAllSongs(shuffleMusic(array)))
 }
 
-console.log(array)
-document.getElementById('rightSection_main_button--flex').addEventListener('click', () => a(shuffleMusic(array)))
 
 
 function renderAudio(id, array) {
@@ -107,25 +114,30 @@ function renderAudio(id, array) {
             if (el.audio.paused === true) {
             el.audio.play();
             const x = document.getElementById(`playButton${el.id}`)
-            x.setAttribute('class', 'fas fa-pause')
+            x.setAttribute('class', 'fas fa-pause whiteOnHover clicked')
 
             const popularRow = document.getElementById(`listPopular_row${id}`)
-            popularRow.setAttribute('class', 'listPopular_row playing')
+            popularRow.setAttribute('class', 'listPopular_row playing unclicked')
         } 
      else {
+         
             el.audio.pause();
             const x = document.getElementById(`playButton${el.id}`)
-            x.setAttribute('class', 'fas fa-play')
+            x.setAttribute('class', 'fas fa-play whiteOnHover clicked')
  
             const popularRow = document.getElementById(`listPopular_row${id}`)
-            popularRow.setAttribute('class', 'listPopular_row playing')  
+            popularRow.setAttribute('class', 'listPopular_row')  
         }
     }
-        else {                                                                   //id = API song ID
-                                                                                 //el.id = song ID from array
+        else {                                                                   
+            el.audio.pause()
+            const popularRow = document.getElementById(`listPopular_row${id}`)
+            popularRow.setAttribute('class', 'listPopular_row playing unclicked')
+ 
             el.audio.src = el.audio.src;
             const x = document.getElementById(`playButton${el.id}`)
-            x.setAttribute('class', 'fas fa-play')
+            x.setAttribute('class', 'fas fa-play whiteOnHover')
+ 
         };     
     })
 }
@@ -144,38 +156,59 @@ function shuffleMusic(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [array[i], array[j]] = [array[j], array[i]];
-     
+        
     }   
     return array;
 }
 
-function a(array) {
-    for (let i = 0; i < array.length; i++) {
-        if (array[i].audio.paused === true) {
-            const x = document.getElementById(`iconPlay`)
-            x.setAttribute('class', 'fas fa-pause')
-        
-            array[0].audio.play();
-        }
-    }
-
-    // let index = 0;
-    // array[index].audio.play()    
+function playAllSongs(array) {
     
-    // for (let i = 0; i < array.length; i++) {
+    console.log(array)
+    if(array.every(noSongsPlaying) === true) {
+    
+     
+    const x = document.getElementById(`iconPlay`)
+    x.setAttribute('class', 'fas fa-pause')
+    document.getElementById('playButton_text').innerHTML = 'Stop'
+
+
+    
+    array[0].audio.play()   
+    console.log('song on index ' + 0 + " is playing") 
+    
+    for (let i = 0; i < array.length; i++) {
         
-    // array[index].audio.onended = () => {array[index + 1].audio.play()}
-    // console.log(array)
+    array[i].audio.onended = () => {
+        array[i++].audio.play()
+        console.log('Song on index ' + i + 1 + " is playing") 
+    }}} else {
+        array[(array.findIndex(findIdOfSongPlaying))].audio.pause();
+
+        const x = document.getElementById(`iconPlay`)
+        x.setAttribute('class', 'fas fa-play')
+        document.getElementById('playButton_text').innerHTML = 'Play'
+
+    }
 }
 
 
-function p(soundArray) {
-    soundArray[0].audio.play();
-    soundArray.forEach(function(element, index, array) 
-    {if (soundArray[index + 1]) {
-        soundArray[index].audio.addEventListener('ended', () => (function() {
-            soundArray[index + 1].audio.play();}, this));      }    });
-        }
+function noSongsPlaying(element, array) {
+    return element.audio.paused === true
+}
+
+
+function findIdOfSongPlaying(element) {
+    return !(element.audio.paused); 
+}
+
+
+//odtial nemazat
+
+
+
+
+
+
 export { loadData }
 export { chooseRandomArtist }
 export { createTable }

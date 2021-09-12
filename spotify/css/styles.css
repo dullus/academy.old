@@ -257,15 +257,19 @@ i {
 .navig_wrapper--icon:hover {
   color: var(--color-darkPastelGreen);
 }
-#left_navig--icon {
+.left_navig_icon {
   padding: 0px;
   padding-top: 10px;
   font-size: 5px;
   color: transparent;
 }
 
-#left_navig--icon:focus,
-#left_navig--icon:hover {
+.left_navig_icon:focus,
+.left_navig_icon:hover {
+  color: var(--color-darkPastelGreen);
+}
+
+.navig_wrapper:hover .left_navig_icon {
   color: var(--color-darkPastelGreen);
 }
 
@@ -387,16 +391,27 @@ p {
 
 .listPopular_row:hover #iconPause {
   display: block;
-  color: #fff;
+  color: var(--color-whiteSmoke);
 }
 
-.listPopular_row:hover .playButton {
-  display: block;
-  color: #fff;
+.whiteOnHover {
+  color: transparent;
 }
-
 .listPopular_row:hover #levt_navig--icon {
   color: #01b949;
+}
+.listPopular_row:hover .fas.fa-play {
+  display: block;
+  color: var(--color-whiteSmoke);
+}
+
+.listPopular_row:hover .fas.fa-pause {
+  display: block;
+  color: var(--color-whiteSmoke);
+}
+
+.clicked {
+  color: var(--color-whiteSmoke);
 }
 
 #tableItem--number {
@@ -418,10 +433,6 @@ p {
 }
 .listPopular_row_rightWrapper {
   display: flex;
-}
-#iconPause {
-  width: 2%;
-  color: transparent;
 }
 
 .playButton {
@@ -494,12 +505,15 @@ p {
   background: var(--color-darkPastelGreen);
 }
 
-.playing {
-  color: var(--color-darkPastelGreen);
+.playing .unclicked {
+  color: var(--color-whiteSmoke);
+}
+.unclicked {
+  color: var(--color-whiteSmoke);
 }
 
-.paused {
-  color: var(--color-whiteSmoke);
+.playing {
+  color: var(--color-darkPastelGreen);
 }
 
 .tooltip {
@@ -511,7 +525,7 @@ p {
 .tooltip .tooltiptext {
   visibility: hidden;
   width: 200px;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.3);
   color: #fff;
   text-align: center;
   border-radius: 6px;
