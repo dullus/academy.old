@@ -10,13 +10,9 @@ fetch('https://613622df8700c50017ef5455.mockapi.io/api/v1/artist/')
       fetch(`https://613622df8700c50017ef5455.mockapi.io/api/v1/artist/${randomArtist}/popular`)
       .then(response => response.json())
       .then (dataPopular => 
-        dataPopular.forEach(artistPopular)
-        
+        dataPopular.forEach(artistPopular) 
     )})
 })
-
-
-
 
 function generateRandomArtist(data) {
       return Math.ceil(Math.random() * data.length)
@@ -51,6 +47,13 @@ function artistPopular(dataPopular){
   toolTip.innerHTML = "Song was created at: " + x + " " + y + "," + z; 
   toolTip.setAttribute('class', 'toolTip')
   song.appendChild(toolTip)
+  
+
+  const audio = document.getElementById("music1")
+  song.onclick = playMusic()
+  function playMusic(){
+     audio.play();
+  }
   
   const leftSongSection = document.createElement("div")
   song.appendChild(leftSongSection)

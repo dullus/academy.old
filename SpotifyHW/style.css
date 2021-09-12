@@ -378,7 +378,7 @@
   width: 30%;
   display: flex;
   flex-direction: column;
-  height: 30%;
+  height: 60%;
 }
 #songListTitle {
   display: flex;
@@ -407,7 +407,7 @@
 .song .toolTip {
   visibility: hidden;
   width: 140px;
-  background-color: grey;
+  background-color: transparent;
   color: #fff;
   text-align: center;
   border-radius: 6px;
@@ -463,6 +463,7 @@
   margin-bottom: 20px;
   width: 90%;
   justify-content: space-between;
+  margin-left: -30px;
 }
 .songPlayButt {
   width: 15%;
@@ -485,7 +486,7 @@
   width: 40%;
 }
 #scrollSong {
-  height: 30%;
+  height: 280px;
   width: 95%;
   overflow: scroll;
 }
