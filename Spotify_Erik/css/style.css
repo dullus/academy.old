@@ -12,9 +12,9 @@
   flex-direction: row;
   background-color: var(--color-black);
   color: var(--color-white);
-  font-size: 18px;
+  font-size: 80%;
   width: 99vw;
-  height: 96vh;
+  height: 98vh;
   font-family: sans-serif;
   background-image: url(/academy/Spotify_Erik/img/1476592829564.jpg);
   background-position: center;
