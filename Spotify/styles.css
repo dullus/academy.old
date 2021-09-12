@@ -335,8 +335,7 @@
   height: auto;
   width: 85%;
 }
-.popular::-webkit-scrollbar {
-}
+
 .popular-item {
   display: flex;
   justify-content: space-between;
@@ -369,7 +368,7 @@
 }
 .popular_item-left img {
   border-radius: 5px;
-  width: 10%;
+  width: 20%;
   height: 100%;
 }
 .popular_item-left i {
@@ -421,7 +420,7 @@
 .popular_item-right:hover #popular__item_right-p-second {
   color: var(--color-darkPastelGreen);
 }
-*/ .fun_also-container {
+.fun_also-container {
   position: absolute;
   top: 23%;
   right: 7%;
