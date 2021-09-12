@@ -17,7 +17,6 @@ const collection = [];
 
 function createMusicCollection(id, createdDate) {
     const isPlaying = false;
-    const isPaused = false;
     const audio = new Audio(`assets/music/song-${id}.mp3`);
     const element = document.getElementById(id);
     audio.setAttribute("id", `songID${id}`);
