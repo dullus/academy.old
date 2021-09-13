@@ -1,0 +1,31 @@
+2021-09-09:ErikScecina::added latest release section
+
+2021-09-09:ErikScecina::modified img paths
+
+2021-09-09:ErikScecina::created main.js and added to html
+
+2021-09-09:ErikScecina::Spotify JS part1 - modified html/css 1/2
+
+2021-09-09:ErikScecina::SpotifyJS part 1 - added fetch and name 2/2
+
+2021-09-09:ErikScecina::SpotifyJS part 1 - done
+
+2021-09-11:Erik::add: lesson15-react folder
+
+2021-09-12:ErikScecina::SpotifyJS part 2 - modified gitignore and css
+
+2021-09-12:ErikScecina::SpotifyJS part 2 - get random artist done
+
+2021-09-12:ErikScecina::SpotifyJS part 2 - load random artist data
+
+2021-09-12:ErikScecina::SpotifyJS part 2 - added overflow to css
+
+2021-09-12:ErikScecina::SpotifyJS part 2 - all data loaded, mod:css/html
+
+2021-09-12:ErikScecina::SpotifyJS part 2 - modified html/css to look better
+
+2021-09-12:ErikScecina::SpotifyJS part 2 - converted ms to mins; done
+
+2021-09-12:ErikScecina::SpotifyJS part 3 - music added
+
+2021-09-12:ErikScecina: (origin/erik_spotify):SpotifyJS part 3 - added play button to tracks and hover effect
