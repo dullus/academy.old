@@ -1,0 +1,29 @@
+// git log --pretty=format:"%ad:%an:%d:%B" --date=short --reverse --all --after="2021-09-06" --author=Kristina
+
+2021-09-08:kristinapuskasova::fixed stop icon hover effect
+
+2021-09-08:kristinapuskasova::SpotifyJS part 1 - data upload and basic date formatting
+
+2021-09-08:kristinapuskasova::SpotifyJS part 2 - random artist selection + fetching popular songs data
+
+2021-09-08:kristinapuskasova::SpotifyJS part 2 - creating the list of popular songs + scrollbar
+
+2021-09-08:kristinapuskasova::SpotifyJS part 2 - song length converted + thousands separator
+
+2021-09-09:kristinapuskasova::SpotifyJS part 2 - fixed html: separate Fans Also Like section
+
+2021-09-09:kristinapuskasova::SpotifyJS part 3 - play button + corresponding song playing on click
+
+2021-09-09:kristinapuskasova:: SpotifyJS part 3 - fix: corresponding song playing on click on div
+
+2021-09-09:kristinapuskasova::SpotifyJS part 3 - music plays on click and stops on click + changing icon
+
+2021-09-10:kristinapuskasova::SpotifyJS part 3 - only one song playing + changing buttons
+
+2021-09-10:kristinapuskasova::SpotifyJS part 3 - tooltip + fixed music play and stop features
+
+2021-09-11:kristinapuskasova::SpotifyJS part 1 - fix: random artist selection  misunderstood task
+
+2021-09-12:kristinapuskasova::SpotifyJS part 3 - shuffled playlist + hover and onclick effects
+
+2021-09-12:kristinapuskasova: (origin/spotify_tina_part2, origin/spotify_tina, spotify_tina_part2): SpotifyJS part 3 - fixed click effects
