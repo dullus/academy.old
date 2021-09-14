@@ -1,0 +1,11 @@
+2021-09-09:SebastianDimun::SpotifyJS part 1finished, part2 not finished
+
+2021-09-09:SebastianDimun::SpotifyJS part 2 still not finished
+
+2021-09-10:SebastianDimun::SpotifyJS part 2 finished
+
+2021-09-10:SebastianDimun::SpotifyJS part3 stacked on hover
+
+2021-09-12:SebastianDimun: (origin/spotify-sebastian, spotify-sebastian):SpotifyJS part 3 not full funcionality on playbutton (random playing more as 1 song)
+
+2021-09-12:SebastianDimun::Merge pull request #34 from dullus/spotify-sebastian Spotify sebastian
