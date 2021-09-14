@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/font-awesome.css" />
+    <link rel="stylesheet" href="css/all.css" />
+    <script type="module" src="js/main.js" crossorigin="anonymous"></script>
+    <title>Spotify</title>
+  </head>
+  <body>
+    <div class="main">
+      <div class="section_left">
+        <p id="Spotify"><i id="Spot_logo" class="fab fa-spotify"></i>Spotyfi</p>
+        <p class="list-header">Discover</p>
+        <ul class="navigation">
+          <li class="nav_item">
+            <i class="fa fa-compass" aria-hidden="true"></i>Explore
+          </li>
+          <li class="nav_item">
+            <i class="fa fa-podcast" aria-hidden="true"></i>Radio
+          </li>
+        </ul>
+        <p class="list-header">Library</p>
+        <ul class="navigation">
+          <li class="nav_item">
+            <i class="fa fa-music" aria-hidden="true"></i>Songs
+          </li>
+          <li class="nav_item"><i class="fas fa-compact-disc"></i>Albums</li>
+          <li class="nav_item"><i class="fas fa-microphone"></i>Artist</li>
+          <li class="nav_item"><i class="fas fa-heart"></i>Favorites</li>
+        </ul>
+        <p class="list-header">
+          Playlist <i id="plus" class="fas fa-plus"></i>
+        </p>
+        <ul class="navigation">
+          <li class="nav_item">
+            <i class="fa fa-align-justify" aria-hidden="true"></i>Discover
+            Weekly
+          </li>
+          <li class="nav_item">
+            <i class="fa fa-align-justify" aria-hidden="true"></i>Relax
+          </li>
+          <li class="nav_item">
+            <i class="fa fa-align-justify" aria-hidden="true"></i>WorkOut
+          </li>
+          <li class="nav_item">
+            <i class="fa fa-align-justify" aria-hidden="true"></i>My music
+          </li>
+        </ul>
+      </div>
+      <div class="section_right">
+        <div class="body_top">
+          <div class="top_left">
+            <div class="page_arrows">
+              <span class="arrow"><i class="fas fa-chevron-left"></i></span>
+              <span class="arrow"
+                ><i id="arrow_right" class="fas fa-chevron-right"></i
+              ></span>
+            </div>
+            <i></i>
+            <i></i>
+            <input type="text" placeholder="     Search" class="text_field" />
+          </div>
+          <div class="top_right"></div>
+          <div class="user">
+            <button id="premium">PREMIUM</button>
+            <i id="bell" class="fas fa-bell"></i>
+            <div class="user_info">
+              <img id="Asylab" src="./img/asylab.png" />
+              <p id="user">Asylab</p>
+              <i id="down_arrow" class="fas fa-chevron-down"></i>
+              <i></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="body_middle">
+          <div class="left_middle">
+            <div class="artist">
+              <div id="artist">
+                <p>Artist</p>
+                <i id="checkmark" class="fas fa-check-circle"></i>
+              </div>
+              <div class="artist_name">
+                <h1><span id="name"></span></h1>
+              </div>
+            </div>
+            <div class="mid_mid">
+              <div class="buttons">
+                <button id="Play" class="main_buttons">Play</button>
+                <button class="main_buttons">Follow</button>
+                <button class="main_buttons" id="dots">...</button>
+              </div>
+              <div class="right_middle">
+                <p>MONTHLY LISTENERS</p>
+                <p class="monthly_number">48,343,984</p>
+              </div>
+            </div>
+            <nav class="mid_nav">
+              <ul class="ul_nav">
+                <li>OVERVIEW</li>
+                <li>FANS ALSO LIKE</li>
+                <li>ABOUT</li>
+                <li>CONCERTS</li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="latest_release">
+          <span class="release">Latest release</span>
+          <div class="latest_body">
+            <img id="latest_img" src="./img/album.jfif" />
+            <div class="song_date">
+              <span id="song_name"></span>
+              <span id="date"></span>
+            </div>
+          </div>
+        </div>
+        <div class="right_bottom">
+          <div class="titles">
+            <p>Popular</p>
+            <p>Fans Also Like</p>
+          </div>
+          <div class="artist_content">
+            <div class="overview_artist" id="over_artist">
+              <div class="tracks" id="all_tracks">
+                <!-- <div class="track">
+                  <div class="track_img">
+                    <img class="album" src="./img/album.jfif" />
+                  </div>
+                  <div class="track_title">All the stars</div>
+                  <div class="explicit">EXPLICIT</div>
+                  <div class="length">3:52</div>
+                  <div class="track_plays">821,421,002</div>
+                </div>
+                <div class="track">
+                  <div class="track_img">
+                    <img class="album" src="./img/album.jfif" />
+                  </div>
+                  <div class="track_title">Chapter Six</div>
+                  <div class="explicit">EXPLICIT</div>
+                  <div class="length">3:52</div>
+                  <div class="track_plays">821,421,002</div>
+                </div>
+                <div class="track">
+                  <div class="track_img">
+                    <img class="album" src="./img/album.jfif" />
+                  </div>
+                  <div class="track_title">HUMBLE</div>
+                  <div class="explicit">EXPLICIT</div>
+                  <div class="length">3:52</div>
+                  <div class="track_plays">821,421,002</div>
+                </div>
+                <div class="track">
+                  <div class="track_img">
+                    <img class="album" src="./img/album.jfif" />
+                  </div>
+                  <div class="track_title">Poetic Justice</div>
+                  <div class="explicit">EXPLICIT</div>
+                  <div class="length">3:52</div>
+                  <div class="track_plays">821,421,002</div>
+                </div> -->
+              </div>
+            </div>
+            <div class="overview_related">
+              <div class="related_artist">
+                <span class="related_artist_img">
+                  <img class="related_img" src="./img/BigSean.png" />
+                </span>
+                <span class="related_artist_name">Big Sean</span>
+              </div>
+              <div class="related_artist">
+                <span class="related_artist_img">
+                  <img class="related_img" src="./img/Jcole.png" />
+                </span>
+                <span class="related_artist_name">J. Cole</span>
+              </div>
+              <div class="related_artist">
+                <span class="related_artist_img">
+                  <img class="related_img" src="./img/2chainz.png" />
+                </span>
+                <span class="related_artist_name">2Chainz</span>
+              </div>
+              <div class="related_artist">
+                <span class="related_artist_img">
+                  <img class="related_img" src="./img/whale.png" />
+                </span>
+                <span class="related_artist_name">Wale</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

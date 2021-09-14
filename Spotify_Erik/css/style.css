@@ -1,0 +1,407 @@
+:root {
+  --color-white: #f6f6f6;
+  --color-green: #00b849;
+  --color-black: #0a0a0a;
+  --color-grey: #2a2a2a;
+  --color-darkGreen: #098b3a;
+  --color-transparent: rgba(255, 255, 255, 0.15);
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  background-color: var(--color-black);
+  color: var(--color-white);
+  font-size: 80%;
+  width: 99vw;
+  height: 98vh;
+  font-family: sans-serif;
+  background-image: url(/academy/Spotify_Erik/img/1476592829564.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-position-y: unset;
+  background-position-x: initial;
+  background-size: 100%;
+}
+
+.section_left {
+  width: 25%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.section_right {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.list-header {
+  color: var(--color-grey);
+}
+
+.body_top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  align-items: center;
+  height: 10%;
+}
+
+.body_middle {
+  display: flex;
+  flex-direction: column;
+}
+
+.mid_mid {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.monthly_number {
+  margin-left: 53%;
+}
+
+.ul_nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 60%;
+  padding-inline-start: 0px;
+}
+
+.user {
+  display: flex;
+  flex-direction: row;
+  width: 35%;
+}
+
+.user_info {
+  display: flex;
+  flex-direction: row;
+}
+
+.nav_item {
+  padding: 5% 0;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+i {
+  padding-right: 10%;
+}
+
+li {
+  list-style: none;
+}
+#plus {
+  padding-left: 50%;
+}
+
+.page_arrows {
+  display: flex;
+  flex-direction: row;
+}
+.arrow {
+  padding: 10%;
+}
+
+.top_left {
+  display: flex;
+  flex-direction: row;
+}
+
+#artist {
+  display: flex;
+  flex-direction: row;
+}
+
+#arrow_right {
+  color: var(--color-grey);
+}
+
+.artist {
+  justify-content: unset;
+}
+
+/* #name {
+  padding-right: 1%;
+} */
+
+.artist_content {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  width: 100%;
+  height: 73%;
+}
+
+/* .tracks {
+  overflow: scroll;
+} */
+
+.track {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.right_bottom {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 50%;
+}
+
+.right_middle {
+  color: var(--color-grey);
+}
+
+.main_buttons {
+  margin-right: 10px;
+  height: 27px;
+
+  padding: 0 15px;
+  font-weight: 500;
+}
+
+.latest_release {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1%;
+}
+
+.latest_body {
+  display: flex;
+  flex-direction: row;
+  padding-top: 1%;
+}
+
+.song_date {
+  display: flex;
+  flex-direction: column;
+  padding-left: 2%;
+}
+
+#latest_img {
+  height: 39px;
+}
+
+.titles {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 8%;
+  width: 100%;
+}
+.overview_artist {
+  width: 75%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 100%;
+}
+
+#Spot_logo {
+  padding: 0%;
+  color: var(--color-grey);
+}
+
+#Spotify {
+  color: var(--color-grey);
+  font-size: 25px;
+}
+
+.track_img {
+  display: flex;
+  flex-direction: row;
+}
+
+#track_play {
+  margin-top: 60%;
+  margin-left: 12%;
+}
+
+.track_title {
+  margin-left: 2%;
+  margin-right: 26%;
+  margin-top: 5%;
+  width: -webkit-fill-available;
+}
+
+.explicit {
+  margin-left: 2%;
+  margin-right: 10%;
+  margin-top: 5%;
+  color: var(--color-transparent);
+}
+
+.explicit:hover {
+  color: var(--color-green);
+}
+
+.length {
+  margin-left: 2%;
+  margin-right: 5%;
+  margin-top: 5%;
+}
+
+.track_plays {
+  margin-left: 2%;
+  margin-right: 5%;
+  margin-top: 5%;
+}
+
+.overview_related {
+  display: flex;
+  flex-direction: column;
+  margin-left: 2%;
+  justify-content: inherit;
+  margin-top: 4%;
+}
+
+#bell {
+  margin-top: 13%;
+  margin-left: 3%;
+}
+
+#premium {
+  border-radius: 35px;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.15);
+  color: var(--color-white);
+  padding: 5%;
+  padding-left: 8%;
+  padding-right: 8%;
+  margin-top: 7%;
+  margin-right: 3%;
+  font-size: 17px;
+  border: none;
+}
+#Asylab {
+  height: 65%;
+  margin-top: 5%;
+  margin-top: 18%;
+}
+
+#user {
+  margin-top: 30%;
+  font-size: 20px;
+}
+
+#dots {
+  border-radius: 60%;
+  padding-top: 2%;
+  padding-bottom: 6%;
+  padding-left: 3%;
+  padding-right: 4%;
+}
+
+#down_arrow {
+  padding-top: 30%;
+  padding-left: 4%;
+}
+
+.buttons {
+  width: 40%;
+}
+
+.main_buttons {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: var(--color-white);
+  border-radius: 35px;
+  font-size: 16px;
+  margin: 3%;
+  background: transparent;
+  padding-left: 7%;
+  padding-right: 8%;
+  padding-top: 2%;
+  padding-bottom: 6%;
+  border: none;
+}
+
+.nav_item:hover {
+  background-color: var(--color-green);
+  border-radius: 30px;
+  cursor: pointer;
+  width: 60%;
+  padding-left: 2%;
+}
+
+.main_buttons:hover {
+  background-color: var(--color-green);
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+#premium:hover {
+  background-color: var(--color-green);
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+#checkmark {
+  color: blue;
+  font-size: 15px;
+  margin-top: 1%;
+  margin-left: 1%;
+}
+
+.ul_nav > li:hover {
+  color: var(--color-green);
+
+  cursor: pointer;
+}
+
+.track:hover {
+  color: var(--color-green);
+  cursor: pointer;
+}
+
+.related_img {
+  height: 36px;
+  border-radius: 90%;
+  margin-top: 1%;
+}
+
+.album {
+  height: 29px;
+  padding-top: 50%;
+}
+
+.related_artist_name {
+  margin-top: 1%;
+}
+
+.text_field {
+  border-radius: 20px;
+  outline: none;
+  border-style: none;
+  background-image: url(/academy/Spotify_Erik/img/magglass.png);
+  background-size: 13px;
+  background-repeat: no-repeat;
+  background-position-x: 5px;
+  background-position-y: 3px;
+}
+
+@media screen and (max-width: 1065px) {
+  .main {
+    font-size: 13px;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .section_left {
+    display: none;
+  }
+
+  .section_right {
+    width: 100vw;
+  }
+}
