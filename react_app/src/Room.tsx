@@ -6,10 +6,11 @@ import Heater from './Heater';
 interface Props {
     name: string;
     id?: number;
+    hasSofa: boolean;
     
 }
 
-const Room: React.FC<Props> = ({name, id}) => {
+const Room: React.FC<Props> = ({name, id, hasSofa}) => {
 
     const sofa = 
         {
@@ -29,9 +30,12 @@ const Room: React.FC<Props> = ({name, id}) => {
     <div className={styles.room}>
         {name}
         {id}
-        <Sofa brand={sofa.brand} color={sofa.color} width={sofa.width} height={sofa.height} depth={sofa.depth} material={sofa.material} shape={sofa.shape}/>
+        
         <Light power={light.power}/>
         <Heater power={heater.power} heatingCapacity={heater.heatingCapacity}/>
+
+        {hasSofa &&
+        <Sofa brand={sofa.brand} color={sofa.color} width={sofa.width} height={sofa.height} depth={sofa.depth} material={sofa.material} shape={sofa.shape}/>}
     </div>);
 
 

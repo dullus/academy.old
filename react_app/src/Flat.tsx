@@ -10,11 +10,11 @@ interface Props {
 const Flat: React.FC<Props> = ({owner}) => {
 
     const rooms = [
-        {id: 1, name: 'Kitchen'},
-        {id: 2, name: 'Livingroom'},
-        {id: 3, name: 'Bedroom'},
-        {id: 4, name: 'Bathroom'},
-        {id: 5, name: 'Hall'}
+        {id: 1, name: 'Kitchen', hasSofa: false},
+        {id: 2, name: 'Livingroom', hasSofa: true},
+        {id: 3, name: 'Bedroom', hasSofa: false},
+        {id: 4, name: 'Bathroom', hasSofa: false},
+        {id: 5, name: 'Hall', hasSofa: false}
         ]
     
 
@@ -24,7 +24,7 @@ const Flat: React.FC<Props> = ({owner}) => {
         
         <div className={styles.rooms}>
         {rooms.map((room => (
-        <Room name={room.name}/>
+        <Room name={room.name} hasSofa={room.hasSofa}/>
         )))}
     </div>
     </div>);
