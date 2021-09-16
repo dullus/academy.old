@@ -1,13 +1,10 @@
 import React from 'react';
 import './App.css';
-import Flat from './Flat'
-import Room from './Room';
-import Sofa from './Sofa'
-import styles from "./App.module.css"
+import Flat from './components/Flat/Flat'
 
 
 const App: React.FC = () => {
-const flat = {owner: 'Kristina'}
+const flat = {owner: 'Kristina', id: 1}
 
 
 return (

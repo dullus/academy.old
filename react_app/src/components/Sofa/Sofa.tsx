@@ -1,4 +1,4 @@
-import styles from './App.module.css'
+import styles from './Sofa.module.css'
 
 interface IProps {
     brand: string;
@@ -13,8 +13,8 @@ interface IProps {
 const Sofa: React.FC<IProps> = ({brand, color, width, height, depth, material, shape}) => {
 
     return (
-    <div className={styles.sofa}> 
-        {color} sofa
+    <div> 
+    <p>{color} sofa</p>
     </div>);
 };
 

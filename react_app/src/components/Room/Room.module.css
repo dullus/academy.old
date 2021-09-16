@@ -1,0 +1,18 @@
+.rooms {
+  display: flex;
+  justify-content: space-around;
+  flex-flow: wrap;
+  margin: 20px;
+}
+
+.room {
+  width: 200px;
+  height: auto;
+  margin: 10px;
+  padding: 10px;
+  background-color: rgb(240, 224, 240);
+}
+
+.room:hover {
+  background-color: thistle;
+}
