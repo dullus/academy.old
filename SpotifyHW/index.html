@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.js"></script>
+    <title>Spotify</title>
+  </head>
+  <body>
+    <div id="pageContent">
+      <nav id="leftSideNavBar">
+        <div id="spotifyLogo">
+          <img src="./assets/aaa.jfif" id="spotifyIcon" />
+        </div>
+        <nav class="discoverNav">
+          <div id="discoverNavLabel"><strong>Discover</strong></div>
+          <div class="leftMenuItem1">
+            <img src="./icons/compass.png" id="explorePic" />
+            <strong>Explore</strong>
+          </div>
+          <div class="leftMenuItem">
+            <img src="./icons/radio.png" id="radioPic" /> <strong>Radio</strong>
+          </div>
+        </nav>
+        <nav class="libraryNav">
+          <div id="libraryNavLabel"><strong>Library</strong></div>
+          <div class="leftMenuItem1">
+            <img src="./icons/note.png" id="songsPic" /> <strong>Songs</strong>
+          </div>
+          <div class="leftMenuItem">
+            <img src="./icons/cd.png" id="albumsPic" /> <strong>Albums</strong>
+          </div>
+          <div class="leftMenuItem">
+            <img src="./icons/mic.png" id="artistsPic" />
+            <strong>Artists</strong>
+          </div>
+          <div class="leftMenuItem">
+            <img src="./icons/heart.png" id="favoritesPic" />
+            <strong>Favorites</strong>
+          </div>
+        </nav>
+        <nav class="playlistsNav">
+          <div id="playlistsNavLabel"><strong>Playlists</strong></div>
+          <div class="leftMenuItem1">
+            <img src="./icons/list.png" class="listPic" />
+            <strong>Discover Weekly</strong>
+          </div>
+          <div class="leftMenuItem">
+            <img src="./icons/list.png" class="listPic" />
+            <strong>Relax</strong>
+          </div>
+          <div class="leftMenuItem">
+            <img src="./icons/list.png" class="listPic" />
+            <strong>WorkOut</strong>
+          </div>
+          <div class="leftMenuItem">
+            <img src="./icons/list.png" class="listPic" />
+            <strong>My Music</strong>
+          </div>
+        </nav>
+      </nav>
+      <div class="rightPageSide">
+        <nav id="topNavBar">
+          <div id="topNavLeft">
+            <div id="backButton">
+              <img src="./icons/arrow-normal.png" id="backArrow" />
+            </div>
+            <div id="forwardButton">
+              <img src="./icons/arrow-normal-grey.png" id="forwardArrow" />
+            </div>
+            <input type="text" placeholder="            Search" />
+          </div>
+          <div id="topNavRight">
+            <div id="premiumText"><strong>PREMIUM</strong></div>
+            <img src="./icons/bell.png" id="bellIcon" />
+            <img src="./icons/asylab.png" id="asylabLogo" />
+            <div id="asylabText">AsyLab</div>
+            <img src="./icons/arrow-down.png" id="downArrow" />
+          </div>
+        </nav>
+        <div class="artistSection">
+          <div id="artist">
+            Artist
+            <img src="./icons/check.png" id="veriCheck" />
+          </div>
+          <div id="nameOfArtist"><strong> Metallica</strong></div>
+        </div>
+        <div class="playSection">
+          <div class="leftSidePlaySection">
+            <div id="playButton">
+              <img src="./icons/play.png" id="playIcon" /> <strong>Play</strong>
+            </div>
+            <div id="followButton"><strong>Follow</strong></div>
+            <div id="moreButton">...</div>
+          </div>
+          <div class="rightSidePlaySection">
+            <div id="monthlyListeners">MONTHLY LISTENERS</div>
+            <div id="monthlyListNumber">75,210,666</div>
+          </div>
+        </div>
+        <div class="navigationSection">
+          <div id="overview"><strong>OVERVIEW</strong></div>
+          <div id="fansAlsoLike"><strong>FANS ALSO LIKE</strong></div>
+          <div id="about"><strong>ABOUT</strong></div>
+          <div id="concerts"><strong>CONCERTS</strong></div>
+        </div>
+        <div class="latestRelease">
+          <div id="latestRealText">Latest Release</div>
+          <div id="flexLRRow">
+            <div id="latestAlbum">
+              <img id="sm2" />
+            </div>
+            <div class="latestReleaseDetails">
+              <div id="nameOfLR"><strong>S&M 2</strong></div>
+              <div id="dateOfLR"><strong>Sept 28 2019</strong></div>
+            </div>
+          </div>
+        </div>
+        <div class="songsSection">
+          <div id="songList">
+            <nav id="songListTitle">
+              <div id="popular">Popular</div>
+            </nav>
+            <div id="scrollSong">
+              <audio id="music1" src="./music/song-1.mp3"></audio>
+              <!-- <div class="song">
+                <img src="MoP.jpg" class="songPicture" />
+                
+                <div class="songText">Master of Puppets</div>
+                <div class="songInfo">EXPLICIT</div>
+                <div class="songLength">8:36</div>
+                <div class="songListens">77,371,392</div>
+              </div>
+              <div class="song">
+                <img src="aJFA.jpg" class="songPicture" />
+                <div id="song1Text">...And Justice For All</div>
+                <div class="songInfo">EXPLICIT</div>
+                <div class="songLength">9:46</div>
+                <div class="songListens">63,072,478</div>
+              </div>
+              <div class="song">
+                <img src="TbA.jpg" class="songPicture" />
+                <div class="songText">Sad But True</div>
+                <div class="songInfo">EXPLICIT</div>
+                <div class="songLength">5:28</div>
+                <div class="songListens">47,820,846</div>
+              </div>
+              <div class="song">
+                <img src="DM.jpg" class="songPicture" />
+                <div class="songText">The Day That Never Comes</div>
+                <div class="songInfo">EXPLICIT</div>
+                <div class="songLength">7:58</div>
+                <div class="songListens">37,937,382</div>
+              </div> -->
+            </div>
+          </div>
+          <div class="fansAlsoLikeSection">
+            <div id="fansAlsoLikeRight">Fans Also Like</div>
+            <div class="bandPicRightSide">
+              <img src="./assets/megadeth.jpg" class="bandPic" />
+              <div class="bandPicName">Megadeth</div>
+            </div>
+            <div class="bandPicRightSide">
+              <img src="./assets/iron maiden.jpg" class="bandPic" />
+              <div class="bandPicName">Iron Maiden</div>
+            </div>
+            <div class="bandPicRightSide">
+              <img src="./assets/slipknot.jpg" class="bandPic" />
+              <div class="bandPicName">Slipknot</div>
+            </div>
+            <div class="bandPicRightSide">
+              <img src="./assets/ghost.jpg" class="bandPic" />
+              <div class="bandPicName">Ghost</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
