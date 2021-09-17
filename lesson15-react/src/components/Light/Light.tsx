@@ -23,8 +23,6 @@ class Light extends React.Component<Props, State> {
   };
 
   handleTurn(e: React.ChangeEvent<HTMLInputElement>) {
-    console.log(e);
-
     this.setState({
       turned: e.target.checked,
     });

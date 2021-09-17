@@ -1,51 +1,43 @@
 import React from "react";
-import styles from "./Room.module.css";
 
 interface IProps {
   power: number;
   width?: number;
   id?: number;
-  onRoomTemperatureChange: (t: string) => void;
-}
-
-interface IState {
-  temperature: number;
   turned: boolean;
+  temperature: number;
+  onRoomTemperatureChange: (t: number) => void;
+  setHeaterTurned: (t: boolean) => void;
 }
 
-class Heater extends React.Component<IProps, IState> {
-  state: IState = {
-    temperature: 20,
-    turned: false,
-  };
-
+class Heater extends React.Component<IProps> {
   onTemperatureChange(event: React.ChangeEvent<HTMLInputElement>) {
-    this.setState({
-      temperature: Number(event.target.value),
-    });
+    this.props.onRoomTemperatureChange(Number(event.target.value));
+  }
 
-    this.props.onRoomTemperatureChange(event.target.value);
+  setHeaterTurned(event: React.ChangeEvent<HTMLInputElement>) {
+    this.props.setHeaterTurned(event.target.checked);
   }
 
   render() {
     return (
       <div>
         <p>Power: {this.props.power}</p>
-        <p>Temperature: {this.state.temperature}</p>
         <input
           type="range"
           name="temp"
-          value={this.state.temperature}
+          value={this.props.temperature}
           onChange={(e) => this.onTemperatureChange(e)}
+        />
+        TURN HEATER
+        <input
+          type="checkbox"
+          name="tt"
+          checked={this.props.turned}
+          onChange={(e) => this.setHeaterTurned(e)}
         />
       </div>
     );
-  }
-}
-
-class App extends React.Component {
-  render() {
-    return <div>ads</div>;
   }
 }
 
