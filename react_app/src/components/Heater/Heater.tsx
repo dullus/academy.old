@@ -28,7 +28,7 @@ class Heater extends React.Component<IProps, IState> {
     render() {
     return(
         <div className={styles.heater}>
-            <p>Set temperature: {this.state.temp}</p>
+            <p className={styles.text}>Set temperature: {this.state.temp}</p>
             <input type="range" name="temp" value={this.state.temp} onChange={(ev) => this.onTemperatureChange(ev)}/>
         </div>
     )

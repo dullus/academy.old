@@ -34,7 +34,7 @@ const Room: React.FC<Props> = ({ name, id, hasSofa, hasAirConditioning }) => {
 
     return (
     <div className={styles.room}>
-        {name}
+        <h2>{name}</h2>
         {id}
         
         <Light power={light.power}/> 

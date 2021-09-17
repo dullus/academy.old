@@ -21,7 +21,7 @@ const Flat: React.FC<Props> = ({owner}) => {
 
     return (
     <div className={styles.flat}>
-        This is {owner}'s flat
+        <h1>This is {owner}'s flat</h1>
         
         <div className={roomStyles.rooms}>
         {rooms.map((room => (

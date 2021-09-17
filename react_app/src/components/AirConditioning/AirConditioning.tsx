@@ -53,11 +53,13 @@ class AirConditioning extends React.Component<IProps, IState> {
 
         return(
             <div className={styles.airConditioning}>
-                <button className={styles.button} onClick={(ev) => {this.turnOnAirConditioning(ev)}}>{text}</button>
-                <p className={styles.airConditioningState}>{airConditioningState}</p>
-                <div>
-                <button onClick={(ev) => {this.setIntensity(ev)}}>Set intensity: </button>
-                {snowflake()}
+                <div className={styles.onOffWrapper}>
+                    <button className={styles.buttonTurnOnOff} onClick={(ev) => {this.turnOnAirConditioning(ev)}}>{text}</button>
+                    <p className={styles.airConditioningState}>AC: {airConditioningState}</p>
+                </div>
+                <div className={styles.intensityWrapper}>
+                    <button className={styles.buttonIntensity} onClick={(ev) => {this.setIntensity(ev)}}>Set intensity: </button>
+                    <p className={styles.snowflake}>{snowflake()}</p>
                 </div>
             </div>
         );
