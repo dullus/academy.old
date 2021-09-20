@@ -1,10 +1,15 @@
-import React, { useEffect, useReducer, Dispatch, useState } from "react";
+import React, {
+  useEffect,
+  useReducer,
+  Dispatch,
+  useState,
+  SetStateAction,
+} from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import styles from "./App.module.css";
 import Room from "./components/Room";
 import temperatureReducer, { IState } from "./reducers/temperatureReducer";
-import { http } from "./request";
 
 // uloha - pridat fetch load start a fetch load end indicator - napriklad pre loading icon
 
@@ -19,7 +24,8 @@ interface IActions {
 
 interface IContext {
   data: IState;
-  dispatch: Dispatch<IActions>;
+  setData: Dispatch<SetStateAction<IState>>;
+  // dispatch: Dispatch<IActions>;
 }
 
 export const MyContext = React.createContext({} as IContext);
@@ -31,12 +37,18 @@ const App: React.FC = () => {
 
   const [data, setData] = useState<IState>({ temperature: 0 });
 
+  // https://designer.mocky.io/manage/delete/4ce1b83e-4ba5-4274-b292-c988d0c62b25/YTTL8AbD5ysts52EWujcwjviPHdMQqTI53L5
   useEffect(() => {
-    fetch("http://asdas.sk")
+    fetch("https://run.mocky.io/v3/4ce1b83e-4ba5-4274-b292-c988d0c62b25")
       .then((response) => response.json())
       .then((response) => setData(response))
       .catch((error) => console.log(error));
     // dispatch({ type: "FETCH_SUCCESS", payload: response.json });
+
+    // returned function will be called on component unmount
+    return () => {
+      alert("just cleaning up..");
+    };
   }, []); // The empty array causes this effect to only run on mount
 
   const owner: string = "Erik";
@@ -49,12 +61,9 @@ const App: React.FC = () => {
   ];
 
   return (
-    <MyContext.Provider value={{ data, dispatch }}>
+    <MyContext.Provider value={{ data, setData }}>
       {/* React Fragment */}
-      <div>Temperature: {data.temperature}</div>
-      <button onClick={() => dispatch({ type: "INCREASE_TEMPERATURE" })}>
-        INCREASE FROM THE APP
-      </button>
+      <div>Temperature from data: {data.temperature}</div>
       <div className="App">
         <img src={logo} alt="React logo" width="100" height="100" />
         {owner}'s FLAT

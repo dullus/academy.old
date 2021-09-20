@@ -38,7 +38,7 @@ const Room: React.FC<Props> = ({ name, id, color, hasLight }) => {
   const [temperature, setTemperature] = useState(22);
   const [heaterTurned, setHeaterTurned] = useState(false);
 
-  const { data, dispatch } = useContext(MyContext);
+  const { data, setData } = useContext(MyContext);
 
   const onRoomTemperatureChange = (temperature: number) => {
     setTemperature(temperature);
@@ -47,13 +47,12 @@ const Room: React.FC<Props> = ({ name, id, color, hasLight }) => {
   return (
     <div className={`${styles.room} ${styles[color]}`}>
       {`I am the room ${name}`}
-      TEMPERATURE FROM CONTEXT (PARENT) - {data.temperature}
-      <button onClick={() => dispatch({ type: "INCREASE_TEMPERATURE" })}>
-        INCREASE FROM THE ROOM
-      </button>
       {id}
       {hasLight && <Light power={40} />}
       Temperature: {temperature}
+      <button onClick={() => setData({ temperature: data.temperature + 1 })}>
+        INCREASE FROM THE ROOM
+      </button>
       <Heater
         turned={heaterTurned}
         temperature={temperature}

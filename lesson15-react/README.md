@@ -1,3 +1,12 @@
+# Task
+
+Create SPA in React using:
+
+- initial data should be loaded from external API request (you can use some mock online APIs, e.g. https://designer.mocky.io/design)
+- style your app using css. You'll get extra points for using css modules
+- add functionality for interaction - user's input changes data in app in real time, e.g. clicking button, changing text input values etc - more complex logic, the more points you'll get
+- pass State to Child components and update it from child components using any techique you prefer (Note: using Context and or Reducers will be evaluated higher)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

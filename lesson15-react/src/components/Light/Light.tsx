@@ -14,8 +14,21 @@ interface State {
 class Light extends React.Component<Props, State> {
   constructor(props: Props) {
     super(props);
+    console.log("Constructing...");
 
     this.handleClickButton = this.handleClickButton.bind(this);
+  }
+
+  componentDidMount() {
+    console.log("Mounted");
+  }
+
+  componentWillUnmount() {
+    console.log("Unmounting...");
+  }
+
+  componentDidUpdate() {
+    console.log(this.props);
   }
 
   state: State = {
@@ -33,6 +46,7 @@ class Light extends React.Component<Props, State> {
   }
 
   render() {
+    console.log("RENDER");
     const bulb = this.state.turned ? "💡" : "-";
 
     return (
