@@ -1,4 +1,5 @@
-import React, {
+import {
+  createContext,
   useEffect,
   useReducer,
   Dispatch,
@@ -28,7 +29,7 @@ interface IContext {
   // dispatch: Dispatch<IActions>;
 }
 
-export const MyContext = React.createContext({} as IContext);
+export const MyContext = createContext({} as IContext);
 
 const App: React.FC = () => {
   // Reducers are functions that take the current state and an action as arguments, and return a new state result. In other words, (state, action) => newState.

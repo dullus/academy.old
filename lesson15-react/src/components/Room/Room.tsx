@@ -1,7 +1,7 @@
 import Light from "../Light";
 import Heater from "../Heater";
 import styles from "./Room.module.css";
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import { MyContext } from "../../App";
 
 interface Props {
@@ -36,6 +36,7 @@ interface Props {
 
 const Room: React.FC<Props> = ({ name, id, color, hasLight }) => {
   const [temperature, setTemperature] = useState(22);
+
   const [heaterTurned, setHeaterTurned] = useState(false);
 
   const { data, setData } = useContext(MyContext);
@@ -44,12 +45,22 @@ const Room: React.FC<Props> = ({ name, id, color, hasLight }) => {
     setTemperature(temperature);
   };
 
+  useEffect(() => {
+    console.log("MOUNTED ROOM");
+
+    return () => {
+      console.log("UNNOMUTTT");
+    };
+  }, []);
+
   return (
     <div className={`${styles.room} ${styles[color]}`}>
       {`I am the room ${name}`}
       {id}
-      {hasLight && <Light power={40} />}
-      Temperature: {temperature}
+      {heaterTurned && <Light power={40} />}
+
+      {data.temperature !== 0 && <div>Temperature: {data.temperature}</div>}
+
       <button onClick={() => setData({ temperature: data.temperature + 1 })}>
         INCREASE FROM THE ROOM
       </button>
