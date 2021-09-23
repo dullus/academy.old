@@ -1,0 +1,13 @@
+.snake {
+  display: "flex";
+  /* alignitems: "center"; */
+  position: "absolute";
+  left: posX;
+  top: posY;
+  width: 30;
+  height: 30;
+  border: "1px solid red";
+  background: "red";
+  /* fontsize: "15px"; */
+  /* textalign: "center"; */
+}

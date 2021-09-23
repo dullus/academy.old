@@ -1,0 +1,8 @@
+.ground {
+  position: "absolute";
+  left: positionX;
+  top: positionY;
+  width: 30;
+  height: 30;
+  border: "1px solid black";
+}
