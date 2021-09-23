@@ -1,0 +1,17 @@
+.CarBody {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100%;
+}
+
+.car {
+  padding: 15px;
+  background-color: rgb(201, 131, 1);
+  font-size: 1.3rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
