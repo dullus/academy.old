@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spotify - Nirvana</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link href="./css/all.css" rel="stylesheet" />
+    <script type="module" src="./js/main.js"></script>
+  </head>
+  <body>
+    <div class="mainScreen" id="navigationWrapper">
+      <div id="logoSection"><i class="fab fa-spotify"></i>Spotify</div>
+      <div id="discoverSection" class="navigationContent">
+        <div class="section">Discover</div>
+        <div class="songSection">
+          <div>
+            <i class="fas fa-compass"></i>
+          </div>
+          <div>Explore</div>
+        </div>
+        <div class="songSection">
+          <i class="fas fa-broadcast-tower"></i>
+          <div>Radio</div>
+        </div>
+      </div>
+      <div id="librarySecttion" class="navigationContent">
+        <div class="section">Library</div>
+        <div class="songSection">
+          <div>
+            <i class="fas fa-music"></i>
+          </div>
+          <div>Songs</div>
+        </div>
+        <div class="songSection">
+          <i class="fas fa-compact-disc"></i>
+          <div>Albums</div>
+        </div>
+        <div class="songSection">
+          <i class="fas fa-microphone"></i>
+          <div>Artists</div>
+        </div>
+        <div class="songSection">
+          <i class="fas fa-heart"></i>
+          <div>Favorites</div>
+        </div>
+      </div>
+      <div id="playlistsSection" class="navigationContent">
+        <div id="playlistStyleWrapper" class="section">
+          <div>Playlists</div>
+          <div id="plusIcon">
+            <i class="fas fa-plus"></i>
+          </div>
+        </div>
+        <div class="songSection">
+          <i class="fas fa-bars"></i>
+          <div>Discover Weekly</div>
+        </div>
+        <div class="songSection">
+          <i class="fas fa-bars"></i>
+          <div>Relax</div>
+        </div>
+        <div class="songSection">
+          <i class="fas fa-bars"></i>
+          <div>Workout</div>
+        </div>
+        <div class="songSection">
+          <i class="fas fa-bars"></i>
+          <div>My Music</div>
+        </div>
+      </div>
+    </div>
+    <div class="mainScreen" id="contentWrapper">
+      <div id="topBar">
+        <div id="navigationSearchWrapper">
+          <div class="navigationArrows">
+            <i class="fas fa-chevron-left"></i>
+          </div>
+          <div class="navigationArrows">
+            <i class="fas fa-chevron-right"></i>
+          </div>
+          <div id="searchBar">
+            <div id="searchIcon">
+              <i class="fas fa-search"></i>
+            </div>
+            <input id="searchInput" type="text" placeholder="Search" />
+          </div>
+        </div>
+        <div id="accountDetails">
+          <div id="premiumButton" class="actionButtons">Premium</div>
+          <div><i id="bellIcon" class="fas fa-bell"></i></div>
+          <div id="avatarDetail">
+            <img id="avatar" src="./assets/avatar.jpg" alt="" />
+            <div>Stano</div>
+          </div>
+          <i id="downArrowIcon" class="fas fa-chevron-down"></i>
+        </div>
+      </div>
+      <div id="artist">
+        <div>Artist</div>
+        <img id="checkedIcon" src="./assets/icons/check.svg" alt="" />
+      </div>
+      <h1 id="artistName"></h1>
+      <div class="actionButtonsClass">
+        <div id="actionButtonId">
+          <div id="playButton" class="actionButtons">
+            <div><i class="fas fa-play"></i></div>
+            <div>Play</div>
+          </div>
+          <div class="actionButtons">Follow</div>
+          <div id="dotsIcon" class="actionButtons">
+            <i class="fas fa-ellipsis-h"></i>
+          </div>
+        </div>
+        <div id="monthly">
+          <div>MONTHLY LISTENERS</div>
+          <div>48,343948</div>
+        </div>
+      </div>
+      <div id="tabs">
+        <div class="tabItems">
+          <div>OVERVIEW</div>
+          <div class="dotUnderTabs"></div>
+        </div>
+        <div class="tabItems">
+          <div>FANS ALSO LIKE</div>
+          <div class="dotUnderTabs"></div>
+        </div>
+        <div class="tabItems">
+          <div>ABOUT</div>
+          <div class="dotUnderTabs"></div>
+        </div>
+        <div class="tabItems">
+          <div>CONCERTS</div>
+          <div class="dotUnderTabs"></div>
+        </div>
+      </div>
+      <div id="latest">
+        <div id="latestSong">Latest Release</div>
+        </div>
+        <div id="bottomContent">
+          <div id="popular">
+            <div>Popular</div>
+          </div>
+          <div id="fansAlsoLike">
+            <div>Fans Also Like</div>
+            <div class="similarArtistsBox">
+              <img
+                class="similarArtistsImage"
+                src="./assets/similar_artists/pearl_jam.jpg"
+                alt=""
+              />
+              <div>Pearl Jam</div>
+            </div>
+            <div class="similarArtistsBox">
+              <img
+                class="similarArtistsImage"
+                src="./assets/similar_artists/alice_in_chains.jpg"
+                alt=""
+              />
+              <div>Alice In Chains</div>
+            </div>
+            <div class="similarArtistsBox">
+              <img
+                class="similarArtistsImage"
+                src="./assets/similar_artists/artic_mokeys.jpeg"
+                alt=""
+              />
+              <div>Artic Monkeys</div>
+            </div>
+            <div class="similarArtistsBox">
+              <img
+                class="similarArtistsImage"
+                src="./assets/similar_artists/soundgarden.jpg"
+                alt=""
+              />
+              <div>Soundgarden</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    <footer></footer>
+  </body>
+</html>

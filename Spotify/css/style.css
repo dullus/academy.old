@@ -1,0 +1,544 @@
+/* declaring page colors */
+:root {
+  --darker-gray: #7a7a7a;
+  --spotify-green: #01b949;
+}
+
+/* page height */
+html {
+  height: 100%;
+  overflow: hidden;
+}
+
+/* body style settings */
+body {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url("../assets/nirvana_background.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 92%;
+  margin: 0 auto;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5vh;
+  display: flex;
+}
+
+/* font color for whole page */
+.mainScreen {
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+/* left navigation */
+#navigationWrapper {
+  flex: 15%;
+  padding-left: 1vw;
+  padding-top: 2.5vh;
+}
+
+/* mid page wrapper settings */
+#contentWrapper {
+  flex: 85%;
+  height: -webkit-fill-available;
+  padding-top: 2.5vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* spotify logo style */
+#logoSection {
+  display: flex;
+  align-items: center;
+  margin: 1.5vh;
+  height: 2vh;
+  color: var(--darker-gray);
+}
+
+/* left navigation content */
+.navigationContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.section {
+  color: var(--darker-gray);
+  margin-left: 1.5vw;
+}
+
+#discoverSection {
+  flex: 10%;
+}
+
+#librarySecttion,
+#playlistsSection {
+  flex: 25%;
+}
+
+/* .songSection:hover, */
+.actionButtons:hover {
+  background: var(--spotify-green);
+}
+
+.songSection {
+  border-radius: 2vw;
+  width: 70%;
+  padding: 1.5vh;
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.songSection > :first-child,
+#playButton > :first-child {
+  flex: 40%;
+  text-align: center;
+}
+
+.songSection > :nth-child(2),
+#playButton > :nth-child(2) {
+  text-align: left;
+  flex: 60%;
+}
+
+#bottomContent {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+#songs {
+  flex: 80%;
+}
+
+#tabs {
+  display: flex;
+  align-items: center;
+}
+
+#tabs > * {
+  margin: 4vh 5vw;
+  margin-left: 0px;
+  margin-bottom: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#songDate {
+  line-height: 3vh;
+  color: var(--spotify-green);
+}
+
+#latestSong {
+  margin: 1.75vw 0px;
+}
+
+#checkedIcon {
+  width: 1.4vw;
+  height: 1.4vh;
+}
+
+h1 {
+  font-size: 5vh;
+  margin: 2vh 0;
+}
+
+.similarArtistsImage {
+  margin: 1vw;
+  margin-left: 0;
+  width: 5vh;
+  height: 5vh;
+  border-radius: 5vh;
+}
+
+#magnifier {
+  background-color: white;
+}
+
+#popular,
+#fansAlsoLike {
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+#popular {
+  flex: 85%;
+  /* display: none; */
+}
+
+#fansAlsoLike {
+  flex: 15%;
+}
+
+.songDetail {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.similarArtistsBox {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.albumBox {
+  display: flex;
+  align-items: center;
+}
+
+.albumImage {
+  margin: 1vw;
+  margin-left: 0;
+  width: 5vh;
+  height: 5vh;
+  border-radius: 0.5vw;
+}
+
+#actionButtonId {
+  width: 30vw;
+  display: flex;
+  align-items: center;
+}
+
+.actionButtons {
+  margin-right: 1.5vw;
+  width: 8vw;
+  height: 4vh;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.actionButtonsClass {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#topBar {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  height: 5%;
+}
+
+#topBar > * {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+.navigationArrows {
+  color: var(--darker-gray);
+}
+
+.navigationArrows:hover {
+  color: white;
+}
+
+#searchBar {
+  display: flex;
+  background: white;
+  padding: 0.5vh 0px;
+  border-radius: 3vw;
+  width: 15vw;
+  height: 2.5vh;
+  color: black;
+  align-items: center;
+}
+
+#searchBar.input {
+  height: 100%;
+}
+
+#searchIcon {
+  margin: 1.5vh;
+}
+
+#searchInput {
+  border: none;
+  height: 90%;
+  width: 80%;
+  font-size: 3vh;
+}
+
+::placeholder {
+  color: black;
+  font-size: 1.5vh;
+  font-weight: bold;
+  text-align: left;
+}
+
+.dotUnderTabs {
+  margin-top: 1vh;
+  visibility: hidden;
+  padding: 0px;
+  width: 0.3vw;
+  height: 0.3vw;
+  border-radius: 0.3vw;
+  background-color: var(--spotify-green);
+}
+
+.tabItems:hover .dotUnderTabs {
+  visibility: visible;
+}
+
+.tabItems:hover {
+  color: var(--spotify-green);
+}
+
+#monthly {
+  display: inline;
+  margin-right: 3vw;
+  color: var(--darker-gray);
+  text-align: right;
+  font-weight: bold;
+}
+
+#monthly > * {
+  margin: 1.5vh;
+}
+
+.playPauseButton {
+  margin: 1vw;
+  margin-left: 0;
+  visibility: hidden;
+}
+
+.explicit {
+  color: var(--darker-gray);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3vw;
+  height: 1.5vh;
+  font-size: 1vh;
+  border: 0.2vh solid var(--darker-gray);
+  border-radius: 1vh;
+}
+
+/* .songDetail:hover .songInformation .explicit {
+  color: var(--spotify-green);
+  border-color: var(--spotify-green);
+}
+
+.songDetail:hover {
+  color: var(--spotify-green);
+}
+
+.songDetail:hover .playPauseButton {
+  color: white;
+  visibility: visible;
+} */
+
+#plusIcon {
+  width: 4.5vw;
+  color: white;
+}
+
+#playlistStyleWrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+#avatar {
+  border: 0.3vh solid white;
+  border-radius: 3vh;
+  width: 3vh;
+  height: 3vh;
+  margin-right: 1vw;
+}
+
+.fa-play {
+  font-size: 1vh;
+}
+
+#dotsIcon {
+  width: 2.5vw;
+}
+
+#artist {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 5vh;
+}
+
+.songInformation {
+  display: flex;
+  width: 50%;
+  justify-content: space-evenly;
+}
+
+footer {
+  display: flex;
+  height: 8%;
+  position: absolute;
+  display: flex;
+  width: 100%;
+  bottom: 0px;
+}
+
+#accountDetails {
+  width: 25%;
+  justify-content: space-evenly;
+}
+
+#avatarDetail {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#navigationSearchWrapper {
+  width: 25%;
+}
+
+#navigationSearchWrapper > * {
+  margin: 0 auto;
+}
+
+.fab {
+  font-size: 2.5vh;
+  margin-right: 0.2vw;
+}
+
+#premiumButton {
+  width: 6vw;
+  margin-right: 0px;
+}
+
+@media screen and (max-width: 420px) {
+  #navigationWrapper,
+  .songInformation,
+  #monthly,
+  .navigationArrows,
+  #accountDetails,
+  #fansAlsoLike {
+    display: none;
+  }
+
+  body {
+    background-size: contain;
+    background-position: top;
+  }
+
+  .actionButtonsClass {
+    height: 10%;
+    position: absolute;
+    bottom: 20px;
+    width: 90%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  #actionButtonId {
+    height: 90%;
+    width: 90%;
+    justify-content: space-evenly;
+  }
+
+  .actionButtons {
+    height: 70%;
+  }
+
+  #dotsIcon {
+    width: 30%;
+  }
+  .actionButtonsClass > :first-child > * {
+    width: 30%;
+  }
+
+  #navigationSearchWrapper {
+    width: 100%;
+  }
+
+  #searchBar {
+    width: 95%;
+    height: 100%;
+  }
+
+  #searchIcon {
+    font-size: 2.5vh;
+  }
+
+  ::placeholder {
+    font-size: 2.5vh;
+    font-weight: bold;
+  }
+
+  #artist {
+    font-size: 2vh;
+  }
+
+  #contentWrapper {
+    padding: 2.5vh;
+  }
+
+  #popular {
+    height: 45vh;
+  }
+
+  #tabs > * {
+    margin: 4vh 5vw;
+    margin-left: 0px;
+    margin-top: 0px;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  #navigationSearchWrapper {
+    width: 60%;
+  }
+
+  #contentWrapper {
+    padding-right: 2vw;
+  }
+  .navigationArrows {
+    flex: 10%;
+  }
+
+  #accountDetails {
+    width: 40%;
+  }
+
+  ::placeholder {
+    font-size: 2vh;
+    font-weight: bold;
+  }
+
+  #searchBar {
+    flex: 80%;
+    height: 100%;
+  }
+
+  .actionButtons,
+  #premiumButton,
+  #dotsIcon {
+    width: 10vw;
+    height: 4vh;
+  }
+
+  .explicit {
+    width: 6vw;
+  }
+
+  .albumBox .active {
+    color: var(--spotify-green);
+    font-weight: bold;
+  }
+  /* .noTactive {
+    color: white !important;
+  } */
+}
