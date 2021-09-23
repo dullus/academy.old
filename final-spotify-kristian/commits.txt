@@ -1,0 +1,15 @@
+2021-09-09:KristianKovacs::SpotifyJS part 2 - adding JS to project
+
+2021-09-09:KristianKovacs::SpotifyJS part 2 - adding specific data about artist with id:1 in top section
+
+2021-09-09:KristianKovacs::SpotifyJS part2 - fixing artist info
+
+2021-09-10:KristianKovacs::SpotifyJS part2 - create function for getting all from multiple artist
+
+2021-09-10:KristianKovacs::Spotify JS part 2 - adding 1st line from popular songs
+
+2021-09-10:KristianKovacs::Spotify JS part 2 - adding 4 lines from popular songs in cycle
+
+2021-09-11:KristianKovacs::Spotify JS part 2 -selected song has green color and play_arrow came out
+
+2021-09-11:KristianKovacs: (origin/Kristian-spotify, Kristian-spotify):Spotify JS part 2 - audio files added to the page
