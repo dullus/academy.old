@@ -10,6 +10,18 @@ interface car{
 
 const Car: React.FC = () => {
 
+const [clicked, handleOnClick] = useState(false);
+
+const statusMessage = () => {
+  if(clicked === false){
+    handleOnClick(true);
+  } else {
+    handleOnClick(false)
+  }
+}
+//   const unlockMessage = () => {
+//     console.log("Car unlocked")
+//   }
 
     const [carData, fillData] = useState<car[]>([]);
 
@@ -25,10 +37,20 @@ const Car: React.FC = () => {
       <div className="CarBody">
         {carData.map(carData =>
         <div className ="car"> 
-        {carData.id} <br/>
-        {carData.brand} 
-        {carData.model} <br/>
-        {carData.yearOfMake}
+
+        Parking spot no.: {carData.id} <br/> <br/>
+        {carData.brand} {carData.model}
+        <br/>
+        {carData.yearOfMake} 
+        
+        <button className = "unlockButton">
+        <strong> Unlock car </strong>
+        {clicked && <div>Car unlocked</div>}
+        </button>
+
+        <button className = "lockButton">
+        <strong> Lock car</strong></button>
+                
         </div>
         )}
         </div>   
