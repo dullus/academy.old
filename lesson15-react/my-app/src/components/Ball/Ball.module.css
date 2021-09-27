@@ -1,0 +1,26 @@
+.ball {
+  font-size: 28px;
+  padding: 20px;
+  height: 200px;
+  width: 80%;
+  margin: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 30px;
+}
+.white {
+  /* background-color: rgb(250, 173, 173); */
+
+  background-color: #fc8f00bb;
+}
+
+button {
+  border-radius: 20px;
+  width: 45%;
+  height: 25px;
+  font-weight: bold;
+}
+button:hover {
+  background-color: rgba(40, 236, 122, 0.61);
+}
