@@ -1,5 +1,5 @@
 // import React, { useState } from 'react';
-import './App.css';
+import styles from './App.module.css'
 import Car from './Car';
 
 const App: React.FC = () => {
@@ -7,8 +7,8 @@ const App: React.FC = () => {
   // const [locked, setLocked] = useState(false);
 
   return (
-    <div className="App">
-      <header className="App-header">
+    <div className={styles.App}>
+      <header className={styles.appPage}>
         <p>
          <strong> Car Security System </strong>
         </p>
