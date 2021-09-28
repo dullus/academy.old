@@ -7,21 +7,16 @@ import { MyContext } from "../../App";
 
 const Playfield: React.FC = () => {
   const [appleArray, setAppleArray] = useState<
-    { eaten: boolean; x: number; y: number }[]
+    { id: number; eaten: boolean; x: number; y: number }[]
   >([]);
   const [snakeX, setSnakeX] = useState(0);
   const [snakeY, setSnakeY] = useState(0);
-
   const updatedContex = useContext(MyContext);
-
   let numberOfGrounds: {
     key: number;
     posX: number;
     posY: number;
   }[] = [];
-
-  let apples: { eaten: boolean; x: number; y: number }[] = [];
-  let temp: { eaten: boolean; x: number; y: number }[] = [];
 
   let id = 0;
   for (let i = 0; i < 25; i++) {
@@ -30,6 +25,7 @@ const Playfield: React.FC = () => {
       id++;
     }
   }
+
   let arr: number[] = [];
   function randomApples() {
     const randomN = Math.floor(Math.random() * numberOfGrounds.length);
@@ -41,16 +37,31 @@ const Playfield: React.FC = () => {
   for (let i = 0; i < 20; i++) {
     randomApples();
   }
-
+  id = 0;
+  let temp: { id: number; eaten: boolean; x: number; y: number }[] = [];
+  numberOfGrounds.forEach((el) => {
+    if (arr.includes(el.key)) {
+      temp.push({ id: id, eaten: false, x: el.posX, y: el.posY });
+      id++;
+    }
+  });
   useEffect(() => {
-    numberOfGrounds.forEach((el) => {
-      if (arr.includes(el.key)) {
-        apples.push({ eaten: false, x: el.posX, y: el.posY });
-        temp.push({ eaten: false, x: el.posX, y: el.posY });
-      }
-    });
     setAppleArray(temp);
   }, []);
+
+  function changeContext(data: any[]) {
+    data.find((item) => {
+      if (item.id === 9) {
+        const tempArr = [...appleArray];
+        item.appleArr = tempArr;
+        tempArr.map((newItem: { eaten: boolean; x: number; y: number }) => {
+          if (!newItem.eaten) {
+            return <Apple positionX={newItem.x} positionY={newItem.y} />;
+          }
+        });
+      }
+    });
+  }
 
   function onMongoosePositionChange(x: number, y: number) {
     // console.log(x, y);
@@ -61,48 +72,51 @@ const Playfield: React.FC = () => {
     setSnakeX(x);
   }
 
-  updatedContex.find((item) => {
-    if (item.id === 9) {
-      item.appleArr = appleArray;
-    }
-  });
-
   return (
-    <div
-      style={{
-        position: "absolute",
-        width: 750,
-        height: 750,
-        background: "gray",
-      }}
-    >
-      {numberOfGrounds.map((item) => {
-        return (
-          <Ground
-            index={item.key}
-            positionX={item.posX}
-            positionY={item.posY}
+    <MyContext.Consumer>
+      {(data) => (
+        <div
+          style={{
+            position: "absolute",
+            width: 750,
+            height: 750,
+            background: "gray",
+          }}
+        >
+          {data.find((item) => {
+            if (item.id === 9) {
+              item.appleArr = appleArray;
+            }
+          })}
+          {numberOfGrounds.map((item) => {
+            return (
+              <Ground
+                index={item.key}
+                positionX={item.posX}
+                positionY={item.posY}
+              />
+            );
+          })}
+          {appleArray.map((item) => {
+            if (!item.eaten) {
+              return <Apple positionX={item.x} positionY={item.y} />;
+            }
+          })}
+
+          {changeContext(data)}
+          <Snake
+            positionX={0}
+            positionY={0}
+            onPositionChange={onPositionChange}
           />
-        );
-      })}
-      {/* {appleArray.map((item) => {
-        return <Apple positionX={item.x} positionY={item.y} />;
-      })} */}
-      {updatedContex.map((item) => {
-        if (item.id === 9) {
-          item.appleArr?.map((newItem) => {
-            // console.log(item);
-            return <Apple positionX={newItem.x} positionY={newItem.y} />;
-          });
-        }
-      })}
-      <Snake positionX={0} positionY={0} onPositionChange={onPositionChange} />
-      <Mongoose
-        snakeY={snakeY}
-        snakeX={snakeX}
-        onMongoosePositionChange={onMongoosePositionChange}
-      />
-    </div>
+          <Mongoose
+            snakeY={snakeY}
+            snakeX={snakeX}
+            onMongoosePositionChange={onMongoosePositionChange}
+          />
+        </div>
+      )}
+    </MyContext.Consumer>
   );
 };
 

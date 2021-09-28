@@ -32,11 +32,21 @@ const Snake: React.FC<Props> = () => {
   }
 
   function collision(x: number, y: number, data: any[]) {
+    let index = -1;
     data.find((item) => {
-      if (item.id === 11) {
-        if (item.mongoosePos.x === x && item.mongoosePos.y === y) {
-          // alert("YOU LOST");
-        }
+      if (item.id === 9) {
+        item.appleArr.map(
+          (newItem: { id: number; eaten: boolean; x: number; y: number }) => {
+            if (newItem.x === posX && newItem.y === posY) {
+              newItem.eaten = true;
+              index = newItem.id;
+            }
+          }
+        );
+        const temp = item.appleArr.filter(function (el: { id: number }) {
+          return el.id != index;
+        });
+        item.appleArr = temp;
       }
     });
   }
