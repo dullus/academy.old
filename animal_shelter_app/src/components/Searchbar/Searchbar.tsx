@@ -1,22 +1,39 @@
 import React, { useContext, useState } from 'react'
-// import { MyContext } from 'src/App'
+import { MyContext } from '../../App'
+import Profile from '../Profile/Profile'
 import styles from '../Searchbar/Searchbar.module.css'
 
 interface IProps {
 setSearchTerm?: any
+searchByBreed: any
 }
 
-const Searchbar: React.FC<IProps> = ({setSearchTerm}) => {
+const Searchbar: React.FC<IProps> = ({searchByBreed}) => {
 
-    // const dogData = useContext(MyContext).map(data => data.breed)
+     const dogData = useContext(MyContext).map(data => data)
 
-    
+     const [searchTerm, setSearchTerm] = useState('')
+
+
+     function handleOnChange(ev) {
+         setSearchTerm(ev.target.value)
+         console.log(searchTerm)            //searchTerm is what I type in
+     }
+
+     function handleSubmit(ev) {
+         ev.preventDefault();
+         if (searchTerm !== '') {
+            searchByBreed(searchTerm);
+            console.log(searchTerm)
+            setSearchTerm('');
+         }
+     }
 
     return(
-        <div className={styles.searchbarWrapper}>
-            <input onChange={ev => setSearchTerm()} className={styles.searchbar} type="text" placeholder="Search by breed..." />
+        <form className={styles.searchbarWrapper} onSubmit={handleSubmit} >
+            <input onChange={handleOnChange} className={styles.searchbar} type="text" placeholder="Search by breed..." />
             
-        </div>
+        </form>
     )
 }
 
