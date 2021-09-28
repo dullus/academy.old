@@ -1,0 +1,26 @@
+.btn {
+  border-width: 1px;
+  border-color: #d3d3d3;
+  width: 200px;
+  height: 60px;
+  border-radius: 10px;
+  margin: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  background-color: whitesmoke;
+  box-shadow: grey 3px 3px 10px;
+}
+
+.btn[aria-pressed="true"] {
+  text-decoration: underline;
+  border-style: double;
+  border-width: 4px;
+  border-color: rgb(0, 0, 0);
+}
+
+.btn:focus,
+.btn:hover {
+  transition-duration: 3s;
+  transition: ease-in-out;
+  background-color: rgb(240, 240, 240);
+}

@@ -1,0 +1,19 @@
+.imageWrapper {
+  width: 350px;
+  height: 233px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 0px auto;
+}
+
+.image {
+  width: 350px;
+  /* height: auto; */
+  position: relative;
+}
+
+.dogName {
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: 500;
+}

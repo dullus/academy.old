@@ -1,0 +1,39 @@
+.femaleProfile {
+  width: 450px;
+  height: auto;
+  background-color: rgb(241, 232, 237);
+  border-radius: 10px;
+  text-align: center;
+  margin: 20px;
+  font-size: 20px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  cursor: pointer;
+}
+
+.femaleProfile:hover,
+.femaleProfile:focus {
+  background-color: rgb(240, 211, 226);
+}
+
+.maleProfile {
+  width: 450px;
+  height: auto;
+  background-color: rgb(210, 237, 241);
+  border-radius: 10px;
+  text-align: center;
+  margin: 20px;
+  font-size: 20px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  cursor: pointer;
+}
+
+.maleProfile:hover,
+.maleProfile:focus {
+  background-color: rgb(182, 230, 243);
+}
+
+.dogId {
+  margin: 0px;
+}

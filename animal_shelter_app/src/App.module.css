@@ -1,0 +1,25 @@
+.heading {
+  text-align: center;
+  margin: 0;
+  padding: 40px 0px 20px 0px;
+}
+
+.profiles {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 10px;
+}
+
+p {
+  font-size: 16px;
+  text-align: center;
+}
+
+.filters {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0 auto;
+  width: 70%;
+  flex-wrap: wrap;
+}
