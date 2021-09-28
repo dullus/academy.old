@@ -12,6 +12,7 @@ interface IProps {
 interface IState {
     clicked: boolean;
     handleOnClick: () => void
+    filteredData?: []
 }
 
 const Profile: React.FC<IProps> = ({ id }) => {
