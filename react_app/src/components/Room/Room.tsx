@@ -45,7 +45,7 @@ const Room: React.FC<Props> = ({ name, id, hasSofa, hasAirConditioning }) => {
         <Sofa brand={sofa.brand} color={sofa.color} width={sofa.width} height={sofa.height} depth={sofa.depth} material={sofa.material} shape={sofa.shape}/>}
    
     </div>);
-//posielam si sem props a priradujem mu lokalnu premennu onTemperatureChange
+
 
 };
 
