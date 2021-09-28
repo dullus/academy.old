@@ -1,10 +1,11 @@
 // import React, { useState } from 'react';
 import styles from './App.module.css'
-import Car from './Car';
+import Car from './Components/Car';
 
 const App: React.FC = () => {
 
   // const [locked, setLocked] = useState(false);
+
 
   return (
     <div className={styles.App}>
