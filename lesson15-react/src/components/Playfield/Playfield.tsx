@@ -49,16 +49,19 @@ const Playfield: React.FC = () => {
     setAppleArray(temp);
   }, []);
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      changeContext(updatedContex);
+    }, 200);
+    return () => {
+      clearInterval(interval);
+    };
+  });
+
   function changeContext(data: any[]) {
     data.find((item) => {
       if (item.id === 9) {
-        const tempArr = [...appleArray];
-        item.appleArr = tempArr;
-        tempArr.map((newItem: { eaten: boolean; x: number; y: number }) => {
-          if (!newItem.eaten) {
-            return <Apple positionX={newItem.x} positionY={newItem.y} />;
-          }
-        });
+        setAppleArray(item.appleArr);
       }
     });
   }
@@ -83,6 +86,7 @@ const Playfield: React.FC = () => {
             background: "gray",
           }}
         >
+          {}
           {data.find((item) => {
             if (item.id === 9) {
               item.appleArr = appleArray;
@@ -103,17 +107,12 @@ const Playfield: React.FC = () => {
             }
           })}
 
-          {changeContext(data)}
           <Snake
             positionX={0}
             positionY={0}
             onPositionChange={onPositionChange}
           />
-          <Mongoose
-            snakeY={snakeY}
-            snakeX={snakeX}
-            onMongoosePositionChange={onMongoosePositionChange}
-          />
+          <Mongoose />
         </div>
       )}
     </MyContext.Consumer>

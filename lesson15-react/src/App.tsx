@@ -36,7 +36,7 @@ const App: React.FC = () => {
       <div>
         <Playfield />
         <HighScoreTable />
-        <ChoosePlayer />
+        {/* <ChoosePlayer /> */}
       </div>
     </MyContext.Provider>
   );

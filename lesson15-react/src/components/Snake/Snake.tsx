@@ -11,8 +11,6 @@ const Snake: React.FC<Props> = () => {
   const [posX, setPosX] = useState(0);
   const [posY, setPosY] = useState(0);
 
-  const updatedContex = useContext(MyContext);
-
   let pox = 0;
   let poy = 0;
   function handleKeyPress(e: { key: any }) {
