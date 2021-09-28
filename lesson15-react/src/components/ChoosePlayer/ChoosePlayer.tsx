@@ -1,19 +1,35 @@
-import React, { useState } from "react";
-import useDropdownMenu from "react-accessible-dropdown-menu-hook";
+import React, { useState, useContext, useEffect } from "react";
+import { MyContext } from "../../App";
 import styles from "./ChoosePlayer.module.css";
 const ChoosePlayer: React.FC = () => {
-  const { buttonProps, itemProps, isOpen, setIsOpen } = useDropdownMenu(5);
+  const [chosenPlayer, setChosenPlayer] = useState(0);
+  const [firstName, setFirstName] = useState("");
+  console.log(firstName);
+
   return (
-    <div className={styles.dropdown}>
-      <button {...buttonProps}>Example</button>
-      <div className={isOpen ? "visible" : ""} role="menu">
-        <a {...itemProps[0]} href="https://example.com">
-          Regular link
-        </a>
-        <a {...itemProps[1]}>With click handler</a>
-      </div>
-      INPUT
-    </div>
+    <MyContext.Consumer>
+      {(data) => (
+        <form>
+          <input
+            name="firstName"
+            onChange={(e) => setFirstName(e.target.value)}
+          />
+          <select>
+            <option selected value="vyberte hraca">
+              vyberte hraca
+            </option>
+            <option value="Stano">Stano</option>
+            <option value="Sebo">Sebo</option>
+            <option value="Stevo">Stano</option>
+            <option value="Pali">Pali</option>
+            <option value="Dano">Dano</option>
+            <option value="Tina">Tina</option>
+            <option value="Kiko">Kiko</option>
+            <option value="Erik">Erik</option>
+          </select>
+        </form>
+      )}
+    </MyContext.Consumer>
   );
 };
 
