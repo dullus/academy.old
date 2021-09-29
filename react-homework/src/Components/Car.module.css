@@ -18,6 +18,11 @@
   margin-right: 20px;
   width: 15%;
   height: 350px;
+  box-shadow: 0px 7px 13px black;
+}
+
+.car:hover {
+  box-shadow: 0px 9px 23px black;
 }
 
 .unlockButton {
@@ -35,6 +40,7 @@
 .unlockButton:hover {
   background-color: rgb(122, 197, 88);
   box-shadow: 0px 5px 8px;
+  cursor: pointer;
 }
 
 .unlockButton:active {
@@ -43,5 +49,5 @@
 
 .carPark {
   justify-content: center;
-  margin: 20px auto;
+  margin: 30px auto;
 }

@@ -4,9 +4,6 @@ import Car from './Components/Car';
 
 const App: React.FC = () => {
 
-  // const [locked, setLocked] = useState(false);
-
-
   return (
     <div className={styles.App}>
       <header className={styles.appPage}>

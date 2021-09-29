@@ -10,22 +10,22 @@ interface car{
 
 const Car: React.FC = () => {
 
-const [clicked, handleOnClick] = useState([false,false,false,false,false]);
+const [clicked, handleOnClick] = useState([false, false, false, false, false]);
 const [statusText, setStatusText] = useState(["Car unlocked", "Car unlocked", "Car unlocked","Car unlocked","Car unlocked"]) 
 
 function statusMessageUnlock(id:number){
-const newStatuses = [...clicked]; // clone
-const oooo = [...statusText] 
-newStatuses[id] = !newStatuses[id]; // true = false, false = true
+const newStatuses = [...clicked]; 
+const carStatusText = [...statusText] 
+newStatuses[id] = !newStatuses[id]; 
 console.log(newStatuses)
 
 if(newStatuses[id]){
-  oooo[id] = "Car Locked"
+  carStatusText[id] = "Car Locked"
 } else {
-  oooo[id] = "Car unlocked"
+  carStatusText[id] = "Car unlocked"
 }
 
-setStatusText(oooo)
+setStatusText(carStatusText)
 handleOnClick(newStatuses);
 
 let trueValue = false;
