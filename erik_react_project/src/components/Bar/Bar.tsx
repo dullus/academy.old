@@ -20,26 +20,12 @@ const [barData, fillData] = useState<bar[]>([]);
     })
 }, []);  
 
-
-  
-    // const boxes = [
-    //   {id: 1, name: 'Box'},
-    //   {id: 2, name: 'Box'},
-    //   {id: 3, name: 'Box'},
-      
-    // ]
-  
-    
-  
     return (
       <div className={styles.bar}>
       {console.log(barData)}
       {barData.map((boxes =>  (
       <Box name={boxes.name} id={boxes.id}  />
       )))}
-  
-      
-      
       </div>
       
     );

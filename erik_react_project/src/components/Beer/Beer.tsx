@@ -1,6 +1,4 @@
-import {MouseEvent} from 'react'
 import React from 'react'
-import { render } from '@testing-library/react';
 import { FaBeer } from 'react-icons/fa';
 import { IoBeerOutline } from 'react-icons/io5';
 import styles from "./Beer.module.css"

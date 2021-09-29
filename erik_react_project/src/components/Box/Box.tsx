@@ -8,12 +8,9 @@ interface Props {
         
   }
 
-  
-  
   const Box: React.FC<Props> = ({name, id}) => {
   
-  
-      return (
+       return (
         <div className={styles.box}>
         <div className={styles.tags}>
         {name} {id}
@@ -21,8 +18,7 @@ interface Props {
         
         <div>
           
-          
-          <Beer />
+           <Beer />
         </div>
         </div>
    ); };
