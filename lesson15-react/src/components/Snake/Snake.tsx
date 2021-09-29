@@ -1,15 +1,12 @@
 import React, { useState, useEffect, useContext } from "react";
 import { MyContext } from "../../App";
 import styles from "./Snake.module.css";
-interface Props {
-  positionX: number;
-  positionY: number;
-  onPositionChange: (pox: number, poy: number) => void;
-}
 
-const Snake: React.FC<Props> = () => {
+const Snake: React.FC = () => {
   const [posX, setPosX] = useState(0);
   const [posY, setPosY] = useState(0);
+
+  const updatedContex = useContext(MyContext);
 
   let pox = 0;
   let poy = 0;
@@ -29,6 +26,25 @@ const Snake: React.FC<Props> = () => {
     }
   }
 
+  function updateScore() {
+    let chosenPlayer: any;
+    updatedContex.find((item) => {
+      if (item.id === 12) {
+        chosenPlayer = item.activePlayer?.id;
+      }
+    });
+    updatedContex.find((item) => {
+      if (item.id === chosenPlayer) {
+        let score = item.score;
+        score++;
+        item.score = score;
+        if (item.score === 20) {
+          alert(item.name + " won!!!!");
+        }
+      }
+    });
+  }
+
   function collision(x: number, y: number, data: any[]) {
     let index = -1;
     data.find((item) => {
@@ -38,6 +54,7 @@ const Snake: React.FC<Props> = () => {
             if (newItem.x === posX && newItem.y === posY) {
               newItem.eaten = true;
               index = newItem.id;
+              updateScore();
             }
           }
         );

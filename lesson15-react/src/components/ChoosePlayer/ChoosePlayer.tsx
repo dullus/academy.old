@@ -2,32 +2,31 @@ import React, { useState, useContext, useEffect } from "react";
 import { MyContext } from "../../App";
 import styles from "./ChoosePlayer.module.css";
 const ChoosePlayer: React.FC = () => {
-  const [chosenPlayer, setChosenPlayer] = useState(0);
-  const [firstName, setFirstName] = useState("");
-  console.log(firstName);
+  function send(data: any[], id: number) {
+    data.find((item) => {
+      if (item.id === 12) {
+        item.activePlayer = { id: id };
+      }
+      if (item.id === 13) {
+        item.chosen = true;
+      }
+    });
+    alert("are you ready ?");
+  }
 
   return (
     <MyContext.Consumer>
       {(data) => (
-        <form>
-          <input
-            name="firstName"
-            onChange={(e) => setFirstName(e.target.value)}
-          />
-          <select>
-            <option selected value="vyberte hraca">
-              vyberte hraca
-            </option>
-            <option value="Stano">Stano</option>
-            <option value="Sebo">Sebo</option>
-            <option value="Stevo">Stano</option>
-            <option value="Pali">Pali</option>
-            <option value="Dano">Dano</option>
-            <option value="Tina">Tina</option>
-            <option value="Kiko">Kiko</option>
-            <option value="Erik">Erik</option>
-          </select>
-        </form>
+        <div>
+          <button onClick={() => send(data, 1)}>Stano</button>
+          <button onClick={() => send(data, 2)}>Sebo</button>
+          <button onClick={() => send(data, 3)}>Stevo</button>
+          <button onClick={() => send(data, 4)}>Pali</button>
+          <button onClick={() => send(data, 5)}>Dano</button>
+          <button onClick={() => send(data, 6)}>Tina</button>
+          <button onClick={() => send(data, 7)}>Kiko</button>
+          <button onClick={() => send(data, 8)}>Erik</button>
+        </div>
       )}
     </MyContext.Consumer>
   );

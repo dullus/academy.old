@@ -1,12 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
 import { MyContext } from "../../App";
 
-// interface Props {
-//   snakeX: number;
-//   snakeY: number;
-//   onMongoosePositionChange: (pox: number, poy: number) => void;
-// }
-
 const Mongoose: React.FC = () => {
   const [posX, setPosX] = useState(210);
   const [posY, setPosY] = useState(210);
@@ -43,12 +37,18 @@ const Mongoose: React.FC = () => {
       if (snakeX - posX >= 0) {
         pox += 30;
       } else pox -= 30;
+      if (snakeX === pox && snakeY === poy) {
+        alert("You Lost");
+      }
       setPosX(pox);
       if (snakeY - poy >= 0) {
         poy += 30;
       } else poy -= 30;
       setPosY(poy);
-    }, 200);
+      if (snakeX === pox && snakeY === poy) {
+        alert("You Lost");
+      }
+    }, 201);
     updatedContex.find((item) => {
       if (item.id === 11) {
         item.mongoosePos = { x: posX, y: posY };

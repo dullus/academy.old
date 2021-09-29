@@ -9,8 +9,6 @@ const Playfield: React.FC = () => {
   const [appleArray, setAppleArray] = useState<
     { id: number; eaten: boolean; x: number; y: number }[]
   >([]);
-  const [snakeX, setSnakeX] = useState(0);
-  const [snakeY, setSnakeY] = useState(0);
   const updatedContex = useContext(MyContext);
   let numberOfGrounds: {
     key: number;
@@ -66,15 +64,6 @@ const Playfield: React.FC = () => {
     });
   }
 
-  function onMongoosePositionChange(x: number, y: number) {
-    // console.log(x, y);
-  }
-
-  function onPositionChange(x: number, y: number) {
-    setSnakeY(y);
-    setSnakeX(x);
-  }
-
   return (
     <MyContext.Consumer>
       {(data) => (
@@ -107,11 +96,7 @@ const Playfield: React.FC = () => {
             }
           })}
 
-          <Snake
-            positionX={0}
-            positionY={0}
-            onPositionChange={onPositionChange}
-          />
+          <Snake />
           <Mongoose />
         </div>
       )}

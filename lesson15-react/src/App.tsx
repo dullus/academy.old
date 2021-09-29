@@ -4,18 +4,38 @@ import HighScoreTable from "./components/HighscoreTable/HighScoreTable";
 import ChoosePlayer from "./components/ChoosePlayer/ChoosePlayer";
 
 interface IState {
-  id?: number;
-  name?: string;
-  score?: number;
-  appleArr?: { eaten: boolean; x: number; y: number }[];
-  snakePos?: { x: number; y: number };
-  mongoosePos?: { x: number; y: number };
+  id: number;
+  name: string;
+  score: number;
+  appleArr: { eaten: boolean; x: number; y: number }[];
+  snakePos: { x: number; y: number };
+  mongoosePos: { x: number; y: number };
+  activePlayer: { id: number };
+  chosen: boolean;
 }
 
 export const MyContext = createContext<IState[]>([]);
 
 const App: React.FC = () => {
   const [data, setData] = useState<IState[]>([]);
+  const [isSelected, setIsSelected] = useState(Boolean);
+
+  function isChoose() {
+    data.find((item) => {
+      if (item.id === 13) {
+        setIsSelected(item.chosen);
+      }
+    });
+  }
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      isChoose();
+    }, 200);
+    return () => {
+      clearInterval(interval);
+    };
+  });
 
   useEffect(() => {
     fetch("https://run.mocky.io/v3/bf595615-98e0-4c43-a88a-6070f2d46793").then(
@@ -24,7 +44,9 @@ const App: React.FC = () => {
           resp.push(
             { id: 9, appleArr: [] },
             { id: 10, snakePos: { x: 0, y: 0 } },
-            { id: 11, mongoosePos: { x: 0, y: 0 } }
+            { id: 11, mongoosePos: { x: 0, y: 0 } },
+            { id: 12, activePlayer: { id: -1, score: 0 } },
+            { id: 13, chosen: false }
           );
           setData(resp);
         })
@@ -35,7 +57,7 @@ const App: React.FC = () => {
     <MyContext.Provider value={data}>
       <div>
         <ChoosePlayer />
-        <Playfield />
+        {isSelected && <Playfield />}
         <HighScoreTable />
       </div>
     </MyContext.Provider>
