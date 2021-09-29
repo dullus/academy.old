@@ -7,7 +7,6 @@ interface IProps {
     img: string;
 }
 
-
 const Dog: React.FC<IProps> = ({ name, img }) => {
 
     return(

@@ -9,6 +9,7 @@
   padding-bottom: 20px;
   padding-top: 20px;
   cursor: pointer;
+  box-shadow: grey 0px 0px 20px;
 }
 
 .femaleProfile:hover,
@@ -27,6 +28,7 @@
   padding-bottom: 20px;
   padding-top: 20px;
   cursor: pointer;
+  box-shadow: grey 0px 0px 20px;
 }
 
 .maleProfile:hover,

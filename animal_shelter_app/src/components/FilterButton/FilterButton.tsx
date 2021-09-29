@@ -2,26 +2,18 @@ import React from "react";
 
 import styles from '../FilterButton/FilterButton.module.css'
 
-interface IState {
-  filterNames?: []
+interface IProps {
   isPressed?: boolean
   setFilter?: any
   name?:string
-  filter?: string;
-  
 }
 
-const FilterButton: React.FC<IState> = ({filterNames, isPressed, setFilter, name, filter}) => {
-
-  
-   
+const FilterButton: React.FC<IProps> = ({isPressed, setFilter, name}) => {
 
     return(
-              
          <button className={styles.btn} aria-pressed={isPressed} onClick={() => setFilter(name)}>
            {name}
            </button>
-        
     );
 }
 

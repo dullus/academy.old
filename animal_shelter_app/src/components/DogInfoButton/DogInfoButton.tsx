@@ -6,16 +6,8 @@ interface IProps {
     showDogInfo: () => void
 }
 
-// interface IState {
-  
-// }
-
 const DogInfoButton: React.FC<IProps> = ({showDogInfo}) => {
-
-
-
-
-
+    
     return (
         <div>
         <button className={styles.moreInfoButton} onClick={showDogInfo}>

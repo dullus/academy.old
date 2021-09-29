@@ -1,7 +1,9 @@
 .heading {
   text-align: center;
   margin: 0;
-  padding: 40px 0px 20px 0px;
+  padding: 40px 0px 0px 0px;
+  font-family: "Birthstone", cursive;
+  font-size: 90px;
 }
 
 .profiles {
@@ -14,6 +16,8 @@
 p {
   font-size: 16px;
   text-align: center;
+  margin-top: 0px;
+  margin-bottom: 40px;
 }
 
 .filters {
@@ -22,4 +26,8 @@ p {
   margin: 0 auto;
   width: 70%;
   flex-wrap: wrap;
+}
+
+.bckgImage {
+  background-image: url("https://static.wixstatic.com/media/fe94e7_186791bbc379415eb6b6777b782e7d7d~mv2.jpg/v1/fill/w_640,h_816,al_c,q_85,usm_0.66_1.00_0.01/fe94e7_186791bbc379415eb6b6777b782e7d7d~mv2.webp");
 }

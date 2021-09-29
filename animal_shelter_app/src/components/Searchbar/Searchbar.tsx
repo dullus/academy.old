@@ -11,13 +11,11 @@ searchByBreed: any
 const Searchbar: React.FC<IProps> = ({searchByBreed}) => {
 
      const dogData = useContext(MyContext).map(data => data)
-
      const [searchTerm, setSearchTerm] = useState('')
-
 
      function handleOnChange(ev) {
          setSearchTerm(ev.target.value)
-         console.log(searchTerm)            //searchTerm is what I type in
+         console.log(searchTerm)
      }
 
      function handleSubmit(ev) {
@@ -32,7 +30,6 @@ const Searchbar: React.FC<IProps> = ({searchByBreed}) => {
     return(
         <form className={styles.searchbarWrapper} onSubmit={handleSubmit} >
             <input onChange={handleOnChange} className={styles.searchbar} type="text" placeholder="Search by breed..." />
-            
         </form>
     )
 }

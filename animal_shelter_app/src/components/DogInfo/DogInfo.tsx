@@ -2,7 +2,6 @@ import React from 'react'
 import styles from '../DogInfo/DogInfo.module.css'
 
 interface IProps {
-    adult: boolean;
     id: number;
     name: string;
     age: number;
@@ -14,8 +13,9 @@ interface IProps {
     color: string;
 }
 
-const DogInfo: React.FC<IProps> = ({id, name, img, sex, age, adult, breed, weight, height, color}) => {
+const DogInfo: React.FC<IProps> = ({name, sex, age, breed, weight, height, color}) => {
 
+    let text = age===1 ? " year" : " years"
 
     return (
         <div className={styles.dogInfo}>
@@ -25,7 +25,7 @@ const DogInfo: React.FC<IProps> = ({id, name, img, sex, age, adult, breed, weigh
             </div>
             <div className={styles.row}>
                 <p className={styles.key}>Age: </p>
-                <p className={styles.value}>{age} years</p>
+                <p className={styles.value}>{age}{text}</p>
             </div>
             <div className={styles.row}>
                 <p className={styles.key}>Breed: </p>
