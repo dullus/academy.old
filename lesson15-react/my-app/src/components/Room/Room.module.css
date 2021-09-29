@@ -1,0 +1,23 @@
+.room {
+  font-size: 18px;
+  padding: 30px;
+  border-radius: 20px;
+  position: relative;
+  width: 20%;
+  height: auto;
+  margin: 0 auto;
+  padding: 0 3%;
+}
+.grey {
+  background-color: #c1c1c170;
+}
+
+p {
+  color: #1486a5;
+  margin: 10px 0;
+  font-size: 24px;
+}
+
+.balls {
+  margin: 10px;
+}

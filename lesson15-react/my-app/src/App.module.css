@@ -1,0 +1,7 @@
+.rooms {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+  position: relative;
+  /* height: 50%; */
+}

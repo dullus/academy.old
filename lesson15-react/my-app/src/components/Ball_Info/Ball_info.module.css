@@ -1,0 +1,14 @@
+.ball_info {
+  text-align: center;
+}
+
+.textWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: black;
+}
+div.textWrapper > p {
+  color: black;
+  font-size: 18px;
+}
