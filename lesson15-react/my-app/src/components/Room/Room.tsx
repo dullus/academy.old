@@ -23,7 +23,7 @@ const Room: React.FC<Props> = ({ id, name, color }) => {
   };
 
   const changeButtonState = (buttonState: boolean) => {
-    buttonState ? setButtonState(false) : setButtonState(true);
+    buttonState = !buttonState;
 
     // if (buttonState) {
     //   setButtonState(false);
