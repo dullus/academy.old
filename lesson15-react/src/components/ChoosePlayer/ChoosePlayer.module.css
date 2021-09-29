@@ -1,0 +1,20 @@
+.isOpen[role="menu"] {
+  visibility: hidden;
+}
+
+.isOpen[role="menu"].visible {
+  visibility: visible;
+}
+/* } */
+/* div[role="menu"].visible {
+    visibility: visible;
+  }
+} */
+
+.dropdown {
+  display: flex;
+  position: absolute;
+  background: red;
+  width: 300;
+  height: 300;
+}
