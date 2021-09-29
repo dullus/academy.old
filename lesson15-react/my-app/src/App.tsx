@@ -62,18 +62,7 @@ const App: React.FC = () => {
     <MyContext.Provider value={{ data, setData }}>
       {/* React Fragment */}
       {/* <div>Temperature from data: {data.temperature}</div> */}
-      <div
-        className="App"
-        style={{
-          backgroundImage: `url(https://img.freepik.com/free-photo/hand-painted-watercolor-background-with-sky-clouds-shape_24972-1095.jpg?size=626&ext=jpg)`,
-          height: `120vh`,
-          width: `100%`,
-          margin: `auto`,
-          backgroundPosition: `center`,
-          backgroundRepeat: `no-repeat`,
-          backgroundSize: `cover`,
-        }}
-      >
+      <div className="App" style={{}}>
         <img src={logo} alt="React logo" width="200" height="200" />
         <div className={styles.header}> This is basic react App</div>
         <div className={styles.rooms}>

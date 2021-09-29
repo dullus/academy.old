@@ -20,7 +20,7 @@ const Ball: React.FC<Props> = ({ id, name, color }) => {
   return (
     <>
       {/* <div>{`I am the classic ${name}`}</div> */}
-      {id == 1 && (
+      {id === 1 && (
         <div
           className={`${styles.ball} ${styles[color]}`}
           style={{
@@ -35,7 +35,7 @@ const Ball: React.FC<Props> = ({ id, name, color }) => {
         </div>
       )}
 
-      {id == 2 && (
+      {id === 2 && (
         <div
           className={`${styles.ball} ${styles[color]}`}
           style={{
@@ -43,7 +43,7 @@ const Ball: React.FC<Props> = ({ id, name, color }) => {
           }}
         ></div>
       )}
-      {id == 3 && (
+      {id === 3 && (
         <div
           className={`${styles.ball} ${styles[color]}`}
           style={{
