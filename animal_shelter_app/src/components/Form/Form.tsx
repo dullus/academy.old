@@ -13,10 +13,6 @@ const Form: React.FC<IProps> = ({addDog}) => {
     const [img, setImg] = useState('')
     const [breed, setBreed] = useState('')
     const [sex, setSex] = useState('Male')
-
-    // const [maleIsChecked, setMaleIsChecked] = useState(true)
-    // const [femaleIsChecked, setFemaleIsChecked] = useState(Boolean)
-
     const [weight, setWeight] = useState('')
     const [height, setHeight] = useState('')
     const [color, setColor] = useState('')
@@ -42,7 +38,7 @@ const Form: React.FC<IProps> = ({addDog}) => {
         setAge(e.target.value)
     }
 
-    function handleChangeImg(e) {
+    function handleChangeImg(e) {       
         setImg(e.target.value)
     }
   
@@ -80,6 +76,7 @@ const Form: React.FC<IProps> = ({addDog}) => {
                     <div className={styles.forminfo}>
                         <label className={styles.label} htmlFor="name">Name: </label>
                         <input
+                        required
                         className={styles.box}
                         type="text"
                         autoComplete="off"
@@ -91,6 +88,7 @@ const Form: React.FC<IProps> = ({addDog}) => {
                     <div className={styles.forminfo}>
                         <label className={styles.label} htmlFor="age">Age: </label>
                         <input
+                        required
                         className={styles.box}
                         type="text"
                         autoComplete="off"
@@ -104,6 +102,7 @@ const Form: React.FC<IProps> = ({addDog}) => {
                         <label className={styles.label} htmlFor="img">Photo: </label>
                         <input
                         className={styles.box}
+                        required
                         type="text"
                         autoComplete="off"
                         value={img}
@@ -114,6 +113,7 @@ const Form: React.FC<IProps> = ({addDog}) => {
                     <div className={styles.forminfo}>
                         <label className={styles.label} htmlFor="breed">Breed: </label>
                         <input
+                        required
                         className={styles.box}
                         type="text"
                         autoComplete="off"
@@ -131,12 +131,13 @@ const Form: React.FC<IProps> = ({addDog}) => {
                                 <div className={styles.labelInputWrapper}>
                                     <label className={styles.sexLabel} htmlFor="male">Male: </label>
                                     <input
+                                    required
                                     className={styles.rButton}
                                     type="radio"
                                     id="male"
                                     value="Male"
                                     name="sex"
-                                    // checked={maleIsChecked}
+                                    checked={sex==="Male"}
                                     onChange={handleChangeSex}
                                     />
                                 </div>
@@ -144,12 +145,13 @@ const Form: React.FC<IProps> = ({addDog}) => {
                                 <div className={styles.labelInputWrapper}>
                                     <label className={styles.sexLabel} htmlFor="female">Female: </label>
                                     <input
+                                    required
                                     className={styles.rButton}
                                     type="radio"
                                     id="female"
                                     name="sex"
                                     value="Female"
-                                    // checked={femaleIsChecked}
+                                    checked={sex==="Female"}
                                     onChange={handleChangeSex}
                                     />
                                 </div>
@@ -159,6 +161,7 @@ const Form: React.FC<IProps> = ({addDog}) => {
                     <div className={styles.forminfo}>
                         <label className={styles.label} htmlFor="weight">Weight: </label>
                         <input
+                        required
                         className={styles.box}
                         type="text"
                         autoComplete="off"
@@ -171,6 +174,7 @@ const Form: React.FC<IProps> = ({addDog}) => {
                     <div className={styles.forminfo}>
                         <label className={styles.label} htmlFor="height">Height: </label>
                         <input
+                        required
                         className={styles.box}
                         type="text"
                         autoComplete="off"
@@ -182,6 +186,7 @@ const Form: React.FC<IProps> = ({addDog}) => {
                     <div className={styles.forminfo}>
                         <label className={styles.label} htmlFor="color">Color: </label>
                         <input
+                        required
                         className={styles.box}
                         type="text"
                         autoComplete="off"
@@ -197,8 +202,6 @@ const Form: React.FC<IProps> = ({addDog}) => {
             </button>
             </div>
       </form>
-      
-
     );
 }
 

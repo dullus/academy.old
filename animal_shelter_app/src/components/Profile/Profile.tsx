@@ -32,16 +32,12 @@ const Profile: React.FC<IProps> = ({ id }) => {
 
     return(
 <>
-     {dog &&  
-    //  <div className={`${dog.sex==="Male" ? `${styles.maleProfile}` : `${styles.femaleProfile}`}`}>
-    <div className={a}>
-
+     {dog && <div className={a}> 
     <p className={styles.dogId}>Dog ID: {id}</p>
             <Dog key={id} id={id} name={dog.name} img={dog.img}/>
             <DogInfoButton showDogInfo={showDogInfo} />
             {clicked && <DogInfo age={dog.age} id={id} name={dog.name} img={dog.img} sex={dog.sex} breed={dog.breed} weight={dog.weight} height={dog.height} color={dog.color}/>}
-
-        </div>}
+    </div>}
 </>
     );
 };

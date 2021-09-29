@@ -1,7 +1,7 @@
 import './App.css';
 import styles from './App.module.css'
 import Profile from './components/Profile/Profile'
-import Searchbar from './components/Searchbar/Searchbar';
+// import Searchbar from './components/Searchbar/Searchbar';
 import Filters from './components/FilterButton/FilterButton'
 import Form from './components/Form/Form';
 import React, { useEffect, useState, createContext } from 'react'
@@ -46,6 +46,7 @@ const App: React.FC = () => {
   function addDog(name, age, img, breed, sex, weight, height, color) {
     console.log(sex)
     const newDog = {
+      key: lastDogId++,
       id: lastDogId++, 
       name: name, 
       age: age,
@@ -91,17 +92,15 @@ const App: React.FC = () => {
     <div className={styles.bckgImage} >
       <h1 className={styles.heading}>The Pawsome Animal Rescue</h1>
       <p>Check out these LOVELY doggos currently looking for their forever home:</p>
- 
-      {/* <Searchbar searchByBreed={searchByBreed}/> */}
-      <div className={styles.filters}>  
-        {listOfFilters}
-      </div>
+        <div className={styles.filters}>  
+          {listOfFilters}
+        </div>
       <div className={styles.profiles}>
-      {filteredData.map(dog => (<div>
-          <Profile id={dog.id}/>
+        {filteredData.map(dog => (<div>
+          <Profile key={dog.id} id={dog.id}/>
         </div>))}
       </div>
-      <Form addDog={addDog}/>
+      <Form key="form" addDog={addDog}/>
     </div>
     </MyContext.Provider>
     );
